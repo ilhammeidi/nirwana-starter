@@ -14,7 +14,22 @@
   },
   "link": {
     "starter": {
-      "home": "index.html"
+      "home": "index.html",
+      "about": "/about.html",
+      "team": "/about/team.html",
+      "blog": "/blog/index.html",
+      "blogDetail": "/blog/detail-blog.html",
+      "login": "/login.html",
+      "register": "/register.html",
+      "contact": "/contact/index.html",
+      "contactMap": "/contact/with-map.html",
+      "card": "/collection/index.html",
+      "product": "/collection/products.html",
+      "productDetail": "/collection/detail-product.html",
+      "pricing": "/utils/pricing.html",
+      "faq": "/utils/faq.html",
+      "maintenance": "/utils/maintenance.html",
+      "comingSoon": "/utils/coming-soon.html"
     }
   },
   "imgAPI": {
@@ -46,6 +61,12 @@
       "https://via.placeholder.com/640x447/fdffc4/757575",
       "https://via.placeholder.com/1280x851/c4ffd7/757575",
       "https://via.placeholder.com/640x425/c4cdff/757575"
+    ],
+    "ui": [
+      "http://via.placeholder.com/200x78/2f688b/FFFFFF/",
+      "http://via.placeholder.com/200x78/fcbdff/767676/",
+      "http://via.placeholder.com/200x78/ceff00/767676/",
+      "http://via.placeholder.com/200x78/ffce00/767676/"
     ],
     "starer": []
   },

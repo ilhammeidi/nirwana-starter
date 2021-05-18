@@ -1,35 +1,3 @@
-.card {
-  &-pricing {
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-    margin-bottom: $spacing2;
-  }
-  &-blog {
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-.name {
-  display: flex;
-  margin-top: $spacing1;
-  align-items: center;
-  span {
-    display: inline-block;
-    @include margin-left($spacing1)
-  }
-}
-
-.avatar-img {
-  width: 30px;
-  height: 30px
-}
-
-.testi-card {
-  padding: $spacing3;
-}
-
 .price {
   &-card {
     text-align: center;

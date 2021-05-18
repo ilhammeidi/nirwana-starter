@@ -49,7 +49,12 @@
 @import './components/animate-slider';
 @import './components/feature';
 @import './components/counter';
-@import './components/cards';
+
+// Cards components
+@import './components/blog-card';
+@import './components/pricing-card';
+@import './components/testi-card';
+
 @import './components/testimonials';
 @import './components/pricing';
 @import './components/blog';

@@ -1,0 +1,42 @@
+mixin profile-card(cover, avatar, name, title, connection, favorites, albums, type, orientation, href)  
+  .card.profile-card(class=orientation + ' ' + type)
+    .figure
+      img(src=cover height='200px')
+    .avatar-img.avatar(class=orientation === 'portrait' ? 'bigger' : 'big'")
+      img(src=avatar alt='avatar')
+    .properties.text-truncate
+      .card-content
+        |
+        |
+        strong.card-title.title
+          span #{name}
+        |
+        |
+        .subtitle.pa-0
+          |
+          | #{title}
+          |
+        .desc
+          span
+            | #{connection }
+            | Connection
+        if orientation === 'portratit'
+          |
+          |
+          a.btn.btn-outlined.primary.waves-effect.main-btn(href=href)
+            | See Profile
+          |
+          |
+      .card-actions.action
+        a.waves-effect.btn.btn-flat(href='#')
+          i.material-icon account_circle
+          | #{connection} Connection
+        a.waves-effect.btn.btn-flat(href='#')
+          i.material-icon favorite
+          | #{ favorites } Favorites
+        a.waves-effect.btn.btn-flat(href='#')
+          i.material-icon photo_library
+          | #{albums} Albums
+      if orientation === 'landscape'
+        a..waves-effect.btn.btn-outlined.primary.main-btn(href='href')
+          | See Profile

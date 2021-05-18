@@ -83,7 +83,7 @@ function views() {
     data: JSON.parse(fs.readFileSync('./src/api.json'))
   };
   return (
-    gulp.src('src/pug/pages/*.pug')
+    gulp.src('src/pug/pages/**/*.pug')
     .pipe(plumber())
     .pipe(pugI18n(options))
     .pipe(prettyHtml({ indent_size: 2 }))

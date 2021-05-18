@@ -1,0 +1,17 @@
+.testi-card {
+  padding: $spacing3;
+  .name {
+    display: flex;
+    margin-top: $spacing1;
+    align-items: center;
+    span {
+      display: inline-block;
+      @include margin-left($spacing1)
+    }
+  }
+
+  .avatar-img {
+    width: 30px;
+    height: 30px
+  }
+}
