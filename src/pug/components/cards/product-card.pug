@@ -1,0 +1,25 @@
+mixin product-card(rating = 0, price = 0, img, title, desc, type = 'full', orientation = 'portrait', href = '#')
+  .card.product-card(class=orientation + ' ' + type)
+    a.waves-effect.hidden-link(href=href) &nbsp;
+    figure
+      img(src=img alt=title)
+    .desc
+      .text
+        h6.title.pb-2.text-truncate #{title}
+        p.use-text-paragraph
+          | #{desc}
+      div
+        .property
+          if rating > 0
+            .rating
+              - var n = 1
+              - var m = 1
+              - var left = 5 - rating
+              while n <= rating
+                i.material-icons.star-icon(title=n++) star
+              while m <= left
+                i.material-icons.star-icon-disable(title=m++) star
+          if price > 0
+            strong $#{price}
+        .btn.btn-outlined.primary.button.block(href=href)
+          | #{$t.common.btn_detail}

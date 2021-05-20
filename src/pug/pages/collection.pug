@@ -1,4 +1,4 @@
-extends ../../layouts/app.pug
+extends ../layouts/app.pug
 
 block variables
   - var pageTitle = " Card Collection"
@@ -6,4 +6,13 @@ block content
   div
     #home
     .main-wrap
-      h1 wadidaw
+      .pa-6(style='width: 900px')
+        include ../components/cards/profile-card
+        +profile-card('https://source.unsplash.com/random', undefined, 'John Dalton', 'Web Designer', 100, 10, 12, 'full', 'portrait')
+        br/
+        +profile-card('https://source.unsplash.com/random', undefined, 'John Dalton', 'Web Designer', 100, 10, 12, 'oval', 'landscape')
+        br/
+        include ../components/cards/product-card
+        +product-card(3, 20, 'https://source.unsplash.com/random', 'Sed lacinia velit', 'Proin pretium arcu eget metus porta consecteturc', 'oval', 'portrait')
+        +product-card(3, 20, 'https://source.unsplash.com/random', 'Sed lacinia velit', 'Proin pretium arcu eget metus porta consecteturc', 'round', 'landscape')
+        
