@@ -1,0 +1,24 @@
+mixin media-card(title, orientation='portrait', type='video', thumb, href='', duration='00:01')
+  .card.media-card(class=orientation + ' ' + type)
+    if type === 'video'
+      |
+      |
+      span.badge.grey.darken-4
+        | #{duration}
+      |
+      |
+    if type === 'photo'
+      |
+      |
+      a.cover-link.waves-effect(href= href !== '' ? href : 'javascript:void(0)')
+      |
+      |
+    figure
+      img(src=thumb alt='cover')
+    .property
+      if type === 'video'
+        a.btn.play-btn.waves-effect(href=href)
+          span.ion-ios-play
+      .card-title.media-title
+        | #{title}
+  

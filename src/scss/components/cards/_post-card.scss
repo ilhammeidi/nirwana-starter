@@ -1,0 +1,144 @@
+/* General */
+.post-card {
+  display: flex;
+  max-width: 1000px;
+  border-radius: $rounded-medium;
+  .btn.action-btn {
+    min-width: 200px;
+  }
+  .card-action {
+    border: none;
+    padding: spacing(1, 0);
+  }
+  .responsive-img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
+  .properties {
+    padding: $spacing2;
+    max-width: 100%;
+  }
+  .figure {
+    height: 200px;
+    display: block;
+    position: relative;
+  }
+  .desc {
+    white-space: initial;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    display: flex;
+    display: -webkit-box;
+    height: 80px;
+    overflow: hidden;
+    padding: 0;
+    font-size: 18px;
+    margin-bottom: $spacing2;
+  }
+  /* Orientation */
+  &.portrait {
+    flex-direction: column;
+    .properties {
+      padding-left: $spacing2;
+      padding-right: $spacing2;
+    }
+    .btn {
+      width: 100%
+    }
+  }
+  &.landscape {
+    flex-direction: row;
+    .figure {
+      width: 100%;
+      min-height: 100%;
+      height: auto;
+      @include breakpoints-down(xs) {
+        max-width: 100px;
+        max-height: 130px;
+      }
+      @include margin-right($spacing2);
+    }
+    .desc {
+      @include breakpoints-down(xs) {
+        display: none;
+      }
+    }
+    .properties {
+      @include breakpoints-down(xs) {
+        padding: $spacing1;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+    .btn.action-btn {
+      @include breakpoints-down(md) {
+        min-width: 0;
+      }
+    }
+  }
+  /* Type */
+  &.full { 
+    overflow: hidden;
+    position: relative;
+  }
+  &.round {
+    .figure {
+      margin: $spacing2;
+      overflow: hidden;
+      border-radius: $rounded-medium
+    }
+    &.landscape {
+      .figure {
+        @include breakpoints-down(xs) {
+          margin: $spacing1;
+        }
+      }
+    }
+  }
+  &.oval {
+    overflow: hidden;
+    &.portrait {
+      .figure {
+        width: 120%;
+        margin-left: -10%;
+        overflow: hidden;
+        border-radius: 0 0 50% 50%;
+      }
+    }
+    &.landscape {
+      .figure {
+        overflow: hidden;
+        & > div {
+          border-radius: 0 50% 50% 0 !important;
+          height: 120% !important;
+          margin-top: -10%;
+        }
+      }
+    }
+  }
+  &.over {
+    overflow: visible;
+    &.portrait {
+      margin-top: $spacing2;
+      .figure {
+        overflow: hidden;
+        @include shade;
+        margin: spacing(-2, 2, 0);
+        border-radius: $rounded-medium;
+      }
+    }
+    &.landscape {
+      @include margin-left($spacing2);
+      .figure {
+        overflow: hidden;
+        @include shade;
+        margin: spacing(2, 0);
+        @include margin-left($spacing2 * -1);
+        border-radius: $rounded-medium;
+      }
+    }
+  }
+}

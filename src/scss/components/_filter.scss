@@ -1,0 +1,116 @@
+.filter {
+  @include breakpoints-down(sm) {
+    padding: $spacing4;
+    height: 100%;
+    overflow: auto;
+    position: absolute;
+    width: 100%;
+  }
+  .strip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $spacing2;
+    line-height: 0px;
+  }
+  .filter-block {
+    margin-bottom: 50px;
+    .collection {
+      border: none;
+      &-header {
+        border: none;
+        font-size: 16px;
+        @include palette-text-secondary
+      }
+    }
+  }
+  .collection-item {
+    display: block;
+    border: none;
+    label {
+      margin-bottom: 0
+    }
+  }
+  .star {
+    display: block
+  }
+  .star-icon {
+    color: #FFC107
+  }
+  .star-icon-disable {
+    .theme--light & {
+      color: $light-divider;
+    }
+    .theme--dark & {
+      color: $dark-divider;
+    }
+  }
+  .btn-tag {
+    position: relative;
+    cursor: pointer;
+    label {
+      display: inline-block;
+      padding: 1px 6px;
+      margin: 4px;
+      border-radius: $rounded-small;
+      border: 1px solid $palette-primary-main;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.3s ease;
+      @include palette-background-default;
+    }
+    input {
+      opacity: 0;
+      position: absolute;
+      &:checked + label {
+        color: $palette-common-white;
+        background: $palette-primary-main;
+      }
+    }
+  }
+  .input-price {
+    width: 75px;
+    display: inline-block;
+  }
+  .apply-range {
+    @include rtl-flip
+  }
+}
+
+.sorter {
+  @include breakpoints-down(xs) {
+    flex-direction: column-reverse;
+  }
+}
+
+.search-banner {
+  height: 520px;
+  display: flex;
+  align-items: center;
+  @include use-theme(background-color, $palette-primary-light, $palette-primary-dark);
+  .search {
+    position: relative;
+    display: flex;
+    margin: $spacing4 auto;
+    align-items: center;
+    @include breakpoints-up(sm) {
+      width: 600px;
+    }
+    fieldset {
+      height: 41px;
+    }
+    .input-field {
+      @include padding-left($spacing5);
+      min-height: 0;
+      margin-bottom: 0;
+      input {
+        max-height: none;
+      }
+    }
+    .search-icon {
+      position: absolute;
+      top: 7px;
+      @include left($spacing1);
+    }
+  }
+}

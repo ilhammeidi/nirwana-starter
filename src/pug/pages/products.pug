@@ -1,0 +1,14 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = " Product List"
+block content
+  div
+    #home
+    .main-wrap
+      h1 products list
+      .container
+        .row
+          .col-lg-2.col-md-3.pa-0
+            include ../components/filter/filter.pug
+        

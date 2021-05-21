@@ -51,11 +51,16 @@
 @import './components/counter';
 
 // Cards components
-@import './components/cards/blog-card';
+@import './components/cards/post-card';
+@import './components/cards/news-card';
 @import './components/cards/pricing-card';
 @import './components/cards/testi-card';
 @import './components/cards/profile-card';
 @import './components/cards/product-card';
+@import './components/cards/media-card';
+
+// Filter components
+@import './components/filter';
 
 @import './components/testimonials';
 @import './components/pricing';

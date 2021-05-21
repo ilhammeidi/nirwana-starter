@@ -1,6 +1,10 @@
 mixin product-card(rating = 0, price = 0, img, title, desc, type = 'full', orientation = 'portrait', href = '#')
   .card.product-card(class=orientation + ' ' + type)
+    |
+    |
     a.waves-effect.hidden-link(href=href) &nbsp;
+    |
+    |
     figure
       img(src=img alt=title)
     .desc
@@ -21,5 +25,9 @@ mixin product-card(rating = 0, price = 0, img, title, desc, type = 'full', orien
                 i.material-icons.star-icon-disable(title=m++) star
           if price > 0
             strong $#{price}
-        .btn.btn-outlined.primary.button.block(href=href)
+        |
+        |
+        a.btn.btn-outlined.primary.button.block(href=href)
           | #{$t.common.btn_detail}
+        |
+        |

@@ -533,6 +533,7 @@
               </div><!-- #### END PRICING ####-->
             </section>
             <section class="space-top space-bottom" id="blog">
+              <!-- include cards/post-card.pug-->
               <div class="container">
                 <h3 class="display-2 text-center mb-4">Blog and News</h3>
                 <p class="body-1 text-center mb-4">Curabitur egestas consequat lorem, vel fermentum augue porta id.</p>
@@ -541,40 +542,13 @@
                     <div class="col-md-9">
                       <div class="row">
                         <div class="col-md-4 px-3">
-                          <div class="card card-blog">
-                            <div class="card-image">
-                              <img src="https://source.unsplash.com/random" alt="blog image" />
-                            </div>
-                            <div class="card-content">
-                              <div class="card-title title">Heading</div>
-                              <p>This is a media card. You can use this section to describe the content.</p>
-                            </div>
-                            <div class="card-action"><a class="btn-flat waves-effect" href="#">This is a link</a></div>
-                          </div>
+                          <!-- +post-card(item.title, item.desc)-->
                         </div>
                         <div class="col-md-4 px-3">
-                          <div class="card card-blog">
-                            <div class="card-image">
-                              <img src="https://source.unsplash.com/random" alt="blog image" />
-                            </div>
-                            <div class="card-content">
-                              <div class="card-title title">Heading</div>
-                              <p>This is a media card. You can use this section to describe the content.</p>
-                            </div>
-                            <div class="card-action"><a class="btn-flat waves-effect" href="#">This is a link</a></div>
-                          </div>
+                          <!-- +post-card(item.title, item.desc)-->
                         </div>
                         <div class="col-md-4 px-3">
-                          <div class="card card-blog">
-                            <div class="card-image">
-                              <img src="https://source.unsplash.com/random" alt="blog image" />
-                            </div>
-                            <div class="card-content">
-                              <div class="card-title title">Heading</div>
-                              <p>This is a media card. You can use this section to describe the content.</p>
-                            </div>
-                            <div class="card-action"><a class="btn-flat waves-effect" href="#">This is a link</a></div>
-                          </div>
+                          <!-- +post-card(item.title, item.desc)-->
                         </div>
                       </div>
                     </div>
@@ -748,10 +722,6 @@
   <script src="./assets/js/vendors/materialize.js"></script>
   <script src="./assets/js/vendors/jquery.animateSlider.js"></script>
   <script src="./assets/js/scripts.js"></script>
-  <script>
-    alert('lorem');
-    window.localStorage.clear();
-  </script>
 </body>
 
 </html>
