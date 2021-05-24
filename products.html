@@ -64,145 +64,677 @@
   <div class="m-application theme--light transition-page" id="app">
     <div class="loading"></div>
     <div class="m-content purple-var" id="main-wrap">
-      <div>
-        <div id="home"></div>
-        <div class="main-wrap">
-          <h1>products list</h1>
+      <div class="container-wrap">
+        <!-- #### SEARCH ####-->
+        <section class="search-banner">
+          <div class="container max-md">
+            <row class="search-block align-items-center">
+              <col-sm-12>
+                <h2 class="use-text-title2 text-center">Milion of resources for everyone</h2>
+                <h3 class="use-text-subtitle2 text-center">Browse over 300 million stock items. Quickly find authentic and premium items.</h3>
+                <div class="search">
+                  <div class="input-field">
+                    <i class="material-icons prefix">search</i>
+                    <input id="search_product" type="text" placeholder="I'm looking for...">
+                  </div>
+                </div>
+              </col-sm-12>
+            </row>
+          </div>
+        </section>
+        <div class="search-content">
           <div class="container">
-            <div class="row">
+            <!-- #### SORTER ####-->
+            <div class="row sorter align-items-center">
+              <div class="col-lg-9 col-md-8 col-sm-6 py-1">
+                <h2 class="use-text-subtitle"><span id="result_length"></span>Items Found</h2>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 py-1">
+                <div class="d-flex justify-content-end align-items-center">
+                  <button class="btn btn-outlined btn-small primary waves-effect me-4 show-sm-down" id="open_filter" type="button">
+                    <i class="material-icons left">filter_list</i>Filter
+
+                  </button>
+                  <div class="toggle-btn-group me-4 show-sm-up">
+                    <button class="btn btn-outlined btn-small primary" id="grid_toggle" type="button"><i class="material-icons">grid_on</i></button>
+                    <button class="btn btn-outlined btn-small primary" id="list_toggle" type="button"><i class="material-icons">view_list</i></button>
+                  </div>
+                  <div class="input-field">
+                    <select class="select">
+                      <option value="" disabled="" selected="">Sort By:</option>
+                      <option value="title-asc">Title A to Z</option>
+                      <option value="title-desc">Title Z to A</option>
+                      <option value="price-asc">Highest Price</option>
+                      <option value="price-desc">Lowest Price</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row align-items-start justify-content-start">
               <div class="col-lg-2 col-md-3 pa-0">
-                <!-- #### FILTER ####-->
-                <aside class="filter">
-                  <div class="filter-block">
-                    <ul class="collection with-header">
-                      <li class="collection-header">Filter Categories</li>
-                      <li><a class="waves-effect collection-item" data-value="all" href="#!">All categories</a></li>
-                      <li><a class="waves-effect collection-item active" data-value="cat-a" href="#!">Category a</a></li>
-                      <li><a class="waves-effect collection-item" data-value="cat-b" href="#!">Category b</a></li>
-                      <li><a class="waves-effect collection-item" data-value="cat-c" href="#!">Category c</a></li>
-                      <li><a class="waves-effect collection-item" data-value="cat-d" href="#!">Category d</a></li>
-                      <li><a class="waves-effect collection-item" data-value="cat-e" href="#!">Category e</a></li>
-                      <li><a class="waves-effect collection-item" data-value="cat-f" href="#!">Category f</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-block">
-                    <ul class="collection with-header">
-                      <li class="collection-header">Rating</li>
-                      <li><a class="waves-effect collection-item" data-value="0" href="#!">All Rating</a></li>
-                      <li>
-                        <a class="waves-effect collection-item" data-value="1" href="#!">
-                          <span class="star"><i class="material-icons star-icon">star</i><i class="material-icons star-icon-disable">star</i><i class="material-icons star-icon-disable">star</i><i class="material-icons star-icon-disable">star</i><i class="material-icons star-icon-disable">star</i></span>
-                          <span class="caption">Minimum 1 star rating</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a class="waves-effect collection-item" data-value="2" href="#!">
-                          <span class="star"><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon-disable">star</i><i class="material-icons star-icon-disable">star</i><i class="material-icons star-icon-disable">star</i></span>
-                          <span class="caption">Minimum 2 star rating</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a class="waves-effect collection-item" data-value="3" href="#!">
-                          <span class="star"><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon-disable">star</i><i class="material-icons star-icon-disable">star</i></span>
-                          <span class="caption">Minimum 3 star rating</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a class="waves-effect collection-item" data-value="4" href="#!">
-                          <span class="star"><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon-disable">star</i></span>
-                          <span class="caption">Minimum 4 star rating</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a class="waves-effect collection-item" data-value="5" href="#!">
-                          <span class="star"><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i></span>
-                          <span class="caption">Minimum 5 star rating</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="filter-block">
-                    <ul class="collection with-header">
-                      <li class="collection-header">Filter Radio</li>
-                      <li class="collection-item waves-effect">
-                        <label><input class="with-gap" name="filter_radio" type="radio" value="all"><span>All categories</span></label>
-                      </li>
-                      <li class="collection-item waves-effect">
-                        <label><input class="with-gap" name="filter_radio" type="radio" value="radio-a"><span>Radio A</span></label>
-                      </li>
-                      <li class="collection-item waves-effect">
-                        <label><input class="with-gap" name="filter_radio" type="radio" value="radio-b"><span>Radio B</span></label>
-                      </li>
-                      <li class="collection-item waves-effect">
-                        <label><input class="with-gap" name="filter_radio" type="radio" value="radio-c"><span>Radio C</span></label>
-                      </li>
-                      <li class="collection-item waves-effect">
-                        <label><input class="with-gap" name="filter_radio" type="radio" value="radio-d"><span>Radio D</span></label>
-                      </li>
-                      <li class="collection-item waves-effect">
-                        <label><input class="with-gap" name="filter_radio" type="radio" value="radio-e"><span>Radio E</span></label>
-                      </li>
-                      <li class="collection-item waves-effect">
-                        <label><input class="with-gap" name="filter_radio" type="radio" value="radio-f"><span>Radio F</span></label>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="filter-block">
-                    <div class="collection with-header">
-                      <div class="collection-header">Filter Tags</div>
-                      <div class="px-2"><span class="btn-tag"><input id="tag_one" type="checkbox" value="tag-one" checked><label class="waves-effect" for="tag_one">Tag One</label></span><span class="btn-tag"><input id="tag_two" type="checkbox" value="tag-two" checked><label class="waves-effect" for="tag_two">Tag Two</label></span><span class="btn-tag"><input id="tag_three" type="checkbox" value="tag-three" checked><label class="waves-effect" for="tag_three">Tag Three</label></span><span class="btn-tag"><input id="tag_four" type="checkbox" value="tag-four" checked><label class="waves-effect" for="tag_four">Tag Four</label></span></div>
+                <div class="hidden-sm-down">
+                  <!-- #### FILTER ####-->
+                  <aside class="filter">
+                    <div class="filter-block">
+                      <ul class="collection with-header">
+                        <li class="collection-header">Filter Categories</li>
+                        <li><a class="waves-effect collection-item" data-value="all" href="#!">All categories</a></li>
+                        <li><a class="waves-effect collection-item active" data-value="cat-a" href="#!">Category a</a></li>
+                        <li><a class="waves-effect collection-item" data-value="cat-b" href="#!">Category b</a></li>
+                        <li><a class="waves-effect collection-item" data-value="cat-c" href="#!">Category c</a></li>
+                        <li><a class="waves-effect collection-item" data-value="cat-d" href="#!">Category d</a></li>
+                        <li><a class="waves-effect collection-item" data-value="cat-e" href="#!">Category e</a></li>
+                        <li><a class="waves-effect collection-item" data-value="cat-f" href="#!">Category f</a></li>
+                      </ul>
                     </div>
-                  </div>
-                  <div class="filter-block">
-                    <div class="collection with-header">
-                      <div class="collection-header">Filter Range</div>
-                      <div class="px-4">
-                        <div class="d-flex">
-                          <div class="input-field pa-0"><input id="from" placeholder="$ From" type="text" value="0"></div>
-                          <div class="strip">-</div>
-                          <div class="input-field pa-0"><input id="from" placeholder="$ To" type="text" value="100"></div>
+                    <div class="filter-block">
+                      <ul class="collection with-header">
+                        <li class="collection-header">Rating</li>
+                        <li><a class="waves-effect collection-item" data-value="0" href="#!">All Rating</a></li>
+                        <li>
+                          <a class="waves-effect collection-item" data-value="1" href="#!">
+                            <span class="star"><i class="material-icons star-icon">star</i><i class="material-icons star-icon-disable">star</i><i class="material-icons star-icon-disable">star</i><i class="material-icons star-icon-disable">star</i><i class="material-icons star-icon-disable">star</i></span>
+                            <span class="caption">Minimum 1 star rating</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="waves-effect collection-item" data-value="2" href="#!">
+                            <span class="star"><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon-disable">star</i><i class="material-icons star-icon-disable">star</i><i class="material-icons star-icon-disable">star</i></span>
+                            <span class="caption">Minimum 2 star rating</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="waves-effect collection-item" data-value="3" href="#!">
+                            <span class="star"><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon-disable">star</i><i class="material-icons star-icon-disable">star</i></span>
+                            <span class="caption">Minimum 3 star rating</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="waves-effect collection-item" data-value="4" href="#!">
+                            <span class="star"><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon-disable">star</i></span>
+                            <span class="caption">Minimum 4 star rating</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="waves-effect collection-item" data-value="5" href="#!">
+                            <span class="star"><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i></span>
+                            <span class="caption">Minimum 5 star rating</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="filter-block">
+                      <ul class="collection with-header">
+                        <li class="collection-header">Filter Radio</li>
+                        <li class="collection-item waves-effect">
+                          <label><input class="with-gap" name="filter_radio" type="radio" value="all"><span>All categories</span></label>
+                        </li>
+                        <li class="collection-item waves-effect">
+                          <label><input class="with-gap" name="filter_radio" type="radio" value="radio-a"><span>Radio A</span></label>
+                        </li>
+                        <li class="collection-item waves-effect">
+                          <label><input class="with-gap" name="filter_radio" type="radio" value="radio-b"><span>Radio B</span></label>
+                        </li>
+                        <li class="collection-item waves-effect">
+                          <label><input class="with-gap" name="filter_radio" type="radio" value="radio-c"><span>Radio C</span></label>
+                        </li>
+                        <li class="collection-item waves-effect">
+                          <label><input class="with-gap" name="filter_radio" type="radio" value="radio-d"><span>Radio D</span></label>
+                        </li>
+                        <li class="collection-item waves-effect">
+                          <label><input class="with-gap" name="filter_radio" type="radio" value="radio-e"><span>Radio E</span></label>
+                        </li>
+                        <li class="collection-item waves-effect">
+                          <label><input class="with-gap" name="filter_radio" type="radio" value="radio-f"><span>Radio F</span></label>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="filter-block">
+                      <div class="collection with-header">
+                        <div class="collection-header">Filter Tags</div>
+                        <div class="px-2"><span class="btn-tag"><input id="tag_one" type="checkbox" value="tag-one" checked><label class="waves-effect" for="tag_one">Tag One</label></span><span class="btn-tag"><input id="tag_two" type="checkbox" value="tag-two" checked><label class="waves-effect" for="tag_two">Tag Two</label></span><span class="btn-tag"><input id="tag_three" type="checkbox" value="tag-three" checked><label class="waves-effect" for="tag_three">Tag Three</label></span><span class="btn-tag"><input id="tag_four" type="checkbox" value="tag-four" checked><label class="waves-effect" for="tag_four">Tag Four</label></span></div>
+                      </div>
+                    </div>
+                    <div class="filter-block">
+                      <div class="collection with-header">
+                        <div class="collection-header">Filter Range</div>
+                        <div class="px-4">
+                          <div class="d-flex">
+                            <div class="input-field pa-0"><input id="from" placeholder="$ From" type="text" value="0"></div>
+                            <div class="strip">-</div>
+                            <div class="input-field pa-0"><input id="from" placeholder="$ To" type="text" value="100"></div>
+                          </div>
+                          <div class="btn btn-small block primary waves-effect">Apply<i class="material-icons right use-rtl-flip">keyboard_arrow_right</i></div>
                         </div>
-                        <div class="btn btn-small block primary waves-effect">Apply<i class="material-icons right use-rtl-flip">keyboard_arrow_right</i></div>
+                      </div>
+                    </div>
+                    <div class="filter-block">
+                      <ul class="collection with-header">
+                        <li class="collection-header">Filter Check</li>
+                        <li class="collection-item waves-effect">Select All</li>
+                        <li class="collection-item waves-effect">
+                          <label>
+                            <input class="filled-in primary" type="checkbox" value="check-a"><span>Check A</span>
+                          </label>
+                        </li>
+                        <li class="collection-item waves-effect">
+                          <label>
+                            <input class="filled-in" type="checkbox" value="check-b"><span>Check B</span>
+                          </label>
+                        </li>
+                        <li class="collection-item waves-effect">
+                          <label>
+                            <input class="filled-in" type="checkbox" value="check-c"><span>Check C</span>
+                          </label>
+                        </li>
+                        <li class="collection-item waves-effect">
+                          <label>
+                            <input class="filled-in" type="checkbox" value="check-d"><span>Check D</span>
+                          </label>
+                        </li>
+                        <li class="collection-item waves-effect">
+                          <label>
+                            <input class="filled-in" type="checkbox" value="check-e"><span>Check E</span>
+                          </label>
+                        </li>
+                        <li class="collection-item waves-effect">
+                          <label>
+                            <input class="filled-in" type="checkbox" value="check-f"><span>Check F</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </aside>
+                </div>
+              </div>
+              <div class="col-lg-10 col-md-9">
+                <div class="row">
+                  <div class="col col-sm-4">
+                    <div class="card product-card portrait round">
+                      <a class="waves-effect hidden-link" href="#">&nbsp;</a>
+                      <figure><img src="https://source.unsplash.com/random" alt="Ut sed eros finibus"></figure>
+                      <div class="desc">
+                        <div class="text">
+                          <h6 class="title pb-2 text-truncate">Ut sed eros finibus</h6>
+                          <p class="use-text-paragraph">Category: cat-a ~ Tag: tag-one,tag-three,tag-four ~ Check: check-d ~ Radio: radio-bundefined</p>
+                        </div>
+                        <div>
+                          <div class="property">
+                            <div class="rating"><i class="material-icons star-icon" title="1">star</i><i class="material-icons star-icon" title="2">star</i><i class="material-icons star-icon" title="3">star</i><i class="material-icons star-icon" title="4">star</i><i class="material-icons star-icon" title="5">star</i></div><strong>$50</strong>
+                          </div>
+                          <a class="btn btn-outlined primary button block" href="#">see detail</a>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div class="filter-block">
-                    <ul class="collection with-header">
-                      <li class="collection-header">Filter Check</li>
-                      <li class="collection-item waves-effect">Select All</li>
-                      <li class="collection-item waves-effect">
-                        <label>
-                          <input class="filled-in primary" type="checkbox" value="check-a"><span>Check A</span>
-                        </label>
-                      </li>
-                      <li class="collection-item waves-effect">
-                        <label>
-                          <input class="filled-in" type="checkbox" value="check-b"><span>Check B</span>
-                        </label>
-                      </li>
-                      <li class="collection-item waves-effect">
-                        <label>
-                          <input class="filled-in" type="checkbox" value="check-c"><span>Check C</span>
-                        </label>
-                      </li>
-                      <li class="collection-item waves-effect">
-                        <label>
-                          <input class="filled-in" type="checkbox" value="check-d"><span>Check D</span>
-                        </label>
-                      </li>
-                      <li class="collection-item waves-effect">
-                        <label>
-                          <input class="filled-in" type="checkbox" value="check-e"><span>Check E</span>
-                        </label>
-                      </li>
-                      <li class="collection-item waves-effect">
-                        <label>
-                          <input class="filled-in" type="checkbox" value="check-f"><span>Check F</span>
-                        </label>
-                      </li>
-                    </ul>
+                  <div class="col col-sm-4">
+                    <div class="card product-card portrait round">
+                      <a class="waves-effect hidden-link" href="#">&nbsp;</a>
+                      <figure><img src="https://source.unsplash.com/random" alt="Cras convallis lacus orci"></figure>
+                      <div class="desc">
+                        <div class="text">
+                          <h6 class="title pb-2 text-truncate">Cras convallis lacus orci</h6>
+                          <p class="use-text-paragraph">Category: cat-b ~ Tag: tag-one,tag-one,tag-four ~ Check: check-d ~ Radio: radio-eundefined</p>
+                        </div>
+                        <div>
+                          <div class="property">
+                            <div class="rating"><i class="material-icons star-icon" title="1">star</i><i class="material-icons star-icon" title="2">star</i><i class="material-icons star-icon-disable" title="1">star</i><i class="material-icons star-icon-disable" title="2">star</i><i class="material-icons star-icon-disable" title="3">star</i></div><strong>$10</strong>
+                          </div>
+                          <a class="btn btn-outlined primary button block" href="#">see detail</a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </aside>
+                  <div class="col col-sm-4">
+                    <div class="card product-card portrait round">
+                      <a class="waves-effect hidden-link" href="#">&nbsp;</a>
+                      <figure><img src="https://source.unsplash.com/random" alt="Integer orci justo"></figure>
+                      <div class="desc">
+                        <div class="text">
+                          <h6 class="title pb-2 text-truncate">Integer orci justo</h6>
+                          <p class="use-text-paragraph">Category: cat-b ~ Tag: tag-one ~ Check: check-a ~ Radio: radio-eundefined</p>
+                        </div>
+                        <div>
+                          <div class="property">
+                            <div class="rating"><i class="material-icons star-icon" title="1">star</i><i class="material-icons star-icon" title="2">star</i><i class="material-icons star-icon" title="3">star</i><i class="material-icons star-icon" title="4">star</i><i class="material-icons star-icon" title="5">star</i></div><strong>$100</strong>
+                          </div>
+                          <a class="btn btn-outlined primary button block" href="#">see detail</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-sm-4">
+                    <div class="card product-card portrait round">
+                      <a class="waves-effect hidden-link" href="#">&nbsp;</a>
+                      <figure><img src="https://source.unsplash.com/random" alt="Ut sed eros finibus"></figure>
+                      <div class="desc">
+                        <div class="text">
+                          <h6 class="title pb-2 text-truncate">Ut sed eros finibus</h6>
+                          <p class="use-text-paragraph">Category: cat-c ~ Tag: tag-one,tag-two ~ Check: check-c ~ Radio: radio-dundefined</p>
+                        </div>
+                        <div>
+                          <div class="property"><strong>$80</strong></div>
+                          <a class="btn btn-outlined primary button block" href="#">see detail</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-sm-4">
+                    <div class="card product-card portrait round">
+                      <a class="waves-effect hidden-link" href="#">&nbsp;</a>
+                      <figure><img src="https://source.unsplash.com/random" alt="Phasellus ante massa"></figure>
+                      <div class="desc">
+                        <div class="text">
+                          <h6 class="title pb-2 text-truncate">Phasellus ante massa</h6>
+                          <p class="use-text-paragraph">Category: cat-a ~ Tag: tag-one,tag-two ~ Check: check-c ~ Radio: radio-cundefined</p>
+                        </div>
+                        <div>
+                          <div class="property"><strong>$90</strong></div>
+                          <a class="btn btn-outlined primary button block" href="#">see detail</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-sm-4">
+                    <div class="card product-card portrait round">
+                      <a class="waves-effect hidden-link" href="#">&nbsp;</a>
+                      <figure><img src="https://source.unsplash.com/random" alt="Cras convallis lacus orci"></figure>
+                      <div class="desc">
+                        <div class="text">
+                          <h6 class="title pb-2 text-truncate">Cras convallis lacus orci</h6>
+                          <p class="use-text-paragraph">Category: cat-d ~ Tag: tag-two ~ Check: check-b ~ Radio: radio-aundefined</p>
+                        </div>
+                        <div>
+                          <div class="property">
+                            <div class="rating"><i class="material-icons star-icon" title="1">star</i><i class="material-icons star-icon" title="2">star</i><i class="material-icons star-icon" title="3">star</i><i class="material-icons star-icon" title="4">star</i><i class="material-icons star-icon" title="5">star</i></div><strong>$20</strong>
+                          </div>
+                          <a class="btn btn-outlined primary button block" href="#">see detail</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-sm-4">
+                    <div class="card product-card portrait round">
+                      <a class="waves-effect hidden-link" href="#">&nbsp;</a>
+                      <figure><img src="https://source.unsplash.com/random" alt="Ut sed eros finibus"></figure>
+                      <div class="desc">
+                        <div class="text">
+                          <h6 class="title pb-2 text-truncate">Ut sed eros finibus</h6>
+                          <p class="use-text-paragraph">Category: cat-e ~ Tag: tag-one,tag-three ~ Check: check-a ~ Radio: radio-bundefined</p>
+                        </div>
+                        <div>
+                          <div class="property">
+                            <div class="rating"><i class="material-icons star-icon" title="1">star</i><i class="material-icons star-icon" title="2">star</i><i class="material-icons star-icon" title="3">star</i><i class="material-icons star-icon" title="4">star</i><i class="material-icons star-icon-disable" title="1">star</i></div><strong>$5</strong>
+                          </div>
+                          <a class="btn btn-outlined primary button block" href="#">see detail</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-sm-4">
+                    <div class="card product-card portrait round">
+                      <a class="waves-effect hidden-link" href="#">&nbsp;</a>
+                      <figure><img src="https://source.unsplash.com/random" alt="Pellentesque ullamcorper"></figure>
+                      <div class="desc">
+                        <div class="text">
+                          <h6 class="title pb-2 text-truncate">Pellentesque ullamcorper</h6>
+                          <p class="use-text-paragraph">Category: cat-c ~ Tag: tag-one,tag-four,tag-two ~ Check: check-a ~ Radio: radio-aundefined</p>
+                        </div>
+                        <div>
+                          <div class="property">
+                            <div class="rating"><i class="material-icons star-icon" title="1">star</i><i class="material-icons star-icon" title="2">star</i><i class="material-icons star-icon" title="3">star</i><i class="material-icons star-icon" title="4">star</i><i class="material-icons star-icon-disable" title="1">star</i></div><strong>$70</strong>
+                          </div>
+                          <a class="btn btn-outlined primary button block" href="#">see detail</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-sm-4">
+                    <div class="card product-card portrait round">
+                      <a class="waves-effect hidden-link" href="#">&nbsp;</a>
+                      <figure><img src="https://source.unsplash.com/random" alt="Cras convallis lacus orci"></figure>
+                      <div class="desc">
+                        <div class="text">
+                          <h6 class="title pb-2 text-truncate">Cras convallis lacus orci</h6>
+                          <p class="use-text-paragraph">Category: cat-d ~ Tag: tag-one,tag-three ~ Check: check-a ~ Radio: radio-bundefined</p>
+                        </div>
+                        <div>
+                          <div class="property">
+                            <div class="rating"><i class="material-icons star-icon" title="1">star</i><i class="material-icons star-icon" title="2">star</i><i class="material-icons star-icon" title="3">star</i><i class="material-icons star-icon" title="4">star</i><i class="material-icons star-icon-disable" title="1">star</i></div><strong>$74</strong>
+                          </div>
+                          <a class="btn btn-outlined primary button block" href="#">see detail</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-sm-4">
+                    <div class="card product-card portrait round">
+                      <a class="waves-effect hidden-link" href="#">&nbsp;</a>
+                      <figure><img src="https://source.unsplash.com/random" alt="Ut sed eros finibus"></figure>
+                      <div class="desc">
+                        <div class="text">
+                          <h6 class="title pb-2 text-truncate">Ut sed eros finibus</h6>
+                          <p class="use-text-paragraph">Category: cat-a ~ Tag: tag-one,tag-three ~ Check: check-b ~ Radio: radio-bundefined</p>
+                        </div>
+                        <div>
+                          <div class="property">
+                            <div class="rating"><i class="material-icons star-icon" title="1">star</i><i class="material-icons star-icon-disable" title="1">star</i><i class="material-icons star-icon-disable" title="2">star</i><i class="material-icons star-icon-disable" title="3">star</i><i class="material-icons star-icon-disable" title="4">star</i></div><strong>$80</strong>
+                          </div>
+                          <a class="btn btn-outlined primary button block" href="#">see detail</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-sm-4">
+                    <div class="card product-card portrait round">
+                      <a class="waves-effect hidden-link" href="#">&nbsp;</a>
+                      <figure><img src="https://source.unsplash.com/random" alt="Phasellus ante massa"></figure>
+                      <div class="desc">
+                        <div class="text">
+                          <h6 class="title pb-2 text-truncate">Phasellus ante massa</h6>
+                          <p class="use-text-paragraph">Category: cat-d ~ Tag: tag-one,tag-three ~ Check: check-d ~ Radio: radio-aundefined</p>
+                        </div>
+                        <div>
+                          <div class="property">
+                            <div class="rating"><i class="material-icons star-icon" title="1">star</i><i class="material-icons star-icon" title="2">star</i><i class="material-icons star-icon" title="3">star</i><i class="material-icons star-icon" title="4">star</i><i class="material-icons star-icon-disable" title="1">star</i></div><strong>$40</strong>
+                          </div>
+                          <a class="btn btn-outlined primary button block" href="#">see detail</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-sm-4">
+                    <div class="card product-card portrait round">
+                      <a class="waves-effect hidden-link" href="#">&nbsp;</a>
+                      <figure><img src="https://source.unsplash.com/random" alt="Cras convallis lacus orci"></figure>
+                      <div class="desc">
+                        <div class="text">
+                          <h6 class="title pb-2 text-truncate">Cras convallis lacus orci</h6>
+                          <p class="use-text-paragraph">Category: cat-a ~ Tag: tag-two,tag-three ~ Check: check-b ~ Radio: radio-aundefined</p>
+                        </div>
+                        <div>
+                          <div class="property"><strong>$40</strong></div>
+                          <a class="btn btn-outlined primary button block" href="#">see detail</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-sm-4">
+                    <div class="card product-card portrait round">
+                      <a class="waves-effect hidden-link" href="#">&nbsp;</a>
+                      <figure><img src="https://source.unsplash.com/random" alt="Ut sed eros finibus"></figure>
+                      <div class="desc">
+                        <div class="text">
+                          <h6 class="title pb-2 text-truncate">Ut sed eros finibus</h6>
+                          <p class="use-text-paragraph">Category: cat-a ~ Tag: tag-one ~ Check: check-a ~ Radio: radio-dundefined</p>
+                        </div>
+                        <div>
+                          <div class="property"><strong>$70</strong></div>
+                          <a class="btn btn-outlined primary button block" href="#">see detail</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-sm-4">
+                    <div class="card product-card portrait round">
+                      <a class="waves-effect hidden-link" href="#">&nbsp;</a>
+                      <figure><img src="https://source.unsplash.com/random" alt="Phasellus ante massa"></figure>
+                      <div class="desc">
+                        <div class="text">
+                          <h6 class="title pb-2 text-truncate">Phasellus ante massa</h6>
+                          <p class="use-text-paragraph">Category: cat-e ~ Tag: tag-one,tag-three ~ Check: check-e ~ Radio: radio-dundefined</p>
+                        </div>
+                        <div>
+                          <div class="property">
+                            <div class="rating"><i class="material-icons star-icon" title="1">star</i><i class="material-icons star-icon" title="2">star</i><i class="material-icons star-icon-disable" title="1">star</i><i class="material-icons star-icon-disable" title="2">star</i><i class="material-icons star-icon-disable" title="3">star</i></div><strong>$55</strong>
+                          </div>
+                          <a class="btn btn-outlined primary button block" href="#">see detail</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-sm-4">
+                    <div class="card product-card portrait round">
+                      <a class="waves-effect hidden-link" href="#">&nbsp;</a>
+                      <figure><img src="https://source.unsplash.com/random" alt="Pellentesque ullamcorper"></figure>
+                      <div class="desc">
+                        <div class="text">
+                          <h6 class="title pb-2 text-truncate">Pellentesque ullamcorper</h6>
+                          <p class="use-text-paragraph">Category: cat-a ~ Tag: tag-three ~ Check: check-d ~ Radio: radio-cundefined</p>
+                        </div>
+                        <div>
+                          <div class="property"><strong>$90</strong></div>
+                          <a class="btn btn-outlined primary button block" href="#">see detail</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-sm-4">
+                    <div class="card product-card portrait round">
+                      <a class="waves-effect hidden-link" href="#">&nbsp;</a>
+                      <figure><img src="https://source.unsplash.com/random" alt="Ut sed eros finibus"></figure>
+                      <div class="desc">
+                        <div class="text">
+                          <h6 class="title pb-2 text-truncate">Ut sed eros finibus</h6>
+                          <p class="use-text-paragraph">Category: cat-a ~ Tag: tag-two,tag-four ~ Check: check-a ~ Radio: radio-fundefined</p>
+                        </div>
+                        <div>
+                          <div class="property">
+                            <div class="rating"><i class="material-icons star-icon" title="1">star</i><i class="material-icons star-icon" title="2">star</i><i class="material-icons star-icon" title="3">star</i><i class="material-icons star-icon" title="4">star</i><i class="material-icons star-icon" title="5">star</i></div><strong>$80</strong>
+                          </div>
+                          <a class="btn btn-outlined primary button block" href="#">see detail</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-sm-4">
+                    <div class="card product-card portrait round">
+                      <a class="waves-effect hidden-link" href="#">&nbsp;</a>
+                      <figure><img src="https://source.unsplash.com/random" alt="Cras convallis lacus orci"></figure>
+                      <div class="desc">
+                        <div class="text">
+                          <h6 class="title pb-2 text-truncate">Cras convallis lacus orci</h6>
+                          <p class="use-text-paragraph">Category: cat-b ~ Tag: tag-one,tag-two,tag-four ~ Check: check-e ~ Radio: radio-aundefined</p>
+                        </div>
+                        <div>
+                          <div class="property">
+                            <div class="rating"><i class="material-icons star-icon" title="1">star</i><i class="material-icons star-icon" title="2">star</i><i class="material-icons star-icon" title="3">star</i><i class="material-icons star-icon" title="4">star</i><i class="material-icons star-icon" title="5">star</i></div><strong>$10</strong>
+                          </div>
+                          <a class="btn btn-outlined primary button block" href="#">see detail</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-sm-4">
+                    <div class="card product-card portrait round">
+                      <a class="waves-effect hidden-link" href="#">&nbsp;</a>
+                      <figure><img src="https://source.unsplash.com/random" alt="Pellentesque ullamcorper"></figure>
+                      <div class="desc">
+                        <div class="text">
+                          <h6 class="title pb-2 text-truncate">Pellentesque ullamcorper</h6>
+                          <p class="use-text-paragraph">Category: cat-c ~ Tag: tag-one,tag-three ~ Check: check-f ~ Radio: radio-fundefined</p>
+                        </div>
+                        <div>
+                          <div class="property">
+                            <div class="rating"><i class="material-icons star-icon" title="1">star</i><i class="material-icons star-icon" title="2">star</i><i class="material-icons star-icon" title="3">star</i><i class="material-icons star-icon" title="4">star</i><i class="material-icons star-icon-disable" title="1">star</i></div><strong>$100</strong>
+                          </div>
+                          <a class="btn btn-outlined primary button block" href="#">see detail</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-sm-4">
+                    <div class="card product-card portrait round">
+                      <a class="waves-effect hidden-link" href="#">&nbsp;</a>
+                      <figure><img src="https://source.unsplash.com/random" alt="Ut sed eros finibus"></figure>
+                      <div class="desc">
+                        <div class="text">
+                          <h6 class="title pb-2 text-truncate">Ut sed eros finibus</h6>
+                          <p class="use-text-paragraph">Category: cat-b ~ Tag: tag-one,tag-four ~ Check: check-d ~ Radio: radio-bundefined</p>
+                        </div>
+                        <div>
+                          <div class="property"><strong>$70</strong></div>
+                          <a class="btn btn-outlined primary button block" href="#">see detail</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-sm-4">
+                    <div class="card product-card portrait round">
+                      <a class="waves-effect hidden-link" href="#">&nbsp;</a>
+                      <figure><img src="https://source.unsplash.com/random" alt="Integer orci justo"></figure>
+                      <div class="desc">
+                        <div class="text">
+                          <h6 class="title pb-2 text-truncate">Integer orci justo</h6>
+                          <p class="use-text-paragraph">Category: cat-a ~ Tag: tag-one,tag-two,tag-four ~ Check: check-d ~ Radio: radio-cundefined</p>
+                        </div>
+                        <div>
+                          <div class="property"><strong>$10</strong></div>
+                          <a class="btn btn-outlined primary button block" href="#">see detail</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-sm-4">
+                    <div class="card product-card portrait round">
+                      <a class="waves-effect hidden-link" href="#">&nbsp;</a>
+                      <figure><img src="https://source.unsplash.com/random" alt="Phasellus ante massa"></figure>
+                      <div class="desc">
+                        <div class="text">
+                          <h6 class="title pb-2 text-truncate">Phasellus ante massa</h6>
+                          <p class="use-text-paragraph">Category: cat-f ~ Tag: tag-one,tag-two ~ Check: check-b ~ Radio: radio-eundefined</p>
+                        </div>
+                        <div>
+                          <div class="property"><strong>$20</strong></div>
+                          <a class="btn btn-outlined primary button block" href="#">see detail</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-sm-4">
+                    <div class="card product-card portrait round">
+                      <a class="waves-effect hidden-link" href="#">&nbsp;</a>
+                      <figure><img src="https://source.unsplash.com/random" alt="Pellentesque ullamcorper"></figure>
+                      <div class="desc">
+                        <div class="text">
+                          <h6 class="title pb-2 text-truncate">Pellentesque ullamcorper</h6>
+                          <p class="use-text-paragraph">Category: cat-d ~ Tag: tag-one,tag-two,tag-four ~ Check: check-d ~ Radio: radio-eundefined</p>
+                        </div>
+                        <div>
+                          <div class="property">
+                            <div class="rating"><i class="material-icons star-icon" title="1">star</i><i class="material-icons star-icon-disable" title="1">star</i><i class="material-icons star-icon-disable" title="2">star</i><i class="material-icons star-icon-disable" title="3">star</i><i class="material-icons star-icon-disable" title="4">star</i></div><strong>$80</strong>
+                          </div>
+                          <a class="btn btn-outlined primary button block" href="#">see detail</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-sm-4">
+                    <div class="card product-card portrait round">
+                      <a class="waves-effect hidden-link" href="#">&nbsp;</a>
+                      <figure><img src="https://source.unsplash.com/random" alt="Ut sed eros finibus"></figure>
+                      <div class="desc">
+                        <div class="text">
+                          <h6 class="title pb-2 text-truncate">Ut sed eros finibus</h6>
+                          <p class="use-text-paragraph">Category: cat-b ~ Tag: tag-one,tag-two,tag-four ~ Check: check-c ~ Radio: radio-aundefined</p>
+                        </div>
+                        <div>
+                          <div class="property">
+                            <div class="rating"><i class="material-icons star-icon" title="1">star</i><i class="material-icons star-icon" title="2">star</i><i class="material-icons star-icon" title="3">star</i><i class="material-icons star-icon" title="4">star</i><i class="material-icons star-icon" title="5">star</i></div><strong>$45</strong>
+                          </div>
+                          <a class="btn btn-outlined primary button block" href="#">see detail</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-sm-4">
+                    <div class="card product-card portrait round">
+                      <a class="waves-effect hidden-link" href="#">&nbsp;</a>
+                      <figure><img src="https://source.unsplash.com/random" alt="Cras convallis lacus orci"></figure>
+                      <div class="desc">
+                        <div class="text">
+                          <h6 class="title pb-2 text-truncate">Cras convallis lacus orci</h6>
+                          <p class="use-text-paragraph">Category: cat-f ~ Tag: tag-one,tag-two,tag-four ~ Check: check-c ~ Radio: radio-aundefined</p>
+                        </div>
+                        <div>
+                          <div class="property"><strong>$40</strong></div>
+                          <a class="btn btn-outlined primary button block" href="#">see detail</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-sm-4">
+                    <div class="card product-card portrait round">
+                      <a class="waves-effect hidden-link" href="#">&nbsp;</a>
+                      <figure><img src="https://source.unsplash.com/random" alt="Phasellus ante massa"></figure>
+                      <div class="desc">
+                        <div class="text">
+                          <h6 class="title pb-2 text-truncate">Phasellus ante massa</h6>
+                          <p class="use-text-paragraph">Category: cat-a ~ Tag: tag-one,tag-four ~ Check: check-f ~ Radio: radio-cundefined</p>
+                        </div>
+                        <div>
+                          <div class="property">
+                            <div class="rating"><i class="material-icons star-icon" title="1">star</i><i class="material-icons star-icon" title="2">star</i><i class="material-icons star-icon" title="3">star</i><i class="material-icons star-icon" title="4">star</i><i class="material-icons star-icon" title="5">star</i></div><strong>$50</strong>
+                          </div>
+                          <a class="btn btn-outlined primary button block" href="#">see detail</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-sm-4">
+                    <div class="card product-card portrait round">
+                      <a class="waves-effect hidden-link" href="#">&nbsp;</a>
+                      <figure><img src="https://source.unsplash.com/random" alt="Cras convallis lacus orci"></figure>
+                      <div class="desc">
+                        <div class="text">
+                          <h6 class="title pb-2 text-truncate">Cras convallis lacus orci</h6>
+                          <p class="use-text-paragraph">Category: cat-f ~ Tag: tag-one,tag-two ~ Check: check-a ~ Radio: radio-cundefined</p>
+                        </div>
+                        <div>
+                          <div class="property">
+                            <div class="rating"><i class="material-icons star-icon" title="1">star</i><i class="material-icons star-icon" title="2">star</i><i class="material-icons star-icon" title="3">star</i><i class="material-icons star-icon-disable" title="1">star</i><i class="material-icons star-icon-disable" title="2">star</i></div><strong>$20</strong>
+                          </div>
+                          <a class="btn btn-outlined primary button block" href="#">see detail</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-sm-4">
+                    <div class="card product-card portrait round">
+                      <a class="waves-effect hidden-link" href="#">&nbsp;</a>
+                      <figure><img src="https://source.unsplash.com/random" alt="Pellentesque ullamcorper"></figure>
+                      <div class="desc">
+                        <div class="text">
+                          <h6 class="title pb-2 text-truncate">Pellentesque ullamcorper</h6>
+                          <p class="use-text-paragraph">Category: cat-b ~ Tag: tag-one,tag-two ~ Check: check-c ~ Radio: radio-cundefined</p>
+                        </div>
+                        <div>
+                          <div class="property">
+                            <div class="rating"><i class="material-icons star-icon" title="1">star</i><i class="material-icons star-icon" title="2">star</i><i class="material-icons star-icon" title="3">star</i><i class="material-icons star-icon" title="4">star</i><i class="material-icons star-icon" title="5">star</i></div><strong>$70</strong>
+                          </div>
+                          <a class="btn btn-outlined primary button block" href="#">see detail</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-sm-4">
+                    <div class="card product-card portrait round">
+                      <a class="waves-effect hidden-link" href="#">&nbsp;</a>
+                      <figure><img src="https://source.unsplash.com/random" alt="Ut sed eros finibus"></figure>
+                      <div class="desc">
+                        <div class="text">
+                          <h6 class="title pb-2 text-truncate">Ut sed eros finibus</h6>
+                          <p class="use-text-paragraph">Category: cat-a ~ Tag: tag-four ~ Check: check-b ~ Radio: radio-aundefined</p>
+                        </div>
+                        <div>
+                          <div class="property"><strong>$45</strong></div>
+                          <a class="btn btn-outlined primary button block" href="#">see detail</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
