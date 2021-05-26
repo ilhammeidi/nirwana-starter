@@ -20,41 +20,42 @@
     }
   ]
 
-.row.sorter.align-items-center
-  .col-lg-9.col-md-8.col-sm-6.py-1
-    h2.use-text-subtitle
-      span#result_length
-      | Items Found
-  .col-lg-3.col-md-4.col-sm-6.py-1
-    .d-flex.justify-content-end.align-items-center
-      |
-      |
-      button.btn.btn-outlined.btn-small.primary.waves-effect.me-4.show-sm-down#open_filter(type='button')
+mixin sorter(total)
+  .row.sorter.align-items-center
+    .col-lg-9.col-md-8.col-sm-6.py-1
+      h2.use-text-subtitle
+        span#result_length #{total}
+        | &nbsp; Items Found
+    .col-lg-3.col-md-4.col-sm-6.py-1
+      .d-flex.justify-content-end.align-items-center
         |
         |
-        i.material-icons.left filter_list
-        | Filter
+        button.btn.btn-outlined.btn-small.primary.waves-effect.me-4.show-sm-down#open_filter(type='button')
+          |
+          |
+          i.material-icons.left filter_list
+          | Filter
+          |
+          |
         |
         |
-      |
-      |
-      .toggle-btn-group.me-4.show-sm-up
-        |
-        |
-        button.btn.btn-outlined.btn-small.primary#grid_toggle(type='button')
-          i.material-icons grid_on
-        |
-        |
-        button.btn.btn-outlined.btn-small.primary#list_toggle(type='button')
-          i.material-icons view_list
-        |
-        |
-      .input-field
-        |
-        |
-        select.select
-          option(value='', disabled='', selected='') Sort By:
-          each item in sortList
-            option(value=item.value) #{item.title}
-        |
-        |
+        .toggle-btn-group.me-4.show-sm-up
+          |
+          |
+          button.btn.btn-outlined.btn-small.primary#grid_toggle(type='button')
+            i.material-icons grid_on
+          |
+          |
+          button.btn.btn-outlined.btn-small.primary#list_toggle(type='button')
+            i.material-icons view_list
+          |
+          |
+        .input-field
+          |
+          |
+          select.select
+            option(value='', disabled='', selected='') Sort By:
+            each item in sortList
+              option(value=item.value) #{item.title}
+          |
+          |

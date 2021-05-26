@@ -87,7 +87,7 @@
             <!-- #### SORTER ####-->
             <div class="row sorter align-items-center">
               <div class="col-lg-9 col-md-8 col-sm-6 py-1">
-                <h2 class="use-text-subtitle"><span id="result_length"></span>Items Found</h2>
+                <h2 class="use-text-subtitle"><span id="result_length">28</span>&nbsp; Items Found</h2>
               </div>
               <div class="col-lg-3 col-md-4 col-sm-6 py-1">
                 <div class="d-flex justify-content-end align-items-center">
@@ -116,11 +116,11 @@
                 <div class="hidden-sm-down">
                   <!-- #### FILTER ####-->
                   <aside class="filter">
-                    <div class="filter-block">
+                    <div class="filter-block" id="filter_category">
                       <ul class="collection with-header">
                         <li class="collection-header">Filter Categories</li>
-                        <li><a class="waves-effect collection-item" data-value="all" href="#!">All categories</a></li>
-                        <li><a class="waves-effect collection-item active" data-value="cat-a" href="#!">Category a</a></li>
+                        <li><a class="waves-effect collection-item active" data-value="all" href="#!">All categories</a></li>
+                        <li><a class="waves-effect collection-item" data-value="cat-a" href="#!">Category a</a></li>
                         <li><a class="waves-effect collection-item" data-value="cat-b" href="#!">Category b</a></li>
                         <li><a class="waves-effect collection-item" data-value="cat-c" href="#!">Category c</a></li>
                         <li><a class="waves-effect collection-item" data-value="cat-d" href="#!">Category d</a></li>
@@ -128,10 +128,10 @@
                         <li><a class="waves-effect collection-item" data-value="cat-f" href="#!">Category f</a></li>
                       </ul>
                     </div>
-                    <div class="filter-block">
+                    <div class="filter-block" id="filter_rating">
                       <ul class="collection with-header">
                         <li class="collection-header">Rating</li>
-                        <li><a class="waves-effect collection-item" data-value="0" href="#!">All Rating</a></li>
+                        <li><a class="waves-effect collection-item active" data-value="0" href="#!">All Rating</a></li>
                         <li>
                           <a class="waves-effect collection-item" data-value="1" href="#!">
                             <span class="star"><i class="material-icons star-icon">star</i><i class="material-icons star-icon-disable">star</i><i class="material-icons star-icon-disable">star</i><i class="material-icons star-icon-disable">star</i><i class="material-icons star-icon-disable">star</i></span>
@@ -164,83 +164,82 @@
                         </li>
                       </ul>
                     </div>
-                    <div class="filter-block">
+                    <div class="filter-block" id="filter_radio">
                       <ul class="collection with-header">
                         <li class="collection-header">Filter Radio</li>
-                        <li class="collection-item waves-effect">
-                          <label><input class="with-gap" name="filter_radio" type="radio" value="all"><span>All categories</span></label>
+                        <li class="collection-item waves-effect active">
+                          <label class="label-block"><input class="with-gap" name="filter_radio" type="radio" value="all" checked><span>All categories</span></label>
                         </li>
                         <li class="collection-item waves-effect">
-                          <label><input class="with-gap" name="filter_radio" type="radio" value="radio-a"><span>Radio A</span></label>
+                          <label class="label-block"><input class="with-gap" name="filter_radio" type="radio" value="radio-a"><span>Radio A</span></label>
                         </li>
                         <li class="collection-item waves-effect">
-                          <label><input class="with-gap" name="filter_radio" type="radio" value="radio-b"><span>Radio B</span></label>
+                          <label class="label-block"><input class="with-gap" name="filter_radio" type="radio" value="radio-b"><span>Radio B</span></label>
                         </li>
                         <li class="collection-item waves-effect">
-                          <label><input class="with-gap" name="filter_radio" type="radio" value="radio-c"><span>Radio C</span></label>
+                          <label class="label-block"><input class="with-gap" name="filter_radio" type="radio" value="radio-c"><span>Radio C</span></label>
                         </li>
                         <li class="collection-item waves-effect">
-                          <label><input class="with-gap" name="filter_radio" type="radio" value="radio-d"><span>Radio D</span></label>
+                          <label class="label-block"><input class="with-gap" name="filter_radio" type="radio" value="radio-d"><span>Radio D</span></label>
                         </li>
                         <li class="collection-item waves-effect">
-                          <label><input class="with-gap" name="filter_radio" type="radio" value="radio-e"><span>Radio E</span></label>
+                          <label class="label-block"><input class="with-gap" name="filter_radio" type="radio" value="radio-e"><span>Radio E</span></label>
                         </li>
                         <li class="collection-item waves-effect">
-                          <label><input class="with-gap" name="filter_radio" type="radio" value="radio-f"><span>Radio F</span></label>
+                          <label class="label-block"><input class="with-gap" name="filter_radio" type="radio" value="radio-f"><span>Radio F</span></label>
                         </li>
                       </ul>
                     </div>
-                    <div class="filter-block">
+                    <div class="filter-block" id="filter_tags">
                       <div class="collection with-header">
                         <div class="collection-header">Filter Tags</div>
                         <div class="px-2"><span class="btn-tag"><input id="tag_one" type="checkbox" value="tag-one" checked><label class="waves-effect" for="tag_one">Tag One</label></span><span class="btn-tag"><input id="tag_two" type="checkbox" value="tag-two" checked><label class="waves-effect" for="tag_two">Tag Two</label></span><span class="btn-tag"><input id="tag_three" type="checkbox" value="tag-three" checked><label class="waves-effect" for="tag_three">Tag Three</label></span><span class="btn-tag"><input id="tag_four" type="checkbox" value="tag-four" checked><label class="waves-effect" for="tag_four">Tag Four</label></span></div>
                       </div>
                     </div>
-                    <div class="filter-block">
+                    <div class="filter-block" id="filter_price">
                       <div class="collection with-header">
                         <div class="collection-header">Filter Range</div>
                         <div class="px-4">
                           <div class="d-flex">
-                            <div class="input-field pa-0"><input id="from" placeholder="$ From" type="text" value="0"></div>
+                            <div class="input-field pa-0"><input id="price_from" placeholder="$ From" type="text" value="0"></div>
                             <div class="strip">-</div>
-                            <div class="input-field pa-0"><input id="from" placeholder="$ To" type="text" value="100"></div>
-                          </div>
-                          <div class="btn btn-small block primary waves-effect">Apply<i class="material-icons right use-rtl-flip">keyboard_arrow_right</i></div>
+                            <div class="input-field pa-0"><input id="price_to" placeholder="$ To" type="text" value="100"></div>
+                          </div><button class="btn btn-small block primary waves-effect" type="button">Apply<i class="material-icons right use-rtl-flip">keyboard_arrow_right</i></button>
                         </div>
                       </div>
                     </div>
-                    <div class="filter-block">
+                    <div class="filter-block" id="filter_check">
                       <ul class="collection with-header">
                         <li class="collection-header">Filter Check</li>
-                        <li class="collection-item waves-effect">Select All</li>
+                        <li class="collection-item waves-effect active" id="select_all_categories">Select All</li>
                         <li class="collection-item waves-effect">
-                          <label>
-                            <input class="filled-in primary" type="checkbox" value="check-a"><span>Check A</span>
+                          <label class="label-block">
+                            <input class="primary filled-in" type="checkbox" value="check-a" checked><span>Check A</span>
                           </label>
                         </li>
                         <li class="collection-item waves-effect">
-                          <label>
-                            <input class="filled-in" type="checkbox" value="check-b"><span>Check B</span>
+                          <label class="label-block">
+                            <input class="primary filled-in" type="checkbox" value="check-b" checked><span>Check B</span>
                           </label>
                         </li>
                         <li class="collection-item waves-effect">
-                          <label>
-                            <input class="filled-in" type="checkbox" value="check-c"><span>Check C</span>
+                          <label class="label-block">
+                            <input class="primary filled-in" type="checkbox" value="check-c" checked><span>Check C</span>
                           </label>
                         </li>
                         <li class="collection-item waves-effect">
-                          <label>
-                            <input class="filled-in" type="checkbox" value="check-d"><span>Check D</span>
+                          <label class="label-block">
+                            <input class="primary filled-in" type="checkbox" value="check-d" checked><span>Check D</span>
                           </label>
                         </li>
                         <li class="collection-item waves-effect">
-                          <label>
-                            <input class="filled-in" type="checkbox" value="check-e"><span>Check E</span>
+                          <label class="label-block">
+                            <input class="primary filled-in" type="checkbox" value="check-e" checked><span>Check E</span>
                           </label>
                         </li>
                         <li class="collection-item waves-effect">
-                          <label>
-                            <input class="filled-in" type="checkbox" value="check-f"><span>Check F</span>
+                          <label class="label-block">
+                            <input class="primary filled-in" type="checkbox" value="check-f" checked><span>Check F</span>
                           </label>
                         </li>
                       </ul>
@@ -249,7 +248,7 @@
                 </div>
               </div>
               <div class="col-lg-10 col-md-9">
-                <div class="row">
+                <div class="row" id="product_result" data-items="[{&quot;title&quot;:&quot;Ut sed eros finibus&quot;,&quot;category&quot;:&quot;cat-a&quot;,&quot;tag&quot;:[&quot;tag-one&quot;,&quot;tag-three&quot;,&quot;tag-four&quot;],&quot;price&quot;:50,&quot;rating&quot;:5,&quot;check&quot;:&quot;check-d&quot;,&quot;radio&quot;:&quot;radio-b&quot;},{&quot;title&quot;:&quot;Cras convallis lacus orci&quot;,&quot;category&quot;:&quot;cat-b&quot;,&quot;tag&quot;:[&quot;tag-one&quot;,&quot;tag-one&quot;,&quot;tag-four&quot;],&quot;price&quot;:10,&quot;rating&quot;:2,&quot;check&quot;:&quot;check-d&quot;,&quot;radio&quot;:&quot;radio-e&quot;},{&quot;title&quot;:&quot;Integer orci justo&quot;,&quot;category&quot;:&quot;cat-b&quot;,&quot;tag&quot;:[&quot;tag-one&quot;],&quot;price&quot;:100,&quot;rating&quot;:5,&quot;check&quot;:&quot;check-a&quot;,&quot;radio&quot;:&quot;radio-e&quot;},{&quot;title&quot;:&quot;Ut sed eros finibus&quot;,&quot;category&quot;:&quot;cat-c&quot;,&quot;tag&quot;:[&quot;tag-one&quot;,&quot;tag-two&quot;],&quot;price&quot;:80,&quot;rating&quot;:0,&quot;check&quot;:&quot;check-c&quot;,&quot;radio&quot;:&quot;radio-d&quot;},{&quot;title&quot;:&quot;Phasellus ante massa&quot;,&quot;category&quot;:&quot;cat-a&quot;,&quot;tag&quot;:[&quot;tag-one&quot;,&quot;tag-two&quot;],&quot;price&quot;:90,&quot;rating&quot;:0,&quot;check&quot;:&quot;check-c&quot;,&quot;radio&quot;:&quot;radio-c&quot;},{&quot;title&quot;:&quot;Cras convallis lacus orci&quot;,&quot;category&quot;:&quot;cat-d&quot;,&quot;tag&quot;:[&quot;tag-two&quot;],&quot;price&quot;:20,&quot;rating&quot;:5,&quot;check&quot;:&quot;check-b&quot;,&quot;radio&quot;:&quot;radio-a&quot;},{&quot;title&quot;:&quot;Ut sed eros finibus&quot;,&quot;category&quot;:&quot;cat-e&quot;,&quot;tag&quot;:[&quot;tag-one&quot;,&quot;tag-three&quot;],&quot;price&quot;:5,&quot;rating&quot;:4,&quot;check&quot;:&quot;check-a&quot;,&quot;radio&quot;:&quot;radio-b&quot;},{&quot;title&quot;:&quot;Pellentesque ullamcorper&quot;,&quot;category&quot;:&quot;cat-c&quot;,&quot;tag&quot;:[&quot;tag-one&quot;,&quot;tag-four&quot;,&quot;tag-two&quot;],&quot;price&quot;:70,&quot;rating&quot;:4,&quot;check&quot;:&quot;check-a&quot;,&quot;radio&quot;:&quot;radio-a&quot;},{&quot;title&quot;:&quot;Cras convallis lacus orci&quot;,&quot;category&quot;:&quot;cat-d&quot;,&quot;tag&quot;:[&quot;tag-one&quot;,&quot;tag-three&quot;],&quot;price&quot;:74,&quot;rating&quot;:4,&quot;check&quot;:&quot;check-a&quot;,&quot;radio&quot;:&quot;radio-b&quot;},{&quot;title&quot;:&quot;Ut sed eros finibus&quot;,&quot;category&quot;:&quot;cat-a&quot;,&quot;tag&quot;:[&quot;tag-one&quot;,&quot;tag-three&quot;],&quot;price&quot;:80,&quot;rating&quot;:1,&quot;check&quot;:&quot;check-b&quot;,&quot;radio&quot;:&quot;radio-b&quot;},{&quot;title&quot;:&quot;Phasellus ante massa&quot;,&quot;category&quot;:&quot;cat-d&quot;,&quot;tag&quot;:[&quot;tag-one&quot;,&quot;tag-three&quot;],&quot;price&quot;:40,&quot;rating&quot;:4,&quot;check&quot;:&quot;check-d&quot;,&quot;radio&quot;:&quot;radio-a&quot;},{&quot;title&quot;:&quot;Cras convallis lacus orci&quot;,&quot;category&quot;:&quot;cat-a&quot;,&quot;tag&quot;:[&quot;tag-two&quot;,&quot;tag-three&quot;],&quot;price&quot;:40,&quot;rating&quot;:0,&quot;check&quot;:&quot;check-b&quot;,&quot;radio&quot;:&quot;radio-a&quot;},{&quot;title&quot;:&quot;Ut sed eros finibus&quot;,&quot;category&quot;:&quot;cat-a&quot;,&quot;tag&quot;:[&quot;tag-one&quot;],&quot;price&quot;:70,&quot;rating&quot;:0,&quot;check&quot;:&quot;check-a&quot;,&quot;radio&quot;:&quot;radio-d&quot;},{&quot;title&quot;:&quot;Phasellus ante massa&quot;,&quot;category&quot;:&quot;cat-e&quot;,&quot;tag&quot;:[&quot;tag-one&quot;,&quot;tag-three&quot;],&quot;price&quot;:55,&quot;rating&quot;:2,&quot;check&quot;:&quot;check-e&quot;,&quot;radio&quot;:&quot;radio-d&quot;},{&quot;title&quot;:&quot;Pellentesque ullamcorper&quot;,&quot;category&quot;:&quot;cat-a&quot;,&quot;tag&quot;:[&quot;tag-three&quot;],&quot;price&quot;:90,&quot;rating&quot;:0,&quot;check&quot;:&quot;check-d&quot;,&quot;radio&quot;:&quot;radio-c&quot;},{&quot;title&quot;:&quot;Ut sed eros finibus&quot;,&quot;category&quot;:&quot;cat-a&quot;,&quot;tag&quot;:[&quot;tag-two&quot;,&quot;tag-four&quot;],&quot;price&quot;:80,&quot;rating&quot;:5,&quot;check&quot;:&quot;check-a&quot;,&quot;radio&quot;:&quot;radio-f&quot;},{&quot;title&quot;:&quot;Cras convallis lacus orci&quot;,&quot;category&quot;:&quot;cat-b&quot;,&quot;tag&quot;:[&quot;tag-one&quot;,&quot;tag-two&quot;,&quot;tag-four&quot;],&quot;price&quot;:10,&quot;rating&quot;:5,&quot;check&quot;:&quot;check-e&quot;,&quot;radio&quot;:&quot;radio-a&quot;},{&quot;title&quot;:&quot;Pellentesque ullamcorper&quot;,&quot;category&quot;:&quot;cat-c&quot;,&quot;tag&quot;:[&quot;tag-one&quot;,&quot;tag-three&quot;],&quot;price&quot;:100,&quot;rating&quot;:4,&quot;check&quot;:&quot;check-f&quot;,&quot;radio&quot;:&quot;radio-f&quot;},{&quot;title&quot;:&quot;Ut sed eros finibus&quot;,&quot;category&quot;:&quot;cat-b&quot;,&quot;tag&quot;:[&quot;tag-one&quot;,&quot;tag-four&quot;],&quot;price&quot;:70,&quot;rating&quot;:0,&quot;check&quot;:&quot;check-d&quot;,&quot;radio&quot;:&quot;radio-b&quot;},{&quot;title&quot;:&quot;Integer orci justo&quot;,&quot;category&quot;:&quot;cat-a&quot;,&quot;tag&quot;:[&quot;tag-one&quot;,&quot;tag-two&quot;,&quot;tag-four&quot;],&quot;price&quot;:10,&quot;rating&quot;:0,&quot;check&quot;:&quot;check-d&quot;,&quot;radio&quot;:&quot;radio-c&quot;},{&quot;title&quot;:&quot;Phasellus ante massa&quot;,&quot;category&quot;:&quot;cat-f&quot;,&quot;tag&quot;:[&quot;tag-one&quot;,&quot;tag-two&quot;],&quot;price&quot;:20,&quot;rating&quot;:0,&quot;check&quot;:&quot;check-b&quot;,&quot;radio&quot;:&quot;radio-e&quot;},{&quot;title&quot;:&quot;Pellentesque ullamcorper&quot;,&quot;category&quot;:&quot;cat-d&quot;,&quot;tag&quot;:[&quot;tag-one&quot;,&quot;tag-two&quot;,&quot;tag-four&quot;],&quot;price&quot;:80,&quot;rating&quot;:1,&quot;check&quot;:&quot;check-d&quot;,&quot;radio&quot;:&quot;radio-e&quot;},{&quot;title&quot;:&quot;Ut sed eros finibus&quot;,&quot;category&quot;:&quot;cat-b&quot;,&quot;tag&quot;:[&quot;tag-one&quot;,&quot;tag-two&quot;,&quot;tag-four&quot;],&quot;price&quot;:45,&quot;rating&quot;:5,&quot;check&quot;:&quot;check-c&quot;,&quot;radio&quot;:&quot;radio-a&quot;},{&quot;title&quot;:&quot;Cras convallis lacus orci&quot;,&quot;category&quot;:&quot;cat-f&quot;,&quot;tag&quot;:[&quot;tag-one&quot;,&quot;tag-two&quot;,&quot;tag-four&quot;],&quot;price&quot;:40,&quot;rating&quot;:0,&quot;check&quot;:&quot;check-c&quot;,&quot;radio&quot;:&quot;radio-a&quot;},{&quot;title&quot;:&quot;Phasellus ante massa&quot;,&quot;category&quot;:&quot;cat-a&quot;,&quot;tag&quot;:[&quot;tag-one&quot;,&quot;tag-four&quot;],&quot;price&quot;:50,&quot;rating&quot;:5,&quot;check&quot;:&quot;check-f&quot;,&quot;radio&quot;:&quot;radio-c&quot;},{&quot;title&quot;:&quot;Cras convallis lacus orci&quot;,&quot;category&quot;:&quot;cat-f&quot;,&quot;tag&quot;:[&quot;tag-one&quot;,&quot;tag-two&quot;],&quot;price&quot;:20,&quot;rating&quot;:3,&quot;check&quot;:&quot;check-a&quot;,&quot;radio&quot;:&quot;radio-c&quot;},{&quot;title&quot;:&quot;Pellentesque ullamcorper&quot;,&quot;category&quot;:&quot;cat-b&quot;,&quot;tag&quot;:[&quot;tag-one&quot;,&quot;tag-two&quot;],&quot;price&quot;:70,&quot;rating&quot;:5,&quot;check&quot;:&quot;check-c&quot;,&quot;radio&quot;:&quot;radio-c&quot;},{&quot;title&quot;:&quot;Ut sed eros finibus&quot;,&quot;category&quot;:&quot;cat-a&quot;,&quot;tag&quot;:[&quot;tag-four&quot;],&quot;price&quot;:45,&quot;rating&quot;:0,&quot;check&quot;:&quot;check-b&quot;,&quot;radio&quot;:&quot;radio-a&quot;}]">
                   <div class="col col-sm-4">
                     <div class="card product-card portrait round">
                       <a class="waves-effect hidden-link" href="#">&nbsp;</a>
@@ -257,7 +256,7 @@
                       <div class="desc">
                         <div class="text">
                           <h6 class="title pb-2 text-truncate">Ut sed eros finibus</h6>
-                          <p class="use-text-paragraph">Category: cat-a ~ Tag: tag-one,tag-three,tag-four ~ Check: check-d ~ Radio: radio-bundefined</p>
+                          <p class="use-text-paragraph">Category: cat-a ~ Tag: tag-one,tag-three,tag-four ~ Check: check-d ~ Radio: radio-b</p>
                         </div>
                         <div>
                           <div class="property">
@@ -275,7 +274,7 @@
                       <div class="desc">
                         <div class="text">
                           <h6 class="title pb-2 text-truncate">Cras convallis lacus orci</h6>
-                          <p class="use-text-paragraph">Category: cat-b ~ Tag: tag-one,tag-one,tag-four ~ Check: check-d ~ Radio: radio-eundefined</p>
+                          <p class="use-text-paragraph">Category: cat-b ~ Tag: tag-one,tag-one,tag-four ~ Check: check-d ~ Radio: radio-e</p>
                         </div>
                         <div>
                           <div class="property">
@@ -293,7 +292,7 @@
                       <div class="desc">
                         <div class="text">
                           <h6 class="title pb-2 text-truncate">Integer orci justo</h6>
-                          <p class="use-text-paragraph">Category: cat-b ~ Tag: tag-one ~ Check: check-a ~ Radio: radio-eundefined</p>
+                          <p class="use-text-paragraph">Category: cat-b ~ Tag: tag-one ~ Check: check-a ~ Radio: radio-e</p>
                         </div>
                         <div>
                           <div class="property">
@@ -311,7 +310,7 @@
                       <div class="desc">
                         <div class="text">
                           <h6 class="title pb-2 text-truncate">Ut sed eros finibus</h6>
-                          <p class="use-text-paragraph">Category: cat-c ~ Tag: tag-one,tag-two ~ Check: check-c ~ Radio: radio-dundefined</p>
+                          <p class="use-text-paragraph">Category: cat-c ~ Tag: tag-one,tag-two ~ Check: check-c ~ Radio: radio-d</p>
                         </div>
                         <div>
                           <div class="property"><strong>$80</strong></div>
@@ -327,7 +326,7 @@
                       <div class="desc">
                         <div class="text">
                           <h6 class="title pb-2 text-truncate">Phasellus ante massa</h6>
-                          <p class="use-text-paragraph">Category: cat-a ~ Tag: tag-one,tag-two ~ Check: check-c ~ Radio: radio-cundefined</p>
+                          <p class="use-text-paragraph">Category: cat-a ~ Tag: tag-one,tag-two ~ Check: check-c ~ Radio: radio-c</p>
                         </div>
                         <div>
                           <div class="property"><strong>$90</strong></div>
@@ -343,7 +342,7 @@
                       <div class="desc">
                         <div class="text">
                           <h6 class="title pb-2 text-truncate">Cras convallis lacus orci</h6>
-                          <p class="use-text-paragraph">Category: cat-d ~ Tag: tag-two ~ Check: check-b ~ Radio: radio-aundefined</p>
+                          <p class="use-text-paragraph">Category: cat-d ~ Tag: tag-two ~ Check: check-b ~ Radio: radio-a</p>
                         </div>
                         <div>
                           <div class="property">
@@ -361,7 +360,7 @@
                       <div class="desc">
                         <div class="text">
                           <h6 class="title pb-2 text-truncate">Ut sed eros finibus</h6>
-                          <p class="use-text-paragraph">Category: cat-e ~ Tag: tag-one,tag-three ~ Check: check-a ~ Radio: radio-bundefined</p>
+                          <p class="use-text-paragraph">Category: cat-e ~ Tag: tag-one,tag-three ~ Check: check-a ~ Radio: radio-b</p>
                         </div>
                         <div>
                           <div class="property">
@@ -379,7 +378,7 @@
                       <div class="desc">
                         <div class="text">
                           <h6 class="title pb-2 text-truncate">Pellentesque ullamcorper</h6>
-                          <p class="use-text-paragraph">Category: cat-c ~ Tag: tag-one,tag-four,tag-two ~ Check: check-a ~ Radio: radio-aundefined</p>
+                          <p class="use-text-paragraph">Category: cat-c ~ Tag: tag-one,tag-four,tag-two ~ Check: check-a ~ Radio: radio-a</p>
                         </div>
                         <div>
                           <div class="property">
@@ -397,7 +396,7 @@
                       <div class="desc">
                         <div class="text">
                           <h6 class="title pb-2 text-truncate">Cras convallis lacus orci</h6>
-                          <p class="use-text-paragraph">Category: cat-d ~ Tag: tag-one,tag-three ~ Check: check-a ~ Radio: radio-bundefined</p>
+                          <p class="use-text-paragraph">Category: cat-d ~ Tag: tag-one,tag-three ~ Check: check-a ~ Radio: radio-b</p>
                         </div>
                         <div>
                           <div class="property">
@@ -415,7 +414,7 @@
                       <div class="desc">
                         <div class="text">
                           <h6 class="title pb-2 text-truncate">Ut sed eros finibus</h6>
-                          <p class="use-text-paragraph">Category: cat-a ~ Tag: tag-one,tag-three ~ Check: check-b ~ Radio: radio-bundefined</p>
+                          <p class="use-text-paragraph">Category: cat-a ~ Tag: tag-one,tag-three ~ Check: check-b ~ Radio: radio-b</p>
                         </div>
                         <div>
                           <div class="property">
@@ -433,7 +432,7 @@
                       <div class="desc">
                         <div class="text">
                           <h6 class="title pb-2 text-truncate">Phasellus ante massa</h6>
-                          <p class="use-text-paragraph">Category: cat-d ~ Tag: tag-one,tag-three ~ Check: check-d ~ Radio: radio-aundefined</p>
+                          <p class="use-text-paragraph">Category: cat-d ~ Tag: tag-one,tag-three ~ Check: check-d ~ Radio: radio-a</p>
                         </div>
                         <div>
                           <div class="property">
@@ -451,7 +450,7 @@
                       <div class="desc">
                         <div class="text">
                           <h6 class="title pb-2 text-truncate">Cras convallis lacus orci</h6>
-                          <p class="use-text-paragraph">Category: cat-a ~ Tag: tag-two,tag-three ~ Check: check-b ~ Radio: radio-aundefined</p>
+                          <p class="use-text-paragraph">Category: cat-a ~ Tag: tag-two,tag-three ~ Check: check-b ~ Radio: radio-a</p>
                         </div>
                         <div>
                           <div class="property"><strong>$40</strong></div>
@@ -467,7 +466,7 @@
                       <div class="desc">
                         <div class="text">
                           <h6 class="title pb-2 text-truncate">Ut sed eros finibus</h6>
-                          <p class="use-text-paragraph">Category: cat-a ~ Tag: tag-one ~ Check: check-a ~ Radio: radio-dundefined</p>
+                          <p class="use-text-paragraph">Category: cat-a ~ Tag: tag-one ~ Check: check-a ~ Radio: radio-d</p>
                         </div>
                         <div>
                           <div class="property"><strong>$70</strong></div>
@@ -483,7 +482,7 @@
                       <div class="desc">
                         <div class="text">
                           <h6 class="title pb-2 text-truncate">Phasellus ante massa</h6>
-                          <p class="use-text-paragraph">Category: cat-e ~ Tag: tag-one,tag-three ~ Check: check-e ~ Radio: radio-dundefined</p>
+                          <p class="use-text-paragraph">Category: cat-e ~ Tag: tag-one,tag-three ~ Check: check-e ~ Radio: radio-d</p>
                         </div>
                         <div>
                           <div class="property">
@@ -501,7 +500,7 @@
                       <div class="desc">
                         <div class="text">
                           <h6 class="title pb-2 text-truncate">Pellentesque ullamcorper</h6>
-                          <p class="use-text-paragraph">Category: cat-a ~ Tag: tag-three ~ Check: check-d ~ Radio: radio-cundefined</p>
+                          <p class="use-text-paragraph">Category: cat-a ~ Tag: tag-three ~ Check: check-d ~ Radio: radio-c</p>
                         </div>
                         <div>
                           <div class="property"><strong>$90</strong></div>
@@ -517,7 +516,7 @@
                       <div class="desc">
                         <div class="text">
                           <h6 class="title pb-2 text-truncate">Ut sed eros finibus</h6>
-                          <p class="use-text-paragraph">Category: cat-a ~ Tag: tag-two,tag-four ~ Check: check-a ~ Radio: radio-fundefined</p>
+                          <p class="use-text-paragraph">Category: cat-a ~ Tag: tag-two,tag-four ~ Check: check-a ~ Radio: radio-f</p>
                         </div>
                         <div>
                           <div class="property">
@@ -535,7 +534,7 @@
                       <div class="desc">
                         <div class="text">
                           <h6 class="title pb-2 text-truncate">Cras convallis lacus orci</h6>
-                          <p class="use-text-paragraph">Category: cat-b ~ Tag: tag-one,tag-two,tag-four ~ Check: check-e ~ Radio: radio-aundefined</p>
+                          <p class="use-text-paragraph">Category: cat-b ~ Tag: tag-one,tag-two,tag-four ~ Check: check-e ~ Radio: radio-a</p>
                         </div>
                         <div>
                           <div class="property">
@@ -553,7 +552,7 @@
                       <div class="desc">
                         <div class="text">
                           <h6 class="title pb-2 text-truncate">Pellentesque ullamcorper</h6>
-                          <p class="use-text-paragraph">Category: cat-c ~ Tag: tag-one,tag-three ~ Check: check-f ~ Radio: radio-fundefined</p>
+                          <p class="use-text-paragraph">Category: cat-c ~ Tag: tag-one,tag-three ~ Check: check-f ~ Radio: radio-f</p>
                         </div>
                         <div>
                           <div class="property">
@@ -571,7 +570,7 @@
                       <div class="desc">
                         <div class="text">
                           <h6 class="title pb-2 text-truncate">Ut sed eros finibus</h6>
-                          <p class="use-text-paragraph">Category: cat-b ~ Tag: tag-one,tag-four ~ Check: check-d ~ Radio: radio-bundefined</p>
+                          <p class="use-text-paragraph">Category: cat-b ~ Tag: tag-one,tag-four ~ Check: check-d ~ Radio: radio-b</p>
                         </div>
                         <div>
                           <div class="property"><strong>$70</strong></div>
@@ -587,7 +586,7 @@
                       <div class="desc">
                         <div class="text">
                           <h6 class="title pb-2 text-truncate">Integer orci justo</h6>
-                          <p class="use-text-paragraph">Category: cat-a ~ Tag: tag-one,tag-two,tag-four ~ Check: check-d ~ Radio: radio-cundefined</p>
+                          <p class="use-text-paragraph">Category: cat-a ~ Tag: tag-one,tag-two,tag-four ~ Check: check-d ~ Radio: radio-c</p>
                         </div>
                         <div>
                           <div class="property"><strong>$10</strong></div>
@@ -603,7 +602,7 @@
                       <div class="desc">
                         <div class="text">
                           <h6 class="title pb-2 text-truncate">Phasellus ante massa</h6>
-                          <p class="use-text-paragraph">Category: cat-f ~ Tag: tag-one,tag-two ~ Check: check-b ~ Radio: radio-eundefined</p>
+                          <p class="use-text-paragraph">Category: cat-f ~ Tag: tag-one,tag-two ~ Check: check-b ~ Radio: radio-e</p>
                         </div>
                         <div>
                           <div class="property"><strong>$20</strong></div>
@@ -619,7 +618,7 @@
                       <div class="desc">
                         <div class="text">
                           <h6 class="title pb-2 text-truncate">Pellentesque ullamcorper</h6>
-                          <p class="use-text-paragraph">Category: cat-d ~ Tag: tag-one,tag-two,tag-four ~ Check: check-d ~ Radio: radio-eundefined</p>
+                          <p class="use-text-paragraph">Category: cat-d ~ Tag: tag-one,tag-two,tag-four ~ Check: check-d ~ Radio: radio-e</p>
                         </div>
                         <div>
                           <div class="property">
@@ -637,7 +636,7 @@
                       <div class="desc">
                         <div class="text">
                           <h6 class="title pb-2 text-truncate">Ut sed eros finibus</h6>
-                          <p class="use-text-paragraph">Category: cat-b ~ Tag: tag-one,tag-two,tag-four ~ Check: check-c ~ Radio: radio-aundefined</p>
+                          <p class="use-text-paragraph">Category: cat-b ~ Tag: tag-one,tag-two,tag-four ~ Check: check-c ~ Radio: radio-a</p>
                         </div>
                         <div>
                           <div class="property">
@@ -655,7 +654,7 @@
                       <div class="desc">
                         <div class="text">
                           <h6 class="title pb-2 text-truncate">Cras convallis lacus orci</h6>
-                          <p class="use-text-paragraph">Category: cat-f ~ Tag: tag-one,tag-two,tag-four ~ Check: check-c ~ Radio: radio-aundefined</p>
+                          <p class="use-text-paragraph">Category: cat-f ~ Tag: tag-one,tag-two,tag-four ~ Check: check-c ~ Radio: radio-a</p>
                         </div>
                         <div>
                           <div class="property"><strong>$40</strong></div>
@@ -671,7 +670,7 @@
                       <div class="desc">
                         <div class="text">
                           <h6 class="title pb-2 text-truncate">Phasellus ante massa</h6>
-                          <p class="use-text-paragraph">Category: cat-a ~ Tag: tag-one,tag-four ~ Check: check-f ~ Radio: radio-cundefined</p>
+                          <p class="use-text-paragraph">Category: cat-a ~ Tag: tag-one,tag-four ~ Check: check-f ~ Radio: radio-c</p>
                         </div>
                         <div>
                           <div class="property">
@@ -689,7 +688,7 @@
                       <div class="desc">
                         <div class="text">
                           <h6 class="title pb-2 text-truncate">Cras convallis lacus orci</h6>
-                          <p class="use-text-paragraph">Category: cat-f ~ Tag: tag-one,tag-two ~ Check: check-a ~ Radio: radio-cundefined</p>
+                          <p class="use-text-paragraph">Category: cat-f ~ Tag: tag-one,tag-two ~ Check: check-a ~ Radio: radio-c</p>
                         </div>
                         <div>
                           <div class="property">
@@ -707,7 +706,7 @@
                       <div class="desc">
                         <div class="text">
                           <h6 class="title pb-2 text-truncate">Pellentesque ullamcorper</h6>
-                          <p class="use-text-paragraph">Category: cat-b ~ Tag: tag-one,tag-two ~ Check: check-c ~ Radio: radio-cundefined</p>
+                          <p class="use-text-paragraph">Category: cat-b ~ Tag: tag-one,tag-two ~ Check: check-c ~ Radio: radio-c</p>
                         </div>
                         <div>
                           <div class="property">
@@ -725,7 +724,7 @@
                       <div class="desc">
                         <div class="text">
                           <h6 class="title pb-2 text-truncate">Ut sed eros finibus</h6>
-                          <p class="use-text-paragraph">Category: cat-a ~ Tag: tag-four ~ Check: check-b ~ Radio: radio-aundefined</p>
+                          <p class="use-text-paragraph">Category: cat-a ~ Tag: tag-four ~ Check: check-b ~ Radio: radio-a</p>
                         </div>
                         <div>
                           <div class="property"><strong>$45</strong></div>

@@ -22,6 +22,14 @@
         font-size: 16px;
         @include palette-text-secondary
       }
+      &-item.active {
+        @include use-theme(background-color, $palette-primary-light, $palette-primary-dark);
+        @include use-theme(color, $palette-primary-dark, $palette-primary-light);
+      }
+    }
+    .label-block {
+      display: block;
+      cursor: pointer;
     }
   }
   .collection-item {
