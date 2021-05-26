@@ -132,7 +132,23 @@ $(function(){
  * @name Filter
  * @function filter product list base on category, price, tag, etc
  * @function sort product list by name or price
+ * @function switch view grid or list
  */
+
+// switch view
+$('#switch_view button').click(function() {
+  $('#switch_view button').removeClass('active');
+  $(this).addClass('active');
+
+  var view = $(this).data('value');
+  if(view === 'grid') {
+    $('#product_result > .col').addClass('col-sm-4').removeClass('col-sm-12');
+    $('#product_result .product-card').addClass('portrait').removeClass('landscape');
+  } else {
+    $('#product_result > .col').addClass('col-sm-12').removeClass('col-sm-4');
+    $('#product_result .product-card').addClass('landscape').removeClass('portrait');
+  }
+});
 
 // collect values
 function removeArray(arr) {
@@ -167,6 +183,12 @@ var filterVal = {
   tags: ['tag-one', 'tag-two', 'tag-three', 'tag-four']
 };
 
+var sortVal = {
+  sortBy: 'price',
+  sortfrom: -1,
+  sortTo: 1
+}
+
 function intersection(firstArray, secondArray) {
   return firstArray.filter(function(element) {
     return secondArray.includes(element);
@@ -194,7 +216,9 @@ function filterResult() {
       filterVal.check.indexOf(cardItem.check) > -1 &&
       intersection(filterVal.tags, cardItem.tag).length > 0
     )
-  })
+  }).sort(function(a, b) {
+    return a[sortVal.sortBy] > b[sortVal.sortBy] ? sortVal.sortFrom : sortVal.sortTo
+  });
 }
 
 // HTML Template
@@ -233,8 +257,6 @@ function productCard(rating = 0, price = 0, img, title, desc, type = 'full', ori
 
 // Render filtered list to HTML
 function renderResult() {
-  //  console.log(filterVal);
-  //  console.log(products);
   var items = filterResult();
   $('#result_length').text(items.length);
   $('#product_result').html('');
@@ -242,6 +264,33 @@ function renderResult() {
     $('#product_result').append(productCard(items[i].rating, items[i].price, 'https://source.unsplash.com/random', items[i].title, 'Category: '+items[i].category+' ~ '+'Tag: '+items[i].tag+' ~ '+'Check: '+items[i].check+' ~ '+'Radio: '+items[i].radio, 'round', 'portrait', '/detail-product'))
   }
 }
+
+// sort filter
+$('#sort_by').change(function(e){
+  var val = e.target.value;
+  switch (val) {
+    case 'title-asc':
+      sortVal.sortBy = 'title'
+      sortVal.sortFrom = 1
+      sortVal.sortTo = -1
+      break
+    case 'title-desc':
+      sortVal.sortBy = 'title'
+      sortVal.sortFrom = -1
+      sortVal.sortTo = 1
+      break
+    case 'price-asc':
+      sortVal.sortBy = 'price'
+      sortVal.sortFrom = -1
+      sortVal.sortTo = 1
+      break
+    default:
+      sortVal.sortBy = 'price'
+      sortVal.sortFrom = 1
+      sortVal.sortTo = -1
+  }
+  renderResult();
+});
 
 // category filter
 $('#filter_category li a').click(function() {

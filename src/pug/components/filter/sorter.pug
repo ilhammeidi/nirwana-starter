@@ -39,21 +39,21 @@ mixin sorter(total)
           |
         |
         |
-        .toggle-btn-group.me-4.show-sm-up
+        .toggle-btn-group.me-4.show-sm-up#switch_view
           |
           |
-          button.btn.btn-outlined.btn-small.primary#grid_toggle(type='button')
+          button.btn.btn-outlined.btn-small.primary.active(type='button' data-value="grid")
             i.material-icons grid_on
           |
           |
-          button.btn.btn-outlined.btn-small.primary#list_toggle(type='button')
+          button.btn.btn-outlined.btn-small.primary(type='button' data-value="list")
             i.material-icons view_list
           |
           |
         .input-field
           |
           |
-          select.select
+          select.select#sort_by
             option(value='', disabled='', selected='') Sort By:
             each item in sortList
               option(value=item.value) #{item.title}

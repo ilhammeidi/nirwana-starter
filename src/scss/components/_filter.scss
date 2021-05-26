@@ -96,6 +96,10 @@
       i {
         font-size: 24px
       }
+      &.active {
+        @include use-theme(background-color, $palette-primary-main !important, $palette-primary-dark !important);
+        color: $palette-primary-light !important;
+      }
     }
     > .btn:not(:last-child) {
       border-right: none;

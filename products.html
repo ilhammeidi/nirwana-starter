@@ -95,12 +95,12 @@
                     <i class="material-icons left">filter_list</i>Filter
 
                   </button>
-                  <div class="toggle-btn-group me-4 show-sm-up">
-                    <button class="btn btn-outlined btn-small primary" id="grid_toggle" type="button"><i class="material-icons">grid_on</i></button>
-                    <button class="btn btn-outlined btn-small primary" id="list_toggle" type="button"><i class="material-icons">view_list</i></button>
+                  <div class="toggle-btn-group me-4 show-sm-up" id="switch_view">
+                    <button class="btn btn-outlined btn-small primary active" type="button" data-value="grid"><i class="material-icons">grid_on</i></button>
+                    <button class="btn btn-outlined btn-small primary" type="button" data-value="list"><i class="material-icons">view_list</i></button>
                   </div>
                   <div class="input-field">
-                    <select class="select">
+                    <select class="select" id="sort_by">
                       <option value="" disabled="" selected="">Sort By:</option>
                       <option value="title-asc">Title A to Z</option>
                       <option value="title-desc">Title Z to A</option>
