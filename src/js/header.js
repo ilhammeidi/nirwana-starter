@@ -32,7 +32,26 @@ $(document).ready(function(){
   // initial dropdown
   $('.dropdown-trigger').dropdown({
     closeOnClick: false,
-    alignment: "left"
+    alignment: 'left'
+  });
+
+  $('.droplist-trigger-hover').dropdown({
+    closeOnClick: false,
+    alignment: 'left',
+    hover: true,
+    coverTrigger: false,
+  });
+
+  $('.droplist-trigger-hover-child').dropdown({
+    closeOnClick: false,
+    alignment: 'right',
+    hover: true,
+    onOpenStart: function(elem) {
+      var sibling = $(elem).parent().siblings().find('.droplist-trigger-hover-child');
+      for(var i=0; i<sibling.length; i++) {
+        M.Dropdown.getInstance(sibling[i]).close();
+      }
+    }
   });
 
   // Initial sidenav for mobile menu

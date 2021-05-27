@@ -147,6 +147,12 @@ $flag: '../images/flag-logo.png';
       @include palette-text-primary;
     }
   }
+  .dropdown-content {
+    overflow: visible !important;
+    .child-menu {
+      left: -100%
+    }
+  }
 }
 
 .user-menu {
