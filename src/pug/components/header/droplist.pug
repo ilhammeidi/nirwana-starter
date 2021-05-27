@@ -2,6 +2,7 @@
 include mobile-menu.pug
 header.app-bar.header#header
   .container
+    #menu_blank &nbsp;
     .header-content
       nav.nav-menu
         |
@@ -27,7 +28,7 @@ header.app-bar.header#header
               a.btn.btn-flat.droplist-trigger-hover.waves-effect(href='#' data-target='dropdown2') Menu 2
               ul#dropdown2.dropdown-content
                 li
-                  a(href='#!') two
+                  a.droplist-trigger-hover-child(href='#!' data-target='menu_blank') two
                 li
                   a.droplist-trigger-hover-child(href='#!' data-target='dropdown2_1') one &gt;
                   ul#dropdown2_1.dropdown-content.child-menu
@@ -39,6 +40,8 @@ header.app-bar.header#header
                       a(href='#!') three
                     li
                       a(href='#!') four
+                li
+                  a.droplist-trigger-hover-child(href='#!' data-target='menu_blank') two x x
                 li
                   a(href='#!') three
                 li

@@ -85,6 +85,7 @@
           </div>
           <header class="app-bar header" id="header">
             <div class="container">
+              <div id="menu_blank">&nbsp;</div>
               <div class="header-content">
                 <nav class="nav-menu">
                   <button class="btn-icon waves-effect sidenav-trigger show-md-down" id="mobile_menu" type="button"><i class="material-icons">menu</i></button>
@@ -95,7 +96,7 @@
                     <ul>
                       <li><a class="btn btn-flat droplist-trigger-hover waves-effect" href="#" data-target="dropdown2">Menu 2</a>
                         <ul class="dropdown-content" id="dropdown2">
-                          <li><a href="#!">two</a></li>
+                          <li><a class="droplist-trigger-hover-child" href="#!" data-target="menu_blank">two</a></li>
                           <li><a class="droplist-trigger-hover-child" href="#!" data-target="dropdown2_1">one &gt;</a>
                             <ul class="dropdown-content child-menu" id="dropdown2_1">
                               <li><a href="#!">one</a></li>
@@ -104,6 +105,7 @@
                               <li><a href="#!">four</a></li>
                             </ul>
                           </li>
+                          <li><a class="droplist-trigger-hover-child" href="#!" data-target="menu_blank">two x x</a></li>
                           <li><a href="#!">three</a></li>
                           <li><a class="droplist-trigger-hover-child" href="#!" data-target="dropdown2_2">one &gt;</a>
                             <ul class="dropdown-content child-menu" id="dropdown2_2">
