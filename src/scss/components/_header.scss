@@ -155,12 +155,6 @@ $flag: '../images/flag-logo.png';
   }
 }
 
-.user-menu {
-  & > button {
-    margin: 0 $spacing1;
-  }
-}
-
 .lang-menu {
   .flag {
     margin: 0;
@@ -252,7 +246,90 @@ $flag: '../images/flag-logo.png';
   text-transform: capitalize
 }
 
-.dropdown-content {
+.dropdown-content.setting {
   width: 200px !important;
   border-radius: 12px;
+}
+
+
+/* Top Multi Lv Menu */
+
+.menu-list {
+  text-transform: capitalize;
+  font-size: 14px;
+}
+
+.submenu-hover {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  display: none;
+  background: none;
+}
+
+.parent-hover {
+  position: relative;
+  &:hover {
+    > .submenu-hover {
+      display: block;
+    }
+  }
+}
+
+.rounded-menu {
+  border-radius: 10px;
+}
+
+/* Top Mega Menu */
+.mega-menu-root {
+  transform: scaleX(1) scaleY(1) !important;
+  &.dropdown-content {
+    overflow: visible;
+    width: 100% !important;
+    left: 0 !important;
+  }
+}
+
+.mega-menu {
+  @include palette-background-paper;
+  position: relative;
+  margin-top: 20px;
+  box-shadow: none;
+  border-radius: 0;
+  max-height: 480px;
+  overflow: auto;
+}
+
+.thumb-menu {
+  width: 200px;
+  height: 78px;
+  border-radius: $rounded-small;
+  margin: spacing(0, 1, 2)
+}
+
+.title-mega {
+  text-transform: uppercase;
+  font-weight: $font-bold;
+  font-size: 11px;
+}
+
+.main-menu, .multi-menu {
+  flex: 1;
+  .btn {
+    text-transform: capitalize;
+  }
+}
+
+.main-menu {
+  .btn {
+    margin: spacing(0, 1);
+    padding: $spacing1;
+  }
+}
+
+.multi-menu {
+  .btn {
+    margin: spacing(0, 0.5);
+    padding: $spacing1;
+  }
 }

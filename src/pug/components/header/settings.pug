@@ -10,7 +10,7 @@ mixin settings(invert)
         i.icon.material-icons#setting_icon(
           class=invert && "invert"
         ) settings
-      .dropdown-content#dropdown_config
+      .dropdown-content.setting#dropdown_config
         ul.collection.with-header
           li.collection-header #{$t.starter.header_theme}
           li.collection-item.no-hover.pl-4

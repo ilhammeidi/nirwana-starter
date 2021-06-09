@@ -1,7 +1,7 @@
 {
 	"name": "starter-project",
 	"version": "1.0.0",
-	"description": "Luxi HTML5 Starter Project",
+	"description": "nirwana HTML5 Starter Project",
 	"keywords": [
 		"starter kit",
 		"empty project",
@@ -9,7 +9,7 @@
 		"kick start",
 		"boilerplate"
 	],
-	"author": "Luxi Theme",
+	"author": "nirwana Theme",
 	"license": "Envato",
 	"private": true,
 	"dependencies": {

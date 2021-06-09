@@ -26,13 +26,13 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"><!-- Facebook-->
-  <meta property="author" content="luxi">
+  <meta property="author" content="nirwana">
   <meta property="og:site_name" content="alexstrap.ux-maestro.com">
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website"><!-- Twitter-->
-  <meta property="twitter:site" content="luxi.ux-maestro.com">
-  <meta property="twitter:domain" content="luxi.ux-maestro.com">
-  <meta property="twitter:creator" content="luxi">
+  <meta property="twitter:site" content="nirwana.ux-maestro.com">
+  <meta property="twitter:domain" content="nirwana.ux-maestro.com">
+  <meta property="twitter:creator" content="nirwana">
   <meta property="twitter:card" content="summary">
   <meta property="twitter:image:src" content="./assets/images/logo.png">
   <meta property="og:url" content="nirwana.indisains.com">
@@ -84,8 +84,8 @@
             </ul>
           </div>
           <header class="app-bar header" id="header">
+            <div id="container_menu">&nbsp;</div>
             <div class="container">
-              <div id="menu_blank">&nbsp;</div>
               <div class="header-content">
                 <nav class="nav-menu">
                   <button class="btn-icon waves-effect sidenav-trigger show-md-down" id="mobile_menu" type="button"><i class="material-icons">menu</i></button>
@@ -93,76 +93,548 @@
                     <a href="#home"><img src="./assets/images/logo.png" alt="logo"></a>
                   </div>
                   <div class="scrollactive-nav show-lg-up">
-                    <ul>
-                      <li><a class="btn btn-flat droplist-trigger-hover waves-effect" href="#" data-target="dropdown2">Menu 2</a>
-                        <ul class="dropdown-content" id="dropdown2">
-                          <li><a class="droplist-trigger-hover-child" href="#!" data-target="menu_blank">two</a></li>
-                          <li><a class="droplist-trigger-hover-child" href="#!" data-target="dropdown2_1">one &gt;</a>
-                            <ul class="dropdown-content child-menu" id="dropdown2_1">
-                              <li><a href="#!">one</a></li>
-                              <li><a href="#!">two</a></li>
-                              <li><a href="#!">three</a></li>
-                              <li><a href="#!">four</a></li>
-                            </ul>
-                          </li>
-                          <li><a class="droplist-trigger-hover-child" href="#!" data-target="menu_blank">two x x</a></li>
-                          <li><a href="#!">three</a></li>
-                          <li><a class="droplist-trigger-hover-child" href="#!" data-target="dropdown2_2">one &gt;</a>
-                            <ul class="dropdown-content child-menu" id="dropdown2_2">
-                              <li><a href="#!">one</a></li>
-                              <li><a class="droplist-trigger-hover-child" href="#!" data-target="dropdown2_2_1">two &gt;</a>
-                                <ul class="dropdown-content child-menu" id="dropdown2_2_1">
-                                  <li><a href="#!">one</a></li>
-                                  <li><a href="#!">two</a></li>
-                                  <li><a href="#!">three</a></li>
-                                  <li><a href="#!">four</a></li>
-                                </ul>
-                              </li>
-                              <li><a class="droplist-trigger-hover-child" href="#!" data-target="dropdown2_2_2">three &gt;</a>
-                                <ul class="dropdown-content child-menu" id="dropdown2_2_2">
-                                  <li><a href="#!">one</a></li>
-                                  <li><a href="#!">two</a></li>
-                                  <li><a href="#!">three</a></li>
-                                  <li><a href="#!">four</a></li>
-                                </ul>
-                              </li>
-                              <li><a href="#!">four</a></li>
-                            </ul>
-                          </li>
-                          <li><a href="#!">four</a></li>
-                        </ul>
-                      </li>
-                      <li><a class="btn btn-flat droplist-trigger-hover waves-effect" href="#" data-target="dropdown1">Menu 1</a>
-                        <ul class="dropdown-content" id="dropdown1">
-                          <li><a href="#!">two</a></li>
-                          <li><a class="droplist-trigger-hover-child" href="#!" data-target="dropdown1_1">one &gt;</a>
-                            <ul class="dropdown-content child-menu" id="dropdown1_1">
-                              <li><a href="#!">one</a></li>
-                              <li><a href="#!">two</a></li>
-                              <li><a href="#!">three</a></li>
-                              <li><a class="droplist-trigger-hover-child" href="#!" data-target="dropdown1_1_1">four &gt;</a>
-                                <ul class="dropdown-content child-menu" id="dropdown1_1_1">
-                                  <li><a href="#!">one</a></li>
-                                  <li><a href="#!">two</a></li>
-                                  <li><a href="#!">three</a></li>
-                                  <li><a href="#!">four</a></li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </li>
-                          <li><a href="#!">three</a></li>
-                          <li><a class="droplist-trigger-hover-child" href="#!" data-target="dropdown1_2">one &gt;</a>
-                            <ul class="dropdown-content child-menu" id="dropdown1_2">
-                              <li><a href="#!">one</a></li>
-                              <li><a href="#!">two</a></li>
-                              <li><a href="#!">three</a></li>
-                              <li><a href="#!">four</a></li>
-                            </ul>
-                          </li>
-                          <li><a href="#!">four</a></li>
-                        </ul>
-                      </li>
-                    </ul>
+                    <div class="multi-menu">
+                      <ul>
+                        <li>
+                          <a class="btn btn-flat megamenu-trigger-click waves-effect" href="#!" data-target="first_menu">First Menu
+
+                            <i class="material-icons right">keyboard_arrow_down</i>
+                          </a>
+                          <div class="mega-menu-root dropdown-content" id="first_menu">
+                            <div class="mega-menu">
+                              <div class="container-md">
+                                <div class="row">
+                                  <div class="col-sm-3">
+                                    <div class="title-mega">Eu Rhoncus Odio</div>
+                                    <img class="thumb-menu" src="https://via.placeholder.com/675x900/e1ad92/fff" alt="thumbnail" />
+                                    <div class="collection"><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Vivamus Condimentum</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Lorem</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Eu Rhoncus Odio</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Praesent Tristique</div>
+                                      </a></div>
+                                  </div>
+                                  <div class="col-sm-3">
+                                    <div class="title-mega">In Lorem</div>
+                                    <img class="thumb-menu" src="https://via.placeholder.com/967x725/ea6d6d/fff" alt="thumbnail" />
+                                    <div class="collection"><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Vivamus Condimentum</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Lorem</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Eu Rhoncus Odio</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Praesent Tristique</div>
+                                      </a></div>
+                                  </div>
+                                  <div class="col-sm-3">
+                                    <div class="title-mega">Eu Rhoncus Odio</div>
+                                    <img class="thumb-menu" src="https://via.placeholder.com/1280x849/ea6db7/fff" alt="thumbnail" />
+                                    <div class="collection"><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Vivamus Condimentum</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Lorem</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Eu Rhoncus Odio</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Praesent Tristique</div>
+                                      </a></div>
+                                  </div>
+                                  <div class="col-sm-3">
+                                    <div class="title-mega">Praesent Tristique</div>
+                                    <img class="thumb-menu" src="https://via.placeholder.com/967x725/bb6dea/fff" alt="thumbnail" />
+                                    <div class="collection"><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Vivamus Condimentum</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Lorem</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Eu Rhoncus Odio</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Praesent Tristique</div>
+                                      </a></div>
+                                  </div>
+                                  <div class="col-sm-3">
+                                    <div class="title-mega">Eu Rhoncus Odio</div>
+                                    <img class="thumb-menu" src="https://via.placeholder.com/1048x701/6d6fea/fff" alt="thumbnail" />
+                                    <div class="collection"><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Vivamus Condimentum</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Lorem</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Eu Rhoncus Odio</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Praesent Tristique</div>
+                                      </a></div>
+                                  </div>
+                                  <div class="col-sm-3">
+                                    <div class="title-mega">In Lorem</div>
+                                    <img class="thumb-menu" src="https://via.placeholder.com/1050x700/6dc0ea/fff" alt="thumbnail" />
+                                    <div class="collection"><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Vivamus Condimentum</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Lorem</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Eu Rhoncus Odio</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Praesent Tristique</div>
+                                      </a></div>
+                                  </div>
+                                  <div class="col-sm-3">
+                                    <div class="title-mega">Eu Rhoncus Odio</div>
+                                    <img class="thumb-menu" src="https://via.placeholder.com/970x725/6deaa6/fff" alt="thumbnail" />
+                                    <div class="collection"><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Vivamus Condimentum</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Lorem</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Eu Rhoncus Odio</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Praesent Tristique</div>
+                                      </a></div>
+                                  </div>
+                                  <div class="col-sm-3">
+                                    <div class="title-mega">Praesent Tristique</div>
+                                    <img class="thumb-menu" src="https://via.placeholder.com/1051x700/b8de27/fff" alt="thumbnail" />
+                                    <div class="collection"><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Vivamus Condimentum</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Lorem</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Eu Rhoncus Odio</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Praesent Tristique</div>
+                                      </a></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <a class="btn btn-flat megamenu-trigger-click waves-effect" href="#!" data-target="second_menu">Second Menu
+
+                            <i class="material-icons right">keyboard_arrow_down</i>
+                          </a>
+                          <div class="mega-menu-root dropdown-content" id="second_menu">
+                            <div class="mega-menu">
+                              <div class="container-md">
+                                <div class="row">
+                                  <div class="col-sm-3">
+                                    <div class="title-mega">Eu Rhoncus Odio</div>
+                                    <img class="thumb-menu" src="https://via.placeholder.com/1051x701/de9f27/fff" alt="thumbnail" />
+                                    <div class="collection"><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Vivamus Condimentum</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Lorem</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Eu Rhoncus Odio</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Praesent Tristique</div>
+                                      </a></div>
+                                  </div>
+                                  <div class="col-sm-3">
+                                    <div class="title-mega">In Lorem</div>
+                                    <img class="thumb-menu" src="https://via.placeholder.com/1050x700/ef4545/fff" alt="thumbnail" />
+                                    <div class="collection"><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Vivamus Condimentum</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Lorem</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Eu Rhoncus Odio</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Praesent Tristique</div>
+                                      </a></div>
+                                  </div>
+                                  <div class="col-sm-3">
+                                    <div class="title-mega">Eu Rhoncus Odio</div>
+                                    <img class="thumb-menu" src="https://via.placeholder.com/1050x700/ffc4c4/757575" alt="thumbnail" />
+                                    <div class="collection"><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Vivamus Condimentum</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Lorem</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Eu Rhoncus Odio</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Praesent Tristique</div>
+                                      </a></div>
+                                  </div>
+                                  <div class="col-sm-3">
+                                    <div class="title-mega">Praesent Tristique</div>
+                                    <img class="thumb-menu" src="https://via.placeholder.com/675x900/e1ad92/fff" alt="thumbnail" />
+                                    <div class="collection"><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Vivamus Condimentum</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Lorem</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Eu Rhoncus Odio</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Praesent Tristique</div>
+                                      </a></div>
+                                  </div>
+                                  <div class="col-sm-3">
+                                    <div class="title-mega">Eu Rhoncus Odio</div>
+                                    <img class="thumb-menu" src="https://via.placeholder.com/967x725/ea6d6d/fff" alt="thumbnail" />
+                                    <div class="collection"><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Vivamus Condimentum</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Lorem</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Eu Rhoncus Odio</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Praesent Tristique</div>
+                                      </a></div>
+                                  </div>
+                                  <div class="col-sm-3">
+                                    <div class="title-mega">In Lorem</div>
+                                    <img class="thumb-menu" src="https://via.placeholder.com/1280x849/ea6db7/fff" alt="thumbnail" />
+                                    <div class="collection"><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Vivamus Condimentum</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Lorem</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Eu Rhoncus Odio</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Praesent Tristique</div>
+                                      </a></div>
+                                  </div>
+                                  <div class="col-sm-3">
+                                    <div class="title-mega">Eu Rhoncus Odio</div>
+                                    <img class="thumb-menu" src="https://via.placeholder.com/967x725/bb6dea/fff" alt="thumbnail" />
+                                    <div class="collection"><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Vivamus Condimentum</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Lorem</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Eu Rhoncus Odio</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Praesent Tristique</div>
+                                      </a></div>
+                                  </div>
+                                  <div class="col-sm-3">
+                                    <div class="title-mega">Praesent Tristique</div>
+                                    <img class="thumb-menu" src="https://via.placeholder.com/1048x701/6d6fea/fff" alt="thumbnail" />
+                                    <div class="collection"><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Vivamus Condimentum</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Lorem</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Eu Rhoncus Odio</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Praesent Tristique</div>
+                                      </a></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <a class="btn btn-flat megamenu-trigger-click waves-effect" href="#!" data-target="third_menu">Third Menu
+
+                            <i class="material-icons right">keyboard_arrow_down</i>
+                          </a>
+                          <div class="mega-menu-root dropdown-content" id="third_menu">
+                            <div class="mega-menu">
+                              <div class="container-md">
+                                <div class="row">
+                                  <div class="col-sm-3">
+                                    <div class="title-mega">Eu Rhoncus Odio</div>
+                                    <img class="thumb-menu" src="https://via.placeholder.com/1050x700/6dc0ea/fff" alt="thumbnail" />
+                                    <div class="collection"><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Vivamus Condimentum</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Lorem</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Eu Rhoncus Odio</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Praesent Tristique</div>
+                                      </a></div>
+                                  </div>
+                                  <div class="col-sm-3">
+                                    <div class="title-mega">In Lorem</div>
+                                    <img class="thumb-menu" src="https://via.placeholder.com/970x725/6deaa6/fff" alt="thumbnail" />
+                                    <div class="collection"><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Vivamus Condimentum</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Lorem</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Eu Rhoncus Odio</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Praesent Tristique</div>
+                                      </a></div>
+                                  </div>
+                                  <div class="col-sm-3">
+                                    <div class="title-mega">Eu Rhoncus Odio</div>
+                                    <img class="thumb-menu" src="https://via.placeholder.com/1051x700/b8de27/fff" alt="thumbnail" />
+                                    <div class="collection"><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Vivamus Condimentum</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Lorem</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Eu Rhoncus Odio</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Praesent Tristique</div>
+                                      </a></div>
+                                  </div>
+                                  <div class="col-sm-3">
+                                    <div class="title-mega">Praesent Tristique</div>
+                                    <img class="thumb-menu" src="https://via.placeholder.com/1051x701/de9f27/fff" alt="thumbnail" />
+                                    <div class="collection"><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Vivamus Condimentum</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Lorem</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Eu Rhoncus Odio</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Praesent Tristique</div>
+                                      </a></div>
+                                  </div>
+                                  <div class="col-sm-3">
+                                    <div class="title-mega">Eu Rhoncus Odio</div>
+                                    <img class="thumb-menu" src="https://via.placeholder.com/1050x700/ef4545/fff" alt="thumbnail" />
+                                    <div class="collection"><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Vivamus Condimentum</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Lorem</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Eu Rhoncus Odio</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Praesent Tristique</div>
+                                      </a></div>
+                                  </div>
+                                  <div class="col-sm-3">
+                                    <div class="title-mega">In Lorem</div>
+                                    <img class="thumb-menu" src="https://via.placeholder.com/1050x700/ffc4c4/757575" alt="thumbnail" />
+                                    <div class="collection"><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Vivamus Condimentum</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Lorem</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Eu Rhoncus Odio</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Praesent Tristique</div>
+                                      </a></div>
+                                  </div>
+                                  <div class="col-sm-3">
+                                    <div class="title-mega">Eu Rhoncus Odio</div>
+                                    <img class="thumb-menu" src="https://via.placeholder.com/675x900/e1ad92/fff" alt="thumbnail" />
+                                    <div class="collection"><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Vivamus Condimentum</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Lorem</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Eu Rhoncus Odio</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Praesent Tristique</div>
+                                      </a></div>
+                                  </div>
+                                  <div class="col-sm-3">
+                                    <div class="title-mega">Praesent Tristique</div>
+                                    <img class="thumb-menu" src="https://via.placeholder.com/967x725/ea6d6d/fff" alt="thumbnail" />
+                                    <div class="collection"><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Vivamus Condimentum</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Lorem</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Eu Rhoncus Odio</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Praesent Tristique</div>
+                                      </a></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <a class="btn btn-flat megamenu-trigger-click waves-effect" href="#!" data-target="fourth_menu">Fourth Menu
+
+                            <i class="material-icons right">keyboard_arrow_down</i>
+                          </a>
+                          <div class="mega-menu-root dropdown-content" id="fourth_menu">
+                            <div class="mega-menu">
+                              <div class="container-md">
+                                <div class="row">
+                                  <div class="col-sm-3">
+                                    <div class="title-mega">Eu Rhoncus Odio</div>
+                                    <img class="thumb-menu" src="https://via.placeholder.com/675x900/e1ad92/fff" alt="thumbnail" />
+                                    <div class="collection"><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Vivamus Condimentum</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Lorem</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Eu Rhoncus Odio</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Praesent Tristique</div>
+                                      </a></div>
+                                  </div>
+                                  <div class="col-sm-3">
+                                    <div class="title-mega">In Lorem</div>
+                                    <img class="thumb-menu" src="https://via.placeholder.com/967x725/ea6d6d/fff" alt="thumbnail" />
+                                    <div class="collection"><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Vivamus Condimentum</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Lorem</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Eu Rhoncus Odio</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Praesent Tristique</div>
+                                      </a></div>
+                                  </div>
+                                  <div class="col-sm-3">
+                                    <div class="title-mega">Eu Rhoncus Odio</div>
+                                    <img class="thumb-menu" src="https://via.placeholder.com/1280x849/ea6db7/fff" alt="thumbnail" />
+                                    <div class="collection"><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Vivamus Condimentum</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Lorem</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Eu Rhoncus Odio</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Praesent Tristique</div>
+                                      </a></div>
+                                  </div>
+                                  <div class="col-sm-3">
+                                    <div class="title-mega">Praesent Tristique</div>
+                                    <img class="thumb-menu" src="https://via.placeholder.com/967x725/bb6dea/fff" alt="thumbnail" />
+                                    <div class="collection"><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Vivamus Condimentum</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Lorem</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Eu Rhoncus Odio</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Praesent Tristique</div>
+                                      </a></div>
+                                  </div>
+                                  <div class="col-sm-3">
+                                    <div class="title-mega">Eu Rhoncus Odio</div>
+                                    <img class="thumb-menu" src="https://via.placeholder.com/1048x701/6d6fea/fff" alt="thumbnail" />
+                                    <div class="collection"><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Vivamus Condimentum</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Lorem</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Eu Rhoncus Odio</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Praesent Tristique</div>
+                                      </a></div>
+                                  </div>
+                                  <div class="col-sm-3">
+                                    <div class="title-mega">In Lorem</div>
+                                    <img class="thumb-menu" src="https://via.placeholder.com/1050x700/6dc0ea/fff" alt="thumbnail" />
+                                    <div class="collection"><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Vivamus Condimentum</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Lorem</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Eu Rhoncus Odio</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Praesent Tristique</div>
+                                      </a></div>
+                                  </div>
+                                  <div class="col-sm-3">
+                                    <div class="title-mega">Eu Rhoncus Odio</div>
+                                    <img class="thumb-menu" src="https://via.placeholder.com/970x725/6deaa6/fff" alt="thumbnail" />
+                                    <div class="collection"><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Vivamus Condimentum</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Lorem</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Eu Rhoncus Odio</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Praesent Tristique</div>
+                                      </a></div>
+                                  </div>
+                                  <div class="col-sm-3">
+                                    <div class="title-mega">Praesent Tristique</div>
+                                    <img class="thumb-menu" src="https://via.placeholder.com/1051x700/b8de27/fff" alt="thumbnail" />
+                                    <div class="collection"><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Vivamus Condimentum</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Lorem</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Eu Rhoncus Odio</div>
+                                      </a><a class="collection-item waves-effect" href="#">
+                                        <div class="menu-list">Praesent Tristique</div>
+                                      </a></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <a class="btn btn-flat megamenu-trigger-click waves-effect" href="#!" data-target="sample_pages">Sample Pages
+
+                            <i class="material-icons right">keyboard_arrow_down</i>
+                          </a>
+                          <div class="mega-menu-root dropdown-content" id="sample_pages">
+                            <div class="mega-menu">
+                              <div class="container-md">
+                                <div class="row">
+                                  <div class="col-sm-3">
+                                    <div class="title-mega">company</div>
+                                    <img class="thumb-menu" src="http://via.placeholder.com/200x78/ffce00/767676/" alt="thumbnail" />
+                                    <div class="collection"><a class="collection-item waves-effect" href="/about">
+                                        <div class="menu-list">about</div>
+                                      </a><a class="collection-item waves-effect" href="/about/team">
+                                        <div class="menu-list">team</div>
+                                      </a><a class="collection-item waves-effect" href="/blog">
+                                        <div class="menu-list">blog</div>
+                                      </a><a class="collection-item waves-effect" href="/blog/detail-blog">
+                                        <div class="menu-list">blog detail</div>
+                                      </a></div>
+                                  </div>
+                                  <div class="col-sm-3">
+                                    <div class="title-mega">Form</div>
+                                    <img class="thumb-menu" src="http://via.placeholder.com/200x78/fcbdff/767676/" alt="thumbnail" />
+                                    <div class="collection"><a class="collection-item waves-effect" href="/login">
+                                        <div class="menu-list">login</div>
+                                      </a><a class="collection-item waves-effect" href="/register">
+                                        <div class="menu-list">register</div>
+                                      </a><a class="collection-item waves-effect" href="/contact">
+                                        <div class="menu-list">contact</div>
+                                      </a><a class="collection-item waves-effect" href="/contact/with-map">
+                                        <div class="menu-list">contact map</div>
+                                      </a></div>
+                                  </div>
+                                  <div class="col-sm-3">
+                                    <div class="title-mega">items</div>
+                                    <img class="thumb-menu" src="http://via.placeholder.com/200x78/2f688b/FFFFFF/" alt="thumbnail" />
+                                    <div class="collection"><a class="collection-item waves-effect" href="/collection">
+                                        <div class="menu-list">card</div>
+                                      </a><a class="collection-item waves-effect" href="/collection/products">
+                                        <div class="menu-list">product</div>
+                                      </a><a class="collection-item waves-effect" href="/collection/detail-product">
+                                        <div class="menu-list">product detail</div>
+                                      </a></div>
+                                  </div>
+                                  <div class="col-sm-3">
+                                    <div class="title-mega">utilities</div>
+                                    <img class="thumb-menu" src="http://via.placeholder.com/200x78/ceff00/767676/" alt="thumbnail" />
+                                    <div class="collection"><a class="collection-item waves-effect" href="/utils/pricing">
+                                        <div class="menu-list">pricing</div>
+                                      </a><a class="collection-item waves-effect" href="/utils/faq">
+                                        <div class="menu-list">faq</div>
+                                      </a><a class="collection-item waves-effect" href="/utils/maintenance">
+                                        <div class="menu-list">maintenance</div>
+                                      </a><a class="collection-item waves-effect" href="/utils/coming-soon">
+                                        <div class="menu-list">coming soon</div>
+                                      </a><a class="collection-item waves-effect" href="/error">
+                                        <div class="menu-list">error</div>
+                                      </a></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </nav>
                 <nav class="user-menu">
@@ -171,7 +643,7 @@
                   <span class="spacer vertical-divider show-lg-up"></span>
                   <div class="menu-setting">
                     <div class="setting"><button class="btn btn-icon waves-effect btn-small m-2 dropdown-trigger" data-target="dropdown_config" data-align="left" type="button"><i class="icon material-icons invert" id="setting_icon">settings</i></button>
-                      <div class="dropdown-content" id="dropdown_config">
+                      <div class="dropdown-content setting" id="dropdown_config">
                         <ul class="collection with-header">
                           <li class="collection-header">theme mode</li>
                           <li class="collection-item no-hover pl-4">

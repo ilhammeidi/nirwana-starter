@@ -1,0 +1,39 @@
+include ../data/mega.pug
+
+.multi-menu
+  ul
+    each item in mega
+      if item.child
+        li
+          |
+          |
+          a.btn.btn-flat.megamenu-trigger-click.waves-effect(href='#!' data-target=item.id)
+            | #{item.name}
+            |
+            |
+            i.material-icons.right keyboard_arrow_down
+            |
+            |
+          |
+          |
+          .mega-menu-root.dropdown-content(id=item.id)
+            .mega-menu
+              .container-md
+                .row
+                  each subitem in item.child
+                    .col-sm-3
+                      .title-mega #{subitem.name}
+                      |
+                      |
+                      img.thumb-menu(src=subitem.thumb alt="thumbnail")/
+                      |
+                      |
+                      .collection
+                        each childitem in subitem.child
+                          a.collection-item.waves-effect(href=childitem.link)
+                            .menu-list #{childitem.name}
+      else
+        li
+          a.btn.btn-flat.waves-effect(href='#!')
+            | #{item.name}
+          
