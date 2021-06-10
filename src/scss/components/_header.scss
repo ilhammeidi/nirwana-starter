@@ -221,27 +221,6 @@ $flag: '../images/flag-logo.png';
   }
 }
 
-.mobile-nav {
-  width: 240px;
-  @include palette-background-default;
-  padding: spacing(10, 2, 4);
-  z-index: 1100;
-  ul.collection {
-    border: none;
-    li.collection-item {
-      border: none;
-      background: none;
-      padding: 0;
-      a {
-        font-size: 13px;
-        padding: $spacing2;
-        height: auto;
-        line-height: normal;
-      }
-    }
-  }
-}
-
 .menu-list {
   text-transform: capitalize
 }
