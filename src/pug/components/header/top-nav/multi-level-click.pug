@@ -7,7 +7,7 @@ mixin submenu(menuItems, target_id)
         li
           |
           |
-          a.droplist-trigger-click-child(href='#!' data-target=item.id)
+          a.menu-list.droplist-trigger-click-child(href='#!' data-target=item.id)
             | #{item.name}
             |
             |
@@ -19,11 +19,11 @@ mixin submenu(menuItems, target_id)
           +submenu(item.child, item.id)
       else
         li
-          a(href='#!')
+          a.menu-list(href='#!')
             | #{item.name}
 
 .multi-menu
-  ul
+  ul.multi-menu-root
     each item in multiple
       if item.child
         li
@@ -44,7 +44,7 @@ mixin submenu(menuItems, target_id)
                 li
                   |
                   |
-                  a.droplist-trigger-click-child(href='#!' data-target=subitem.id)
+                  a.menu-list.droplist-trigger-click-child(href='#!' data-target=subitem.id)
                     | #{subitem.name}
                     |
                     |
@@ -58,7 +58,7 @@ mixin submenu(menuItems, target_id)
                 li
                   |
                   |
-                  a(href='#!')
+                  a.menu-list(href='#!')
                     | #{subitem.name}
                   |
                   |

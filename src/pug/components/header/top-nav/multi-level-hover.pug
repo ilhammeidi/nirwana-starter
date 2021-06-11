@@ -7,7 +7,7 @@ mixin submenu(menuItems, target_id)
         li
           |
           |
-          a.droplist-trigger-hover-child(href='#!' data-target=item.id)
+          a.menu-list.droplist-trigger-hover-child(href='#!' data-target=item.id)
             | #{item.name}
             |
             |
@@ -19,17 +19,17 @@ mixin submenu(menuItems, target_id)
           +submenu(item.child, item.id)
       else
         li
-          a.droplist-trigger-hover-child(href='#!' data-target='menu_blank')
+          a.menu-list.droplist-trigger-hover-child(href='#!' data-target='menu_blank')
             | #{item.name}
 
 .multi-menu
-  ul
+  ul.multi-menu-root
     each item in multiple
       if item.child
         li
           |
           |
-          a.btn.btn-flat.droplist-trigger-hover.waves-effect(href='#!' data-target=item.id)
+          a.menu-list.btn.btn-flat.droplist-trigger-hover.waves-effect(href='#!' data-target=item.id)
             | #{item.name}
             |
             |
@@ -44,7 +44,7 @@ mixin submenu(menuItems, target_id)
                 li
                   |
                   |
-                  a.droplist-trigger-hover-child(href='#!' data-target=subitem.id)
+                  a.menu-list.droplist-trigger-hover-child(href='#!' data-target=subitem.id)
                     | #{subitem.name}
                     |
                     |
@@ -58,7 +58,7 @@ mixin submenu(menuItems, target_id)
                 li
                   |
                   |
-                  a.droplist-trigger-hover-child(href='#!' data-target='menu_blank')
+                  a.menu-list.droplist-trigger-hover-child(href='#!' data-target='menu_blank')
                     | #{subitem.name}
                   |
                   |

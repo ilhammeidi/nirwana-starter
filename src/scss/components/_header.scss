@@ -39,6 +39,10 @@ $flag: '../images/flag-logo.png';
   margin-top: 0;
 }
 
+#menu_blank {
+  height: 0;
+}
+
 .header {
   @include palette-text-primary;
   @include palette-background-paper;
@@ -142,13 +146,25 @@ $flag: '../images/flag-logo.png';
       list-style: none;
       position: relative;
       display: inline-block;
-      padding: 10px 8px;
+      padding: spacing(0, 1);
       height: auto;
       @include palette-text-primary;
     }
   }
   .dropdown-content {
+    @include shade;
+    padding: 4px;
     overflow: visible !important;
+    li {
+      border-radius: $rounded-small;
+      a.menu-list {
+        text-transform: capitalize;
+        font-size: 14px;
+        i {
+          margin: 0
+        }
+      }
+    }
     .child-menu {
       left: -100%
     }
@@ -232,12 +248,6 @@ $flag: '../images/flag-logo.png';
 
 
 /* Top Multi Lv Menu */
-
-.menu-list {
-  text-transform: capitalize;
-  font-size: 14px;
-}
-
 .submenu-hover {
   position: absolute;
   left: 100%;
@@ -263,9 +273,23 @@ $flag: '../images/flag-logo.png';
 .mega-menu-root {
   transform: scaleX(1) scaleY(1) !important;
   &.dropdown-content {
+    position: fixed;
     overflow: visible;
     width: 100% !important;
     left: 0 !important;
+    top: 70px !important;
+    .theme--dark & {
+      box-shadow: 0px 10px 3px 0px rgba(64, 64, 64, 1), 0px 1px 1px 0px rgba(42, 42, 42, 1), 0px 2px 1px -1px rgba(20, 20, 20, 1)
+    }
+    .theme--light & {
+      box-shadow: 0 10px 12px 2px rgba(0, 0, 0, 0.06);
+    }
+  }
+}
+
+.multi-menu-root {
+  .dropdown-content {
+    width: 200px !important;
   }
 }
 
@@ -283,13 +307,14 @@ $flag: '../images/flag-logo.png';
   width: 200px;
   height: 78px;
   border-radius: $rounded-small;
-  margin: spacing(0, 1, 2)
+  margin-bottom: $spacing2
 }
 
 .title-mega {
   text-transform: uppercase;
   font-weight: $font-bold;
   font-size: 11px;
+  padding: spacing(0, 2)
 }
 
 .main-menu, .multi-menu {

@@ -18,20 +18,21 @@ include ../data/mega.pug
           |
           .mega-menu-root.dropdown-content(id=item.id)
             .mega-menu
-              .container-md
+              .container.max-md
                 .row
                   each subitem in item.child
-                    .col-sm-3
+                    .col-sm-3.mb-6
                       .title-mega #{subitem.name}
                       |
                       |
                       img.thumb-menu(src=subitem.thumb alt="thumbnail")/
                       |
                       |
-                      .collection
+                      ul
                         each childitem in subitem.child
-                          a.collection-item.waves-effect(href=childitem.link)
-                            .menu-list #{childitem.name}
+                          li.waves-effect
+                            a.menu-list(href=childitem.link)
+                              | #{childitem.name}
       else
         li
           a.btn.btn-flat.waves-effect(href='#!')

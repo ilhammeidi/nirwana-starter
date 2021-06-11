@@ -9,7 +9,7 @@ body {
 }
 
 // Additional Button Styles
-$btn-radius: 4px !default;
+$btn-radius: 6px !default;
 
 @mixin btn-hover {
   &:before {
@@ -34,7 +34,7 @@ $btn-radius: 4px !default;
   }
 }
 
-@mixin btn-style($border: none, $radius: 4px) {
+@mixin btn-style($border: none, $radius: 6px) {
   text-decoration: none;
   text-align: center;
   letter-spacing: .5px;
@@ -249,6 +249,11 @@ $btn-radius: 4px !default;
     width: 92px;
     height: 92px;
   }
+}
+
+// Container
+.dropdown-content {
+  border-radius: $rounded-small;
 }
 
 // Form
