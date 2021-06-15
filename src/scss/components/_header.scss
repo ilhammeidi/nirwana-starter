@@ -160,6 +160,10 @@ $flag: '../images/flag-logo.png';
       a.menu-list {
         text-transform: capitalize;
         font-size: 14px;
+        &.current {
+          @include use-theme(background, $palette-primary-light, $palette-primary-dark);
+          @include use-theme(color, $palette-primary-dark, $palette-primary-light);
+        }
         i {
           margin: 0
         }
@@ -321,6 +325,9 @@ $flag: '../images/flag-logo.png';
   flex: 1;
   .btn {
     text-transform: capitalize;
+  }
+  .arrow-icon {
+    @include rtl-flip
   }
 }
 

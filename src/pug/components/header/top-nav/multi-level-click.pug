@@ -11,7 +11,7 @@ mixin submenu(menuItems, target_id)
             | #{item.name}
             |
             |
-            i.material-icons.right keyboard_arrow_right
+            i.material-icons.right.arrow-icon keyboard_arrow_right
             |
             |
           |
@@ -19,7 +19,7 @@ mixin submenu(menuItems, target_id)
           +submenu(item.child, item.id)
       else
         li
-          a.menu-list(href='#!')
+          a.menu-list(href=item.link class=item.name === pageName ? 'current' : '')
             | #{item.name}
 
 .multi-menu
@@ -48,7 +48,7 @@ mixin submenu(menuItems, target_id)
                     | #{subitem.name}
                     |
                     |
-                    i.material-icons.right keyboard_arrow_right
+                    i.material-icons.right.arrow-icon keyboard_arrow_right
                     |
                     |
                   |
@@ -58,12 +58,12 @@ mixin submenu(menuItems, target_id)
                 li
                   |
                   |
-                  a.menu-list(href='#!')
+                  a.menu-list(href=subitem.link class=subitem.name === pageName ? 'current' : '')
                     | #{subitem.name}
                   |
                   |
       else
         li
-          a.btn.btn-flat.waves-effect(href='#!')
+          a.btn.btn-flat.waves-effect(href=item.link)
             | #{item.name}
           

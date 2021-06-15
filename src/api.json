@@ -16,20 +16,20 @@
     "starter": {
       "home": "index.html",
       "about": "/about.html",
-      "team": "/about/team.html",
-      "blog": "/blog/index.html",
-      "blogDetail": "/blog/detail-blog.html",
+      "team": "/about-team.html",
+      "blog": "/blog.html",
+      "blogDetail": "/blog-detail.html",
       "login": "/login.html",
       "register": "/register.html",
-      "contact": "/contact/index.html",
-      "contactMap": "/contact/with-map.html",
-      "card": "/collection/index.html",
-      "product": "/collection/products.html",
-      "productDetail": "/collection/detail-product.html",
-      "pricing": "/utils/pricing.html",
-      "faq": "/utils/faq.html",
-      "maintenance": "/utils/maintenance.html",
-      "comingSoon": "/utils/coming-soon.html"
+      "contact": "/contact.html",
+      "contactMap": "/contact-map.html",
+      "card": "/collection.html",
+      "product": "/products.html",
+      "productDetail": "/product-detail.html",
+      "pricing": "/pricing.html",
+      "faq": "/faq.html",
+      "maintenance": "/maintenance.html",
+      "comingSoon": "/coming-soon.html"
     }
   },
   "imgAPI": {

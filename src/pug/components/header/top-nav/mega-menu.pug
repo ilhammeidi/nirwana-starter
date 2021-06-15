@@ -31,10 +31,10 @@ include ../data/mega.pug
                       ul
                         each childitem in subitem.child
                           li.waves-effect
-                            a.menu-list(href=childitem.link)
+                            a.menu-list(href=childitem.link class=childitem.name === pageName ? 'current' : '')
                               | #{childitem.name}
       else
         li
-          a.btn.btn-flat.waves-effect(href='#!')
+          a.btn.btn-flat.waves-effect(href=item.link)
             | #{item.name}
           

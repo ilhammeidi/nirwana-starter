@@ -19,7 +19,11 @@ mixin submenu(menuItems, target_id)
           +submenu(item.child, item.id)
       else
         li
-          a.menu-list.droplist-trigger-hover-child(href='#!' data-target='menu_blank')
+          a.menu-list.droplist-trigger-hover-child(
+            href=item.link
+            data-target='menu_blank'
+            class=item.name === pageName ? 'current' : ''
+          )
             | #{item.name}
 
 .multi-menu
@@ -58,12 +62,16 @@ mixin submenu(menuItems, target_id)
                 li
                   |
                   |
-                  a.menu-list.droplist-trigger-hover-child(href='#!' data-target='menu_blank')
+                  a.menu-list.droplist-trigger-hover-child(
+                    href=subitem.link
+                    data-target='menu_blank'
+                    class=subitem.name === pageName ? 'current' : ''
+                  )
                     | #{subitem.name}
                   |
                   |
       else
         li
-          a.btn.btn-flat.waves-effect(href='#!' data-target='menu_blank')
+          a.btn.btn-flat.waves-effect(href=item.link data-target='menu_blank')
             | #{item.name}
           

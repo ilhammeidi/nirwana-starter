@@ -20,7 +20,10 @@ mixin child-menu(menuItems)
           li.collection-item.side-group-link
             |
             |
-            a.waves-effect.text-truncate.menu-list(href=subitem.link)
+            a.waves-effect.text-truncate.menu-list(
+              href=subitem.link
+              class=subitem.name === pageName ? 'current' : ''
+            )
               | #{subitem.name}
             |
             |
@@ -46,7 +49,10 @@ mixin child-menu(menuItems)
             li.collection-item
               |
               |
-              a.waves-effect.text-truncate.menu-list(href=item.link)
+              a.waves-effect.text-truncate.menu-list(
+                href=item.link
+                class=item.name === pageName ? 'current' : ''
+              )
                 | #{item.name}
               |
               |

@@ -25,18 +25,5 @@ header.app-bar.header#header
           |
         .scrollactive-nav.show-lg-up
           include top-nav/multi-level-click
-      nav.user-menu
-        |
-        |
-        button.btn.btn-flat.waves-effect.show-lg-up(type="button") Login
-        |
-        |
-        button.btn.waves-effect.primary(type="button") Register
-        |
-        |
-        span.spacer.vertical-divider.show-lg-up
-        include ./settings
-        +settings("false")
-|
-|
+      include ./top-nav/user-menu
 // #### END HEADER ####

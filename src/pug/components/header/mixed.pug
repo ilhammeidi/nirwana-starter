@@ -1,5 +1,4 @@
 // #### HEADER ####
-include mobile-menu.pug
 header.app-bar.header#header
   .container
     .header-content
@@ -30,18 +29,5 @@ header.app-bar.header#header
                 a.btn.btn-flat.anchor-link.waves-effect(
                   href='#'+item.name
                 ) #{item.name}
-      nav.user-menu
-        |
-        |
-        button.btn.btn-flat.waves-effect.show-lg-up(type="button") Login
-        |
-        |
-        button.btn.waves-effect.primary(type="button") Register
-        |
-        |
-        span.spacer.vertical-divider.show-lg-up
-        include ./settings
-        +settings("false")
-|
-|
+      include ./top-nav/user-menu
 // #### END HEADER ####
