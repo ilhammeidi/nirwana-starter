@@ -13,11 +13,9 @@ header.app-bar.header#header
         .logo
           |
           |
-          a(href="#home")
-            img(
-              src=assets + brand.starter.img
-              alt="logo"
-            )
+          a(href=link.starter.home)
+            include ../logo.pug
+            +logo('landscape')
           |
           |
         .scrollactive-nav.show-lg-up

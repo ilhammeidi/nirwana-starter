@@ -3,12 +3,13 @@ extends ../layouts/app.pug
 block variables
   - var pageTitle = " Landing Page"
   - var pageName = "product detail"
+  - var headerHome = true
 
 block content
   div
     #home
     .main-wrap
-      include ../components/header/header.pug
+      include ../components/header/main.pug
       main.container-wrap
         section
           .container

@@ -498,8 +498,9 @@ if (typeof Storage !== 'undefined') { // eslint-disable-line
 
 var $header = $('#header'),
     $menu = $('#mobile_menu'),
-    $slideMenu = $('#slide-menu')
-    isOpen = false;
+    $slideMenu = $('#slide-menu'),
+    isOpen = false,
+    isOpenHamburger = false;
 
 $(document).ready(function(){
   // Dark and Light mode config
@@ -585,6 +586,38 @@ $(document).ready(function(){
     }
   });
 
+  // Hamburger menu
+  function openMenu() {
+    $('#main_menu').fadeIn();
+    $header.addClass('open-drawer');
+    $menu.addClass('is-active');
+    $slideMenu.addClass('menu-open');
+  }
+
+  function closeMenu() {
+    $('#main_menu').fadeOut();
+    $header.removeClass('open-drawer');
+    $menu.removeClass('is-active');
+    $slideMenu.removeClass('menu-open');
+  }
+
+  $('#hamburger_menu').click(function() {
+    isOpenHamburger = !isOpenHamburger;
+    if(isOpenHamburger) {
+      openMenu();
+      $(this).addClass('is-active');
+    } else {
+      closeMenu();
+      $(this).removeClass('is-active');
+    }
+  });
+  
+  $('#main_menu a').click(function() {
+    closeMenu();
+    isOpenHamburger = false;
+  })
+
+  // SideNav
   $('.sidenav').sidenav({
     onOpenStart: function() {
       isOpen = true;
@@ -599,7 +632,7 @@ $(document).ready(function(){
       $slideMenu.removeClass('menu-open');
     }
   });
-})
+});
 /**
  * @name Language
  * @function redirect to language specified page

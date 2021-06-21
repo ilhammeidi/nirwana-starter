@@ -2,7 +2,7 @@
 header.app-bar.header#header
   .container
     .header-content
-      nav.nav-menu
+      nav.nav-menu.flex-grow-1
         |
         |
         button.btn-icon.waves-effect.sidenav-trigger.show-md-down(
@@ -18,6 +18,11 @@ header.app-bar.header#header
             +logo('landscape')
           |
           |
-        include ./top-nav/mixed-nav
+        .hide-xs-down.flex-grow-1
+          include ./top-nav/search-field
+          +search-field()
       include ./top-nav/user-menu
+  .hidden-sm-up
+    include ./top-nav/search-field
+    +search-field()
 // #### END HEADER ####

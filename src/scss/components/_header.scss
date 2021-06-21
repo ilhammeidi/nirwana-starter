@@ -64,7 +64,9 @@ $flag: '../images/flag-logo.png';
   &.fixed {
     position: fixed;
     top: 0;
-    @include shadow4;
+    &:not(.open-drawer) {
+      @include shadow4;
+    }
     @include palette-background-paper;
     .vertical-divider {
       min-height: $spacing3;
@@ -78,6 +80,50 @@ $flag: '../images/flag-logo.png';
     nav {
       padding: spacing(1, 0);
     }
+  }
+  .search {
+    position: relative;
+    display: flex;
+    max-width: 600px;
+    align-items: center;
+    @include margin-left($spacing2);
+    @include margin-right($spacing2);
+    @include breakpoints-down(xs) {
+      margin-bottom: $spacing2;
+    }
+    @include breakpoints-up(sm) {
+      flex: 1;
+    }
+    &.short {
+      width: 300px;
+    }
+    .input-field {
+      @include padding-right($spacing2);
+      min-height: 0;
+      margin-bottom: 0;
+      width: 100%;
+      border: 1px solid;
+      border-radius: $rounded-small;
+      @include use-theme(border-color, $light-text-hint, $dark-text-hint);
+      @include palette-background-paper;
+      @include padding-left($spacing5);
+      input {
+        height: auto;
+        padding: spacing(1, 0);
+        max-height: none;
+        display: block;
+        margin: 4px;
+        border: none !important;
+        box-shadow: none !important
+      }
+    }
+  }
+  .search-icon {
+    position: absolute;
+    top: 10px;
+    font-size: 24px;
+    @include left($spacing1);
+    @include palette-text-secondary;
   }
 }
 
@@ -128,7 +174,7 @@ $flag: '../images/flag-logo.png';
   .scrollactive-nav {
     list-style: none;
     display: flex;
-    @include padding-left($spacing5);
+    @include padding-left($spacing2);
     li.current {
       position: relative;
       &:after {
@@ -139,6 +185,15 @@ $flag: '../images/flag-logo.png';
         background: $palette-primary-main;
         bottom: 4px;
         left: 0;
+      }
+    }
+    i.right.icon {
+      margin-left: 0
+    }
+    .multi-menu {
+      .btn {
+        margin: spacing(0, 0.5);
+        padding: $spacing1;
       }
     }
     .btn  {
@@ -233,6 +288,7 @@ $flag: '../images/flag-logo.png';
 
 .mobile-menu {
   @include margin-right($spacing1);
+  padding: spacing(1, 0);
   .bar {
     @include palette-background-text-secondary;
     &:after, &:before {
@@ -338,9 +394,67 @@ $flag: '../images/flag-logo.png';
   }
 }
 
-.multi-menu {
-  .btn {
-    margin: spacing(0, 0.5);
-    padding: $spacing1;
+/* Hamburger Menu */
+#main_menu.paper-nav {
+  @include palette-background-paper;
+  width: 100%;
+  position: fixed;
+  z-index: 9990;
+  height: 100%;
+  display: none;
+  .full-nav {
+    z-index: 90;
+    min-width: 300px;
+    @include breakpoints-down(xs) {
+      width: 100% !important
+    }
+    .menu {
+      padding: spacing(2, 5);
+      margin-top: $spacing8;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      position: absolute;
+      list-style: none;
+      li {
+        text-align: center;
+        .btn-flat {
+          font-size: 24px;
+          @include palette-text-primary;
+          padding: spacing(2.5, 4);
+          height: auto;
+          &:before {
+            content: "";
+            position: absolute;
+            @include left($spacing2 * -1);
+            top: 8px;
+            opacity: 0.2;
+            background: linear-gradient(120deg, $palette-secondary-main, $palette-primary-main);
+            height: 75%;
+            width: 0;
+            border-radius: 0;
+            transition: all 0.2s cubic-bezier(0, 0, 0.14, 0.97);
+          }
+          &:hover {
+            color: $palette-secondary-main;
+            background: none;
+            &:before {
+              width: 125%
+            }
+          }
+        }
+      }
+      &.menu-open {
+        a {
+          animation-name: slide-right;
+          animation-timing-function: ease;
+        }
+      }
+    }
+    .divider-sidebar {
+      background: rgba(255, 255, 255, 0.2);
+      margin: spacing(3, 0)
+    }
   }
 }

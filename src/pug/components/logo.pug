@@ -1,0 +1,8 @@
+mixin logo(type = '')
+  |
+  |
+  span.logo(class=type)
+    img(src=assets + brand.starter.img alt='logo')/
+    | #{type !== 'only' ? brand.starter.name : ''}
+  |
+  |

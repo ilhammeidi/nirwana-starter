@@ -2,7 +2,7 @@
 header.app-bar.header#header
   .container
     .header-content
-      nav.nav-menu
+      nav.nav-menu.flex-grow-1
         |
         |
         button.btn-icon.waves-effect.sidenav-trigger.show-md-down(
@@ -10,7 +10,7 @@ header.app-bar.header#header
           type="button"
         )
           i.material-icons menu
-        .logo
+        .logo.flex-grow-1
           |
           |
           a(href=link.starter.home)
@@ -18,6 +18,13 @@ header.app-bar.header#header
             +logo('landscape')
           |
           |
-        include ./top-nav/mixed-nav
-      include ./top-nav/user-menu
+        nav.user-menu
+          |
+          |
+          a.btn.btn-flat.waves-effect.show-lg-up(type="button" href=basicMenuLink !== undefined ? basicMenuLink : link.starter.login)
+            | #{basicMenuText !== undefined ? basicMenuText : $t.common.login}
+          |
+          |
+          span.spacer.vertical-divider.show-lg-up
+      include ./top-nav/settings
 // #### END HEADER ####

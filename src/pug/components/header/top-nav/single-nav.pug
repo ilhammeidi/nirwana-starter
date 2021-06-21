@@ -1,0 +1,9 @@
+.scrollactive-nav.scrollnav.show-lg-up
+  ul.main-menu
+    each item in menu.starter
+      |
+      |
+      li
+        a.btn.btn-flat.anchor-link.waves-effect(
+          href=headerHome ? '#'+item.name : link.starter.home+'#'+item.name
+        ) #{$t.starter['header_' + item.name]}

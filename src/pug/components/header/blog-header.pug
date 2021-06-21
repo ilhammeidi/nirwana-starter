@@ -1,6 +1,8 @@
 // #### HEADER ####
+include side-nav/multi-mobile.pug
 header.app-bar.header#header
   .container
+    #menu_blank &nbsp;
     .header-content
       nav.nav-menu
         |
@@ -8,6 +10,7 @@ header.app-bar.header#header
         button.btn-icon.waves-effect.sidenav-trigger.show-md-down(
           id="mobile_menu"
           type="button"
+          data-target="slide_menu"
         )
           i.material-icons menu
         .logo
@@ -18,6 +21,15 @@ header.app-bar.header#header
             +logo('landscape')
           |
           |
-        include ./top-nav/mixed-nav
-      include ./top-nav/user-menu
+        .scrollactive-nav.show-lg-up
+          include top-nav/multi-level-click
+      nav
+        .hidden-xs-down
+          include ./top-nav/search-field
+          +search-field(true)
+        span.spacer.vertical-divider.show-lg-up
+        include ./top-nav/settings
+      .hidden-sm-up
+        include ./top-nav/search-field
+        +search-field()
 // #### END HEADER ####
