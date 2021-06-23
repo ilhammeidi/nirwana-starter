@@ -61,6 +61,7 @@ $identation: 8px;
     }
   }
   .group-child {
+    padding-bottom: $spacing2;
     .collapsible-body {
       @include padding-left($identation * 1.5);
     }
@@ -81,6 +82,9 @@ $identation: 8px;
   }
   .side-group-link {
     @include padding-left($identation)
+  }
+  .collection-header {
+    @include padding-left($spacing1)
   }
   .title-mega {
     text-transform: uppercase;

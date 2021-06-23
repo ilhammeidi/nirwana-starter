@@ -1,15 +1,18 @@
 // #### HEADER ####
+include side-nav/singlenav-mobile.pug
 header.app-bar.header#header
   .container
     .header-content
       nav.nav-menu
         |
         |
-        button.btn-icon.waves-effect.sidenav-trigger.show-md-down(
+        button.btn-icon.waves-effect.sidenav-trigger.hamburger.hamburger--spin.show-md-down(
           id="mobile_menu"
           type="button"
+          data-target="slide_menu"
         )
-          i.material-icons menu
+          span.hamburger-box
+            span.bar.hamburger-inner
         .logo
           |
           |

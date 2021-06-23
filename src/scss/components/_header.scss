@@ -188,7 +188,8 @@ $flag: '../images/flag-logo.png';
       }
     }
     i.right.icon {
-      margin-left: 0
+      margin-left: 0;
+      line-height: inherit;
     }
     .multi-menu {
       .btn {
