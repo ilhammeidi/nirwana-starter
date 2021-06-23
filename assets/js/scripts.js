@@ -582,7 +582,8 @@ $(document).ready(function(){
     if(isOpen) {
       $('.sidenav').sidenav('open')  
     } else {
-      $('.sidenav').sidenav('close')  
+      $('.sidenav').sidenav('close');
+      return false;
     }
   });
 
