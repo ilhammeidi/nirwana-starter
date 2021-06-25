@@ -739,21 +739,41 @@
             </div>
           </div>
           <div class="hidden-md-down">
-            <div class="page-nav" id="page_nav">
-              <nav class="section-nav">
-                <div class="scrollnav">
+            <div class="chat">
+              <div class="panel" id="chat_panel">
+                <header>
+                  <h3><span class="indicator online"></span>Live Chat</h3>
+                  <div class="btn btn-icon waves-effect close" id="close_chat"><i class="ion-android-close"></i></div>
+                </header>
+                <div class="chat-room" id="chat-container">
                   <ul>
-                    <li style="top: 150px"><a class="tooltipped" href="#feature" data-position="left" data-tooltip="feature"></a></li>
-                    <li style="top: 120px"><a class="tooltipped" href="#testimonials" data-position="left" data-tooltip="testimonials"></a></li>
-                    <li style="top: 90px"><a class="tooltipped" href="#pricing" data-position="left" data-tooltip="pricing"></a></li>
-                    <li style="top: 60px"><a class="tooltipped" href="#blog" data-position="left" data-tooltip="blog"></a></li>
-                    <li style="top: 30px"><a class="tooltipped" href="#subscribe" data-position="left" data-tooltip="subscribe"></a></li>
+                    <li class="item">
+                      <div class="avatar">
+                        <img class="avatar-img" src="./assets/images/avatars/pp_boy4.svg" alt="visitor" />
+                      </div>
+                      <span class="talk from">Hola!, Maecenas</span>
+                    </li>
+                    <li class="item justify-content-end">
+                      <span class="talk">Hola!, Maecenas nisl </span>
+                    </li>
+                    <li class="item">
+                      <div class="avatar">
+                        <img class="avatar-img" src="./assets/images/avatars/pp_boy4.svg" alt="visitor" />
+                      </div>
+                      <span class="talk from">Hola!, Maecenas</span>
+                    </li>
                   </ul>
                 </div>
-              </nav>
-              <div class="scrollnav"><a class="btn-floating btn-large primary tooltipped waves-effect waves-light" href="#home" data-position="left" data-tooltip="To Top">
-                  <div class="icon material-icons">keyboard_arrow_up</div>
-                </a></div>
+                <div class="form">
+                  <div class="input-field"><input id="chat_field" type="text">
+                    <label for="chat_field">Ask something</label>
+                  </div>
+                  <div class="btn-floating waves-effect btn-small send" id="send_message"><span class="ion-android-send"></span></div>
+                </div>
+              </div>
+              <div class="btn-floating btn-large chat-button" id="toggle_chat">
+                <span class="indicator online"></span><i class="ion-chatbox"></i>
+              </div>
             </div>
           </div>
           <footer class="container footer">

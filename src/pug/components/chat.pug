@@ -1,0 +1,58 @@
+-
+  var conversation = [
+    {
+      text: 'Hola!, Maecenas',
+      visitor: false
+    },
+    {
+      text: 'Hola!, Maecenas nisl ',
+      visitor: true
+    },
+    {
+      text: 'Hola!, Maecenas',
+      visitor: false
+    }
+  ]
+
+.chat
+  .panel#chat_panel
+    header
+      h3
+        span.indicator.online
+        | Live Chat
+      .btn.btn-icon.waves-effect.close#close_chat
+        i.ion-android-close
+    #chat-container.chat-room
+      ul
+        each item in conversation
+          li.item(class=item.visitor ? 'justify-content-end': '')
+            if !item.visitor
+              .avatar
+                |
+                |
+                img.avatar-img(src=assets + '/images/avatars/pp_boy4.svg' alt='visitor')/
+                |
+                |
+            |
+            |
+            span.talk(class=!item.visitor ? 'from' : '')
+              | #{item.text}
+            |
+            |
+    .form
+      .input-field
+        input#chat_field(type='text')
+        |
+        |
+        label(for='chat_field') Ask something
+        |
+        |
+      .btn-floating.waves-effect.btn-small.send#send_message
+        span.ion-android-send
+  .btn-floating.btn-large.chat-button#toggle_chat
+    |
+    |
+    span.indicator.online
+    i.ion-chatbox
+    |
+    |

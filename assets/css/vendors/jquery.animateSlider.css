@@ -42,7 +42,7 @@
 /*****Current Slide******/
 
 .anim-slide-this {
-    z-index: 1000;
+    z-index: 10;
 } 
 
 .anim-slide-this * {
