@@ -331,3 +331,9 @@ $btn-radius: 6px !default;
   @include palette-divider
 }
 
+// Toast icon
+.toast .toast-action {
+  color: #FFF;
+  @include margin-right(-12px)
+}
+
