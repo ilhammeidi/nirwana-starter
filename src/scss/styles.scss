@@ -61,14 +61,18 @@
 @import './components/cards/product-card';
 @import './components/cards/media-card';
 
-// Filter components
-@import './components/filter';
+// Cards footer
+@import './components/footer/basic';
+@import './components/footer/contact';
+@import './components/footer/sitemap';
+@import './components/footer/blog';
 
+@import './components/filter';
+@import './components/chat';
 @import './components/testimonials';
 @import './components/pricing';
 @import './components/blog';
 @import './components/subscribe';
-@import './components/footer';
 @import './components/page-nav';
 @import './components/notification';
 

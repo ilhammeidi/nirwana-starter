@@ -4,11 +4,11 @@
       "name": "Starter",
       "desc": "Nirwana Starter - HTML5 Starter Template",
       "prefix": "nirwana",
-      "footerText": "Nirwana Theme All Rights Reserved 2021",
+      "footerText": "Nirwana Theme 2021",
       "logoText": "Nirwana Theme",
       "projectName": "Starter Project",
       "url": "nirwana.indisains.com",
-      "img": "/images/logo.png",
+      "img": "/images/logo-starter.png",
       "notifMsg": "Donec sit amet nulla sed arcu pulvinar ultricies commodo id ligula"
     }
   },
