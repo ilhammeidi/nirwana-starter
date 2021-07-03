@@ -51,7 +51,6 @@
   <link href="./assets/css/vendors/jquery.youtubebackground.css" rel="stylesheet">
   <link href="./assets/css/vendors/materialize.css" rel="stylesheet">
   <link href="./assets/css/vendors/hamburger-menu.css" rel="stylesheet">
-  <link href="./assets/css/vendors/jquery.animateSlider.css" rel="stylesheet">
   <link href="./assets/css/vendors/animate.css" rel="stylesheet">
   <link href="./assets/css/vendors/animate-extends.css" rel="stylesheet">
   <link href="./assets/css/vendors/slick-carousel/slick.css" rel="stylesheet">
@@ -60,7 +59,7 @@
 </head>
 
 <body>
-  <div id="preloader" style="position: fixed; z-index: 10000; background: #fafafa; width: 100%; height: 100%"><img style="opacity: 0.5; position: fixed; top: calc(50% - 50px); left: calc(50% - 50px)" src="./assets/images/loading.gif" alt="loading"></div>
+  <div id="preloader" style="position: fixed; z-index: 10000; background: #fafafa; width: 100%; height: 100%"><img style="opacity: 0.2; position: fixed; top: calc(50% - 50px); left: calc(50% - 50px)" src="./assets/images/loading.gif" alt="loading"></div>
   <div class="m-application theme--light transition-page" id="app">
     <div class="loading"></div>
     <div class="m-content purple-var" id="main-wrap">
@@ -319,56 +318,70 @@
             </div>
           </header><!-- #### END HEADER ####-->
           <main class="container-wrap">
-            <section>
-              <div class="container">
-                <!-- #### ANIMATE SLIDER ####-->
-                <div class="hero-content">
-                  <div class="slider-wrapper anim-slider">
-                    <div class="slide slider-content anim-slide">
-                      <section class="inner" style="background: url(https://via.placeholder.com/1280x849/ea6db7/fff) no-repeat center center">
-                        <h1>A simple example</h1>
-                        <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras justo odio, dapibus ac facilisis.</p>
-                        <div class="hero-buttons d-flex justify-content-center">
-                          <button class="btn primary waves-effect mx-2">Main call to action</button>
-                          <button class="btn-outlined waves-effect white mx-2">Secondary action</button></div>
-                        <footer>
-                          <img src="https://avatars.dicebear.com/api/avataaars/as.svg" alt="Luanda Gjokaj" />
-                          <span>Posted by&nbsp;<strong>Luanda Gjokaj</strong></span>
-                        </footer>
-                      </section>
+            <section id="home">
+              <div class="banner-wrap">
+                <div class="carousel">
+                  <div class="banner-carousel" id="banner_slider">
+                    <div class="slide" data-key="0">
+                      <div class="inner">
+                        <div class="container w-100">
+                          <div class="row">
+                            <div class="col-sm-7 col-lg-6">
+                              <div class="text">
+                                <h4 class="text-h4">Welcome to Starter Project</h4>
+                                <h5 class="text-h5">Create your project from scratch with main components and basic styles.</h5>
+                              </div>
+                            </div>
+                            <div class="img">
+                              <img src="./assets/images/starter/Illustration.png" alt="illustration" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="slide slider-content anim-slide">
-                      <section class="inner" style="background: url(https://via.placeholder.com/1280x851/c4ffd7/757575) no-repeat center center">
-                        <h1>A simple example</h1>
-                        <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui.</p>
-                        <div class="hero-buttons d-flex justify-content-center">
-                          <button class="btn primary waves-effect mx-2">Main call to action</button>
-                          <button class="btn-outlined waves-effect white mx-2">Secondary action</button></div>
-                        <footer>
-                          <img src="https://avatars.dicebear.com/api/avataaars/qwert.svg" alt="Erich Behrens" />
-                          <span>Posted by&nbsp;<strong>Erich Behrens</strong></span>
-                        </footer>
-                      </section>
+                    <div class="slide" data-key="1">
+                      <div class="inner">
+                        <div class="container w-100">
+                          <div class="row">
+                            <div class="col-sm-7 col-lg-6">
+                              <div class="text">
+                                <h4 class="text-h4">Welcome to Starter Project</h4>
+                                <h5 class="text-h5">Create your project from scratch with main components and basic styles.</h5>
+                              </div>
+                            </div>
+                            <div class="img">
+                              <img src="./assets/images/starter/Illustration.png" alt="illustration" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="slide slider-content anim-slide">
-                      <section class="inner" style="background: url(https://via.placeholder.com/1050x700/ffc4c4/757575) no-repeat center center">
-                        <h1>A simple example</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
-                        <div class="hero-buttons d-flex justify-content-center">
-                          <button class="btn primary waves-effect mx-2">Main call to action</button>
-                          <button class="btn-outlined waves-effect white mx-2">Secondary action</button></div>
-                        <footer>
-                          <img src="https://avatars.dicebear.com/api/avataaars/qwert.svg" alt="Bruno Vizovskyy" />
-                          <span>Posted by&nbsp;<strong>Bruno Vizovskyy</strong></span>
-                        </footer>
-                      </section>
-                    </div>
-                    <div class="anim-arrows">
-                      <a class="anim-arrows-prev" href="#">&#x276E;</a>
-                      <a class="anim-arrows-next" href="#">&#x276F;</a>
+                    <div class="slide" data-key="2">
+                      <div class="inner">
+                        <div class="container w-100">
+                          <div class="row">
+                            <div class="col-sm-7 col-lg-6">
+                              <div class="text">
+                                <h4 class="text-h4">Welcome to Starter Project</h4>
+                                <h5 class="text-h5">Create your project from scratch with main components and basic styles.</h5>
+                              </div>
+                            </div>
+                            <div class="img">
+                              <img src="./assets/images/starter/Illustration.png" alt="illustration" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div><!-- #### END ANIMATE SLIDER ####-->
+                </div>
+                <div class="hidden-md-down">
+                  <div class="container max-md">
+                    <nav class="slide-nav" id="banner_nav"><a class="waves-effect active" data-slide="0"><strong>First Slide</strong>Interdum et malesuada fames ac ante</a>
+                      <hr class="divider"><a class="waves-effect" data-slide="1"><strong>Second Slide</strong>Interdum et malesuada fames ac ante</a>
+                      <hr class="divider"><a class="waves-effect" data-slide="2"><strong>Third Slide</strong>Interdum et malesuada fames ac ante</a></nav>
+                  </div>
+                </div>
               </div>
             </section>
             <section class="space-top space-bottom" id="feature">
@@ -685,7 +698,6 @@
               </div><!-- #### END PRICING ####-->
             </section>
             <section class="space-top space-bottom" id="blog">
-              <!-- include cards/post-card.pug-->
               <div class="container">
                 <h3 class="display-2 text-center mb-4">Blog and News</h3>
                 <p class="body-1 text-center mb-4">Curabitur egestas consequat lorem, vel fermentum augue porta id.</p>
@@ -694,13 +706,61 @@
                     <div class="col-md-9">
                       <div class="row">
                         <div class="col-md-4 px-3">
-                          <!-- +post-card(item.title, item.desc)-->
+                          <div class="card post-card portrait full">
+                            <div class="card-image figure">
+                              <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
+                            </div>
+                            <div class="properties">
+                              <div class="use-text-subtitle2 text-truncate">
+                                <strong>Maecenas rutrum dolor sed nisi</strong>
+                              </div>
+                              <div class="caption py-4">12 Nov 2020</div>
+                              <div class="card-content desc">
+                                <p>Proin pretium arcu eget metus porta consectetur Pellentesque habitant</p>
+                              </div>
+                              <div class="card-action">
+                                <a class="btn btn-outlined primary action-btn waves-effect" href="#">read more</a>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                         <div class="col-md-4 px-3">
-                          <!-- +post-card(item.title, item.desc)-->
+                          <div class="card post-card portrait full">
+                            <div class="card-image figure">
+                              <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
+                            </div>
+                            <div class="properties">
+                              <div class="use-text-subtitle2 text-truncate">
+                                <strong>Maecenas rutrum dolor sed nisi</strong>
+                              </div>
+                              <div class="caption py-4">12 Nov 2020</div>
+                              <div class="card-content desc">
+                                <p>Proin pretium arcu eget metus porta consectetur Pellentesque habitant</p>
+                              </div>
+                              <div class="card-action">
+                                <a class="btn btn-outlined primary action-btn waves-effect" href="#">read more</a>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                         <div class="col-md-4 px-3">
-                          <!-- +post-card(item.title, item.desc)-->
+                          <div class="card post-card portrait full">
+                            <div class="card-image figure">
+                              <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
+                            </div>
+                            <div class="properties">
+                              <div class="use-text-subtitle2 text-truncate">
+                                <strong>Maecenas rutrum dolor sed nisi</strong>
+                              </div>
+                              <div class="caption py-4">12 Nov 2020</div>
+                              <div class="card-content desc">
+                                <p>Proin pretium arcu eget metus porta consectetur Pellentesque habitant</p>
+                              </div>
+                              <div class="card-action">
+                                <a class="btn btn-outlined primary action-btn waves-effect" href="#">read more</a>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -872,7 +932,6 @@
   <script src="./assets/js/vendors/jquery.navScroll.min.js"></script><!-- This assets are not avalaible in npm.js or it has been costumized-->
   <script src="./assets/js/vendors/modernizr-2.8.3-respond-1.4.2.min.js"></script>
   <script src="./assets/js/vendors/materialize.js"></script>
-  <script src="./assets/js/vendors/jquery.animateSlider.js"></script>
   <script src="./assets/js/scripts.js"></script>
 </body>
 

@@ -16,7 +16,6 @@ mixin productionCSS
 mixin generalCSS
   link(href=doc_dir === 'rtl' ? assets + "/css/rtl-vendors/materialize-rtl.css" : assets + "/css/vendors/materialize.css" rel="stylesheet")
   link(href=assets + "/css/vendors/hamburger-menu.css" rel="stylesheet")
-  link(href=assets + "/css/vendors/jquery.animateSlider.css" rel="stylesheet")
   link(href=assets + "/css/vendors/animate.css" rel="stylesheet")
   link(href=assets + "/css/vendors/animate-extends.css" rel="stylesheet")
   link(href=assets + "/css/vendors/slick-carousel/slick.css" rel="stylesheet")
@@ -52,7 +51,6 @@ mixin generalJS
   // This assets are not avalaible in npm.js or it has been costumized
   script(src=assets + "/js/vendors/modernizr-2.8.3-respond-1.4.2.min.js")
   script(src=assets + "/js/vendors/materialize.js")
-  script(src=assets + "/js/vendors/jquery.animateSlider.js")
   script(src=assets + "/js/scripts.js")
 
 mixin localJS
@@ -162,7 +160,7 @@ html(lang=doc_lang dir=doc_dir)
       style="position: fixed; z-index: 10000; background: #fafafa; width: 100%; height: 100%"
     )
       img(
-        style="opacity: 0.5; position: fixed; top: calc(50% - 50px); left: calc(50% - 50px)"
+        style="opacity: 0.2; position: fixed; top: calc(50% - 50px); left: calc(50% - 50px)"
         src=assets + "/images/loading.gif"
         alt="loading"
       )

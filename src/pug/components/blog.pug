@@ -17,7 +17,7 @@
     }
   ]
 
-// include cards/post-card.pug
+include ../components/cards/post-card
 
 .container
   h3.display-2.text-center.mb-4
@@ -30,4 +30,4 @@
         .row
           each item in blogData
             .col-md-4.px-3
-              // +post-card(item.title, item.desc)
+              +post-card('Maecenas rutrum dolor sed nisi', 'Proin pretium arcu eget metus porta consectetur Pellentesque habitant', '12 Nov 2020', 'portrait', 'full', 'https://source.unsplash.com/random', '#')

@@ -125,56 +125,44 @@ $(document).ready(function(){
   });
 });
 
-var transition = {
-  section: {
-    show: "slideInLeft",
-    hide: "slideOutRight",
-    delayShow: "delay0s"
-  },
-  h1: {
-    show: "fadeInDown",
-    hide: "fadeOutUp",
-    delayShow: "delay1s"
-  },
-  p: {
-    show: "fadeInUp",
-    hide: "fadeOutDown",
-    delayShow: "delay1s"
-  },
-  '.hero-buttons': {
-    show: "fadeInUp",
-    hide: "fadeOutDown",
-    delayShow: "delay1-5s"
-  },
-  img: {
-    show: "fadeIn",
-    hide: "fadeOut",
-    delayShow: "delay1-5s"
-  },
-  span: {
-    show: "fadeInDown",
-    hide: "fadeOutUp",
-    delayShow: "delay1s"
-  },
-  strong: {
-    show: "fadeInUp",
-    hide: "fadeOutDown",
-    delayShow: "delay1-5s"
-  }
-}
+/**
+ * @name banner hero banner slider
+ * @function handle slider banner
+ */
 
-$(function(){
-  // animate slider
-  $(".anim-slider").animateSlider({
-    autoplay: true,
-    interval: 10000,
-    animations: {
-      0: transition,
-      1: transition,
-      2: transition
-    }
+var $carousel = $('#banner_slider');
+var $carouselNav = $('#banner_nav a');
+
+$(function() {
+  // slick carousel config
+  $carousel.slick({
+    dots: false,
+    arrows: false,
+    slidesToShow: 1,
+    infinite: true,
+    autoplay: false,
+    responsive: [
+      {
+        breakpoint: 800,
+        settings: {
+          dots: true
+        }
+      }
+    ]
   });
 });
+
+$carouselNav.click(function() {
+  var index = $(this).data("slide");
+  $carousel.slick('slickGoTo', index);
+});
+
+$carousel.on('afterChange', function(event, slick, currentSlide){
+  var active = currentSlide;
+  $carouselNav.removeClass("active");
+  $('#banner_nav > a[data-slide='+active+']').addClass("active");
+});
+
 // Counter Scroll
 (function ($) {
   $(window).on("load", function () {
