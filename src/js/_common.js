@@ -81,10 +81,7 @@ $(document).ready(function(){
   
   // initial wow
   new WOW().init();
-  
-  // initial parallax
-  $('#mode_feature').enllax();
-  
+    
   // Accordion init
   $('.collapsible').collapsible();
   var elem = document.querySelector('.collapsible.expandable');

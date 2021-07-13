@@ -68,7 +68,7 @@
       "http://via.placeholder.com/200x78/ceff00/767676/",
       "http://via.placeholder.com/200x78/ffce00/767676/"
     ],
-    "starer": []
+    "starter": []
   },
   "menu": {
     "starter": [
@@ -93,5 +93,8 @@
         "offset": -40
       }
     ]
+  },
+  "youtube": {
+    "use": true
   }
 }

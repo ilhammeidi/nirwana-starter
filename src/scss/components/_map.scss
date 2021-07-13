@@ -1,0 +1,24 @@
+#map {
+  .map {
+    height: 640px;
+    top: 120px;
+    position: relative;
+    z-index: 20;
+    color: $light-text-primary;
+    @include margin-left($spacing6 * -1);
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.4);
+    #map {
+      height: 100%;
+    }
+  }
+
+  .buble {
+    .material-icons {
+      color: #607D8B;
+      @include margin-right($spacing1);
+      font-size: 16px;
+      top: 3px;
+      position: relative;
+    }
+  }
+}

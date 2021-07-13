@@ -45,12 +45,20 @@
 ** Components and Pages
 */
 
+// Homepage
 @import './components/header';
 @import './components/logo';
 @import './components/side-nav';
 @import './components/banner-slider';
 @import './components/feature';
 @import './components/counter';
+@import './components/chat';
+@import './components/testimonials';
+@import './components/pricing';
+@import './components/blog';
+@import './components/subscribe';
+@import './components/page-nav';
+@import './components/notification';
 
 // Cards components
 @import './components/cards/post-card';
@@ -67,13 +75,13 @@
 @import './components/footer/sitemap';
 @import './components/footer/blog';
 
+// Inner components
+@import './components/call-action';
+@import './components/company-logo';
 @import './components/filter';
-@import './components/chat';
-@import './components/testimonials';
-@import './components/pricing';
-@import './components/blog';
-@import './components/subscribe';
-@import './components/page-nav';
-@import './components/notification';
+@import './components/forms';
+@import './components/map';
 
-@import './pages/home';
+// Inner pages
+@import './pages/pages';
+@import './pages/about';

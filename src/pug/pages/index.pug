@@ -1,13 +1,12 @@
 extends ../layouts/app.pug
 
 block variables
-  - var pageTitle = " Landing Page"
+  - var pageTitle = " Home Page"
   - var pageName = "home"
   - var headerHome = true
 
 block content
-  div
-    #home
+  div#home
     .main-wrap
       include ../components/header/main.pug
       main.container-wrap
@@ -18,6 +17,7 @@ block content
             include ../components/feature/feature.pug
         section
           include ../components/counter.pug
+          +counter(true)
         section#testimonials.space-top
           include ../components/testimonials.pug
         section#pricing.space-top

@@ -1,7 +1,15 @@
 .counter-wrap {
-  background: $palette-primary-main;
   padding: spacing(6.5, 0);
   position: relative;
+  &.dark{
+    background: $palette-primary-main;
+    .counter-item {
+      color: $palette-common-white;
+      .icon {
+        color: $palette-common-white;
+      }
+    }
+  }
 }
 
 #watched_counter{
@@ -12,7 +20,6 @@
 }
 
 .counter-item {
-  color: $palette-common-white;
   align-items: center;
   justify-content: center;
   @include breakpoints-up(md) {
@@ -26,7 +33,6 @@
     text-align: left;
   }
   .icon {
-    color: $palette-common-white;
     width: 40px;
     height: 40px;
     font-size: 80px;

@@ -26,14 +26,14 @@ mixin localCSS
   // Put the 3rd/plugins css here
   link(href=assets + "/css/vendors/normalize.css" rel="stylesheet")
   link(href= doc_dir === 'rtl' ? assets + "/css/rtl-vendors/bootstrap-rtl.css" : assets + "/css/vendors/bootstrap.css" rel="stylesheet")
-  link(href=assets + "/css/vendors/jquery.youtubebackground.css" rel="stylesheet")
+  link(href=assets + "/css/vendors/magnific-popup.css" rel="stylesheet")
   +generalCSS
 
 mixin npmCSS
   // Put the 3rd/plugins css with from node_modules/ here
   link(href="./node_modules/normalize.css/normalize.css" rel="stylesheet")
   link(href=doc_dir === 'rtl' ? assets + "/css/rtl-vendors/bootstrap.css" : "./node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet")
-  link(href="./node_modules/jquery-youtube-background/src/style.css" rel="stylesheet")
+  link(href="./node_modules/magnific-popup/dist/magnific-popup.css" rel="stylesheet")
   +generalCSS
 
 mixin cssAssets
@@ -58,10 +58,9 @@ mixin localJS
   script(src=assets + "/js/vendors/jquery.min.js")
   script(src=assets + "/js/vendors/bootstrap.min.js")
   script(src=assets + "/js/vendors/enquire.min.js")
-  script(src=assets + "/js/vendors/jquery.enllax.min.js")
   script(src=assets + "/js/vendors/jquery.form-validator.min.js")
   script(src=assets + "/js/vendors/jquery.touchSwipe.min.js")
-  script(src=assets + "/js/vendors/jquery.youtubebackground.js")
+  script(src=assets + "/js/vendors/jquery.magnific-popup.min.js")
   script(src=assets + "/js/vendors/pace.min.js")
   script(src=assets + "/js/vendors/slick.min.js")
   script(src=assets + "/js/vendors/wow.min.js")
@@ -73,14 +72,13 @@ mixin npmJS
   script(src="./node_modules/jquery/dist/jquery.min.js")
   script(src="./node_modules/bootstrap/dist/js/bootstrap.min.js")
   script(src="./node_modules/enquire.js/dist/enquire.min.js")
-  script(src="./node_modules/enllax/dist/jquery.enllax.min.js")
   script(src="./node_modules/jquery-form-validator/form-validator/jquery.form-validator.min.js")
   script(src="./node_modules/jquery-touchswipe/jquery.touchSwipe.min.js")
-  script(src="./node_modules/jquery-youtube-background/src/jquery.youtubebackground.js")
   script(src="./node_modules/pace-js/pace.min.js")
   script(src="./node_modules/slick-carousel/slick/slick.min.js")
   script(src="./node_modules/wow.js/dist/wow.min.js")
   script(src="./node_modules/jquery-nav-scroll/jquery.navScroll.min.js")
+  script(src="./node_modules/magnific-popup/dist/jquery.magnific-popup.min.js")
   +generalJS
   
 mixin jsAssets
