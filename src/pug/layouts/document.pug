@@ -51,6 +51,7 @@ mixin generalJS
   // This assets are not avalaible in npm.js or it has been costumized
   script(src=assets + "/js/vendors/modernizr-2.8.3-respond-1.4.2.min.js")
   script(src=assets + "/js/vendors/materialize.js")
+  script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?callback=initMap')
   script(src=assets + "/js/scripts.js")
 
 mixin localJS

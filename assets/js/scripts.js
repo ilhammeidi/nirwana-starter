@@ -48,15 +48,16 @@ function playProgress() {
   }
 }
 
-setTimeout(function() {
-  window.onscroll = function() {
-    playProgress();
-    fixedNav();
-    fixedFabNav();
-  };
-}, 500)
 
 $(document).ready(function(){
+  // Fixed nav
+  setTimeout(function() {
+    window.onscroll = function() {
+      playProgress();
+      fixedNav();
+      fixedFabNav();
+    };
+  }, 500)
   // Preloader
   $('#preloader').delay(1000).fadeOut('fast');
   $(".transition-page").addClass('page-fadeUp-transition-enter').delay(1000).queue(function(){
@@ -81,10 +82,7 @@ $(document).ready(function(){
   
   // initial wow
   new WOW().init();
-  
-  // initial parallax
-  $('#mode_feature').enllax();
-  
+    
   // Accordion init
   $('.collapsible').collapsible();
   var elem = document.querySelector('.collapsible.expandable');
@@ -124,6 +122,202 @@ $(document).ready(function(){
     ]
   });
 });
+
+/**
+ * @name Carousel
+ * @function handle team and album carousel
+ */
+
+var $photoCarousel = $('#about_photo_carousel');
+var $teamCarousel = $('#about_team_carousel');
+var $teamPrev = $('#team_prev');
+var $teamNext = $('#team_next');
+
+$(document).ready(function(){
+  // slick carousel album
+  $photoCarousel.slick({
+    dots: false,
+    arrows: false,
+    slidesToShow: 3,
+    infinite: true,
+    autoplay: false,
+    responsive: [
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+
+  // slick carousel team
+  $teamCarousel.slick({
+    dots: true,
+    arrows: false,
+    slidesToShow: 1,
+    variableWidth: true,
+    autoplay: false,
+    responsive: [
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+
+  $teamPrev.click(function() {
+    $photoCarousel.slick('slickPrev');
+  });
+
+  $teamNext.click(function() {
+    $photoCarousel.slick('slickNext');
+  });
+});
+
+/**
+ * @name Lightbox
+ * @function handle lightbox popup for album
+ */
+
+$photoCarousel.each(function() {
+  $(this).magnificPopup({
+    delegate: '.item a',
+    type: 'image',
+    mainClass: 'mfp-with-zoom', // this class is for CSS animation below
+    gallery: {
+      enabled: true
+    },
+    zoom: {
+      enabled: true, // By default it's false, so don't forget to enable it
+
+      duration: 300, // duration of the effect, in milliseconds
+      easing: 'ease-in-out', // CSS transition easing function
+
+      // The "opener" function should return the element from which popup will be zoomed in
+      // and to which popup will be scaled down
+      // By defailt it looks for an image tag:
+      opener: function(openerElement) {
+        // openerElement is the element on which popup was initialized, in this case its <a> tag
+        // you don't need to add "opener" option if this code matches your needs, it's defailt one.
+        return openerElement.is('img') ? openerElement : openerElement.find('img');
+      }
+    }
+  });
+});
+
+
+/**
+ * @name Progress
+ * @function handle progress on scroll window
+ */
+
+var progressOffset = 0;
+
+var $progress = $('#progress').offset();
+if($("#progress").length > 0) {
+  progressOffset = $progress.top - 300;
+}
+
+function playProgress() {
+  if (window.pageYOffset > progressOffset) {
+    $('#progress').removeClass('zero');
+  }
+}
+
+setTimeout(function() {
+  window.onscroll = function() {
+    playProgress();
+  };
+}, 500);
+
+/**
+ * @name video-iframe
+ * @function handle youtube video iframe
+ */
+
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement('script');
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var player;
+
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('video_iframe', {
+    height: '360',
+    width: '640',
+    videoId: 'sf15CtXuw9M',
+    playerVars : {
+      autoplay: 0
+    },
+    events: {
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
+    }
+  });
+}
+
+// 4. The API will call this function when the video player is ready.
+function onPlayerReady(event) {
+  // event.target.playVideo();
+}
+
+// 5. The API calls this function when the player's state changes.
+//    The function indicates that when playing a video (state=1),
+//    the player should play for six seconds and then stop.
+var done = false;
+function onPlayerStateChange(event) {
+  if (event.data == YT.PlayerState.PLAYING && !done) {
+    setTimeout(stopVideo, 6000);
+    done = true;
+  }
+}
+
+function playVideo() {
+  player.playVideo();
+}
+
+function stopVideo() {
+  player.stopVideo();
+}
+
+$(function() {
+  $('.modal').modal({
+    onOpenEnd: function() {
+      playVideo();
+    },
+    onCloseEnd: function() {
+      stopVideo();
+    }
+  });
+  $('.modal .modal-close').click(function(){
+    stopVideo();
+  })
+});
+
 
 /**
  * @name banner hero banner slider
@@ -532,6 +726,31 @@ $.validate({
   }
 });
 
+/**
+ * @name form
+ * @function handle form validation
+ */
+
+$(document).ready(function(){
+  var toastHTML = '<span>Message Sent</span><button onclick="M.Toast.dismissAll()" class="btn-icon waves-effect toast-action"><i class="material-icons">close</i></button>';
+  $.validate({
+    form: "#contact_form",
+    onSuccess: function(form) {
+      M.toast({html: toastHTML});
+      return false;
+    }
+  });
+
+  $.validate({
+    form: "#login_form"
+  });
+
+  $.validate({
+    form: "#register_form",
+    modules : "security"
+  });
+});
+
 var darkMode = 'false';
 if (typeof Storage !== 'undefined') { // eslint-disable-line
   darkMode = localStorage.getItem('nirwanaDarkMode') || 'false';
@@ -707,6 +926,55 @@ $(function(){
     return false;
   });
 });
+/**
+ * @name Map Adress
+ * @function initial google map with marker
+ */
+
+function initMap() {
+  var myLatLng = {
+    lat: 44.933076,
+    lng: 15.629058
+  };
+  var mapElm = document.getElementById('map');
+  var map, marker;
+  
+  var contentString = '<div id="content" class="buble">'+
+      '<h6 class="title pb-2 px-3">Head Quarter</h6>'+
+      '<div class="row ma-3">'+
+      '<div class="col-sm-6 pa-0">'+
+      '<p><i class="material-icons">phone</i> +98 765 432 10</p>'+
+      '</div>'+
+      '<div class="col-sm-6 pa-0">'+
+      '<p><i class="material-icons">email</i> hello@luxi.com</p>'+
+      '</div>'+
+      '<div class="col-sm-12 pa-0">'+
+      '<p><i class="material-icons">location_on</i> Lorem ipsum street Block C - Vestibullum Building</p>'+
+      '</div>'+
+      '</div>'+
+      '</div>';
+  
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString
+  });
+  
+  if (mapElm) {
+    var map = new google.maps.Map(mapElm, {
+      zoom: 10,
+      center: myLatLng
+    });
+
+    var marker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+    });
+    marker.addListener('click', function() {
+      infowindow.open(map, marker);
+    });
+  }
+
+}
+
 /**
  * Handle css class by using Media query
  * @alias xs, sm, md, lg, xl

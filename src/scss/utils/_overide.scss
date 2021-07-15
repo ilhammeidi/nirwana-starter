@@ -13,8 +13,8 @@ html {
 }
 .m-application {
   overflow: hidden;
-  .carousel {
-    height: auto;
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
   }
   a {
     &:hover {
@@ -60,9 +60,6 @@ html {
     font-family: 'Roboto', sans-serif;
     padding: 0 !important;
   }
-  .overlay {
-    z-index: 90 !important
-  }
   .m-application--wrap a {
     color: $palette-primary-main
   }
@@ -71,11 +68,6 @@ html {
   }
   .btn {
     font-weight: 600;
-  }
-  .slick-slide {
-    &:focus {
-      outline: none;
-    }
   }
   label {
     font-size: 1rem;
@@ -118,6 +110,40 @@ html {
     overflow: hidden;
     &-content {
       font-size: 0.875rem;
+    }
+  }
+  .carousel {
+    height: auto;
+    overflow: visible;
+  }
+  .modal {
+    border-radius: 12px;
+    max-height: 76%;
+  }
+  .overlay {
+    z-index: 90 !important
+  }
+  .slick-slide {
+    &:focus {
+      outline: none;
+    }
+  }
+  .slick-dots {
+    padding-left: 0;
+    li {
+      button:before {
+        border-radius: 50%;
+        color: transparent !important;
+        width: 20px;
+        height: 20px;
+        border: 1px solid $palette-secondary-main;
+        @include use-theme(background-color, $palette-secondary-light, $palette-secondary-dark);
+      }
+      &.slick-active {
+        button:before {
+          background: $palette-secondary-main;
+        }
+      }
     }
   }
   .accordion-content.active {

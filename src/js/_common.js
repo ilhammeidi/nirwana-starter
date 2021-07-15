@@ -48,15 +48,16 @@ function playProgress() {
   }
 }
 
-setTimeout(function() {
-  window.onscroll = function() {
-    playProgress();
-    fixedNav();
-    fixedFabNav();
-  };
-}, 500)
 
 $(document).ready(function(){
+  // Fixed nav
+  setTimeout(function() {
+    window.onscroll = function() {
+      playProgress();
+      fixedNav();
+      fixedFabNav();
+    };
+  }, 500)
   // Preloader
   $('#preloader').delay(1000).fadeOut('fast');
   $(".transition-page").addClass('page-fadeUp-transition-enter').delay(1000).queue(function(){

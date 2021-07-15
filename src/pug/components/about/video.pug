@@ -5,10 +5,10 @@ div
       .modal-content
         |
         |
-        h4 Vestibulum consequat hendrerit lacus
+        h4.use-text-subtitle.mb-3 Vestibulum consequat hendrerit lacus
         |
         |
-        button.btn-icon.modal-close.waves-effect
+        button.btn-icon.modal-close.close-btn.waves-effect
           i.material-icons close
         .text-center
           #video_iframe
@@ -18,4 +18,4 @@ div
     | Proin scelerisque sapien at enim faucibus, ut scelerisque urna consequat.
   .video-wrap
     div.modal-trigger(data-target="video_modal")
-      +media-card('Sed lacinia velit, ut malesuada eros interdum a', 'portrait', 'video', 'https://source.unsplash.com/random', '', '02:30')
+      +media-card('Sed lacinia velit, ut malesuada eros interdum a', 'landscape', 'video', 'https://source.unsplash.com/random', '', '02:30')

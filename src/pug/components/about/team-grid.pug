@@ -3,5 +3,5 @@
   - var n = 0
   while n < 9
     .col-md-4.pa-5(data-key=n++)
-      .wow.fadeInUp(data-wow-delay="(0.2 + (0.1 * n)) + 's'" data-wow-duration="0.5s")
-        +profile-card('https://source.unsplash.com/random', '/images/avatars/pp_girl.svg', 'John Dalton', 'Web Designer', 100, 10, 12, 'full', 'portrait')
+      .wow.fadeInUp(data-wow-delay=(0.2 + (0.1 * n)) + 's' data-wow-duration='0.5s')
+        +profile-card('https://source.unsplash.com/random', `${assets}/images/avatars/pp_girl.svg`, 'John Dalton', 'Web Designer', 100, 10, 12, 'full', 'portrait')

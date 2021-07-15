@@ -1,17 +1,18 @@
-#map {
-  .map {
-    height: 640px;
-    top: 120px;
-    position: relative;
-    z-index: 20;
-    color: $light-text-primary;
-    @include margin-left($spacing6 * -1);
-    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.4);
-    #map {
-      height: 100%;
-    }
+.map {
+  height: 745px;
+  position: relative;
+  z-index: 20;
+  color: $light-text-primary;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.4);
+  @include breakpoints-up(md) {
+    border-radius: 0 $rounded-medium $rounded-medium 0 !important;
   }
-
+  &.full {
+    height: 922px;
+  }
+  #map {
+    height: 100%;
+  }
   .buble {
     .material-icons {
       color: #607D8B;

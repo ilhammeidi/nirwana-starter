@@ -44,7 +44,7 @@
     .btn {
       flex: 1;
       padding: $spacing1;
-      height: 60px;
+      height: auto;
       .btn-content {
         flex-direction: column;
         text-transform: none;
@@ -71,7 +71,7 @@
     .action {
       border-top: 1px solid;
       @include palette-divider;
-      padding-top: $spacing2;
+      padding: spacing(2, 0);
       margin-top: $spacing2;
     }
   }

@@ -8,7 +8,7 @@ var $teamCarousel = $('#about_team_carousel');
 var $teamPrev = $('#team_prev');
 var $teamNext = $('#team_next');
 
-$(function() {
+$(document).ready(function(){
   // slick carousel album
   $photoCarousel.slick({
     dots: false,
@@ -58,23 +58,22 @@ $(function() {
       }
     ]
   });
-});
 
-$teamPrev.click(function() {
-  $photoCarousel.slick('slickPrev');
-});
+  $teamPrev.click(function() {
+    $photoCarousel.slick('slickPrev');
+  });
 
-$teamNext.click(function() {
-  $photoCarousel.slick('slickNext');
+  $teamNext.click(function() {
+    $photoCarousel.slick('slickNext');
+  });
 });
-
 
 /**
  * @name Lightbox
  * @function handle lightbox popup for album
  */
 
-$photoCarousel.each(function() { 
+$photoCarousel.each(function() {
   $(this).magnificPopup({
     delegate: '.item a',
     type: 'image',
@@ -100,6 +99,7 @@ $photoCarousel.each(function() {
   });
 });
 
+
 /**
  * @name Progress
  * @function handle progress on scroll window
@@ -122,7 +122,7 @@ setTimeout(function() {
   window.onscroll = function() {
     playProgress();
   };
-}, 500)
+}, 500);
 
 /**
  * @name video-iframe
@@ -144,7 +144,7 @@ function onYouTubeIframeAPIReady() {
   player = new YT.Player('video_iframe', {
     height: '360',
     width: '640',
-    videoId: 'QPMkYyM2Gzg',
+    videoId: 'sf15CtXuw9M',
     playerVars : {
       autoplay: 0
     },
@@ -170,6 +170,7 @@ function onPlayerStateChange(event) {
     done = true;
   }
 }
+
 function playVideo() {
   player.playVideo();
 }
@@ -178,7 +179,7 @@ function stopVideo() {
   player.stopVideo();
 }
 
-$(function(){
+$(function() {
   $('.modal').modal({
     onOpenEnd: function() {
       playVideo();
@@ -190,4 +191,5 @@ $(function(){
   $('.modal .modal-close').click(function(){
     stopVideo();
   })
+});
 

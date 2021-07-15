@@ -45,11 +45,10 @@ $flag: '../images/flag-logo.png';
 
 .header {
   @include palette-text-primary;
-  @include palette-background-paper;
   box-shadow: none;
   transition: all 0.3s ease;
   position: fixed;
-  z-index: 9999;
+  z-index: 999;
   width: 100%;
   top: 0;
   left: 0;

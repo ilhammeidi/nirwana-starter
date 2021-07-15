@@ -44,11 +44,11 @@
   <meta property="og:image" content="/images/logo-starter.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <title>Starter - Landing Page </title><!-- Styles-->
+  <title>Starter - Home Page </title><!-- Styles-->
   <!-- Put the 3rd/plugins css here-->
   <link href="./assets/css/vendors/normalize.css" rel="stylesheet">
   <link href="./assets/css/vendors/bootstrap.css" rel="stylesheet">
-  <link href="./assets/css/vendors/jquery.youtubebackground.css" rel="stylesheet">
+  <link href="./assets/css/vendors/magnific-popup.css" rel="stylesheet">
   <link href="./assets/css/vendors/materialize.css" rel="stylesheet">
   <link href="./assets/css/vendors/hamburger-menu.css" rel="stylesheet">
   <link href="./assets/css/vendors/animate.css" rel="stylesheet">
@@ -63,8 +63,7 @@
   <div class="m-application theme--light transition-page" id="app">
     <div class="loading"></div>
     <div class="m-content purple-var" id="main-wrap">
-      <div>
-        <div id="home"></div>
+      <div id="home">
         <div class="main-wrap">
           <!-- #### HEADER ####-->
           <div class="sidenav mobile-nav" id="slide_menu">
@@ -319,67 +318,69 @@
           </header><!-- #### END HEADER ####-->
           <main class="container-wrap">
             <section id="home">
-              <div class="banner-wrap">
-                <div class="carousel">
-                  <div class="banner-carousel" id="banner_slider">
-                    <div class="slide" data-key="0">
-                      <div class="inner">
-                        <div class="container w-100">
-                          <div class="row">
-                            <div class="col-sm-7 col-lg-6">
-                              <div class="text">
-                                <h4 class="text-h4">Welcome to Starter Project</h4>
-                                <h5 class="text-h5">Create your project from scratch with main components and basic styles.</h5>
+              <div id="banner-slider">
+                <div class="banner-wrap">
+                  <div class="carousel">
+                    <div class="banner-carousel" id="banner_slider">
+                      <div class="slide" data-key="0">
+                        <div class="inner">
+                          <div class="container w-100">
+                            <div class="row">
+                              <div class="col-sm-7 col-lg-6">
+                                <div class="text">
+                                  <h4 class="text-h4">Welcome to Starter Project</h4>
+                                  <h5 class="text-h5">Create your project from scratch with main components and basic styles.</h5>
+                                </div>
                               </div>
-                            </div>
-                            <div class="img">
-                              <img src="./assets/images/starter/Illustration.png" alt="illustration" />
+                              <div class="img">
+                                <img src="./assets/images/starter/Illustration.png" alt="illustration" />
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="slide" data-key="1">
-                      <div class="inner">
-                        <div class="container w-100">
-                          <div class="row">
-                            <div class="col-sm-7 col-lg-6">
-                              <div class="text">
-                                <h4 class="text-h4">Welcome to Starter Project</h4>
-                                <h5 class="text-h5">Create your project from scratch with main components and basic styles.</h5>
+                      <div class="slide" data-key="1">
+                        <div class="inner">
+                          <div class="container w-100">
+                            <div class="row">
+                              <div class="col-sm-7 col-lg-6">
+                                <div class="text">
+                                  <h4 class="text-h4">Welcome to Starter Project</h4>
+                                  <h5 class="text-h5">Create your project from scratch with main components and basic styles.</h5>
+                                </div>
                               </div>
-                            </div>
-                            <div class="img">
-                              <img src="./assets/images/starter/Illustration.png" alt="illustration" />
+                              <div class="img">
+                                <img src="./assets/images/starter/Illustration.png" alt="illustration" />
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="slide" data-key="2">
-                      <div class="inner">
-                        <div class="container w-100">
-                          <div class="row">
-                            <div class="col-sm-7 col-lg-6">
-                              <div class="text">
-                                <h4 class="text-h4">Welcome to Starter Project</h4>
-                                <h5 class="text-h5">Create your project from scratch with main components and basic styles.</h5>
+                      <div class="slide" data-key="2">
+                        <div class="inner">
+                          <div class="container w-100">
+                            <div class="row">
+                              <div class="col-sm-7 col-lg-6">
+                                <div class="text">
+                                  <h4 class="text-h4">Welcome to Starter Project</h4>
+                                  <h5 class="text-h5">Create your project from scratch with main components and basic styles.</h5>
+                                </div>
                               </div>
-                            </div>
-                            <div class="img">
-                              <img src="./assets/images/starter/Illustration.png" alt="illustration" />
+                              <div class="img">
+                                <img src="./assets/images/starter/Illustration.png" alt="illustration" />
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="hidden-md-down">
-                  <div class="container max-md">
-                    <nav class="slide-nav" id="banner_nav"><a class="waves-effect active" data-slide="0"><strong>First Slide</strong>Interdum et malesuada fames ac ante</a>
-                      <hr class="divider"><a class="waves-effect" data-slide="1"><strong>Second Slide</strong>Interdum et malesuada fames ac ante</a>
-                      <hr class="divider"><a class="waves-effect" data-slide="2"><strong>Third Slide</strong>Interdum et malesuada fames ac ante</a></nav>
+                  <div class="hidden-md-down">
+                    <div class="container max-md">
+                      <nav class="slide-nav" id="banner_nav"><a class="waves-effect active" data-slide="0"><strong>First Slide</strong>Interdum et malesuada fames ac ante</a>
+                        <hr class="divider"><a class="waves-effect" data-slide="1"><strong>Second Slide</strong>Interdum et malesuada fames ac ante</a>
+                        <hr class="divider"><a class="waves-effect" data-slide="2"><strong>Third Slide</strong>Interdum et malesuada fames ac ante</a></nav>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -387,33 +388,7 @@
             <section class="space-top space-bottom" id="feature">
               <div class="container">
                 <div>
-                  <div class="parallax-wrap">
-                    <div class="container">
-                      <div class="banner-parallax-wrap">
-                        <div class="figure">
-                          <div>
-                            <div data-enllax-ratio="-0.2" data-enllax-type="foreground"><svg class="parallax-vertical parallax-dot" width="645px" height="1099px">
-                                <use xlink:href="./assets/images/decoration/dot-deco.svg#dot"></use>
-                              </svg></div>
-                          </div>
-                        </div>
-                        <div class="figure">
-                          <div>
-                            <div data-enllax-ratio="-0.25" data-enllax-type="foreground"><svg class="parallax-vertical parallax-triangle" width="902px" height="1042px">
-                                <use xlink:href="./assets/images/decoration/triangle-deco.svg#triangle"></use>
-                              </svg></div>
-                          </div>
-                        </div>
-                        <div class="figure">
-                          <div>
-                            <div data-enllax-ratio="-0.2" data-enllax-type="foreground"><svg class="parallax-vertical parallax-circle" width="600px" height="570px">
-                                <use xlink:href="./assets/images/decoration/circle-deco.svg#circle"></use>
-                              </svg></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div><!-- #### MAIN FEATURE ####-->
+                  <!-- #### MAIN FEATURE ####-->
                   <div class="page-section">
                     <div class="row">
                       <div class="col-sm-4 pa-6 py-md-0">
@@ -517,15 +492,16 @@
             </section>
             <section>
               <!-- #### COUNTER ####-->
-              <div class="counter-wrap" id="counter_target">
-                <div class="container">
+              <!-- #### END COUNTER ####-->
+              <div class="counter-wrap dark" id="counter_target">
+                <div class="container max-md">
                   <div class="row justify-content-center align-items-center">
                     <div class="col py-4">
                       <div class="counter-item">
                         <span class="icon ion-leaf"></span>
                         <div class="text">
                           <h4 class="display-1"><span class="numscroller" data-min="0" data-max="123" data-delay="5" data-increment="8">&nbsp;</span></h4>
-                          <h6 class="title">Lorem</h6>
+                          <h6 class="use-text-subtitle2">Lorem Ipsum dolo</h6>
                         </div>
                       </div>
                     </div>
@@ -534,7 +510,7 @@
                         <span class="icon ion-ios-lightbulb-outline"></span>
                         <div class="text">
                           <h4 class="display-1"><span class="numscroller" data-min="0" data-max="456" data-delay="5" data-increment="8">&nbsp;</span></h4>
-                          <h6 class="title">Lorem</h6>
+                          <h6 class="use-text-subtitle2">Pellentesque ac bibendum</h6>
                         </div>
                       </div>
                     </div>
@@ -543,13 +519,13 @@
                         <span class="icon ion-ios-world-outline"></span>
                         <div class="text">
                           <h4 class="display-1"><span class="numscroller" data-min="0" data-max="789" data-delay="5" data-increment="8">&nbsp;</span></h4>
-                          <h6 class="title">Lorem</h6>
+                          <h6 class="use-text-subtitle2">Consectetur adipiscing</h6>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div><!-- #### END COUNTER ####-->
+              </div>
             </section>
             <section class="space-top" id="testimonials">
               <!-- #### TESTIMONIALS ####-->
@@ -836,63 +812,102 @@
               </div>
             </div>
           </div>
-          <footer class="footer-contact container px-0 max-lg">
-            <div class="root">
+          <footer class="footer-sitemap">
+            <div class="container">
               <div class="row">
-                <div class="col-md-7 order-md-last">
-                  <div id="contact">
-                    <div class="card form-box">
-                      <div class="row">
-                        <div class="col-lg-5">
-                          <h3 class="title-main use-text-title">Say Hello to Us</h3>
-                        </div>
-                        <div class="col-lg-7">
-                          <div class="form">
-                            <form id="contact_form">
-                              <div class="row spacing6">
-                                <div class="col-sm-12 px-6 py-0">
-                                  <div class="input-field light filled">
-                                    <input class="validate" id="name" type="text" required>
-                                    <label for="name">What is your name? *</label>
-                                  </div>
-                                </div>
-                                <div class="col-sm-12 px-6 py-0">
-                                  <div class="input-field light filled">
-                                    <input class="validate" id="email" type="email" required>
-                                    <label for="email">What is your email? *</label>
-                                  </div>
-                                </div>
-                                <div class="col-sm-12 px-6 py-0">
-                                  <div class="input-field light filled">
-                                    <textarea class="materialize-textarea" id="message" rows="6"></textarea>
-                                    <label for="message">Write your message here</label>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="btn-area"><button class="btn block btn-large primary waves-effect" type="submit">Send Message</button></div>
-                            </form>
-                          </div>
-                        </div>
+                <div class="col-md-3 pa-4">
+                  <div class="logo">
+                    <img src="./assets/images/logo-starter.png" alt="logo" />
+                    <h6 class="mb-4 title">Starter Project</h6>
+                  </div>
+                  <p class="body-2">Create your project from scratch with main components and basic styles.</p>
+                  <p class="body-2">&copy;
+                    Nirwana Theme 2021</p>
+                </div>
+                <div class="col-md-6 pa-4">
+                  <ul class="show-sm-down collapsible">
+                    <li class="accordion-content">
+                      <div class="collapsible-header">
+                        <h6 class="title mb-4">Company</h6><i class="material-icons right arrow">expand_more</i>
                       </div>
+                      <div class="collapsible-body">
+                        <ul>
+                          <li><a href="#team">Team</a></li>
+                          <li><a href="#history">History</a></li>
+                          <li><a href="#contact-us">Contact us</a></li>
+                          <li><a href="#locations">Locations</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="accordion-content">
+                      <div class="collapsible-header">
+                        <h6 class="title mb-4">Resources</h6><i class="material-icons right arrow">expand_more</i>
+                      </div>
+                      <div class="collapsible-body">
+                        <ul>
+                          <li><a href="#resource">Resource</a></li>
+                          <li><a href="#resource-name">Resource name</a></li>
+                          <li><a href="#another-resource">Another resource</a></li>
+                          <li><a href="#final-resource">Final resource</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="accordion-content">
+                      <div class="collapsible-header">
+                        <h6 class="title mb-4">Legal</h6><i class="material-icons right arrow">expand_more</i>
+                      </div>
+                      <div class="collapsible-body">
+                        <ul>
+                          <li><a href="#privacy-policy">Privacy policy</a></li>
+                          <li><a href="#terms-of-use">Terms of use</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="row show-md-up justify-content-around">
+                    <div class="col pa-4 site-map-item">
+                      <h6 class="title mb-4">Company</h6>
+                      <ul>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#history">History</a></li>
+                        <li><a href="#contact-us">Contact us</a></li>
+                        <li><a href="#locations">Locations</a></li>
+                      </ul>
+                    </div>
+                    <div class="col pa-4 site-map-item">
+                      <h6 class="title mb-4">Resources</h6>
+                      <ul>
+                        <li><a href="#resource">Resource</a></li>
+                        <li><a href="#resource-name">Resource name</a></li>
+                        <li><a href="#another-resource">Another resource</a></li>
+                        <li><a href="#final-resource">Final resource</a></li>
+                      </ul>
+                    </div>
+                    <div class="col pa-4 site-map-item">
+                      <h6 class="title mb-4">Legal</h6>
+                      <ul>
+                        <li><a href="#privacy-policy">Privacy policy</a></li>
+                        <li><a href="#terms-of-use">Terms of use</a></li>
+                      </ul>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-5 px-12 order-md-first text-center">
-                  <div class="logo">
-                    <img src="./assets/images/logo-starter.png" alt="logo" />
-                    <p>Starter</p>
-                  </div>
-                  <p>Create your project from scratch with main components and basic styles.</p>
+                <div class="col-md-3 pa-4">
                   <div class="socmed">
-                    <a class="btn-icon margin waves-effect" href="#"><i class="ion-social-facebook"></i></a>
-                    <a class="btn-icon margin waves-effect" href="#"><i class="ion-social-linkedin"></i></a>
-                    <a class="btn-icon margin waves-effect" href="#"><i class="ion-social-twitter"></i></a>
-                    <a class="btn-icon margin waves-effect" href="#"><i class="ion-social-instagram"></i></a>
+                    <a class="btn btn-icon waves-effect"><span class="ion-social-facebook icon"></span></a>
+                    <a class="btn btn-icon waves-effect"><span class="ion-social-twitter icon"></span></a>
+                    <a class="btn btn-icon waves-effect"><span class="ion-social-instagram icon"></span></a>
+                    <a class="btn btn-icon waves-effect"><span class="ion-social-linkedin icon"></span></a>
                   </div>
-                  <div class="contact">
-                    <p class="use-text-paragraph">Phone<br/>+12 345 678 90</p>
-                      <div class="divider"></div>
-                      <p class="use-text-paragraph">Skype<br/>jenadoe.skype</p>
+                  <div class="select-lang select-outlined">
+                    <select class="select" id="lang_select">
+                      <option value="ar">󠁥󠁮󠁧󠁿العربيّة</option>
+                      <option value="de">Deutsch</option>
+                      <option value="en" selected>English</option>
+                      <option value="id">󠁥󠁮󠁧󠁿Bahasa Indonesia</option>
+                      <option value="pt">󠁥󠁮󠁧󠁿Português</option>
+                      <option value="zh">简体中文</option>
+                    </select>
                   </div>
                 </div>
               </div>
@@ -906,16 +921,16 @@
   <script src="./assets/js/vendors/jquery.min.js"></script>
   <script src="./assets/js/vendors/bootstrap.min.js"></script>
   <script src="./assets/js/vendors/enquire.min.js"></script>
-  <script src="./assets/js/vendors/jquery.enllax.min.js"></script>
   <script src="./assets/js/vendors/jquery.form-validator.min.js"></script>
   <script src="./assets/js/vendors/jquery.touchSwipe.min.js"></script>
-  <script src="./assets/js/vendors/jquery.youtubebackground.js"></script>
+  <script src="./assets/js/vendors/jquery.magnific-popup.min.js"></script>
   <script src="./assets/js/vendors/pace.min.js"></script>
   <script src="./assets/js/vendors/slick.min.js"></script>
   <script src="./assets/js/vendors/wow.min.js"></script>
   <script src="./assets/js/vendors/jquery.navScroll.min.js"></script><!-- This assets are not avalaible in npm.js or it has been costumized-->
   <script src="./assets/js/vendors/modernizr-2.8.3-respond-1.4.2.min.js"></script>
   <script src="./assets/js/vendors/materialize.js"></script>
+  <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
   <script src="./assets/js/scripts.js"></script>
 </body>
 

@@ -5,21 +5,27 @@
         width: 0 !important;
       }
     }
-  }
-  .banner-wrap {
-    position: relative;
-    display: block;
-    @include use-theme(background, $palette-primary-light, $palette-primary-dark);
-    @include breakpoints-up('sm') {
-      height: 600px;
+  }  
+  .showimg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 382px;
+    z-index: 6;
+    top: 48px;
+    left: 12px;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 340px;
+    a {
+      width: 100%;
+      height: 100%;
+      display: block;
+      img {
+        width: 100%;
+        opacity: 0;
+      }
     }
-    @include breakpoints-down('xs') {
-      padding: spacing(12, 0, 5)
-    }
-  }
-
-  .slide {
-    position: relative;
   }
 
   .img {
@@ -80,7 +86,7 @@
       padding: 0;
       li {
         list-style: none;
-        margin-bottom: $spacing5;
+        margin-bottom: $spacing3;
         &:last-child {
           margin-bottom: 0
         }
@@ -98,6 +104,7 @@
     i {
       @include palette-text-secondary;
       font-size: 28px;
+      padding-top: 8px;
     }
     h5 {
       @include margin-left($spacing1)
@@ -138,6 +145,13 @@
 
   .carousel {
     position: relative;
+    .icon {
+      font-size: 32px;
+    }
+  }
+  
+  .item {
+    position: relative
   }
 
   .nav {
