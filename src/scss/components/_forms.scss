@@ -1,4 +1,4 @@
-.general-form {
+.form-components {
   .page-wrap {
     min-height: 100%;
     position: relative;
@@ -18,14 +18,12 @@
       }
     }
   }
-
   .full-form-wrap {
     padding-top: $spacing8;
     @include breakpoints-down(xs) {
       padding-top: $spacing4
     }
   }
-
   .card.form-box {
     overflow: hidden;
     background: transparent;
@@ -38,8 +36,6 @@
       }
     }
   }
-
-
   .desc {
     text-align: center;
     padding: spacing(0, 10);
@@ -47,8 +43,6 @@
       padding: spacing(0, 2)
     }
   }
-
-
   .form {
     position: relative;
     margin-top: $spacing8;
@@ -60,7 +54,6 @@
       padding: spacing(0, 2, 8)
     }
   }
-
   .form-helper {
     display: flex;
     justify-content: space-between;
@@ -72,7 +65,6 @@
       justify-content: center;
     }
   }
-
   .btn-area {
     justify-content: space-between;
     @include breakpoints-up(md) {
@@ -108,17 +100,14 @@
       }
     }
   }
-
   .right-icon {
     @include margin-left($spacing1)
   }
-
   .check {
     svg {
       fill: $palette-secondary-main
     }
   }
-
   .auth-frame {
     display: block;
     position: relative;
@@ -126,7 +115,6 @@
       padding: 0
     }
   }
-
   .greeting {
     display: flex;
     padding-top: $spacing5;
@@ -140,11 +128,9 @@
       font-weight: $font-regular
     }
   }
-
   .img {
     margin: spacing(5, 0)
   }
-
   .head {
     text-align: center;
     margin-bottom: $spacing5;
@@ -157,7 +143,6 @@
       }
     }
   }
-
   .form-wrap {
     @include palette-background-paper;
     position: relative;
@@ -166,7 +151,6 @@
       padding: $spacing5
     }
   }
-
   .socmed-side-login {
     display: flex;
     justify-content: space-around;
@@ -194,7 +178,6 @@
       @include margin-right($spacing1)
     }
   }
-
   .blue-btn {
     background: #28aae1 !important;
     &:hover {
@@ -245,5 +228,4 @@
       margin-top: 0
     }
   }
-  
 }

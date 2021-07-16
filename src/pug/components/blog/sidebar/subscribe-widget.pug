@@ -1,0 +1,10 @@
+include ../../paper.pug
+
++paper($t.common.blog_subscribe, 'cast_connected', $t.common.blog_subscribe, true)
+  div
+    .form
+      .input-field
+        input.input.dark#subscribe(placeholder=$t.common.register_email type='text')
+        label(for='subscribe') #{$t.common.register_email}
+      .btn.btn-outlined.white.small.send
+        | #{$t.common.btn_submit}

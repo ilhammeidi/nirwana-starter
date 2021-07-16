@@ -1,0 +1,17 @@
+.paper {
+  header {
+    padding: spacing(0, 2);
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: $spacing1;
+  }
+  &.color {
+    color: $palette-common-white;
+    background: $palette-primary-main;
+  }
+  .icon {
+    color: $palette-primary-main;
+    padding: spacing(2, 0)
+  }
+}
+

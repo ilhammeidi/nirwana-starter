@@ -1,0 +1,11 @@
+.comment-components
+  .form-comment
+    .write
+      .avatar(v-if='!isMobile', :size='36')
+        img(src=assets+'/images/avatars/pp_boy4.svg' alt='avatar')
+      .input-field
+        input#write_comment(placeholder=$t.common.blog_write type='text')
+        label(for='write_comment') #{$t.common.blog_write}
+        button.btn.waves-effect.primary.send-btn
+          span.hidden-xs-down #{$t.common.form_send}
+          .material-icons.icon.show-xs-down send

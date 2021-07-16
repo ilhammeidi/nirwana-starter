@@ -76,13 +76,15 @@
 @import './components/footer/blog';
 
 // Inner components
+@import './components/about';
 @import './components/banner-basic';
+@import './components/blog';
 @import './components/call-action';
 @import './components/company-logo';
 @import './components/filter';
 @import './components/forms';
 @import './components/map';
+@import './components/paper';
 
 // Inner pages
 @import './pages/pages';
-@import './pages/about';
