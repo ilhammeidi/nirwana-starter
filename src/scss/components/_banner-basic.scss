@@ -23,9 +23,11 @@
       h4 {
         font-weight: $font-bold;
         margin-bottom: $spacing2;
+        display: block;
       }
       h5 {
         line-height: 36px;
+        display: block;
         @include palette-text-secondary
       }
     }

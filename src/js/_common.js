@@ -37,14 +37,14 @@ function fixedFabNav() {
 
 var progressOffset = 0;
 
-var $progress = $('#statistic').offset();
-if($("#statistic").length > 0) {
+var $progress = $('#progress').offset();
+if($("#progress").length > 0) {
   progressOffset = $progress.top - 50;
 }
 
 function playProgress() {
   if (window.pageYOffset > progressOffset) {
-    $('#statistic').removeClass('zero');
+    $('#progress').removeClass('zero');
   }
 }
 

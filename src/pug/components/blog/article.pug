@@ -3,37 +3,37 @@
     {
       name: 'John Doe',
       avatar: '/images/avatars/pp_boy4.svg',
-      date: '13 Jan 2020',
+      date: '13 Dec 2021',
       comment:
         'Maecenas nisl libero, tincidunt id odio id, feugiat vulputate quam. Vestibulum feugiat rhoncus metus. In non erat et ipsum molestie porta sit amet ut felis. Vestibulum a massa vestibulum, gravida odio id, fringilla ipsum.'
     },
     {
       name: 'John Doe',
       avatar: '/images/avatars/pp_boy4.svg',
-      date: '13 Jan 2020',
+      date: '13 Dec 2021',
       comment:
         'Maecenas nisl libero, tincidunt id odio id, feugiat vulputate quam. Vestibulum feugiat rhoncus metus. In non erat et ipsum molestie porta sit amet ut felis. Vestibulum a massa vestibulum, gravida odio id, fringilla ipsum.'
     },
     {
       name: 'John Doe',
       avatar: '/images/avatars/pp_boy4.svg',
-      date: '13 Jan 2020',
+      date: '13 Dec 2021',
       comment:
         'Maecenas nisl libero, tincidunt id odio id, feugiat vulputate quam. Vestibulum feugiat rhoncus metus. In non erat et ipsum molestie porta sit amet ut felis. Vestibulum a massa vestibulum, gravida odio id, fringilla ipsum.'
     },
     {
       name: 'John Doe',
       avatar: '/images/avatars/pp_boy4.svg',
-      date: '13 Jan 2020',
+      date: '13 Dec 2021',
       comment:
         'Maecenas nisl libero, tincidunt id odio id, feugiat vulputate quam. Vestibulum feugiat rhoncus metus. In non erat et ipsum molestie porta sit amet ut felis. Vestibulum a massa vestibulum, gravida odio id, fringilla ipsum.'
     }
   ]
 
-.blog-components
+.blog-style
   article.blog-content
     h4.text-h4.title-blog Maecenas rutrum dolor sed nisi
-    time.caption June 19, 2020 by Oliver
+    time.caption June 19, 2021 by Oliver
     figure.image-blog
       img(src='https://source.unsplash.com/random', alt='blog')
     p
@@ -65,28 +65,28 @@
         | Cum sociis natoque penatibus et magnis dis parturient montes, nascetur  ridiculus mus.
       li Maecenas sed diam eget risus varius blandit sit amet non magna.
     .share-socmed
-      h3.subtitle #{$t.common.blog_share}
+      h5.use-text-subtitle2.use-text-bold.mb-3 #{$t.common.blog_share}
       |
       |
       a.btn.btn-outlined.waves-effect.facebook.mq-xs-down(data-class='btn-icon')
-        i.icon.ion-social-facebook
+        i.icon.ion-social-facebook.left
         span.hidden-xs-down facebook
       |
       |
       a.btn.btn-outlined.waves-effect.twitter.mq-xs-down(data-class='btn-icon')
-        i.icon.ion-social-twitter
+        i.icon.ion-social-twitter.left
         span.hidden-xs-down twitter
       |
       |
       a.btn.btn-outlined.waves-effect.linkedin.mq-xs-down(data-class='btn-icon')
-        i.icon.ion-social-linkedin
+        i.icon.ion-social-linkedin.left
         span.hidden-xs-down linkedin
       |
-    .comment
-      h3.subtitle #{$t.common.blog_write}
-      include ../comment/form
-      .collection
-        include ../comment/item
-        .comments-components
-          each item, index in comments
-            +item(assets+item.avatar, item.name, item.date, item.comment, index >= comments.length - 1)
+.comment
+  h5.use-text-subtitle2.use-text-bold.mb-3 #{$t.common.blog_write}
+  include ../comment/form
+  .collection.border-0
+    include ../comment/item
+    .comments-style
+      each item, index in comments
+        +item(assets+item.avatar, item.name, item.date, item.comment, index >= comments.length - 1)

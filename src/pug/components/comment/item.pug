@@ -1,11 +1,16 @@
 mixin item(avatar=assets+'/images/avatars/pp_boy4.svg', name, date, comment, last=false)
-  .collection.comment-list
+  .comment-list
     .collection-item.avatar
-      img(src=avatar)
-      .title.font-weight-bold #{name}
-      p
-        | #{date}
-        br
-        | #{comment}
-    if last
+      |
+      |
+      img.circle(src=avatar)/
+      |
+      |
+      span.title.font-weight-medium #{name}
+      |
+      |
+      div
+        span.caption #{date}
+        p.mt-2 #{comment}
+    if !last
       hr.divider

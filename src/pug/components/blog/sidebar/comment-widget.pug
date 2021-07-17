@@ -42,10 +42,14 @@ include ../../paper.pug
       a.waves-effect.collection-item.avatar(href='#!')
         |
         |
-        span.circle(class=item.color)
-          | #{item.name.chartAt(0)}
-        span.title
+        i.circle.icon.avatar-char(class=item.color)
+          | #{item.name.charAt(0)}
+        |
+        |
+        span.d-block.use-text-medium
           | #{item.name}
+        |
+        |
         span #{item.comment}
         |
         |

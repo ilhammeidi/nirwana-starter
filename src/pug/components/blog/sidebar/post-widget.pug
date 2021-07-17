@@ -1,7 +1,7 @@
 include ../../paper.pug
 
 -
-  var news: [
+  var news = [
     {
       title: 'Vestibulum bibendum nisi eget magna',
       date: 'Jan 9, 2014'
@@ -33,12 +33,12 @@ include ../../paper.pug
         a.waves-effect.collection-item(href='#!')
           |
           |
-          span.title
-            | #{item}
-          span #{item.date}
+          span.d-block
+            | #{item.title}
+          span.caption #{item.date}
           |
           |
         |
         |
-  a.waves-effect.btn-flat.block
-    | #{$t.common.btn_seeall}
+    a.btn.waves-effect.btn-flat.block
+      | #{$t.common.btn_seeall}

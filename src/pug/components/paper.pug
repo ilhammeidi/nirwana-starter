@@ -1,8 +1,8 @@
 mixin paper(title, icon, subtitle='', color=false)
   .card.paper(class=color ? 'color' : '')
     header
-      .material-icons.icon(color=color ? 'white' : '')
-        | #{icon}
+      .icon
+        i.material-icons.small(class=color ? 'white-text' : '') #{icon}
       .card-content
         span.card-title #{title}
         p #{subtitle}

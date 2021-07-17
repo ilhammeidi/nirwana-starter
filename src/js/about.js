@@ -99,31 +99,6 @@ $photoCarousel.each(function() {
   });
 });
 
-
-/**
- * @name Progress
- * @function handle progress on scroll window
- */
-
-var progressOffset = 0;
-
-var $progress = $('#progress').offset();
-if($("#progress").length > 0) {
-  progressOffset = $progress.top - 300;
-}
-
-function playProgress() {
-  if (window.pageYOffset > progressOffset) {
-    $('#progress').removeClass('zero');
-  }
-}
-
-setTimeout(function() {
-  window.onscroll = function() {
-    playProgress();
-  };
-}, 500);
-
 /**
  * @name video-iframe
  * @function handle youtube video iframe

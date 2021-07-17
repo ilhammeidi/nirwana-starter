@@ -96,7 +96,7 @@
                             <a class="waves-effect text-truncate menu-list" href="/blog.html">blog</a>
                           </li>
                           <li class="collection-item side-group-link">
-                            <a class="waves-effect text-truncate menu-list" href="/blog-detail.html">blog detail</a>
+                            <a class="waves-effect text-truncate menu-list" href="/detail-blog.html">blog detail</a>
                           </li>
                         </ul>
                         <ul class="group-child">
@@ -211,7 +211,7 @@
                                     <li class="waves-effect"><a class="menu-list current" href="/about.html">about</a></li>
                                     <li class="waves-effect"><a class="menu-list" href="/about-team.html">team</a></li>
                                     <li class="waves-effect"><a class="menu-list" href="/blog.html">blog</a></li>
-                                    <li class="waves-effect"><a class="menu-list" href="/blog-detail.html">blog detail</a></li>
+                                    <li class="waves-effect"><a class="menu-list" href="/detail-blog.html">blog detail</a></li>
                                   </ul>
                                 </div>
                                 <div class="col-sm-3 mb-6">
@@ -316,7 +316,7 @@
               </div>
             </div>
           </header><!-- #### END HEADER ####-->
-          <div id="banner-basic">
+          <div class="banner-basic">
             <div class="banner-wrap">
               <div class="inner">
                 <div class="container">
@@ -338,7 +338,7 @@
             </div>
           </div>
           <div class="space-top-short">
-            <div class="fixed-width" id="logo_list">
+            <div class="company-logo fixed-width">
               <div class="root">
                 <img src="./assets/images/logos/architect.png" alt="logo0" />
                 <img src="./assets/images/logos/cloud.png" alt="logo1" />
@@ -350,7 +350,7 @@
             </div>
           </div><!-- #### COUNTER ####-->
           <!-- #### END COUNTER ####-->
-          <div class="counter-wrap" id="counter_target">
+          <div class="counter-style" id="counter_target">
             <div class="container max-md">
               <div class="row justify-content-center align-items-center">
                 <div class="col py-4">
@@ -386,7 +386,7 @@
           <div class="container">
             <div class="row">
               <div class="col-md-6 px-md-12">
-                <div>
+                <div class="about-style">
                   <div class="modal video-popup" id="video_modal">
                     <div class="modal-content">
                       <h4 class="use-text-subtitle mb-3">Vestibulum consequat hendrerit lacus</h4>
@@ -412,280 +412,286 @@
                 </div>
               </div>
               <div class="col-md-6 px-md-12">
-                <div class="progress-wrap">
-                  <ul class="zero" id="progress">
-                    <li>
-                      <div class="text-icon"><i class="ion-wand"></i>
-                        <h5 class="use-text-subtitle2">UI Interface Design</h5>
-                      </div>
-                      <div class="progress">
-                        <div class="determinate progress-linear" style="width: 80%"></div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="text-icon"><i class="ion-social-dribbble-outline"></i>
-                        <h5 class="use-text-subtitle2">Icon Design</h5>
-                      </div>
-                      <div class="progress">
-                        <div class="determinate progress-linear" style="width: 70%"></div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="text-icon"><i class="ion-ios-world-outline"></i>
-                        <h5 class="use-text-subtitle2">HTML Prototyping</h5>
-                      </div>
-                      <div class="progress">
-                        <div class="determinate progress-linear" style="width: 60%"></div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="text-icon"><i class="ion-ios-camera-outline"></i>
-                        <h5 class="use-text-subtitle2">Photo Editing</h5>
-                      </div>
-                      <div class="progress">
-                        <div class="determinate progress-linear" style="width: 90%"></div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="text-icon"><i class="ion-ios-snowy"></i>
-                        <h5 class="use-text-subtitle2">Graphic Illustrations</h5>
-                      </div>
-                      <div class="progress">
-                        <div class="determinate progress-linear" style="width: 80%"></div>
-                      </div>
-                    </li>
-                  </ul>
+                <div class="about-style">
+                  <div class="progress-wrap">
+                    <ul class="zero" id="progress">
+                      <li>
+                        <div class="text-icon"><i class="ion-wand"></i>
+                          <h5 class="use-text-subtitle2">UI Interface Design</h5>
+                        </div>
+                        <div class="progress">
+                          <div class="determinate progress-linear" style="width: 80%"></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="text-icon"><i class="ion-social-dribbble-outline"></i>
+                          <h5 class="use-text-subtitle2">Icon Design</h5>
+                        </div>
+                        <div class="progress">
+                          <div class="determinate progress-linear" style="width: 70%"></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="text-icon"><i class="ion-ios-world-outline"></i>
+                          <h5 class="use-text-subtitle2">HTML Prototyping</h5>
+                        </div>
+                        <div class="progress">
+                          <div class="determinate progress-linear" style="width: 60%"></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="text-icon"><i class="ion-ios-camera-outline"></i>
+                          <h5 class="use-text-subtitle2">Photo Editing</h5>
+                        </div>
+                        <div class="progress">
+                          <div class="determinate progress-linear" style="width: 90%"></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="text-icon"><i class="ion-ios-snowy"></i>
+                          <h5 class="use-text-subtitle2">Graphic Illustrations</h5>
+                        </div>
+                        <div class="progress">
+                          <div class="determinate progress-linear" style="width: 80%"></div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="space-bottom-short">
-            <div class="bg-wrapper">
+            <div class="about-style">
+              <div class="bg-wrapper">
+                <div class="container">
+                  <h4 class="use-text-title2 mb-3">Team Member</h4>
+                  <p class="use-text-subtitle2">Vestibulum faucibus eget erat eget pretium. Donec commodo convallis eget suscipit orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="carousel mt-15">
+                  <div class="team-carousel" id="about_team_carousel">
+                    <div class="item px-3" data-key="0">
+                      <div class="card profile-card landscape full">
+                        <div class="figure">
+                          <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
+                        </div>
+                        <div class="avatar-img avatar big">
+                          <img src="./assets/images/avatars/pp_girl3.svg" alt="avatar" />
+                        </div>
+                        <div class="properties text-truncate">
+                          <div class="card-content">
+                            <h5><strong>John Dalton</strong></h5>
+                            <div class="subtitle">Web Designer</div>
+                            <div class="desc">
+                              <span>100 Connection</span>
+                            </div>
+                          </div>
+                          <div class="card-actions action">
+                            <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">account_circle</i>100 Connection</span></a>
+                            <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">favorite</i>10 Favorites</span></a>
+                            <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">photo_library</i>12 Albums</span></a>
+                          </div><a class="waves-effect btn btn-outlined primary main-btn" href="href">See Profile</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item px-3" data-key="1">
+                      <div class="card profile-card landscape full">
+                        <div class="figure">
+                          <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
+                        </div>
+                        <div class="avatar-img avatar big">
+                          <img src="./assets/images/avatars/pp_girl3.svg" alt="avatar" />
+                        </div>
+                        <div class="properties text-truncate">
+                          <div class="card-content">
+                            <h5><strong>John Dalton</strong></h5>
+                            <div class="subtitle">Web Designer</div>
+                            <div class="desc">
+                              <span>100 Connection</span>
+                            </div>
+                          </div>
+                          <div class="card-actions action">
+                            <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">account_circle</i>100 Connection</span></a>
+                            <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">favorite</i>10 Favorites</span></a>
+                            <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">photo_library</i>12 Albums</span></a>
+                          </div><a class="waves-effect btn btn-outlined primary main-btn" href="href">See Profile</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item px-3" data-key="2">
+                      <div class="card profile-card landscape full">
+                        <div class="figure">
+                          <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
+                        </div>
+                        <div class="avatar-img avatar big">
+                          <img src="./assets/images/avatars/pp_girl3.svg" alt="avatar" />
+                        </div>
+                        <div class="properties text-truncate">
+                          <div class="card-content">
+                            <h5><strong>John Dalton</strong></h5>
+                            <div class="subtitle">Web Designer</div>
+                            <div class="desc">
+                              <span>100 Connection</span>
+                            </div>
+                          </div>
+                          <div class="card-actions action">
+                            <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">account_circle</i>100 Connection</span></a>
+                            <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">favorite</i>10 Favorites</span></a>
+                            <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">photo_library</i>12 Albums</span></a>
+                          </div><a class="waves-effect btn btn-outlined primary main-btn" href="href">See Profile</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item px-3" data-key="3">
+                      <div class="card profile-card landscape full">
+                        <div class="figure">
+                          <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
+                        </div>
+                        <div class="avatar-img avatar big">
+                          <img src="./assets/images/avatars/pp_girl3.svg" alt="avatar" />
+                        </div>
+                        <div class="properties text-truncate">
+                          <div class="card-content">
+                            <h5><strong>John Dalton</strong></h5>
+                            <div class="subtitle">Web Designer</div>
+                            <div class="desc">
+                              <span>100 Connection</span>
+                            </div>
+                          </div>
+                          <div class="card-actions action">
+                            <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">account_circle</i>100 Connection</span></a>
+                            <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">favorite</i>10 Favorites</span></a>
+                            <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">photo_library</i>12 Albums</span></a>
+                          </div><a class="waves-effect btn btn-outlined primary main-btn" href="href">See Profile</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item px-3" data-key="4">
+                      <div class="card profile-card landscape full">
+                        <div class="figure">
+                          <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
+                        </div>
+                        <div class="avatar-img avatar big">
+                          <img src="./assets/images/avatars/pp_girl3.svg" alt="avatar" />
+                        </div>
+                        <div class="properties text-truncate">
+                          <div class="card-content">
+                            <h5><strong>John Dalton</strong></h5>
+                            <div class="subtitle">Web Designer</div>
+                            <div class="desc">
+                              <span>100 Connection</span>
+                            </div>
+                          </div>
+                          <div class="card-actions action">
+                            <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">account_circle</i>100 Connection</span></a>
+                            <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">favorite</i>10 Favorites</span></a>
+                            <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">photo_library</i>12 Albums</span></a>
+                          </div><a class="waves-effect btn btn-outlined primary main-btn" href="href">See Profile</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item px-3" data-key="5">
+                      <div class="card profile-card landscape full">
+                        <div class="figure">
+                          <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
+                        </div>
+                        <div class="avatar-img avatar big">
+                          <img src="./assets/images/avatars/pp_girl3.svg" alt="avatar" />
+                        </div>
+                        <div class="properties text-truncate">
+                          <div class="card-content">
+                            <h5><strong>John Dalton</strong></h5>
+                            <div class="subtitle">Web Designer</div>
+                            <div class="desc">
+                              <span>100 Connection</span>
+                            </div>
+                          </div>
+                          <div class="card-actions action">
+                            <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">account_circle</i>100 Connection</span></a>
+                            <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">favorite</i>10 Favorites</span></a>
+                            <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">photo_library</i>12 Albums</span></a>
+                          </div><a class="waves-effect btn btn-outlined primary main-btn" href="href">See Profile</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="space-bottom-short">
+            <div class="about-style">
               <div class="container">
-                <h4 class="use-text-title2 mb-3">Team Member</h4>
+                <h4 class="use-text-title2 mb-3">Gallery</h4>
                 <p class="use-text-subtitle2">Vestibulum faucibus eget erat eget pretium. Donec commodo convallis eget suscipit orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-              <div class="carousel mt-15">
-                <div class="team-carousel" id="about_team_carousel">
-                  <div class="item px-3" data-key="0">
-                    <div class="card profile-card landscape full">
-                      <div class="figure">
-                        <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
-                      </div>
-                      <div class="avatar-img avatar big">
-                        <img src="./assets/images/avatars/pp_girl3.svg" alt="avatar" />
-                      </div>
-                      <div class="properties text-truncate">
-                        <div class="card-content">
-                          <h5><strong>John Dalton</strong></h5>
-                          <div class="subtitle">Web Designer</div>
-                          <div class="desc">
-                            <span>100 Connection</span>
-                          </div>
+                <div class="carousel"><button class="btn btn-icon waves-effect btn-small nav prev" id="team_prev"><i class="icon material-icons">arrow_back</i></button>
+                  <div class="photo-carousel" id="about_photo_carousel">
+                    <div class="item px-3 showImg" data-index="0">
+                      <div class="showimg"><a class="waves-effect" href="https://source.unsplash.com/random"><img src="https://source.unsplash.com/random" /></a></div>
+                      <div class="card media-card portrait photo">
+                        <a class="cover-link waves-effect" href="https://source.unsplash.com/random"></a>
+                        <figure><img src="https://source.unsplash.com/random" alt="cover"></figure>
+                        <div class="property">
+                          <div class="card-title media-title">Sed lacinia velit, ut malesuada eros interdum a</div>
                         </div>
-                        <div class="card-actions action">
-                          <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">account_circle</i>100 Connection</span></a>
-                          <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">favorite</i>10 Favorites</span></a>
-                          <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">photo_library</i>12 Albums</span></a>
-                        </div><a class="waves-effect btn btn-outlined primary main-btn" href="href">See Profile</a>
                       </div>
                     </div>
-                  </div>
-                  <div class="item px-3" data-key="1">
-                    <div class="card profile-card landscape full">
-                      <div class="figure">
-                        <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
-                      </div>
-                      <div class="avatar-img avatar big">
-                        <img src="./assets/images/avatars/pp_girl3.svg" alt="avatar" />
-                      </div>
-                      <div class="properties text-truncate">
-                        <div class="card-content">
-                          <h5><strong>John Dalton</strong></h5>
-                          <div class="subtitle">Web Designer</div>
-                          <div class="desc">
-                            <span>100 Connection</span>
-                          </div>
+                    <div class="item px-3 showImg" data-index="1">
+                      <div class="showimg"><a class="waves-effect" href="https://source.unsplash.com/random"><img src="https://source.unsplash.com/random" /></a></div>
+                      <div class="card media-card portrait photo">
+                        <a class="cover-link waves-effect" href="https://source.unsplash.com/random"></a>
+                        <figure><img src="https://source.unsplash.com/random" alt="cover"></figure>
+                        <div class="property">
+                          <div class="card-title media-title">Sed lacinia velit, ut malesuada eros interdum a</div>
                         </div>
-                        <div class="card-actions action">
-                          <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">account_circle</i>100 Connection</span></a>
-                          <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">favorite</i>10 Favorites</span></a>
-                          <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">photo_library</i>12 Albums</span></a>
-                        </div><a class="waves-effect btn btn-outlined primary main-btn" href="href">See Profile</a>
                       </div>
                     </div>
-                  </div>
-                  <div class="item px-3" data-key="2">
-                    <div class="card profile-card landscape full">
-                      <div class="figure">
-                        <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
-                      </div>
-                      <div class="avatar-img avatar big">
-                        <img src="./assets/images/avatars/pp_girl3.svg" alt="avatar" />
-                      </div>
-                      <div class="properties text-truncate">
-                        <div class="card-content">
-                          <h5><strong>John Dalton</strong></h5>
-                          <div class="subtitle">Web Designer</div>
-                          <div class="desc">
-                            <span>100 Connection</span>
-                          </div>
+                    <div class="item px-3 showImg" data-index="2">
+                      <div class="showimg"><a class="waves-effect" href="https://source.unsplash.com/random"><img src="https://source.unsplash.com/random" /></a></div>
+                      <div class="card media-card portrait photo">
+                        <a class="cover-link waves-effect" href="https://source.unsplash.com/random"></a>
+                        <figure><img src="https://source.unsplash.com/random" alt="cover"></figure>
+                        <div class="property">
+                          <div class="card-title media-title">Sed lacinia velit, ut malesuada eros interdum a</div>
                         </div>
-                        <div class="card-actions action">
-                          <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">account_circle</i>100 Connection</span></a>
-                          <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">favorite</i>10 Favorites</span></a>
-                          <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">photo_library</i>12 Albums</span></a>
-                        </div><a class="waves-effect btn btn-outlined primary main-btn" href="href">See Profile</a>
                       </div>
                     </div>
-                  </div>
-                  <div class="item px-3" data-key="3">
-                    <div class="card profile-card landscape full">
-                      <div class="figure">
-                        <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
-                      </div>
-                      <div class="avatar-img avatar big">
-                        <img src="./assets/images/avatars/pp_girl3.svg" alt="avatar" />
-                      </div>
-                      <div class="properties text-truncate">
-                        <div class="card-content">
-                          <h5><strong>John Dalton</strong></h5>
-                          <div class="subtitle">Web Designer</div>
-                          <div class="desc">
-                            <span>100 Connection</span>
-                          </div>
+                    <div class="item px-3 showImg" data-index="3">
+                      <div class="showimg"><a class="waves-effect" href="https://source.unsplash.com/random"><img src="https://source.unsplash.com/random" /></a></div>
+                      <div class="card media-card portrait photo">
+                        <a class="cover-link waves-effect" href="https://source.unsplash.com/random"></a>
+                        <figure><img src="https://source.unsplash.com/random" alt="cover"></figure>
+                        <div class="property">
+                          <div class="card-title media-title">Sed lacinia velit, ut malesuada eros interdum a</div>
                         </div>
-                        <div class="card-actions action">
-                          <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">account_circle</i>100 Connection</span></a>
-                          <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">favorite</i>10 Favorites</span></a>
-                          <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">photo_library</i>12 Albums</span></a>
-                        </div><a class="waves-effect btn btn-outlined primary main-btn" href="href">See Profile</a>
                       </div>
                     </div>
-                  </div>
-                  <div class="item px-3" data-key="4">
-                    <div class="card profile-card landscape full">
-                      <div class="figure">
-                        <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
-                      </div>
-                      <div class="avatar-img avatar big">
-                        <img src="./assets/images/avatars/pp_girl3.svg" alt="avatar" />
-                      </div>
-                      <div class="properties text-truncate">
-                        <div class="card-content">
-                          <h5><strong>John Dalton</strong></h5>
-                          <div class="subtitle">Web Designer</div>
-                          <div class="desc">
-                            <span>100 Connection</span>
-                          </div>
+                    <div class="item px-3 showImg" data-index="4">
+                      <div class="showimg"><a class="waves-effect" href="https://source.unsplash.com/random"><img src="https://source.unsplash.com/random" /></a></div>
+                      <div class="card media-card portrait photo">
+                        <a class="cover-link waves-effect" href="https://source.unsplash.com/random"></a>
+                        <figure><img src="https://source.unsplash.com/random" alt="cover"></figure>
+                        <div class="property">
+                          <div class="card-title media-title">Sed lacinia velit, ut malesuada eros interdum a</div>
                         </div>
-                        <div class="card-actions action">
-                          <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">account_circle</i>100 Connection</span></a>
-                          <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">favorite</i>10 Favorites</span></a>
-                          <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">photo_library</i>12 Albums</span></a>
-                        </div><a class="waves-effect btn btn-outlined primary main-btn" href="href">See Profile</a>
                       </div>
                     </div>
-                  </div>
-                  <div class="item px-3" data-key="5">
-                    <div class="card profile-card landscape full">
-                      <div class="figure">
-                        <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
-                      </div>
-                      <div class="avatar-img avatar big">
-                        <img src="./assets/images/avatars/pp_girl3.svg" alt="avatar" />
-                      </div>
-                      <div class="properties text-truncate">
-                        <div class="card-content">
-                          <h5><strong>John Dalton</strong></h5>
-                          <div class="subtitle">Web Designer</div>
-                          <div class="desc">
-                            <span>100 Connection</span>
-                          </div>
+                    <div class="item px-3 showImg" data-index="5">
+                      <div class="showimg"><a class="waves-effect" href="https://source.unsplash.com/random"><img src="https://source.unsplash.com/random" /></a></div>
+                      <div class="card media-card portrait photo">
+                        <a class="cover-link waves-effect" href="https://source.unsplash.com/random"></a>
+                        <figure><img src="https://source.unsplash.com/random" alt="cover"></figure>
+                        <div class="property">
+                          <div class="card-title media-title">Sed lacinia velit, ut malesuada eros interdum a</div>
                         </div>
-                        <div class="card-actions action">
-                          <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">account_circle</i>100 Connection</span></a>
-                          <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">favorite</i>10 Favorites</span></a>
-                          <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">photo_library</i>12 Albums</span></a>
-                        </div><a class="waves-effect btn btn-outlined primary main-btn" href="href">See Profile</a>
                       </div>
                     </div>
-                  </div>
+                  </div><button class="btn btn-icon waves-effect btn-small nav next" id="team_next"><i class="icon material-icons">arrow_forward</i></button>
                 </div>
               </div>
             </div>
           </div>
-          <div class="space-bottom-short">
-            <div class="container">
-              <h4 class="use-text-title2 mb-3">Gallery</h4>
-              <p class="use-text-subtitle2">Vestibulum faucibus eget erat eget pretium. Donec commodo convallis eget suscipit orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <div class="carousel"><button class="btn btn-icon waves-effect btn-small nav prev" id="team_prev"><i class="icon material-icons">arrow_back</i></button>
-                <div class="photo-carousel" id="about_photo_carousel">
-                  <div class="item px-3 showImg" data-index="0">
-                    <div class="showimg"><a class="waves-effect" href="https://source.unsplash.com/random"><img src="https://source.unsplash.com/random" /></a></div>
-                    <div class="card media-card portrait photo">
-                      <a class="cover-link waves-effect" href="https://source.unsplash.com/random"></a>
-                      <figure><img src="https://source.unsplash.com/random" alt="cover"></figure>
-                      <div class="property">
-                        <div class="card-title media-title">Sed lacinia velit, ut malesuada eros interdum a</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item px-3 showImg" data-index="1">
-                    <div class="showimg"><a class="waves-effect" href="https://source.unsplash.com/random"><img src="https://source.unsplash.com/random" /></a></div>
-                    <div class="card media-card portrait photo">
-                      <a class="cover-link waves-effect" href="https://source.unsplash.com/random"></a>
-                      <figure><img src="https://source.unsplash.com/random" alt="cover"></figure>
-                      <div class="property">
-                        <div class="card-title media-title">Sed lacinia velit, ut malesuada eros interdum a</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item px-3 showImg" data-index="2">
-                    <div class="showimg"><a class="waves-effect" href="https://source.unsplash.com/random"><img src="https://source.unsplash.com/random" /></a></div>
-                    <div class="card media-card portrait photo">
-                      <a class="cover-link waves-effect" href="https://source.unsplash.com/random"></a>
-                      <figure><img src="https://source.unsplash.com/random" alt="cover"></figure>
-                      <div class="property">
-                        <div class="card-title media-title">Sed lacinia velit, ut malesuada eros interdum a</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item px-3 showImg" data-index="3">
-                    <div class="showimg"><a class="waves-effect" href="https://source.unsplash.com/random"><img src="https://source.unsplash.com/random" /></a></div>
-                    <div class="card media-card portrait photo">
-                      <a class="cover-link waves-effect" href="https://source.unsplash.com/random"></a>
-                      <figure><img src="https://source.unsplash.com/random" alt="cover"></figure>
-                      <div class="property">
-                        <div class="card-title media-title">Sed lacinia velit, ut malesuada eros interdum a</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item px-3 showImg" data-index="4">
-                    <div class="showimg"><a class="waves-effect" href="https://source.unsplash.com/random"><img src="https://source.unsplash.com/random" /></a></div>
-                    <div class="card media-card portrait photo">
-                      <a class="cover-link waves-effect" href="https://source.unsplash.com/random"></a>
-                      <figure><img src="https://source.unsplash.com/random" alt="cover"></figure>
-                      <div class="property">
-                        <div class="card-title media-title">Sed lacinia velit, ut malesuada eros interdum a</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item px-3 showImg" data-index="5">
-                    <div class="showimg"><a class="waves-effect" href="https://source.unsplash.com/random"><img src="https://source.unsplash.com/random" /></a></div>
-                    <div class="card media-card portrait photo">
-                      <a class="cover-link waves-effect" href="https://source.unsplash.com/random"></a>
-                      <figure><img src="https://source.unsplash.com/random" alt="cover"></figure>
-                      <div class="property">
-                        <div class="card-title media-title">Sed lacinia velit, ut malesuada eros interdum a</div>
-                      </div>
-                    </div>
-                  </div>
-                </div><button class="btn btn-icon waves-effect btn-small nav next" id="team_next"><i class="icon material-icons">arrow_forward</i></button>
-              </div>
-            </div>
-          </div>
-          <div id="call-to-action">
+          <div class="call-to-action">
             <div class="container fixed-width-md-up">
               <div class="root">
                 <div class="card paper">
@@ -705,7 +711,7 @@
             </div>
           </div>
           <div class="space-top-short">
-            <div class="general-form">
+            <div class="form-style">
               <div class="page-wrap">
                 <div class="container max-lg inner-wrap">
                   <div class="row d-flex align-items-center">

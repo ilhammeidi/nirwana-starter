@@ -132,16 +132,22 @@ $btn-radius: 6px !default;
 // Font Icons
 .icon {
   &.primary {
-    color: $palette-primary-main;
+    color: $palette-primary-main !important;
   }
   &.secondary {
-    color: $palette-secondary-main;
+    color: $palette-secondary-main !important;
   }
 }
 
 // Collection Item
 .collection-item.no-hover:hover{
   background: none;
+}
+
+.collection {
+  a.collection-item{
+    @include palette-text-primary
+  }
 }
 
 // Typography

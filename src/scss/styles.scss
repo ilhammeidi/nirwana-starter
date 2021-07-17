@@ -30,7 +30,7 @@
 @import './utils/url-img';
 
 // Materialize and Bootstrap overide
-@import './utils/overide';
+@import './utils/root';
 
 // Materialize extended style
 @import './utils/material_extends';
@@ -80,6 +80,7 @@
 @import './components/banner-basic';
 @import './components/blog';
 @import './components/call-action';
+@import './components/comments';
 @import './components/company-logo';
 @import './components/filter';
 @import './components/forms';

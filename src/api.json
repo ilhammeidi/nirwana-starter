@@ -18,7 +18,7 @@
       "about": "/about.html",
       "team": "/about-team.html",
       "blog": "/blog.html",
-      "blogDetail": "/blog-detail.html",
+      "blogDetail": "/detail-blog.html",
       "login": "/login.html",
       "register": "/register.html",
       "contact": "/contact.html",

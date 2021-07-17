@@ -65,6 +65,15 @@
       line-height: 22px;
     }
   }
+  &-bold {
+    font-weight: $font-bold
+  }
+  &-medium {
+    font-weight: $font-medium
+  }
+  &-regular {
+    font-weight: $font-regular
+  }
 }
 
 // Hidden class media query

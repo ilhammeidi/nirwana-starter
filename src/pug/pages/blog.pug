@@ -12,27 +12,27 @@ block content
       .container-general
         .container
           .row
-            .col-xs-12
+            .col-sm-12
               include ../components/blog/headline.pug
           .row.mt-8
             .col-md-6.px-3
-              +post-cards('Maecenas rutrum dolor sed nisi', 'Proin pretium arcu eget metus porta consectetur Pellentesque habitant', '12 Nov 2020', 'landscape', 'full', 'https://source.unsplash.com/random', link.starter.blogDetail)
+              +post-card('Maecenas rutrum dolor sed nisi', 'Proin pretium arcu eget metus porta consectetur Pellentesque habitant', '12 Nov 2021', 'landscape', 'full', 'https://source.unsplash.com/random', link.starter.blogDetail)
             .col-md-6.px-4
-              +post-card('Maecenas rutrum dolor sed nisi', 'Proin pretium arcu eget metus porta consectetur Pellentesque habitant', '12 Nov 2020', 'landscape', 'full', 'https://source.unsplash.com/random', link.starter.blogDetail)
+              +post-card('Maecenas rutrum dolor sed nisi', 'Proin pretium arcu eget metus porta consectetur Pellentesque habitant', '12 Nov 2021', 'landscape', 'full', 'https://source.unsplash.com/random', link.starter.blogDetail)
           .row.mt-6
             .col-md-8
               - var n = 0
               while n < 6
-                div(data-index=n++ class= n > 0 ? 'mt-15' : '')
-                  +post-card('Maecenas rutrum dolor sed nisi', 'Maecenas rutrum dolor sed nisi maximus rhoncus. Nunc vel dignissim enim. Proin pretium arcu eget', '12 Nov 2020', 'portrait', 'full', 'https://source.unsplash.com/random', link.starter.blogDetail)
+                div(data-index=n++ class= n > 0 ? 'mt-12' : '')
+                  +post-card('Maecenas rutrum dolor sed nisi', 'Maecenas rutrum dolor sed nisi maximus rhoncus. Nunc vel dignissim enim. Proin pretium arcu eget', '12 Nov 2021', 'portrait', 'oval', 'https://source.unsplash.com/random', link.starter.blogDetail)
               .arrow
-                .row.justify-space-between.mt-5
-                  .btn-flat
-                    .material-icons arrow_back
+                .d-flex.justify-content-between.mt-10
+                  .btn-flat.waves-effect
+                    i.material-icons.left arrow_back
                     | #{$t.common.btn_prev}
-                  .btn-flat
+                  .btn-flat.waves-effect
                     | #{$t.common.btn_next}
-                    .material-icons arrow_forward
+                    i.material-icons.right arrow_forward
             .col-md-4
               include ../components/blog/sidebar/sidebar.pug
       #footer
