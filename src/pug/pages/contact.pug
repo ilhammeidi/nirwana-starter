@@ -1,0 +1,15 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = " Contact"
+  - var pageName = "contact"
+  - var headerHome = false
+
+block content
+  div#contact-page
+    .main-wrap
+      include ../components/header/main.pug
+      .space-top-short
+        include ../components/forms/contact.pug
+      #footer
+        include ../components/footer/main.pug

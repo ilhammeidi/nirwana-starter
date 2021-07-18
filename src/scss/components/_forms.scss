@@ -7,6 +7,9 @@
     @include breakpoints-up(md) {
       display: flex;
     }
+    .inner-wrap {
+      width: 100%;
+    }
     a {
       @include use-theme(color, $palette-primary-main, $palette-primary-light);
       text-transform: none;
@@ -59,6 +62,7 @@
     justify-content: space-between;
     align-items: flex-start;
     font-size: 14px;
+    @include margin-right($spacing2);
     @include breakpoints-down(xs) {
       flex-direction: column;
       align-items: center;
@@ -82,7 +86,6 @@
       margin-bottom: $spacing3;
     }
     button.btn-large {
-      margin-top: $spacing2;
       min-height: 48px;
       min-width: 180px;
     }
@@ -124,7 +127,6 @@
     height: 100%;
     text-align: center;
     h6 {
-      color: $palette-primary-main;
       font-weight: $font-regular
     }
   }
@@ -163,7 +165,6 @@
     > * {
       color: $palette-common-white;
       width: 150px;
-      padding: $spacing1;
       @include breakpoints-down(md) {
         margin: 0 4px;
         width: 120px;
@@ -227,5 +228,23 @@
     > div {
       margin-top: 0
     }
+  }
+  .input-field textarea {
+    height: auto;
+  }
+  .form-error {
+    color: rgb(185, 74, 72)
+  }
+}
+
+.toast {
+  @include padding-right($spacing1);
+  border-radius: 4px;
+  width: auto;
+  .toast-action {
+    margin-right: 0;
+  }
+  i.material-icons {
+    color: #FFF
   }
 }

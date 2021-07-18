@@ -40,6 +40,8 @@
   .logo {
     text-align: center;
     margin-top: $spacing4;
+    display: flex;
+    align-items: center;
     img {
       width: 54px;
       height: 54px;

@@ -1,0 +1,17 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = " Register"
+  - var pageName = "register"
+  - var headerHome = false
+  - var basicMenuText = $t.common.login
+  - var basicMenuLink = link.starter.login
+
+block content
+  div#register-page
+    .main-wrap
+      include ../components/header/basic.pug
+      .container-general.container-front
+        include ../components/forms/register.pug
+      #footer
+        include ../components/footer/main.pug

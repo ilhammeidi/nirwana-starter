@@ -201,8 +201,9 @@ $flag: '../images/flag-logo.png';
       list-style: none;
       position: relative;
       display: inline-block;
-      padding: spacing(0, 1);
+      padding: $spacing1;
       height: auto;
+      line-height: normal;
       @include palette-text-primary;
     }
   }
@@ -268,6 +269,8 @@ $flag: '../images/flag-logo.png';
   .icon {
     transition: all 0.3s ease;
     @include palette-text-secondary;
+    display: block;
+    font-size: 24px;
   }
   .active {
     transform: rotate(30deg)

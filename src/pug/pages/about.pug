@@ -26,7 +26,8 @@ block content
         include ../components/about/photo-slider.pug
       include ../components/call-action.pug
       .space-top-short
-        include ../components/forms/contact-map.pug
-        +contact-map(true)
+        .container
+          include ../components/forms/contact-map.pug
+          +contact-map(true)
       #footer
         include ../components/footer/main.pug

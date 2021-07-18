@@ -711,62 +711,64 @@
             </div>
           </div>
           <div class="space-top-short">
-            <div class="form-style">
-              <div class="page-wrap">
-                <div class="container max-lg inner-wrap">
-                  <div class="row d-flex align-items-center">
-                    <div class="col-md-6 pe-md-0 wrap-deco">
-                      <div class="card form-box map-form">
-                        <div class="form">
-                          <div class="text-center">
-                            <h4 class="use-text-title2 mb-3">Say Hello to Us</h4>
-                            <p>Aenean sit amet magna vel magna fringilla fermentum. Donec sed arcu pulvinar ultricies commodo id ligula.</p>
+            <div class="container">
+              <div class="form-style">
+                <div class="page-wrap">
+                  <div class="inner-wrap">
+                    <div class="row d-flex align-items-center">
+                      <div class="col-md-6 pe-md-0 wrap-deco">
+                        <div class="card form-box map-form">
+                          <div class="form">
+                            <div class="text-center">
+                              <h4 class="use-text-title2 mb-3">Say Hello to Us</h4>
+                              <p>Aenean sit amet magna vel magna fringilla fermentum. Donec sed arcu pulvinar ultricies commodo id ligula.</p>
+                            </div>
+                            <form id="contact_form">
+                              <div class="row spacing6">
+                                <div class="col-sm-12">
+                                  <div class="input-field primary filled">
+                                    <input class="validate" id="name" type="text" required>
+                                    <label for="name">What is your name? *</label>
+                                  </div>
+                                </div>
+                                <div class="col-sm-12">
+                                  <div class="input-field primary filled">
+                                    <input class="validate" id="email" type="email" required>
+                                    <label for="email">What is your email? *</label>
+                                  </div>
+                                </div>
+                                <div class="col-sm-12">
+                                  <div class="input-field primary filled">
+                                    <input id="phone" type="tel">
+                                    <label for="phone">What is your phone number?</label>
+                                  </div>
+                                </div>
+                                <div class="col-sm-12">
+                                  <div class="input-field primary filled">
+                                    <input id="company" type="text">
+                                    <label for="company">What is your company?</label>
+                                  </div>
+                                </div>
+                                <div class="col-sm-12">
+                                  <div class="input-field primary filled">
+                                    <textarea class="materialize-textarea" id="message" rows="6"></textarea>
+                                    <label for="message">Write your message here</label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form-control-label">
+                                <label><input class="filled-in secondary" type="checkbox" required><span>I have read and accept the Terms of <a class="link" href="#">Service &amp; Privacy Policy *</a></span></label>
+                              </div>
+                              <div class="btn-area"><button class="btn block primary btn-large waves-effect" type="submit">Send Message</button></div>
+                            </form>
                           </div>
-                          <form id="contact_form">
-                            <div class="row spacing6">
-                              <div class="col-sm-12">
-                                <div class="input-field primary filled">
-                                  <input class="validate" id="name" type="text" required>
-                                  <label for="name">What is your name? *</label>
-                                </div>
-                              </div>
-                              <div class="col-sm-12">
-                                <div class="input-field primary filled">
-                                  <input class="validate" id="email" type="email" required>
-                                  <label for="email">What is your email? *</label>
-                                </div>
-                              </div>
-                              <div class="col-sm-12">
-                                <div class="input-field primary filled">
-                                  <input id="phone" type="tel">
-                                  <label for="phone">What is your phone number?</label>
-                                </div>
-                              </div>
-                              <div class="col-sm-12">
-                                <div class="input-field primary filled">
-                                  <input id="company" type="text">
-                                  <label for="company">What is your company?</label>
-                                </div>
-                              </div>
-                              <div class="col-sm-12">
-                                <div class="input-field primary filled">
-                                  <textarea class="materialize-textarea" id="message" rows="6"></textarea>
-                                  <label for="message">Write your message here</label>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="form-control-label">
-                              <label><input class="filled-in secondary" type="checkbox" required><span>I have read and accept the Terms of <a class="link" href="#">Service &amp; Privacy Policy *</a></span></label>
-                            </div>
-                            <div class="btn-area"><button class="btn block primary btn-large waves-effect" type="submit">Send Message</button></div>
-                          </form>
                         </div>
                       </div>
-                    </div>
-                    <div class="col-md-6 ps-md-0">
-                      <div class="hidden-md-down">
-                        <div class="card map full">
-                          <div id="map"></div>
+                      <div class="col-md-6 ps-md-0">
+                        <div class="hidden-md-down">
+                          <div class="card map full">
+                            <div id="map"></div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -782,7 +784,7 @@
                   <div class="col-md-3 pa-4">
                     <div class="logo">
                       <img src="./assets/images/logo-starter.png" alt="logo" />
-                      <h6 class="mb-4 title">Starter Project</h6>
+                      <h6 class="title">Starter Project</h6>
                     </div>
                     <p class="body-2">Create your project from scratch with main components and basic styles.</p>
                     <p class="body-2">&copy;

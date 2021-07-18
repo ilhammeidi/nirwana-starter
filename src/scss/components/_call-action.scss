@@ -11,7 +11,7 @@
       top: 4px;
       position: relative;
       [dir="rtl"] & {
-        transform: rotate(180deg  )
+        transform: rotate(180deg)
       }
     }
     @include breakpoints-up(md) {
@@ -35,7 +35,7 @@
     }
     @include breakpoints-up(lg) {
       padding: spacing(4, 10);
-      margin: spacing(0, 4);
+      margin: spacing(0, 2);
     }
     @include breakpoints-down(sm) {
       margin-bottom: $spacing5
