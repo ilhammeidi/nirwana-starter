@@ -4,6 +4,7 @@ block variables
   - 
     var pageTitle = " Product List"
     var pageName = "products"
+    var headerHome = false
     var products = [
       {
         title: 'Ut sed eros finibus',
@@ -260,20 +261,24 @@ block variables
     ];
 
 block content
-  .container-wrap
-    include ../components/filter/search
-    .search-content
-      .container
-        include ../components/filter/sorter
-        +sorter(products.length)
-        .row.align-items-start.justify-content-start
-          .col-lg-2.col-md-3.pa-0
-            .hidden-sm-down
-              include ../components/filter/filter
-          .col-lg-10.col-md-9
-            include ../components/cards/product-card
-            .row#product_result(data-items=products)
-              each item in products
-                .col.col-sm-4
-                  +product-card(item.rating, item.price, 'https://source.unsplash.com/random', item.title, 'Category: '+item.category+' ~ '+'Tag: '+item.tag+' ~ '+'Check: '+item.check+' ~ '+'Radio: '+item.radio, 'round', 'portrait')
-        
+  #products-page
+    .main-wrap
+      include ../components/header/main.pug
+      .container-wrap
+        include ../components/filter/search
+        .search-content
+          .container
+            include ../components/filter/sorter
+            +sorter(products.length)
+            .row.align-items-start.justify-content-start
+              .col-lg-2.col-md-3.pa-0
+                .hidden-sm-down
+                  include ../components/filter/filter
+              .col-lg-10.col-md-9
+                include ../components/cards/product-card
+                .row#product_result
+                  each item in products
+                    .col.col-sm-4
+                      +product-card(item.rating, item.price, 'https://source.unsplash.com/random', item.title, 'Category: '+item.category+' ~ '+'Tag: '+item.tag+' ~ '+'Check: '+item.check+' ~ '+'Radio: '+item.radio, 'round', 'portrait')
+      #footer
+        include ../components/footer/main.pug
