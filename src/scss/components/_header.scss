@@ -80,6 +80,9 @@ $flag: '../images/flag-logo.png';
       padding: spacing(1, 0);
     }
   }
+  &.no-shadow {
+     @include palette-background-paper;
+  }
   .search {
     position: relative;
     display: flex;
@@ -203,7 +206,7 @@ $flag: '../images/flag-logo.png';
       display: inline-block;
       padding: $spacing1;
       height: auto;
-      line-height: normal;
+      line-height: 18px;
       @include palette-text-primary;
     }
   }

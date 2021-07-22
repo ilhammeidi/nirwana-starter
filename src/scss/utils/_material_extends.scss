@@ -41,19 +41,21 @@ $btn-radius: 6px !default;
   -webkit-transition: background-color .2s ease-out;
   transition: background-color .2s ease-out;
   cursor: pointer;
-  font-size: 14px;
   outline: 0;
   border: $border;
   font-weight: $font-bold;
   border-radius: $radius;
   display: inline-block;
-  height: 36px;
-  line-height: 36px;
-  padding: 0 16px;
   text-transform: uppercase;
   vertical-align: middle;
   -webkit-tap-highlight-color: transparent;
   @include btn-hover;
+  &:not(.btn-small):not(.btn-large) {
+    padding: 0 16px;
+    font-size: 14px;
+    height: 36px;
+    line-height: 36px;
+  }
 }
 
 .btn {
@@ -148,6 +150,30 @@ $btn-radius: 6px !default;
   a.collection-item{
     @include palette-text-primary
   }
+}
+
+.collection .collection-item.avatar:not(.circle-clipper) > .round,
+.collection .collection-item.avatar :not(.circle-clipper) > .round,
+.collection .collection-item.avatar:not(.circle-clipper) > .square,
+.collection .collection-item.avatar :not(.circle-clipper) > .square {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  overflow: hidden;
+  left: 12px;
+  top: 12px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.round {
+  border-radius: $rounded-small
+}
+
+// Collapsible Accordion
+.collapsible {
+  box-shadow: none;
+  border: none;
 }
 
 // Typography

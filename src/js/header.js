@@ -80,7 +80,13 @@ $(document).ready(function(){
     alignment: 'left',
     coverTrigger: false,
     constrainWidth: true,
-    container: $('#container_menu')
+    container: $('#container_menu'),
+    onOpenStart: function() {
+      $header.addClass('no-shadow')
+    },
+    onCloseEnd: function() {
+      $header.removeClass('no-shadow')
+    }
   });
 
   // Initial sidenav for mobile menu

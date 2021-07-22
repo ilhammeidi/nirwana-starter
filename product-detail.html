@@ -44,7 +44,7 @@
   <meta property="og:image" content="/images/logo-starter.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <title>Starter - Contact </title><!-- Styles-->
+  <title>Starter - Product Detail </title><!-- Styles-->
   <!-- Put the 3rd/plugins css here-->
   <link href="./assets/css/vendors/normalize.css" rel="stylesheet">
   <link href="./assets/css/vendors/bootstrap.css" rel="stylesheet">
@@ -63,7 +63,7 @@
   <div class="m-application theme--light transition-page" id="app">
     <div class="loading"></div>
     <div class="m-content purple-var" id="main-wrap">
-      <div id="contact-page">
+      <div id="detail-product-page">
         <div class="main-wrap">
           <!-- #### HEADER ####-->
           <div class="sidenav mobile-nav" id="slide_menu">
@@ -110,7 +110,7 @@
                             <a class="waves-effect text-truncate menu-list" href="/register.html">register</a>
                           </li>
                           <li class="collection-item side-group-link">
-                            <a class="waves-effect text-truncate menu-list current" href="/contact.html">contact</a>
+                            <a class="waves-effect text-truncate menu-list" href="/contact.html">contact</a>
                           </li>
                           <li class="collection-item side-group-link">
                             <a class="waves-effect text-truncate menu-list" href="/contact-map.html">contact map</a>
@@ -127,7 +127,7 @@
                             <a class="waves-effect text-truncate menu-list" href="/products.html">products</a>
                           </li>
                           <li class="collection-item side-group-link">
-                            <a class="waves-effect text-truncate menu-list" href="/product-detail.html">product detail</a>
+                            <a class="waves-effect text-truncate menu-list current" href="/product-detail.html">product detail</a>
                           </li>
                         </ul>
                         <ul class="group-child">
@@ -220,7 +220,7 @@
                                   <ul>
                                     <li class="waves-effect"><a class="menu-list" href="/login.html">login</a></li>
                                     <li class="waves-effect"><a class="menu-list" href="/register.html">register</a></li>
-                                    <li class="waves-effect"><a class="menu-list current" href="/contact.html">contact</a></li>
+                                    <li class="waves-effect"><a class="menu-list" href="/contact.html">contact</a></li>
                                     <li class="waves-effect"><a class="menu-list" href="/contact-map.html">contact map</a></li>
                                   </ul>
                                 </div>
@@ -230,7 +230,7 @@
                                   <ul>
                                     <li class="waves-effect"><a class="menu-list" href="/collection.html">collection</a></li>
                                     <li class="waves-effect"><a class="menu-list" href="/products.html">products</a></li>
-                                    <li class="waves-effect"><a class="menu-list" href="/product-detail.html">product detail</a></li>
+                                    <li class="waves-effect"><a class="menu-list current" href="/product-detail.html">product detail</a></li>
                                   </ul>
                                 </div>
                                 <div class="col-sm-3 mb-6">
@@ -316,53 +316,255 @@
               </div>
             </div>
           </header><!-- #### END HEADER ####-->
-          <div class="space-top-short">
-            <div class="form-style">
-              <div class="container inner-wrap max-md">
-                <div class="full-form-wrap">
-                  <h3 class="title-contact use-text-title pb-3 text-center">Say Hello to Us</h3>
-                  <p class="desc use-text-subtitle2 text-center">Do you have any questions? Are you ready to reduce cost and create new revenue? Or you simply want to say hi? Drop us a message.</p>
-                  <div class="form">
-                    <form id="contact_form">
-                      <div class="row spacing6">
-                        <div class="col-sm-6 px-6">
-                          <div class="input-field primary">
-                            <input class="validate" id="name" type="text" required>
-                            <label for="name">What is your name? *</label>
+          <div class="container-general">
+            <div class="list-style">
+              <div class="row justify-content-center">
+                <div class="col-md-4 col-sm-5 pa-md-6">
+                  <div class="carousel">
+                    <div class="detail-carousel" id="detail_carousel">
+                      <div class="image" data-index="0">
+                        <a class="waves-effect" href="https://via.placeholder.com/967x725/bb6dea/fff">
+                          <div class="figure">
+                            <img src="https://via.placeholder.com/967x725/bb6dea/fff" alt="thumb" />
+                            <div class="img image-detail" style="background-image: url(https://via.placeholder.com/967x725/bb6dea/fff"></div>
+                            <i class="material-icons zoom-icon">zoom_in</i>
                           </div>
-                        </div>
-                        <div class="col-sm-6 px-6">
-                          <div class="input-field primary">
-                            <input class="validate" id="email" type="email" required>
-                            <label for="email">What is your email? *</label>
-                          </div>
-                        </div>
-                        <div class="col-sm-6 px-6">
-                          <div class="input-field primary">
-                            <input id="phone" type="tel">
-                            <label for="phone">What is your phone number?</label>
-                          </div>
-                        </div>
-                        <div class="col-sm-6 px-6">
-                          <div class="input-field primary">
-                            <input id="company" type="text">
-                            <label for="company">What is your company?</label>
-                          </div>
-                        </div>
-                        <div class="col-sm-12 px-6">
-                          <div class="input-field primary">
-                            <textarea class="materialize-textarea" id="message" rows="6"></textarea>
-                            <label for="message">Write your message here</label>
-                          </div>
-                        </div>
+                        </a>
                       </div>
+                      <div class="image" data-index="1">
+                        <a class="waves-effect" href="https://via.placeholder.com/967x725/bb6dea/fff">
+                          <div class="figure">
+                            <img src="https://via.placeholder.com/967x725/bb6dea/fff" alt="thumb" />
+                            <div class="img image-detail" style="background-image: url(https://via.placeholder.com/967x725/bb6dea/fff"></div>
+                            <i class="material-icons zoom-icon">zoom_in</i>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="image" data-index="2">
+                        <a class="waves-effect" href="https://via.placeholder.com/967x725/bb6dea/fff">
+                          <div class="figure">
+                            <img src="https://via.placeholder.com/967x725/bb6dea/fff" alt="thumb" />
+                            <div class="img image-detail" style="background-image: url(https://via.placeholder.com/967x725/bb6dea/fff"></div>
+                            <i class="material-icons zoom-icon">zoom_in</i>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="image" data-index="3">
+                        <a class="waves-effect" href="https://via.placeholder.com/967x725/bb6dea/fff">
+                          <div class="figure">
+                            <img src="https://via.placeholder.com/967x725/bb6dea/fff" alt="thumb" />
+                            <div class="img image-detail" style="background-image: url(https://via.placeholder.com/967x725/bb6dea/fff"></div>
+                            <i class="material-icons zoom-icon">zoom_in</i>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="image" data-index="4">
+                        <a class="waves-effect" href="https://via.placeholder.com/967x725/bb6dea/fff">
+                          <div class="figure">
+                            <img src="https://via.placeholder.com/967x725/bb6dea/fff" alt="thumb" />
+                            <div class="img image-detail" style="background-image: url(https://via.placeholder.com/967x725/bb6dea/fff"></div>
+                            <i class="material-icons zoom-icon">zoom_in</i>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="image" data-index="5">
+                        <a class="waves-effect" href="https://via.placeholder.com/967x725/bb6dea/fff">
+                          <div class="figure">
+                            <img src="https://via.placeholder.com/967x725/bb6dea/fff" alt="thumb" />
+                            <div class="img image-detail" style="background-image: url(https://via.placeholder.com/967x725/bb6dea/fff"></div>
+                            <i class="material-icons zoom-icon">zoom_in</i>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-sm-7 pa-6 px-md-10">
+                  <div class="text">
+                    <h4 class="use-text-title2"><span class="use-text-subtitle2">Vivamus sit amet</span> The Lorem Ipsum Dolor Sit Amet</h4>
+                    <div class="property">
+                      <div class="star"><i class="material-icons star-icon" data-index="0">star</i><i class="material-icons star-icon" data-index="1">star</i><i class="material-icons star-icon" data-index="2">star</i><i class="material-icons star-icon" data-index="3">star</i><i class="material-icons star-icon" data-index="4">star</i></div>5.0<span class="divider"></span>213 Sales
+                    </div>
+                    <article class="desc">
+                      <h6 class="use-text-paragraph">Maecenas nisl libero, tincidunt id odio id, feugiat vulputate quam. Vestibulum feugiat rhoncus metus.</h6>
+                    </article>
+                    <div class="btn-area">
+                      <a class="btn-flat text-btn" href="#">Add to wishlist</a>
+                      <a class="btn button primary" href="#">Add to cart</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="list-style">
+              <div class="row justify-content-center">
+                <div class="col-lg-10 col-md-12 pa-6">
+                  <div class="row">
+                    <div class="col-sm-8 px-4">
+                      <h4 class="use-text-subtitle mb-3">Description</h4>
+                      <p>Vestibulum faucibus eget erat eget pretium. Donec commodo convallis eget suscipit orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      <p>Pellentesque ullamcorper aliquet ultrices. Aenean facilisis vitae purus facilisis semper. Nam vitae scelerisque lorem, quis tempus libero. Proin varius, tortor faucibus tempor pharetra, nunc mi consectetur enim, nec posuere ante magna vitae quam.</p>
                       <div class="btn-area">
-                        <div class="form-control-label">
-                          <label><input class="filled-in primary" type="checkbox" required><span>I have read and accept the Terms of</span></label>
-                          <br/><a href="#">Service &amp; Privacy Policy *</a>
-                        </div><button class="btn btn-large waves-effect primary" type="submit">Send Message</button>
+                        <a class="btn-flat text-btn"><i class="ion-android-share-alt"></i>Share</a>
+                        <a class="btn-flat text-btn"><i class="ion-film-marker"></i>Trivia</a>
+                        <a class="btn-flat text-btn"><i class="ion-ios-star"></i>Rate this</a>
                       </div>
-                    </form>
+                    </div>
+                    <div class="col-sm-4 px-4">
+                      <div class="person">
+                        <h6 class="caption use-text-bold">Property 1</h6>
+                        <p>Item 1, Item 2, Item 3, Item 4, Item 5</p>
+                        <h6 class="caption use-text-bold">Property 2</h6>
+                        <p>Item 1, Item 2, Item 3, Item 4, Item 5</p>
+                        <h6 class="caption use-text-bold">Property 3</h6>
+                        <p>Item 1, Item 2, Item 3, Item 4, Item 5</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-lg-10 col-md-12 pa-6">
+                <h4 class="use-text-subtitle mb-3">Related Products</h4>
+                <div class="row scroll-tablet">
+                  <div class="col-md-3 col-sm-4 col-xs-10 px-2" data-index="0">
+                    <div class="card product-card portrait over">
+                      <a class="waves-effect hidden-link" href="#">&nbsp;</a>
+                      <figure><img src="https://source.unsplash.com/random" alt="Sed lacinia velit"></figure>
+                      <div class="desc">
+                        <div class="text">
+                          <h6 class="title pb-2 text-truncate">Sed lacinia velit</h6>
+                          <p class="use-text-paragraph">Proin pretium arcu eget metus porta consecteturc</p>
+                        </div>
+                        <div>
+                          <div class="property">
+                            <div class="rating"><i class="material-icons star-icon" title="1">star</i><i class="material-icons star-icon" title="2">star</i><i class="material-icons star-icon" title="3">star</i><i class="material-icons star-icon-disable" title="1">star</i><i class="material-icons star-icon-disable" title="2">star</i></div><strong>$20</strong>
+                          </div>
+                          <a class="btn btn-outlined primary button block" href="#">see detail</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-4 col-xs-10 px-2" data-index="1">
+                    <div class="card product-card portrait over">
+                      <a class="waves-effect hidden-link" href="#">&nbsp;</a>
+                      <figure><img src="https://source.unsplash.com/random" alt="Sed lacinia velit"></figure>
+                      <div class="desc">
+                        <div class="text">
+                          <h6 class="title pb-2 text-truncate">Sed lacinia velit</h6>
+                          <p class="use-text-paragraph">Proin pretium arcu eget metus porta consecteturc</p>
+                        </div>
+                        <div>
+                          <div class="property">
+                            <div class="rating"><i class="material-icons star-icon" title="1">star</i><i class="material-icons star-icon" title="2">star</i><i class="material-icons star-icon" title="3">star</i><i class="material-icons star-icon-disable" title="1">star</i><i class="material-icons star-icon-disable" title="2">star</i></div><strong>$20</strong>
+                          </div>
+                          <a class="btn btn-outlined primary button block" href="#">see detail</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-4 col-xs-10 px-2" data-index="2">
+                    <div class="card product-card portrait over">
+                      <a class="waves-effect hidden-link" href="#">&nbsp;</a>
+                      <figure><img src="https://source.unsplash.com/random" alt="Sed lacinia velit"></figure>
+                      <div class="desc">
+                        <div class="text">
+                          <h6 class="title pb-2 text-truncate">Sed lacinia velit</h6>
+                          <p class="use-text-paragraph">Proin pretium arcu eget metus porta consecteturc</p>
+                        </div>
+                        <div>
+                          <div class="property">
+                            <div class="rating"><i class="material-icons star-icon" title="1">star</i><i class="material-icons star-icon" title="2">star</i><i class="material-icons star-icon" title="3">star</i><i class="material-icons star-icon-disable" title="1">star</i><i class="material-icons star-icon-disable" title="2">star</i></div><strong>$20</strong>
+                          </div>
+                          <a class="btn btn-outlined primary button block" href="#">see detail</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-4 col-xs-10 px-2" data-index="3">
+                    <div class="card product-card portrait over">
+                      <a class="waves-effect hidden-link" href="#">&nbsp;</a>
+                      <figure><img src="https://source.unsplash.com/random" alt="Sed lacinia velit"></figure>
+                      <div class="desc">
+                        <div class="text">
+                          <h6 class="title pb-2 text-truncate">Sed lacinia velit</h6>
+                          <p class="use-text-paragraph">Proin pretium arcu eget metus porta consecteturc</p>
+                        </div>
+                        <div>
+                          <div class="property">
+                            <div class="rating"><i class="material-icons star-icon" title="1">star</i><i class="material-icons star-icon" title="2">star</i><i class="material-icons star-icon" title="3">star</i><i class="material-icons star-icon-disable" title="1">star</i><i class="material-icons star-icon-disable" title="2">star</i></div><strong>$20</strong>
+                          </div>
+                          <a class="btn btn-outlined primary button block" href="#">see detail</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="comments-style">
+              <div class="row justify-content-center">
+                <div class="col-lg-10 col-md-12 pa-6">
+                  <div class="row">
+                    <div class="col-md-8 px-4">
+                      <h4 class="use-text-subtitle mb-3 text-capitalize">comments</h4>
+                      <div class="comments-style">
+                        <div class="form-comment">
+                          <div class="write">
+                            <div class="avatar-img"><img src="./assets/images/avatars/pp_boy3.svg" alt="avatar"></div>
+                            <div class="input-field"><input id="write_comment" placeholder="Write Comments" type="text"><button class="btn waves-effect primary send-btn"><span class="hidden-xs-down">Send Message</span>
+                                <div class="material-icons icon show-xs-down">send</div></button></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="collection border-0">
+                        <div class="comment-list">
+                          <div class="collection-item avatar">
+                            <img class="circle" src="./assets/images/avatars/pp_boy4.svg" />
+                            <span class="title font-weight-medium">John Doe</span>
+                            <div><span class="caption">13 Dec 2021</span>
+                              <p class="mt-2">Maecenas nisl libero, tincidunt id odio id, feugiat vulputate quam. Vestibulum feugiat rhoncus metus. In non erat et ipsum molestie porta sit amet ut felis. Vestibulum a massa vestibulum, gravida odio id, fringilla ipsum.</p>
+                            </div>
+                          </div>
+                          <hr class="divider">
+                        </div>
+                        <div class="comment-list">
+                          <div class="collection-item avatar">
+                            <img class="circle" src="./assets/images/avatars/pp_boy4.svg" />
+                            <span class="title font-weight-medium">John Doe</span>
+                            <div><span class="caption">13 Dec 2021</span>
+                              <p class="mt-2">Maecenas nisl libero, tincidunt id odio id, feugiat vulputate quam. Vestibulum feugiat rhoncus metus. In non erat et ipsum molestie porta sit amet ut felis. Vestibulum a massa vestibulum, gravida odio id, fringilla ipsum.</p>
+                            </div>
+                          </div>
+                          <hr class="divider">
+                        </div>
+                        <div class="comment-list">
+                          <div class="collection-item avatar">
+                            <img class="circle" src="./assets/images/avatars/pp_boy4.svg" />
+                            <span class="title font-weight-medium">John Doe</span>
+                            <div><span class="caption">13 Dec 2021</span>
+                              <p class="mt-2">Maecenas nisl libero, tincidunt id odio id, feugiat vulputate quam. Vestibulum feugiat rhoncus metus. In non erat et ipsum molestie porta sit amet ut felis. Vestibulum a massa vestibulum, gravida odio id, fringilla ipsum.</p>
+                            </div>
+                          </div>
+                          <hr class="divider">
+                        </div>
+                        <div class="comment-list">
+                          <div class="collection-item avatar">
+                            <img class="circle" src="./assets/images/avatars/pp_boy4.svg" />
+                            <span class="title font-weight-medium">John Doe</span>
+                            <div><span class="caption">13 Dec 2021</span>
+                              <p class="mt-2">Maecenas nisl libero, tincidunt id odio id, feugiat vulputate quam. Vestibulum feugiat rhoncus metus. In non erat et ipsum molestie porta sit amet ut felis. Vestibulum a massa vestibulum, gravida odio id, fringilla ipsum.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 pa-3">
+                      <div class="comments-style">
+                        <div class="collection helper"><a class="collection-item waves-effect" href="#!"><i class="icon primary left material-icons">info</i><span class="help-item">report this item</span></a><a class="collection-item waves-effect" href="#!"><i class="icon primary left material-icons">help</i><span class="help-item">report this item</span></a><a class="collection-item waves-effect" href="#!"><i class="icon primary left material-icons">radio_button_checked</i><span class="help-item">other option 1</span></a><a class="collection-item waves-effect" href="#!"><i class="icon primary left material-icons">check_circle</i><span class="help-item">other option 2</span></a></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

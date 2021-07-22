@@ -7,6 +7,14 @@
       padding: spacing(2, 3);
     }
   }
+  .helper {
+    &.collection {
+      border: none;
+      .collection-item {
+        border: none
+      }
+    }
+  }
   .write {
     position: relative;
     display: flex;

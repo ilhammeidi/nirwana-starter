@@ -12,9 +12,9 @@ block content
       .container-wrap
         include ../components/filter/search
         .search-content
-          .container
+          .container.max-lg
             .row.align-items-start.justify-content-center
-              .col-md-8
+              .col-md-9
                 include ../components/cards/profile-card
                 include ../components/cards/product-card
                 include ../components/cards/media-card
@@ -34,7 +34,7 @@ block content
                   .row
                     - var profile_l = 0
                     while profile_l < 3
-                      .col-md-12(data-index=profile_l++)
+                      .col-md-12.px-0(data-index=profile_l++)
                         +profile-card('https://source.unsplash.com/random', undefined, 'John Dalton', 'Web Designer', 100, 10, 12, 'full', 'landscape')
                         br/
                         br/
@@ -54,7 +54,7 @@ block content
                   .row
                     - var product_l = 0
                     while product_l < 3
-                      .col-md-12(data-index=product_l++)
+                      .col-md-12.px-0(data-index=product_l++)
                         +product-card(3, 20, 'https://source.unsplash.com/random', 'Sed lacinia velit', 'Proin pretium arcu eget metus porta consecteturc', 'round', 'landscape')
                 #media_video.space-top-short
                   h4.use-text-subtitle.mb-3
@@ -78,7 +78,7 @@ block content
                   .row
                     - var news_p = 0
                     while news_p < 3
-                      .col-md-12(data-index=news_p++)
+                      .col-sm-4(data-index=news_p++)
                         +news-card('Ut sed eros finibus, placerat orci id, dapibus mauris. Vestibulum consequat hendrerit lacus.', 'news', 'portrait', 'over', 'https://source.unsplash.com/random', '#')
                 #news_l.space-top-short
                   h4.use-text-subtitle.mb-3
@@ -86,7 +86,7 @@ block content
                   .row
                     - var news_l = 0
                     while news_l < 3
-                      .col-sm-4(data-index=news_l++)
+                      .col-md-12.px-0(data-index=news_l++)
                         +post-card('Maecenas rutrum dolor sed nisi', 'Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant. Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant', '12 Nov 2021', 'landscape', 'over', 'https://source.unsplash.com/random', '#')
                 #post_p.space-top-short
                   h4.use-text-subtitle.mb-3
@@ -95,16 +95,16 @@ block content
                     - var post_p = 0
                     while post_p < 3
                       .col-sm-4(data-index=post_p++)
-                        +post-card('Maecenas rutrum dolor sed nisi', 'Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant. Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant', '12 Nov 2021', 'landscape', 'over', 'https://source.unsplash.com/random', '#')
+                        +post-card('Maecenas rutrum dolor sed nisi', 'Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant. Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant', '12 Nov 2021', 'portrait', 'oval', 'https://source.unsplash.com/random', '#')
                 #post_l.space-top-short
                   h4.use-text-subtitle.mb-3
                     | Post Cards Landscape
                   .row
                     - var post_l = 0
                     while post_l < 3
-                      .col-md-12(data-index=post_l++)
+                      .col-md-12.px-0(data-index=post_l++)
                         +post-card('Maecenas rutrum dolor sed nisi', 'Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant. Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant', '12 Nov 2021', 'landscape', 'over', 'https://source.unsplash.com/random', '#')
-              .col-md-4
+              .col-md-3.px-0
                 include ../components/list/sidebar/sidebar
       #footer
         include ../components/footer/main.pug

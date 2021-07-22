@@ -1,4 +1,129 @@
 /**
+ * @name _common
+ * @function handle scroling
+ * @function initial parallax, tooltip, carousel, etc
+ */
+
+var $header = $("#header");
+var $pageNav = $("#page_nav");
+var sticky = 0;
+
+// Sticky header
+if($("#header").length > 0) {
+  sticky = header.offsetTop + 80;
+}
+
+function fixedNav() {
+  if (window.pageYOffset > sticky) {
+    $header.addClass("fixed");
+  } else {
+    $header.removeClass("fixed");
+  }
+}
+
+// Bottom right navigation,
+function fixedFabNav() {
+  if (window.pageYOffset > 500) {
+    $pageNav.addClass("show");
+  } else {
+    $pageNav.removeClass("show");
+  }
+}
+
+/**
+ * @name Feature Progress
+ * @function handle progress on scroll window
+ */
+
+var progressOffset = 0;
+
+var $progress = $('#progress').offset();
+if($("#progress").length > 0) {
+  progressOffset = $progress.top - 50;
+}
+
+function playProgress() {
+  if (window.pageYOffset > progressOffset) {
+    $('#progress').removeClass('zero');
+  }
+}
+
+
+$(document).ready(function(){
+  // Fixed nav
+  setTimeout(function() {
+    window.onscroll = function() {
+      playProgress();
+      fixedNav();
+      fixedFabNav();
+    };
+  }, 500)
+  // Preloader
+  $('#preloader').delay(1000).fadeOut('fast');
+  $(".transition-page").addClass('page-fadeUp-transition-enter').delay(1000).queue(function(){
+    $(this)
+    .removeClass('page-fadeUp-transition-enter')
+    .addClass('page-fadeUp-transition-enter-active')
+    .dequeue()
+    .delay(1400).queue(function(){
+      $(this)
+      .removeClass('page-fadeUp-transition-enter-active')
+      .addClass('page-fadeUp-transition-exit')
+      .dequeue();
+    })
+  });
+  
+  // Open Page scroll navigation
+  $('.scrollnav').navScroll({
+    scrollSpy: true,
+    activeParent: true,
+    activeClassName: 'current'
+  });
+  
+  // initial wow
+  new WOW().init();
+    
+  // Accordion init
+  $('.collapsible').collapsible();
+  var elem = document.querySelector('.collapsible.expandable');
+  var instance = M.Collapsible.init(elem, {
+    accordion: false
+  });
+
+  // Select
+  $('.select').formSelect();
+
+  // Tooltip initial
+  $('.tooltipped').tooltip();
+
+  // slick carousel config
+  $('.slick-carousel').slick({
+    dots: false,
+    arrows: false,
+    slidesToShow: 3,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 30000,
+    responsive: [
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+});
+
+/**
  * @name Carousel
  * @function handle team and album carousel
  */
@@ -683,7 +808,13 @@ $(document).ready(function(){
     alignment: 'left',
     coverTrigger: false,
     constrainWidth: true,
-    container: $('#container_menu')
+    container: $('#container_menu'),
+    onOpenStart: function() {
+      $header.addClass('no-shadow')
+    },
+    onCloseEnd: function() {
+      $header.removeClass('no-shadow')
+    }
   });
 
   // Initial sidenav for mobile menu
@@ -776,6 +907,53 @@ $(function(){
     return false;
   });
 });
+/**
+ * @name Lightbox
+ * @function handle slider carousel for detail item
+ * @function handle lightbox popup for detail item
+ */
+
+
+$(document).ready(function(){
+  var $detailCarousel = $('#detail_carousel');
+
+  // slick carousel album
+  $detailCarousel.slick({
+    dots: true,
+    arrows: false,
+    slidesToShow: 1,
+    infinite: false,
+    autoplay: false
+  });
+
+  $detailCarousel.each(function() {
+    $(this).magnificPopup({
+      delegate: '.image a',
+      type: 'image',
+      mainClass: 'mfp-with-zoom', // this class is for CSS animation below
+      gallery: {
+        enabled: true
+      },
+      zoom: {
+        enabled: true, // By default it's false, so don't forget to enable it
+
+        duration: 300, // duration of the effect, in milliseconds
+        easing: 'ease-in-out', // CSS transition easing function
+
+        // The "opener" function should return the element from which popup will be zoomed in
+        // and to which popup will be scaled down
+        // By defailt it looks for an image tag:
+        opener: function(openerElement) {
+          // openerElement is the element on which popup was initialized, in this case its <a> tag
+          // you don't need to add "opener" option if this code matches your needs, it's defailt one.
+          return openerElement.is('img') ? openerElement : openerElement.find('img');
+        }
+      }
+    });
+  });
+});
+
+
 /**
  * @name Map Adress
  * @function initial google map with marker
@@ -899,128 +1077,3 @@ enquire
   .register(mq.smDown, handler_smDown)
   .register(mq.mdDown, handler_mdDown)
   .register(mq.lgDown, handler_lgDown);
-
-/**
- * @name _common
- * @function handle scroling
- * @function initial parallax, tooltip, carousel, etc
- */
-
-var $header = $("#header");
-var $pageNav = $("#page_nav");
-var sticky = 0;
-
-// Sticky header
-if($("#header").length > 0) {
-  sticky = header.offsetTop + 80;
-}
-
-function fixedNav() {
-  if (window.pageYOffset > sticky) {
-    $header.addClass("fixed");
-  } else {
-    $header.removeClass("fixed");
-  }
-}
-
-// Bottom right navigation,
-function fixedFabNav() {
-  if (window.pageYOffset > 500) {
-    $pageNav.addClass("show");
-  } else {
-    $pageNav.removeClass("show");
-  }
-}
-
-/**
- * @name Feature Progress
- * @function handle progress on scroll window
- */
-
-var progressOffset = 0;
-
-var $progress = $('#progress').offset();
-if($("#progress").length > 0) {
-  progressOffset = $progress.top - 50;
-}
-
-function playProgress() {
-  if (window.pageYOffset > progressOffset) {
-    $('#progress').removeClass('zero');
-  }
-}
-
-
-$(document).ready(function(){
-  // Fixed nav
-  setTimeout(function() {
-    window.onscroll = function() {
-      playProgress();
-      fixedNav();
-      fixedFabNav();
-    };
-  }, 500)
-  // Preloader
-  $('#preloader').delay(1000).fadeOut('fast');
-  $(".transition-page").addClass('page-fadeUp-transition-enter').delay(1000).queue(function(){
-    $(this)
-    .removeClass('page-fadeUp-transition-enter')
-    .addClass('page-fadeUp-transition-enter-active')
-    .dequeue()
-    .delay(1400).queue(function(){
-      $(this)
-      .removeClass('page-fadeUp-transition-enter-active')
-      .addClass('page-fadeUp-transition-exit')
-      .dequeue();
-    })
-  });
-  
-  // Open Page scroll navigation
-  $('.scrollnav').navScroll({
-    scrollSpy: true,
-    activeParent: true,
-    activeClassName: 'current'
-  });
-  
-  // initial wow
-  new WOW().init();
-    
-  // Accordion init
-  $('.collapsible').collapsible();
-  var elem = document.querySelector('.collapsible.expandable');
-  var instance = M.Collapsible.init(elem, {
-    accordion: false
-  });
-
-  // Select
-  $('.select').formSelect();
-
-  // Tooltip initial
-  $('.tooltipped').tooltip();
-
-  // slick carousel config
-  $('.slick-carousel').slick({
-    dots: false,
-    arrows: false,
-    slidesToShow: 3,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 30000,
-    responsive: [
-      {
-        breakpoint: 800,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  });
-});

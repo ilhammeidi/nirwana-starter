@@ -66,13 +66,13 @@
     }
   }
   &-bold {
-    font-weight: $font-bold
+    font-weight: $font-bold !important;
   }
   &-medium {
-    font-weight: $font-medium
+    font-weight: $font-medium !important;
   }
   &-regular {
-    font-weight: $font-regular
+    font-weight: $font-regular !important;
   }
 }
 

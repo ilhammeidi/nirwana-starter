@@ -1,7 +1,7 @@
 include ../../paper.pug
 
 -
-  var products: [
+  var products = [
     {
       image: 'https://source.unsplash.com/random',
       text: 'Sed lacinia velit',
@@ -30,10 +30,10 @@ include ../../paper.pug
       .row.ma-0
         each item in products
           .col-md-6.col-sm-3.col-xs-6.product-item
-            .collection-item.item
+            .collection-item.item.pa-0
               a.waves-effect
-                img.image(src=item.image height='100' alt='thumb')/
+                img.responsive-img(src=item.image height='100' alt='thumb')/
                 p.text-truncate.text-body-1.mt-2.mb-0 #{item.text}
-                h6.text-h6.price #{item.price}
+                h6.price $#{item.price}
     a.btn.waves-effect.btn-flat.block
       | #{$t.common.btn_seeall}

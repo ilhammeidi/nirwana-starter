@@ -5,14 +5,15 @@
         .detail-carousel#detail_carousel
           - var n = 0
           while n < 6
-            .image.detail-img(data-index=n++)
+            .image(data-index=n++)
               |
               |
-              a.waves-effect(href=imgAPI.photo[0])
+              a.waves-effect(href=imgAPI.photo[3])
                 .figure
                   |
                   |
-                  img.image-detail(src=imgAPI.photo[0] height='200px' alt='detail-image')/
+                  img(src=imgAPI.photo[3] alt='thumb')/
+                  .img.image-detail(style=`background-image: url(${imgAPI.photo[3]}`)
                   |
                   |
                   i.material-icons.zoom-icon zoom_in
@@ -28,8 +29,8 @@
         .property
           .star
             - var star = 0
-            white star < 5
-              i.material-icon.star-icon(data-index=star++) star
+            while star < 5
+              i.material-icons.star-icon(data-index=star++) star
           | 5.0
           span.divider
           | 213 Sales

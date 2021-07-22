@@ -1,0 +1,17 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = " Pricing"
+  - var pageName = "pricing"
+  - var headerHome = false
+
+block content
+  div#pricing-page
+    .main-wrap
+      include ../components/header/main.pug
+      .space-top
+        include ../components/pricing.pug
+      .space-top-short
+        include ../components/faq/faq.pug
+      #footer
+        include ../components/footer/main.pug

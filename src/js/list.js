@@ -19,7 +19,7 @@ $(document).ready(function(){
 
   $detailCarousel.each(function() {
     $(this).magnificPopup({
-      delegate: '.detail-img a',
+      delegate: '.image a',
       type: 'image',
       mainClass: 'mfp-with-zoom', // this class is for CSS animation below
       gallery: {

@@ -42,17 +42,17 @@ include ../../paper.pug
       li.collection-item.avatar
         |
         |
-        img.circle(src=item.img alt=item.name)/
+        img.circle(src=assets+item.img alt=item.name)/
         |
         |
         p.use-text-medium
           | #{item.name}
         |
         |
-        p #{item.title}
+        p.caption #{item.title}
         |
         |
-        a.secondary-content.btn-outlined.btn-small(href='#!') follow
+        a.secondary-content.primary.btn-outlined.btn-small(href='#!') follow
         |
         |
       |
