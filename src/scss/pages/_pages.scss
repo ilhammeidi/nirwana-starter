@@ -46,12 +46,17 @@
   display: flex;
 }
 
+.full-width {
+  width: 100% !important
+}
+
 .maintenance-icon {
   border-radius: 50%;
   margin: $spacing1;
   padding: $spacing2;
-  &.v-icon {
+  &.icon {
     font-size: 48px;
+    @include palette-text-secondary;
   }
   @include use-theme(background, $light-divider, $dark-divider);
   @include breakpoints-up(sm) {

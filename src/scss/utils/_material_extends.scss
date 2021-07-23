@@ -322,6 +322,16 @@ $btn-radius: 6px !default;
       color: $palette-secondary-main
     }
   }
+  .prefix {
+    width: auto;
+    left: 0;
+  }
+  .suffix {
+    position: absolute;
+    transition: color 0.2s;
+    top: 0.5rem;
+    right: 0;
+  }
 }
 
 [type=checkbox].filled-in.primary:checked + span:not(.lever):after {

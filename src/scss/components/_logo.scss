@@ -1,12 +1,7 @@
 .logo {
-  font-size: 18px;
   font-weight: $font-bold;
   @include palette-text-primary;
   display: flex;
-  img {
-    width: 54px;
-    height: 54px;
-  }
   &.landscape {
     align-items: center;
     position: relative;
@@ -21,6 +16,27 @@
     img {
       margin: 0 auto $spacing1;
       display: block;
+    }
+  }
+  &.small {
+    font-size: 16px;
+    img {
+      max-Width: 34px;
+      height: 34px
+    }
+  }
+  &.medium {
+    font-size: 18px;
+    img {
+      max-width: 54px;
+      height: 54px;
+    }
+  }
+  &.large {
+    font-size: 28px;
+    img {
+      max-width: 64px;
+      height: 64px
     }
   }
 }
