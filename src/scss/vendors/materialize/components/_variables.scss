@@ -80,9 +80,9 @@ $button-floating-large-size: 56px !default;
 
 // Small buttons
 $button-small-font-size: 13px !default;
-$button-small-icon-font-size: 1.2rem !default;
-$button-small-height: $button-height * .9 !default;
-$button-floating-small-size: $button-height * .9 !default;
+$button-small-icon-font-size: 1xrem !default;
+$button-small-height: $button-height * .7 !default;
+$button-floating-small-size: $button-height * .7 !default;
 
 // Flat buttons
 $button-flat-color: #343434 !default;

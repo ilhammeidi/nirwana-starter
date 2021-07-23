@@ -1,0 +1,82 @@
+footer.footer-contact.container.px-0.max-lg
+  .root
+    .row
+      .col-md-7.order-md-last
+        #contact
+          .card.form-box
+            .row
+              .col-lg-5
+                h3.title-main.use-text-title #{$t.common.contact_title2}
+              .col-lg-7
+                .form
+                  form#contact_form
+                    .row.spacing6
+                      .col-sm-12.px-6.py-0
+                        .input-field.light.filled
+                            |
+                            |
+                            input.validate#name(type='text' required)
+                            |
+                            |
+                            label(for='name') #{$t.common.form_name}
+                            |
+                            |
+                      .col-sm-12.px-6.py-0
+                        .input-field.light.filled
+                            |
+                            |
+                            input.validate#email(type='email' required)
+                            |
+                            |
+                            label(for='email') #{$t.common.form_email}
+                            |
+                            |
+                      .col-sm-12.px-6.py-0
+                        .input-field.light.filled
+                            |
+                            |
+                            textarea#message.materialize-textarea(rows="6")
+                            |
+                            |
+                            label(for='message') #{$t.common.form_message}
+                            |
+                            |
+                    .btn-area
+                      button.btn.block.btn-large.primary.waves-effect(type="submit") #{$t.common.form_send}
+
+      .col-md-5.px-12.order-md-first.text-center
+        .logo
+          |
+          |
+          img(src=assets+brand.starter.img alt='logo')/
+          |
+          |
+          p #{brand.starter.name}
+        p #{$t.starter.banner_subtitle}
+        .socmed
+          |
+          |
+          a.btn-icon.margin.waves-effect(href="#")
+            i.ion-social-facebook
+          |
+          |
+          a.btn-icon.margin.waves-effect(href="#")
+            i.ion-social-linkedin
+          |
+          |
+          a.btn-icon.margin.waves-effect(href="#")
+            i.ion-social-twitter
+          |
+          |
+          a.btn-icon.margin.waves-effect(href="#")
+            i.ion-social-instagram
+          |
+          |
+        .contact
+          p.use-text-paragraph #{$t.common.blog_phone}
+            br/
+            | +12 345 678 90
+          .divider
+          p.use-text-paragraph Skype
+            br/
+            | jenadoe.skype

@@ -1,0 +1,48 @@
+include ../data/mega.pug
+
+mixin child-menu(menuItems)
+  .collection.side-group
+    each subitem in menuItems
+      ul.collapsible.expandable.group-child
+        li.collection-header
+          .title-mega #{subitem.name}
+        each granditem in subitem.child
+          li.collection-item.side-group-link
+            |
+            |
+            a.waves-effect.text-truncate.menu-list(
+              href=granditem.link
+              class=granditem.name === pageName ? 'current' : ''
+            )
+              | #{granditem.name}
+            |
+            |
+
+#slide_menu.sidenav.mobile-nav
+  .side-multilv
+    .collection.side-multilv
+      ul.collapsible.expandable
+        each item in mega
+          if item.child
+            li.collection-item.group-child.has-child
+              .collapsible-header
+                a.waves-effect.text-truncate.menu-list(href='#!')
+                  | #{item.name}
+                  |
+                  |
+                  i.material-icons.right keyboard_arrow_down
+                  |
+                  |
+              .collapsible-body
+                +child-menu(item.child)
+    .dropdown-divider
+    .collection
+      ul
+        each item in ['login', 'register']
+          li.collection-item
+            |
+            |
+            a.sidenav-close.waves-effect.menu-list(href=link.starter[item])
+              | #{$t.common[item]}
+            |
+            |

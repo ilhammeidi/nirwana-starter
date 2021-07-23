@@ -1,12 +1,13 @@
 var darkMode = 'false';
 if (typeof Storage !== 'undefined') { // eslint-disable-line
-  darkMode = localStorage.getItem('luxiDarkMode') || 'false';
+  darkMode = localStorage.getItem('nirwanaDarkMode') || 'false';
 }
 
 var $header = $('#header'),
     $menu = $('#mobile_menu'),
-    $slideMenu = $('#slide-menu')
-    isOpen = false;
+    $slideMenu = $('#slide-menu'),
+    isOpen = false,
+    isOpenHamburger = false;
 
 $(document).ready(function(){
   // Dark and Light mode config
@@ -18,12 +19,12 @@ $(document).ready(function(){
   $('#theme_switcher').change(function() {
     if($(this).is(':checked')) {
       // dark
-      localStorage.setItem('luxiDarkMode', "true");
+      localStorage.setItem('nirwanaDarkMode', "true");
       $('#app').removeClass('theme--light');
       $('#app').addClass('theme--dark');
     } else {
       // light
-      localStorage.setItem('luxiDarkMode', "false");
+      localStorage.setItem('nirwanaDarkMode', "false");
       $('#app').removeClass('theme--dark');
       $('#app').addClass('theme--light');
     }
@@ -35,6 +36,7 @@ $(document).ready(function(){
     alignment: 'left'
   });
 
+  // Dropdown list hover
   $('.droplist-trigger-hover').dropdown({
     closeOnClick: false,
     alignment: 'left',
@@ -54,16 +56,82 @@ $(document).ready(function(){
     }
   });
 
+  // Dropdown list click
+  $('.droplist-trigger-click').dropdown({
+    closeOnClick: false,
+    alignment: 'left',
+    coverTrigger: false,
+  });
+
+  $('.droplist-trigger-click-child').dropdown({
+    closeOnClick: false,
+    alignment: 'right',
+    onOpenStart: function(elem) {
+      var sibling = $(elem).parent().siblings().find('.droplist-trigger-click-child');
+      for(var i=0; i<sibling.length; i++) {
+        M.Dropdown.getInstance(sibling[i]).close();
+      }
+    }
+  });
+
+  // Megamenu click
+  $('.megamenu-trigger-click').dropdown({
+    closeOnClick: false,
+    alignment: 'left',
+    coverTrigger: false,
+    constrainWidth: true,
+    container: $('#container_menu'),
+    onOpenStart: function() {
+      $header.addClass('no-shadow')
+    },
+    onCloseEnd: function() {
+      $header.removeClass('no-shadow')
+    }
+  });
+
   // Initial sidenav for mobile menu
   $('#mobile_menu').click(function() {
     isOpen = !isOpen;
     if(isOpen) {
       $('.sidenav').sidenav('open')  
     } else {
-      $('.sidenav').sidenav('close')  
+      $('.sidenav').sidenav('close');
+      return false;
     }
   });
 
+  // Hamburger menu
+  function openMenu() {
+    $('#main_menu').fadeIn();
+    $header.addClass('open-drawer');
+    $menu.addClass('is-active');
+    $slideMenu.addClass('menu-open');
+  }
+
+  function closeMenu() {
+    $('#main_menu').fadeOut();
+    $header.removeClass('open-drawer');
+    $menu.removeClass('is-active');
+    $slideMenu.removeClass('menu-open');
+  }
+
+  $('#hamburger_menu').click(function() {
+    isOpenHamburger = !isOpenHamburger;
+    if(isOpenHamburger) {
+      openMenu();
+      $(this).addClass('is-active');
+    } else {
+      closeMenu();
+      $(this).removeClass('is-active');
+    }
+  });
+  
+  $('#main_menu a').click(function() {
+    closeMenu();
+    isOpenHamburger = false;
+  })
+
+  // SideNav
   $('.sidenav').sidenav({
     onOpenStart: function() {
       isOpen = true;
@@ -78,4 +146,4 @@ $(document).ready(function(){
       $slideMenu.removeClass('menu-open');
     }
   });
-})
+});

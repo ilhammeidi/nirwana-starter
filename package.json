@@ -1,7 +1,7 @@
 {
 	"name": "starter-project",
 	"version": "1.0.0",
-	"description": "Luxi HTML5 Starter Project",
+	"description": "nirwana HTML5 Starter Project",
 	"keywords": [
 		"starter kit",
 		"empty project",
@@ -9,14 +9,13 @@
 		"kick start",
 		"boilerplate"
 	],
-	"author": "Luxi Theme",
+	"author": "nirwana Theme",
 	"license": "Envato",
 	"private": true,
 	"dependencies": {
 		"animate.css": "^3.7.2",
 		"bootstrap": "^4.4.1",
 		"browser-sync": "^2.26.7",
-		"enllax": "^1.1.0",
 		"enquire.js": "^2.1.6",
 		"gulp-clean-css": "^4.3.0",
 		"gulp-concat": "^2.6.1",
@@ -32,7 +31,7 @@
 		"jquery-form-validator": "^2.3.79",
 		"jquery-nav-scroll": "^1.4.1",
 		"jquery-touchswipe": "^1.6.19",
-		"jquery-youtube-background": "^1.0.0",
+    "magnific-popup": "^1.1.0",
 		"materialize-css": "^1.0.0-rc.2",
 		"normalize.css": "^8.0.1",
 		"pace-js": "^1.0.2",

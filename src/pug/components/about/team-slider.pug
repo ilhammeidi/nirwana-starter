@@ -1,0 +1,15 @@
+include ../cards/profile-card
+
+.about-style
+  .bg-wrapper
+    .container
+      h4.use-text-title2.mb-3
+        | #{$t.common.about_team}
+      p.use-text-subtitle2
+        | Vestibulum faucibus eget erat eget pretium. Donec commodo convallis eget suscipit orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    .carousel.mt-15
+      .team-carousel#about_team_carousel
+        - var n = 0
+        while n < 6
+          .item.px-3(data-key=n++)
+            +profile-card('https://source.unsplash.com/random', `${assets}/images/avatars/pp_girl3.svg`, 'John Dalton', 'Web Designer', 100, 10, 12, 'full', 'landscape')

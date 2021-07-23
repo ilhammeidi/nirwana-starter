@@ -1,0 +1,29 @@
+footer.footer-basic
+  .root
+    .container.max-lg
+      nav
+        ul
+          each item in menu.starter
+            li
+              a(href="#" + item.name) #{$t.starter["header_"+item.name]}
+      .socmed
+        |
+        |
+        a.btn.icon.waves-effect.waves-light(href="#")
+          i.ion-social-twitter
+        |
+        |
+        a.btn.icon.waves-effect.waves-light(href="#")
+          i.ion-social-facebook
+        |
+        |
+        a.btn.icon.waves-effect.waves-light(href="#")
+          i.ion-social-instagram
+        |
+        |
+    .copyright
+      |
+      |
+      p.body-2.text-center
+        | &copy; #{brand.starter.footerText}
+

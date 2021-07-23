@@ -1,0 +1,40 @@
+include ../data/mega.pug
+
+.multi-menu
+  ul
+    each item in mega
+      if item.child
+        li
+          |
+          |
+          a.btn.btn-flat.megamenu-trigger-click.waves-effect(href='#!' data-target=item.id)
+            | #{item.name}
+            |
+            |
+            i.material-icons.right.icon keyboard_arrow_down
+            |
+            |
+          |
+          |
+          .mega-menu-root.dropdown-content(id=item.id)
+            .mega-menu
+              .container.max-md
+                .row
+                  each subitem in item.child
+                    .col-sm-3.mb-6
+                      .title-mega #{subitem.name}
+                      |
+                      |
+                      img.thumb-menu(src=subitem.thumb alt="thumbnail")/
+                      |
+                      |
+                      ul
+                        each childitem in subitem.child
+                          li.waves-effect
+                            a.menu-list(href=childitem.link class=childitem.name === pageName ? 'current' : '')
+                              | #{childitem.name}
+      else
+        li
+          a.btn.btn-flat.waves-effect(href=item.link)
+            | #{item.name}
+          

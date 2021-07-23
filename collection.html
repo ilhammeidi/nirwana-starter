@@ -26,32 +26,31 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"><!-- Facebook-->
-  <meta property="author" content="luxi">
+  <meta property="author" content="nirwana">
   <meta property="og:site_name" content="alexstrap.ux-maestro.com">
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website"><!-- Twitter-->
-  <meta property="twitter:site" content="luxi.ux-maestro.com">
-  <meta property="twitter:domain" content="luxi.ux-maestro.com">
-  <meta property="twitter:creator" content="luxi">
+  <meta property="twitter:site" content="nirwana.ux-maestro.com">
+  <meta property="twitter:domain" content="nirwana.ux-maestro.com">
+  <meta property="twitter:creator" content="nirwana">
   <meta property="twitter:card" content="summary">
-  <meta property="twitter:image:src" content="./assets/images/logo.png">
+  <meta property="twitter:image:src" content="./assets/images/logo-starter.png">
   <meta property="og:url" content="nirwana.indisains.com">
   <meta property="og:title" content="Starter Project">
   <meta property="og:description" content="Nirwana Starter - HTML5 Starter Template">
   <meta name="twitter:site" content="nirwana.indisains.com">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="/images/logo.png">
-  <meta property="og:image" content="/images/logo.png">
+  <meta name="twitter:image" content="/images/logo-starter.png">
+  <meta property="og:image" content="/images/logo-starter.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <title>Nirwana Starter - Card Collection </title><!-- Styles-->
+  <title>Starter - Card Collection </title><!-- Styles-->
   <!-- Put the 3rd/plugins css here-->
   <link href="./assets/css/vendors/normalize.css" rel="stylesheet">
   <link href="./assets/css/vendors/bootstrap.css" rel="stylesheet">
-  <link href="./assets/css/vendors/jquery.youtubebackground.css" rel="stylesheet">
+  <link href="./assets/css/vendors/magnific-popup.css" rel="stylesheet">
   <link href="./assets/css/vendors/materialize.css" rel="stylesheet">
   <link href="./assets/css/vendors/hamburger-menu.css" rel="stylesheet">
-  <link href="./assets/css/vendors/jquery.animateSlider.css" rel="stylesheet">
   <link href="./assets/css/vendors/animate.css" rel="stylesheet">
   <link href="./assets/css/vendors/animate-extends.css" rel="stylesheet">
   <link href="./assets/css/vendors/slick-carousel/slick.css" rel="stylesheet">
@@ -60,189 +59,1172 @@
 </head>
 
 <body>
-  <div id="preloader" style="position: fixed; z-index: 10000; background: #fafafa; width: 100%; height: 100%"><img style="opacity: 0.5; position: fixed; top: calc(50% - 50px); left: calc(50% - 50px)" src="./assets/images/loading.gif" alt="loading"></div>
+  <div id="preloader" style="position: fixed; z-index: 10000; background: #fafafa; width: 100%; height: 100%"><img style="opacity: 0.2; position: fixed; top: calc(50% - 50px); left: calc(50% - 50px)" src="./assets/images/loading.gif" alt="loading"></div>
   <div class="m-application theme--light transition-page" id="app">
     <div class="loading"></div>
     <div class="m-content purple-var" id="main-wrap">
-      <div>
-        <div id="home"></div>
+      <div id="collection-page">
         <div class="main-wrap">
-          <div class="pa-6" style="width: 900px">
-            <div class="card profile-card portrait full">
-              <div class="figure">
-                <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
+          <!-- #### HEADER ####-->
+          <div class="sidenav mobile-nav" id="slide_menu">
+            <div class="side-multilv">
+              <div class="collection side-multilv">
+                <ul class="collapsible expandable">
+                  <li class="collection-item"><a class="sidenav-close waves-effect menu-list" href="#feature">feature</a></li>
+                  <li class="collection-item"><a class="sidenav-close waves-effect menu-list" href="#testimonials">testimonials</a></li>
+                  <li class="collection-item"><a class="sidenav-close waves-effect menu-list" href="#pricing">pricing</a></li>
+                  <li class="collection-item"><a class="sidenav-close waves-effect menu-list" href="#blog">blog</a></li>
+                  <li class="collection-item"><a class="sidenav-close waves-effect menu-list" href="#subscribe">subscribe</a></li>
+                  <li class="collection-item group-child has-child">
+                    <div class="collapsible-header"><a class="waves-effect text-truncate menu-list" href="#!">inner Page
+
+                        <i class="material-icons right">keyboard_arrow_down</i>
+                      </a></div>
+                    <div class="collapsible-body">
+                      <div class="collection side-group">
+                        <ul class="group-child">
+                          <li class="collection-header">
+                            <div class="title-mega">company</div>
+                          </li>
+                          <li class="collection-item side-group-link">
+                            <a class="waves-effect text-truncate menu-list" href="/about.html">about</a>
+                          </li>
+                          <li class="collection-item side-group-link">
+                            <a class="waves-effect text-truncate menu-list" href="/about-team.html">team</a>
+                          </li>
+                          <li class="collection-item side-group-link">
+                            <a class="waves-effect text-truncate menu-list" href="/blog.html">blog</a>
+                          </li>
+                          <li class="collection-item side-group-link">
+                            <a class="waves-effect text-truncate menu-list" href="/detail-blog.html">blog detail</a>
+                          </li>
+                        </ul>
+                        <ul class="group-child">
+                          <li class="collection-header">
+                            <div class="title-mega">Form</div>
+                          </li>
+                          <li class="collection-item side-group-link">
+                            <a class="waves-effect text-truncate menu-list" href="/login.html">login</a>
+                          </li>
+                          <li class="collection-item side-group-link">
+                            <a class="waves-effect text-truncate menu-list" href="/register.html">register</a>
+                          </li>
+                          <li class="collection-item side-group-link">
+                            <a class="waves-effect text-truncate menu-list" href="/contact.html">contact</a>
+                          </li>
+                          <li class="collection-item side-group-link">
+                            <a class="waves-effect text-truncate menu-list" href="/contact-map.html">contact map</a>
+                          </li>
+                        </ul>
+                        <ul class="group-child">
+                          <li class="collection-header">
+                            <div class="title-mega">items</div>
+                          </li>
+                          <li class="collection-item side-group-link">
+                            <a class="waves-effect text-truncate menu-list current" href="/collection.html">collection</a>
+                          </li>
+                          <li class="collection-item side-group-link">
+                            <a class="waves-effect text-truncate menu-list" href="/products.html">products</a>
+                          </li>
+                          <li class="collection-item side-group-link">
+                            <a class="waves-effect text-truncate menu-list" href="/product-detail.html">product detail</a>
+                          </li>
+                        </ul>
+                        <ul class="group-child">
+                          <li class="collection-header">
+                            <div class="title-mega">utilities</div>
+                          </li>
+                          <li class="collection-item side-group-link">
+                            <a class="waves-effect text-truncate menu-list" href="/pricing.html">pricing</a>
+                          </li>
+                          <li class="collection-item side-group-link">
+                            <a class="waves-effect text-truncate menu-list" href="/faq.html">faq</a>
+                          </li>
+                          <li class="collection-item side-group-link">
+                            <a class="waves-effect text-truncate menu-list" href="/maintenance.html">maintenance</a>
+                          </li>
+                          <li class="collection-item side-group-link">
+                            <a class="waves-effect text-truncate menu-list" href="/coming-soon.html">coming soon</a>
+                          </li>
+                          <li class="collection-item side-group-link">
+                            <a class="waves-effect text-truncate menu-list" href="/error">error</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
               </div>
-              <div class="avatar-img avatar bigger">
-                <img src="./assets/images/avatars/pp_girl.svg" alt="avatar" />
-              </div>
-              <div class="properties text-truncate">
-                <div class="card-content">
-                  <h5><strong>John Dalton</strong></h5>
-                  <div class="subtitle">Web Designer</div>
-                  <div class="desc">
-                    <span>100 Connection</span>
-                  </div>
-                  <a class="btn btn-outlined primary waves-effect main-btn" href="#">See Profile</a>
-                </div>
-                <div class="card-actions action">
-                  <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">account_circle</i>100 Connection</span></a>
-                  <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">favorite</i>10 Favorites</span></a>
-                  <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">photo_library</i>12 Albums</span></a>
-                </div>
-              </div>
-            </div><br/>
-            <div class="card profile-card landscape oval">
-              <div class="figure">
-                <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
-              </div>
-              <div class="avatar-img avatar big">
-                <img src="./assets/images/avatars/pp_girl.svg" alt="avatar" />
-              </div>
-              <div class="properties text-truncate">
-                <div class="card-content">
-                  <h5><strong>John Dalton</strong></h5>
-                  <div class="subtitle">Web Designer</div>
-                  <div class="desc">
-                    <span>100 Connection</span>
-                  </div>
-                </div>
-                <div class="card-actions action">
-                  <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">account_circle</i>100 Connection</span></a>
-                  <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">favorite</i>10 Favorites</span></a>
-                  <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">photo_library</i>12 Albums</span></a>
-                </div><a class="waves-effect btn btn-outlined primary main-btn" href="href">See Profile</a>
-              </div>
-            </div><br/>
-            <div class="card product-card portrait oval">
-              <a class="waves-effect hidden-link" href="#">&nbsp;</a>
-              <figure><img src="https://source.unsplash.com/random" alt="Sed lacinia velit"></figure>
-              <div class="desc">
-                <div class="text">
-                  <h6 class="title pb-2 text-truncate">Sed lacinia velit</h6>
-                  <p class="use-text-paragraph">Proin pretium arcu eget metus porta consecteturc</p>
-                </div>
-                <div>
-                  <div class="property">
-                    <div class="rating"><i class="material-icons star-icon" title="1">star</i><i class="material-icons star-icon" title="2">star</i><i class="material-icons star-icon" title="3">star</i><i class="material-icons star-icon-disable" title="1">star</i><i class="material-icons star-icon-disable" title="2">star</i></div><strong>$20</strong>
-                  </div>
-                  <a class="btn btn-outlined primary button block" href="#">see detail</a>
-                </div>
-              </div>
-            </div>
-            <div class="card product-card landscape round">
-              <a class="waves-effect hidden-link" href="#">&nbsp;</a>
-              <figure><img src="https://source.unsplash.com/random" alt="Sed lacinia velit"></figure>
-              <div class="desc">
-                <div class="text">
-                  <h6 class="title pb-2 text-truncate">Sed lacinia velit</h6>
-                  <p class="use-text-paragraph">Proin pretium arcu eget metus porta consecteturc</p>
-                </div>
-                <div>
-                  <div class="property">
-                    <div class="rating"><i class="material-icons star-icon" title="1">star</i><i class="material-icons star-icon" title="2">star</i><i class="material-icons star-icon" title="3">star</i><i class="material-icons star-icon-disable" title="1">star</i><i class="material-icons star-icon-disable" title="2">star</i></div><strong>$20</strong>
-                  </div>
-                  <a class="btn btn-outlined primary button block" href="#">see detail</a>
-                </div>
-              </div>
-            </div><br/>
-            <div class="card media-card portrait video">
-              <span class="badge grey darken-4">00:01</span>
-              <figure><img src="https://source.unsplash.com/random" alt="cover"></figure>
-              <div class="property"><a class="btn play-btn waves-effect" href=""><span class="ion-ios-play"></span></a>
-                <div class="card-title media-title">Sed lacinia velit, ut malesuada eros interdum a</div>
-              </div>
-            </div>
-            <div class="card media-card portrait photo">
-              <a class="cover-link waves-effect" href="javascript:void(0)"></a>
-              <figure><img src="https://source.unsplash.com/random" alt="cover"></figure>
-              <div class="property">
-                <div class="card-title media-title">Sed lacinia velit, ut malesuada eros interdum a</div>
-              </div>
-            </div><br/>
-            <div style="width: 300px">
-              <div class="card post-card portrait oval">
-                <div class="card-image figure">
-                  <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
-                </div>
-                <div class="properties">
-                  <div class="use-text-subtitle2 text-truncate">
-                    <strong>Maecenas rutrum dolor sed nisi</strong>
-                  </div>
-                  <div class="caption py-4">12 Nov 2020</div>
-                  <div class="card-content desc">
-                    <p>Proin pretium arcu eget metus porta consectetur Pellentesque habitant</p>
-                  </div>
-                  <div class="card-action">
-                    <a class="btn btn-outlined primary action-btn waves-effect" href="#">read more</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card post-card landscape over">
-              <div class="card-image figure">
-                <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
-              </div>
-              <div class="properties">
-                <div class="use-text-subtitle2 text-truncate">
-                  <strong>Maecenas rutrum dolor sed nisi</strong>
-                </div>
-                <div class="caption py-4">12 Nov 2020</div>
-                <div class="card-content desc">
-                  <p>Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant. Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant</p>
-                </div>
-                <div class="card-action">
-                  <a class="btn btn-outlined primary action-btn waves-effect btn-small" href="#">read more</a>
-                </div>
-              </div>
-            </div><br/>
-            <div style="width: 300px">
-              <div class="card news-card portrait over">
-                <div class="card-image figure">
-                  <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
-                </div>
-                <div class="properties">
-                  <div class="caption">news</div>
-                  <div class="news-title"> Ut sed eros finibus, placerat orci id, dapibus mauris. Vestibulum consequat hendrerit lacus.</div>
-                  <div class="card-action">
-                    <div class="flex-grow-1"></div>
-                    <a class="btn-flat primary action-btn waves-effect">read more</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card news-card landscape oval">
-              <div class="card-image figure">
-                <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
-              </div>
-              <div class="properties">
-                <div class="caption">news</div>
-                <div class="news-title"> Ut sed eros finibus, placerat orci id, dapibus mauris. Vestibulum consequat hendrerit lacus.</div>
-                <div class="card-action">
-                  <a class="btn-flat primary action-btn waves-effect">read more</a>
-                </div>
+              <div class="dropdown-divider"></div>
+              <div class="collection">
+                <ul>
+                  <li class="collection-item">
+                    <a class="sidenav-close waves-effect menu-list" href="/login.html">Login</a>
+                  </li>
+                  <li class="collection-item">
+                    <a class="sidenav-close waves-effect menu-list" href="/register.html">register</a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div><!-- Scripts-->
-  <!-- Put the 3rd/plugins javascript here-->
-  <script src="./assets/js/vendors/jquery.min.js"></script>
-  <script src="./assets/js/vendors/bootstrap.min.js"></script>
-  <script src="./assets/js/vendors/enquire.min.js"></script>
-  <script src="./assets/js/vendors/jquery.enllax.min.js"></script>
-  <script src="./assets/js/vendors/jquery.form-validator.min.js"></script>
-  <script src="./assets/js/vendors/jquery.touchSwipe.min.js"></script>
-  <script src="./assets/js/vendors/jquery.youtubebackground.js"></script>
-  <script src="./assets/js/vendors/pace.min.js"></script>
-  <script src="./assets/js/vendors/slick.min.js"></script>
-  <script src="./assets/js/vendors/wow.min.js"></script>
-  <script src="./assets/js/vendors/jquery.navScroll.min.js"></script><!-- This assets are not avalaible in npm.js or it has been costumized-->
-  <script src="./assets/js/vendors/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-  <script src="./assets/js/vendors/materialize.js"></script>
-  <script src="./assets/js/vendors/jquery.animateSlider.js"></script>
-  <script src="./assets/js/scripts.js"></script>
+          <header class="app-bar header" id="header">
+            <div class="container">
+              <div class="header-content">
+                <nav class="nav-menu">
+                  <button class="btn-icon waves-effect sidenav-trigger hamburger hamburger--spin show-md-down" id="mobile_menu" type="button" data-target="slide_menu"><span class="hamburger-box"><span class="bar hamburger-inner"></span></span></button>
+                  <div class="logo">
+                    <a href="index.html">
+                      <span class="logo landscape medium">
+<img src="./assets/images/logo-starter.png" alt="logo"/>
+
+Starter</span>
+                    </a>
+                  </div>
+                  <div class="scrollactive-nav scrollnav show-lg-up">
+                    <ul class="main-menu">
+                      <li>
+                        <a class="btn btn-flat anchor-link waves-effect" href="index.html#feature">feature</a>
+                      </li>
+                      <li>
+                        <a class="btn btn-flat anchor-link waves-effect" href="index.html#testimonials">testimonials</a>
+                      </li>
+                      <li>
+                        <a class="btn btn-flat anchor-link waves-effect" href="index.html#pricing">pricing</a>
+                      </li>
+                      <li>
+                        <a class="btn btn-flat anchor-link waves-effect" href="index.html#blog">blog</a>
+                      </li>
+                      <li>
+                        <a class="btn btn-flat anchor-link waves-effect" href="index.html#subscribe">subscribe</a>
+                      </li>
+                      <li>
+                        <button class="btn btn-flat megamenu-trigger-click waves-effect" href="#sample-page" data-target="sample-page">inner Page
+
+                          <i class="material-icons right icon">keyboard_arrow_down</i>
+                        </button>
+                        <div class="mega-menu-root dropdown-content" id="sample-page">
+                          <div class="mega-menu">
+                            <div class="container max-md">
+                              <div class="row">
+                                <div class="col-sm-3 mb-6">
+                                  <div class="title-mega">company</div>
+                                  <img class="thumb-menu" src="http://via.placeholder.com/200x78/ffce00/767676/" alt="thumbnail" />
+                                  <ul>
+                                    <li class="waves-effect"><a class="menu-list" href="/about.html">about</a></li>
+                                    <li class="waves-effect"><a class="menu-list" href="/about-team.html">team</a></li>
+                                    <li class="waves-effect"><a class="menu-list" href="/blog.html">blog</a></li>
+                                    <li class="waves-effect"><a class="menu-list" href="/detail-blog.html">blog detail</a></li>
+                                  </ul>
+                                </div>
+                                <div class="col-sm-3 mb-6">
+                                  <div class="title-mega">Form</div>
+                                  <img class="thumb-menu" src="http://via.placeholder.com/200x78/fcbdff/767676/" alt="thumbnail" />
+                                  <ul>
+                                    <li class="waves-effect"><a class="menu-list" href="/login.html">login</a></li>
+                                    <li class="waves-effect"><a class="menu-list" href="/register.html">register</a></li>
+                                    <li class="waves-effect"><a class="menu-list" href="/contact.html">contact</a></li>
+                                    <li class="waves-effect"><a class="menu-list" href="/contact-map.html">contact map</a></li>
+                                  </ul>
+                                </div>
+                                <div class="col-sm-3 mb-6">
+                                  <div class="title-mega">items</div>
+                                  <img class="thumb-menu" src="http://via.placeholder.com/200x78/2f688b/FFFFFF/" alt="thumbnail" />
+                                  <ul>
+                                    <li class="waves-effect"><a class="menu-list current" href="/collection.html">collection</a></li>
+                                    <li class="waves-effect"><a class="menu-list" href="/products.html">products</a></li>
+                                    <li class="waves-effect"><a class="menu-list" href="/product-detail.html">product detail</a></li>
+                                  </ul>
+                                </div>
+                                <div class="col-sm-3 mb-6">
+                                  <div class="title-mega">utilities</div>
+                                  <img class="thumb-menu" src="http://via.placeholder.com/200x78/ceff00/767676/" alt="thumbnail" />
+                                  <ul>
+                                    <li class="waves-effect"><a class="menu-list" href="/pricing.html">pricing</a></li>
+                                    <li class="waves-effect"><a class="menu-list" href="/faq.html">faq</a></li>
+                                    <li class="waves-effect"><a class="menu-list" href="/maintenance.html">maintenance</a></li>
+                                    <li class="waves-effect"><a class="menu-list" href="/coming-soon.html">coming soon</a></li>
+                                    <li class="waves-effect"><a class="menu-list" href="/error">error</a></li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+                <nav class="user-menu">
+                  <a class="btn btn-flat waves-effect show-lg-up" type="button" href="/login.html">Login</a>
+                  <a class="btn waves-effect primary" type="button" href="/register.html">register</a>
+                  <span class="spacer vertical-divider show-lg-up"></span>
+                  <div class="menu-setting">
+                    <div class="setting"><button class="btn btn-icon waves-effect btn-small m-2 dropdown-trigger" data-target="dropdown_config" data-align="left" type="button"><i class="icon material-icons" id="setting_icon">settings</i></button>
+                      <div class="dropdown-content setting" id="dropdown_config">
+                        <ul class="collection with-header">
+                          <li class="collection-header">theme mode</li>
+                          <li class="collection-item no-hover pl-4">
+                            <div class="flex-menu">
+                              <div class="switch">
+                                <label>light<input id="theme_switcher" type="checkbox"><span class="lever"></span>dark</label>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class="dropdown-divider"></div>
+                        <ul class="collection with-header lang-menu" id="lang_menu">
+                          <li class="collection-header">language</li>
+                          <li class="collection-item lang-list waves-effect avatar">
+                            <a data-lang="ar" href="#">
+                              <div class="flag circle"><i class="ar"></i></div>
+                              <span class="content lang-opt text-truncate">󠁥󠁮󠁧󠁿العربيّة</span>
+                            </a>
+                          </li>
+                          <li class="collection-item lang-list waves-effect avatar">
+                            <a data-lang="de" href="#">
+                              <div class="flag circle"><i class="de"></i></div>
+                              <span class="content lang-opt text-truncate">Deutsch</span>
+                            </a>
+                          </li>
+                          <li class="collection-item lang-list waves-effect avatar">
+                            <a data-lang="en" href="#">
+                              <div class="flag circle"><i class="en"></i></div>
+                              <span class="content lang-opt text-truncate">English</span>
+                            </a>
+                          </li>
+                          <li class="collection-item lang-list waves-effect avatar">
+                            <a data-lang="id" href="#">
+                              <div class="flag circle"><i class="id"></i></div>
+                              <span class="content lang-opt text-truncate">󠁥󠁮󠁧󠁿Bahasa Indonesia</span>
+                            </a>
+                          </li>
+                          <li class="collection-item lang-list waves-effect avatar">
+                            <a data-lang="pt" href="#">
+                              <div class="flag circle"><i class="pt"></i></div>
+                              <span class="content lang-opt text-truncate">󠁥󠁮󠁧󠁿Português</span>
+                            </a>
+                          </li>
+                          <li class="collection-item lang-list waves-effect avatar">
+                            <a data-lang="zh" href="#">
+                              <div class="flag circle"><i class="zh"></i></div>
+                              <span class="content lang-opt text-truncate">简体中文</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </header><!-- #### END HEADER ####-->
+          <div class="container-wrap">
+            <!-- #### SEARCH ####-->
+            <section class="search-banner">
+              <div class="container max-md">
+                <row class="search-block align-items-center">
+                  <col-sm-12>
+                    <h2 class="use-text-title2 text-center">Milion of resources for everyone</h2>
+                    <h3 class="use-text-subtitle2 text-center">Browse over 300 million stock items. Quickly find authentic and premium items.</h3>
+                    <div class="search">
+                      <div class="input-field">
+                        <i class="material-icons prefix">search</i>
+                        <input id="search_product" type="text" placeholder="I'm looking for...">
+                      </div>
+                    </div>
+                  </col-sm-12>
+                </row>
+              </div>
+            </section>
+            <div class="search-content">
+              <div class="container max-lg">
+                <div class="row align-items-start justify-content-center">
+                  <div class="col-md-9">
+                    <div class="space-top-short" id="profile_p">
+                      <h4 class="use-text-subtitle mb-3">Profile Cards Portrait</h4>
+                      <div class="row">
+                        <div class="col-sm-6" data-index="0">
+                          <div class="card profile-card portrait full">
+                            <div class="figure">
+                              <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
+                            </div>
+                            <div class="avatar-img avatar bigger">
+                              <img src="./assets/images/avatars/pp_girl.svg" alt="avatar" />
+                            </div>
+                            <div class="properties text-truncate">
+                              <div class="card-content">
+                                <h6><strong>John Dalton</strong></h6>
+                                <div class="subtitle">Web Designer</div>
+                                <div class="desc">
+                                  <span>100 Connection</span>
+                                </div>
+                                <a class="btn btn-outlined primary waves-effect main-btn" href="#">See Profile</a>
+                              </div>
+                              <div class="card-actions action">
+                                <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">account_circle</i>100 Connection</span></a>
+                                <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">favorite</i>10 Favorites</span></a>
+                                <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">photo_library</i>12 Albums</span></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6" data-index="1">
+                          <div class="card profile-card portrait full">
+                            <div class="figure">
+                              <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
+                            </div>
+                            <div class="avatar-img avatar bigger">
+                              <img src="./assets/images/avatars/pp_girl.svg" alt="avatar" />
+                            </div>
+                            <div class="properties text-truncate">
+                              <div class="card-content">
+                                <h6><strong>John Dalton</strong></h6>
+                                <div class="subtitle">Web Designer</div>
+                                <div class="desc">
+                                  <span>100 Connection</span>
+                                </div>
+                                <a class="btn btn-outlined primary waves-effect main-btn" href="#">See Profile</a>
+                              </div>
+                              <div class="card-actions action">
+                                <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">account_circle</i>100 Connection</span></a>
+                                <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">favorite</i>10 Favorites</span></a>
+                                <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">photo_library</i>12 Albums</span></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="space-top-short" id="profile_l">
+                      <h4 class="use-text-subtitle mb-3">Profile Cards Landscape</h4>
+                      <div class="row">
+                        <div class="col-md-12 px-0" data-index="0">
+                          <div class="card profile-card landscape full">
+                            <div class="figure">
+                              <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
+                            </div>
+                            <div class="avatar-img avatar big">
+                              <img src="./assets/images/avatars/pp_girl.svg" alt="avatar" />
+                            </div>
+                            <div class="properties text-truncate">
+                              <div class="card-content">
+                                <h6><strong>John Dalton</strong></h6>
+                                <div class="subtitle">Web Designer</div>
+                                <div class="desc">
+                                  <span>100 Connection</span>
+                                </div>
+                              </div>
+                              <div class="card-actions action">
+                                <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">account_circle</i>100 Connection</span></a>
+                                <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">favorite</i>10 Favorites</span></a>
+                                <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">photo_library</i>12 Albums</span></a>
+                              </div><a class="waves-effect btn btn-outlined primary main-btn" href="href">See Profile</a>
+                            </div>
+                          </div><br/><br/></div>
+                          <div class="col-md-12 px-0" data-index="1">
+                            <div class="card profile-card landscape full">
+                              <div class="figure">
+                                <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
+                              </div>
+                              <div class="avatar-img avatar big">
+                                <img src="./assets/images/avatars/pp_girl.svg" alt="avatar" />
+                              </div>
+                              <div class="properties text-truncate">
+                                <div class="card-content">
+                                  <h6><strong>John Dalton</strong></h6>
+                                  <div class="subtitle">Web Designer</div>
+                                  <div class="desc">
+                                    <span>100 Connection</span>
+                                  </div>
+                                </div>
+                                <div class="card-actions action">
+                                  <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">account_circle</i>100 Connection</span></a>
+                                  <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">favorite</i>10 Favorites</span></a>
+                                  <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">photo_library</i>12 Albums</span></a>
+                                </div><a class="waves-effect btn btn-outlined primary main-btn" href="href">See Profile</a>
+                              </div>
+                            </div><br/><br/></div>
+                            <div class="col-md-12 px-0" data-index="2">
+                              <div class="card profile-card landscape full">
+                                <div class="figure">
+                                  <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
+                                </div>
+                                <div class="avatar-img avatar big">
+                                  <img src="./assets/images/avatars/pp_girl.svg" alt="avatar" />
+                                </div>
+                                <div class="properties text-truncate">
+                                  <div class="card-content">
+                                    <h6><strong>John Dalton</strong></h6>
+                                    <div class="subtitle">Web Designer</div>
+                                    <div class="desc">
+                                      <span>100 Connection</span>
+                                    </div>
+                                  </div>
+                                  <div class="card-actions action">
+                                    <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">account_circle</i>100 Connection</span></a>
+                                    <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">favorite</i>10 Favorites</span></a>
+                                    <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">photo_library</i>12 Albums</span></a>
+                                  </div><a class="waves-effect btn btn-outlined primary main-btn" href="href">See Profile</a>
+                                </div>
+                              </div><br/><br/></div>
+                            </div>
+                          </div>
+                          <div class="space-top-short" id="product_p">
+                            <h4 class="use-text-subtitle mb-3">Product Cards Portrait</h4>
+                            <div class="row">
+                              <div class="col-sm-4" data-index="0">
+                                <div class="card product-card portrait oval">
+                                  <a class="waves-effect hidden-link" href="#">&nbsp;</a>
+                                  <figure><img src="https://source.unsplash.com/random" alt="Sed lacinia velit"></figure>
+                                  <div class="desc">
+                                    <div class="text">
+                                      <h6 class="title pb-2 text-truncate">Sed lacinia velit</h6>
+                                      <p class="use-text-paragraph">Proin pretium arcu eget metus porta consecteturc</p>
+                                    </div>
+                                    <div>
+                                      <div class="property">
+                                        <div class="rating"><i class="material-icons star-icon" title="1">star</i><i class="material-icons star-icon" title="2">star</i><i class="material-icons star-icon" title="3">star</i><i class="material-icons star-icon-disable" title="1">star</i><i class="material-icons star-icon-disable" title="2">star</i></div><strong>$20</strong>
+                                      </div>
+                                      <a class="btn btn-outlined primary button block" href="#">see detail</a>
+                                    </div>
+                                  </div>
+                                </div><br/><br/></div>
+                                <div class="col-sm-4" data-index="1">
+                                  <div class="card product-card portrait oval">
+                                    <a class="waves-effect hidden-link" href="#">&nbsp;</a>
+                                    <figure><img src="https://source.unsplash.com/random" alt="Sed lacinia velit"></figure>
+                                    <div class="desc">
+                                      <div class="text">
+                                        <h6 class="title pb-2 text-truncate">Sed lacinia velit</h6>
+                                        <p class="use-text-paragraph">Proin pretium arcu eget metus porta consecteturc</p>
+                                      </div>
+                                      <div>
+                                        <div class="property">
+                                          <div class="rating"><i class="material-icons star-icon" title="1">star</i><i class="material-icons star-icon" title="2">star</i><i class="material-icons star-icon" title="3">star</i><i class="material-icons star-icon-disable" title="1">star</i><i class="material-icons star-icon-disable" title="2">star</i></div><strong>$20</strong>
+                                        </div>
+                                        <a class="btn btn-outlined primary button block" href="#">see detail</a>
+                                      </div>
+                                    </div>
+                                  </div><br/><br/></div>
+                                  <div class="col-sm-4" data-index="2">
+                                    <div class="card product-card portrait oval">
+                                      <a class="waves-effect hidden-link" href="#">&nbsp;</a>
+                                      <figure><img src="https://source.unsplash.com/random" alt="Sed lacinia velit"></figure>
+                                      <div class="desc">
+                                        <div class="text">
+                                          <h6 class="title pb-2 text-truncate">Sed lacinia velit</h6>
+                                          <p class="use-text-paragraph">Proin pretium arcu eget metus porta consecteturc</p>
+                                        </div>
+                                        <div>
+                                          <div class="property">
+                                            <div class="rating"><i class="material-icons star-icon" title="1">star</i><i class="material-icons star-icon" title="2">star</i><i class="material-icons star-icon" title="3">star</i><i class="material-icons star-icon-disable" title="1">star</i><i class="material-icons star-icon-disable" title="2">star</i></div><strong>$20</strong>
+                                          </div>
+                                          <a class="btn btn-outlined primary button block" href="#">see detail</a>
+                                        </div>
+                                      </div>
+                                    </div><br/><br/></div>
+                                  </div>
+                                </div>
+                                <div class="space-top-short" id="product_l">
+                                  <h4 class="use-text-subtitle mb-3">Product Cards Landscape</h4>
+                                  <div class="row">
+                                    <div class="col-md-12 px-0" data-index="0">
+                                      <div class="card product-card landscape round">
+                                        <a class="waves-effect hidden-link" href="#">&nbsp;</a>
+                                        <figure><img src="https://source.unsplash.com/random" alt="Sed lacinia velit"></figure>
+                                        <div class="desc">
+                                          <div class="text">
+                                            <h6 class="title pb-2 text-truncate">Sed lacinia velit</h6>
+                                            <p class="use-text-paragraph">Proin pretium arcu eget metus porta consecteturc</p>
+                                          </div>
+                                          <div>
+                                            <div class="property">
+                                              <div class="rating"><i class="material-icons star-icon" title="1">star</i><i class="material-icons star-icon" title="2">star</i><i class="material-icons star-icon" title="3">star</i><i class="material-icons star-icon-disable" title="1">star</i><i class="material-icons star-icon-disable" title="2">star</i></div><strong>$20</strong>
+                                            </div>
+                                            <a class="btn btn-outlined primary button block" href="#">see detail</a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-12 px-0" data-index="1">
+                                      <div class="card product-card landscape round">
+                                        <a class="waves-effect hidden-link" href="#">&nbsp;</a>
+                                        <figure><img src="https://source.unsplash.com/random" alt="Sed lacinia velit"></figure>
+                                        <div class="desc">
+                                          <div class="text">
+                                            <h6 class="title pb-2 text-truncate">Sed lacinia velit</h6>
+                                            <p class="use-text-paragraph">Proin pretium arcu eget metus porta consecteturc</p>
+                                          </div>
+                                          <div>
+                                            <div class="property">
+                                              <div class="rating"><i class="material-icons star-icon" title="1">star</i><i class="material-icons star-icon" title="2">star</i><i class="material-icons star-icon" title="3">star</i><i class="material-icons star-icon-disable" title="1">star</i><i class="material-icons star-icon-disable" title="2">star</i></div><strong>$20</strong>
+                                            </div>
+                                            <a class="btn btn-outlined primary button block" href="#">see detail</a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-12 px-0" data-index="2">
+                                      <div class="card product-card landscape round">
+                                        <a class="waves-effect hidden-link" href="#">&nbsp;</a>
+                                        <figure><img src="https://source.unsplash.com/random" alt="Sed lacinia velit"></figure>
+                                        <div class="desc">
+                                          <div class="text">
+                                            <h6 class="title pb-2 text-truncate">Sed lacinia velit</h6>
+                                            <p class="use-text-paragraph">Proin pretium arcu eget metus porta consecteturc</p>
+                                          </div>
+                                          <div>
+                                            <div class="property">
+                                              <div class="rating"><i class="material-icons star-icon" title="1">star</i><i class="material-icons star-icon" title="2">star</i><i class="material-icons star-icon" title="3">star</i><i class="material-icons star-icon-disable" title="1">star</i><i class="material-icons star-icon-disable" title="2">star</i></div><strong>$20</strong>
+                                            </div>
+                                            <a class="btn btn-outlined primary button block" href="#">see detail</a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="space-top-short" id="media_video">
+                                  <h4 class="use-text-subtitle mb-3">Video Cards</h4>
+                                  <div class="row">
+                                    <div class="col-sm-6" data-index="0">
+                                      <div class="card media-card portrait video">
+                                        <span class="badge grey darken-4">00:01</span>
+                                        <figure><img src="https://source.unsplash.com/random" alt="cover"></figure>
+                                        <div class="property"><a class="btn play-btn waves-effect" href=""><span class="ion-ios-play"></span></a>
+                                          <div class="card-title media-title">Sed lacinia velit, ut malesuada eros interdum a</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6" data-index="1">
+                                      <div class="card media-card portrait video">
+                                        <span class="badge grey darken-4">00:01</span>
+                                        <figure><img src="https://source.unsplash.com/random" alt="cover"></figure>
+                                        <div class="property"><a class="btn play-btn waves-effect" href=""><span class="ion-ios-play"></span></a>
+                                          <div class="card-title media-title">Sed lacinia velit, ut malesuada eros interdum a</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="space-top-short" id="media_photo">
+                                  <h4 class="use-text-subtitle mb-3">Image Cards</h4>
+                                  <div class="row">
+                                    <div class="col-sm-6" data-index="0">
+                                      <div class="card media-card portrait photo">
+                                        <a class="cover-link waves-effect" href="javascript:void(0)"></a>
+                                        <figure><img src="https://source.unsplash.com/random" alt="cover"></figure>
+                                        <div class="property">
+                                          <div class="card-title media-title">Sed lacinia velit, ut malesuada eros interdum a</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6" data-index="1">
+                                      <div class="card media-card portrait photo">
+                                        <a class="cover-link waves-effect" href="javascript:void(0)"></a>
+                                        <figure><img src="https://source.unsplash.com/random" alt="cover"></figure>
+                                        <div class="property">
+                                          <div class="card-title media-title">Sed lacinia velit, ut malesuada eros interdum a</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="space-top-short" id="news_p">
+                                  <h4 class="use-text-subtitle mb-3">News Cards Portrait</h4>
+                                  <div class="row">
+                                    <div class="col-sm-4" data-index="0">
+                                      <div class="card news-card portrait over">
+                                        <div class="card-image figure">
+                                          <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
+                                        </div>
+                                        <div class="properties">
+                                          <div class="caption">news</div>
+                                          <div class="news-title"> Ut sed eros finibus, placerat orci id, dapibus mauris. Vestibulum consequat hendrerit lacus.</div>
+                                          <div class="card-action">
+                                            <div class="flex-grow-1"></div>
+                                            <a class="btn-flat primary action-btn waves-effect">read more</a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-4" data-index="1">
+                                      <div class="card news-card portrait over">
+                                        <div class="card-image figure">
+                                          <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
+                                        </div>
+                                        <div class="properties">
+                                          <div class="caption">news</div>
+                                          <div class="news-title"> Ut sed eros finibus, placerat orci id, dapibus mauris. Vestibulum consequat hendrerit lacus.</div>
+                                          <div class="card-action">
+                                            <div class="flex-grow-1"></div>
+                                            <a class="btn-flat primary action-btn waves-effect">read more</a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-4" data-index="2">
+                                      <div class="card news-card portrait over">
+                                        <div class="card-image figure">
+                                          <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
+                                        </div>
+                                        <div class="properties">
+                                          <div class="caption">news</div>
+                                          <div class="news-title"> Ut sed eros finibus, placerat orci id, dapibus mauris. Vestibulum consequat hendrerit lacus.</div>
+                                          <div class="card-action">
+                                            <div class="flex-grow-1"></div>
+                                            <a class="btn-flat primary action-btn waves-effect">read more</a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="space-top-short" id="news_l">
+                                  <h4 class="use-text-subtitle mb-3">News Cards Landscape</h4>
+                                  <div class="row">
+                                    <div class="col-md-12 px-0" data-index="0">
+                                      <div class="card post-card landscape over">
+                                        <div class="card-image figure">
+                                          <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
+                                        </div>
+                                        <div class="properties">
+                                          <div class="use-text-subtitle2 text-truncate">
+                                            <strong>Maecenas rutrum dolor sed nisi</strong>
+                                          </div>
+                                          <div class="caption py-4">12 Nov 2021</div>
+                                          <div class="card-content desc">
+                                            <p>Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant. Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant</p>
+                                          </div>
+                                          <div class="card-action">
+                                            <a class="btn btn-outlined primary action-btn waves-effect btn-small" href="#">read more</a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-12 px-0" data-index="1">
+                                      <div class="card post-card landscape over">
+                                        <div class="card-image figure">
+                                          <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
+                                        </div>
+                                        <div class="properties">
+                                          <div class="use-text-subtitle2 text-truncate">
+                                            <strong>Maecenas rutrum dolor sed nisi</strong>
+                                          </div>
+                                          <div class="caption py-4">12 Nov 2021</div>
+                                          <div class="card-content desc">
+                                            <p>Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant. Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant</p>
+                                          </div>
+                                          <div class="card-action">
+                                            <a class="btn btn-outlined primary action-btn waves-effect btn-small" href="#">read more</a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-12 px-0" data-index="2">
+                                      <div class="card post-card landscape over">
+                                        <div class="card-image figure">
+                                          <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
+                                        </div>
+                                        <div class="properties">
+                                          <div class="use-text-subtitle2 text-truncate">
+                                            <strong>Maecenas rutrum dolor sed nisi</strong>
+                                          </div>
+                                          <div class="caption py-4">12 Nov 2021</div>
+                                          <div class="card-content desc">
+                                            <p>Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant. Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant</p>
+                                          </div>
+                                          <div class="card-action">
+                                            <a class="btn btn-outlined primary action-btn waves-effect btn-small" href="#">read more</a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="space-top-short" id="post_p">
+                                  <h4 class="use-text-subtitle mb-3">Post Cards Portrait</h4>
+                                  <div class="row">
+                                    <div class="col-sm-4" data-index="0">
+                                      <div class="card post-card portrait oval">
+                                        <div class="card-image figure">
+                                          <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
+                                        </div>
+                                        <div class="properties">
+                                          <div class="use-text-subtitle2 text-truncate">
+                                            <strong>Maecenas rutrum dolor sed nisi</strong>
+                                          </div>
+                                          <div class="caption py-4">12 Nov 2021</div>
+                                          <div class="card-content desc">
+                                            <p>Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant. Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant</p>
+                                          </div>
+                                          <div class="card-action">
+                                            <a class="btn btn-outlined primary action-btn waves-effect" href="#">read more</a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-4" data-index="1">
+                                      <div class="card post-card portrait oval">
+                                        <div class="card-image figure">
+                                          <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
+                                        </div>
+                                        <div class="properties">
+                                          <div class="use-text-subtitle2 text-truncate">
+                                            <strong>Maecenas rutrum dolor sed nisi</strong>
+                                          </div>
+                                          <div class="caption py-4">12 Nov 2021</div>
+                                          <div class="card-content desc">
+                                            <p>Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant. Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant</p>
+                                          </div>
+                                          <div class="card-action">
+                                            <a class="btn btn-outlined primary action-btn waves-effect" href="#">read more</a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-4" data-index="2">
+                                      <div class="card post-card portrait oval">
+                                        <div class="card-image figure">
+                                          <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
+                                        </div>
+                                        <div class="properties">
+                                          <div class="use-text-subtitle2 text-truncate">
+                                            <strong>Maecenas rutrum dolor sed nisi</strong>
+                                          </div>
+                                          <div class="caption py-4">12 Nov 2021</div>
+                                          <div class="card-content desc">
+                                            <p>Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant. Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant</p>
+                                          </div>
+                                          <div class="card-action">
+                                            <a class="btn btn-outlined primary action-btn waves-effect" href="#">read more</a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="space-top-short" id="post_l">
+                                  <h4 class="use-text-subtitle mb-3">Post Cards Landscape</h4>
+                                  <div class="row">
+                                    <div class="col-md-12 px-0" data-index="0">
+                                      <div class="card post-card landscape over">
+                                        <div class="card-image figure">
+                                          <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
+                                        </div>
+                                        <div class="properties">
+                                          <div class="use-text-subtitle2 text-truncate">
+                                            <strong>Maecenas rutrum dolor sed nisi</strong>
+                                          </div>
+                                          <div class="caption py-4">12 Nov 2021</div>
+                                          <div class="card-content desc">
+                                            <p>Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant. Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant</p>
+                                          </div>
+                                          <div class="card-action">
+                                            <a class="btn btn-outlined primary action-btn waves-effect btn-small" href="#">read more</a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-12 px-0" data-index="1">
+                                      <div class="card post-card landscape over">
+                                        <div class="card-image figure">
+                                          <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
+                                        </div>
+                                        <div class="properties">
+                                          <div class="use-text-subtitle2 text-truncate">
+                                            <strong>Maecenas rutrum dolor sed nisi</strong>
+                                          </div>
+                                          <div class="caption py-4">12 Nov 2021</div>
+                                          <div class="card-content desc">
+                                            <p>Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant. Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant</p>
+                                          </div>
+                                          <div class="card-action">
+                                            <a class="btn btn-outlined primary action-btn waves-effect btn-small" href="#">read more</a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-12 px-0" data-index="2">
+                                      <div class="card post-card landscape over">
+                                        <div class="card-image figure">
+                                          <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
+                                        </div>
+                                        <div class="properties">
+                                          <div class="use-text-subtitle2 text-truncate">
+                                            <strong>Maecenas rutrum dolor sed nisi</strong>
+                                          </div>
+                                          <div class="caption py-4">12 Nov 2021</div>
+                                          <div class="card-content desc">
+                                            <p>Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant. Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant</p>
+                                          </div>
+                                          <div class="card-action">
+                                            <a class="btn btn-outlined primary action-btn waves-effect btn-small" href="#">read more</a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-3 px-0">
+                                <div class="list-style mt-12">
+                                  <div class="card paper">
+                                    <header>
+                                      <div class="icon"><i class="material-icons small">label</i></div>
+                                      <div class="card-content"><span class="card-title">Related Products</span>
+                                        <p>Donec commodo convallis ligula eget suscipit orci.</p>
+                                      </div>
+                                      <div class="text"></div>
+                                    </header>
+                                    <div class="content">
+                                      <div>
+                                        <div class="collection">
+                                          <div class="row ma-0">
+                                            <div class="col-md-6 col-sm-3 col-xs-6 product-item">
+                                              <div class="collection-item item pa-0"><a class="waves-effect"><img class="responsive-img" src="https://source.unsplash.com/random" height="100" alt="thumb" />
+                                                  <p class="text-truncate text-body-1 mt-2 mb-0">Sed lacinia velit</p>
+                                                  <h6 class="price">$32</h6>
+                                                </a></div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-3 col-xs-6 product-item">
+                                              <div class="collection-item item pa-0"><a class="waves-effect"><img class="responsive-img" src="https://source.unsplash.com/random" height="100" alt="thumb" />
+                                                  <p class="text-truncate text-body-1 mt-2 mb-0">Sed lacinia velit</p>
+                                                  <h6 class="price">$20</h6>
+                                                </a></div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-3 col-xs-6 product-item">
+                                              <div class="collection-item item pa-0"><a class="waves-effect"><img class="responsive-img" src="https://source.unsplash.com/random" height="100" alt="thumb" />
+                                                  <p class="text-truncate text-body-1 mt-2 mb-0">Sed lacinia velit</p>
+                                                  <h6 class="price">$15</h6>
+                                                </a></div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-3 col-xs-6 product-item">
+                                              <div class="collection-item item pa-0"><a class="waves-effect"><img class="responsive-img" src="https://source.unsplash.com/random" height="100" alt="thumb" />
+                                                  <p class="text-truncate text-body-1 mt-2 mb-0">Sed lacinia velit</p>
+                                                  <h6 class="price">$21</h6>
+                                                </a></div>
+                                            </div>
+                                          </div>
+                                        </div><a class="btn waves-effect btn-flat block">see all</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="py-4"></div>
+                                  <div class="card paper">
+                                    <header>
+                                      <div class="icon"><i class="material-icons small">people</i></div>
+                                      <div class="card-content"><span class="card-title">You may know</span>
+                                        <p>Donec commodo convallis ligula eget suscipit orci.</p>
+                                      </div>
+                                      <div class="text"></div>
+                                    </header>
+                                    <div class="content">
+                                      <ul class="collection">
+                                        <li class="collection-item avatar">
+                                          <img class="circle" src="./assets/images/avatars/pp_boy5.svg" alt="John Doe" />
+                                          <p class="use-text-medium">John Doe</p>
+                                          <p class="caption">Web Designer</p>
+                                          <a class="secondary-content primary btn-outlined btn-small" href="#!">follow</a>
+                                        </li>
+
+                                        <li class="collection-item avatar">
+                                          <img class="circle" src="./assets/images/avatars/pp_girl.svg" alt="Jean Doe" />
+                                          <p class="use-text-medium">Jean Doe</p>
+                                          <p class="caption">Executive Merketing</p>
+                                          <a class="secondary-content primary btn-outlined btn-small" href="#!">follow</a>
+                                        </li>
+
+                                        <li class="collection-item avatar">
+                                          <img class="circle" src="./assets/images/avatars/pp_boy2.svg" alt="Jim Doe" />
+                                          <p class="use-text-medium">Jim Doe</p>
+                                          <p class="caption">Dev Ops</p>
+                                          <a class="secondary-content primary btn-outlined btn-small" href="#!">follow</a>
+                                        </li>
+
+                                        <li class="collection-item avatar">
+                                          <img class="circle" src="./assets/images/avatars/pp_girl2.svg" alt="Jihan Doe" />
+                                          <p class="use-text-medium">Jihan Doe</p>
+                                          <p class="caption">Director</p>
+                                          <a class="secondary-content primary btn-outlined btn-small" href="#!">follow</a>
+                                        </li>
+
+                                        <li class="collection-item avatar">
+                                          <img class="circle" src="./assets/images/avatars/pp_girl3.svg" alt="Jena Doe" />
+                                          <p class="use-text-medium">Jena Doe</p>
+                                          <p class="caption">CEO</p>
+                                          <a class="secondary-content primary btn-outlined btn-small" href="#!">follow</a>
+                                        </li>
+
+                                        <li class="collection-item avatar">
+                                          <img class="circle" src="./assets/images/avatars/pp_boy3.svg" alt="Johan Doe" />
+                                          <p class="use-text-medium">Johan Doe</p>
+                                          <p class="caption">iOS Developer</p>
+                                          <a class="secondary-content primary btn-outlined btn-small" href="#!">follow</a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="py-4"></div>
+                                  <div class="card paper">
+                                    <header>
+                                      <div class="icon"><i class="material-icons small">receipt</i></div>
+                                      <div class="card-content"><span class="card-title">Headline News</span>
+                                        <p>Donec commodo convallis ligula eget suscipit orci.</p>
+                                      </div>
+                                      <div class="text"></div>
+                                    </header>
+                                    <div class="content">
+                                      <div>
+                                        <div class="collection">
+                                          <a class="waves-effect collection-item avatar" href="#!">
+                                            <img class="round" src="https://source.unsplash.com/random" alt="Vestibulum bibendum nisi eget magna" />
+                                            <span class="d-block">Vestibulum bibendum nisi eget magna</span><span class="caption">the-news.com</span>
+                                          </a>
+
+                                          <a class="waves-effect collection-item avatar" href="#!">
+                                            <img class="round" src="https://source.unsplash.com/random" alt="Quisque a consequat ante" />
+                                            <span class="d-block">Quisque a consequat ante</span><span class="caption">the-news.com</span>
+                                          </a>
+
+                                          <a class="waves-effect collection-item avatar" href="#!">
+                                            <img class="round" src="https://source.unsplash.com/random" alt="Donec dignissim, odio ac imperdiet luctus" />
+                                            <span class="d-block">Donec dignissim, odio ac imperdiet luctus</span><span class="caption">the-news.com</span>
+                                          </a>
+
+                                          <a class="waves-effect collection-item avatar" href="#!">
+                                            <img class="round" src="https://source.unsplash.com/random" alt="Suspendisse eleifend nunc non" />
+                                            <span class="d-block">Suspendisse eleifend nunc non</span><span class="caption">the-news.com</span>
+                                          </a>
+
+                                          <a class="waves-effect collection-item avatar" href="#!">
+                                            <img class="round" src="https://source.unsplash.com/random" alt="Vestibulum a massa vestibulum" />
+                                            <span class="d-block">Vestibulum a massa vestibulum</span><span class="caption">the-news.com</span>
+                                          </a>
+                                        </div><a class="btn waves-effect btn-flat block">see all</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="py-4"></div>
+                                  <div class="card paper">
+                                    <header>
+                                      <div class="icon"><i class="material-icons small">show_chart</i></div>
+                                      <div class="card-content"><span class="card-title">Trending now</span>
+                                        <p>Donec commodo convallis ligula eget suscipit orci</p>
+                                      </div>
+                                      <div class="text"></div>
+                                    </header>
+                                    <div class="content">
+                                      <div>
+                                        <div class="collection">
+                                          <a class="waves-effect collection-item" href="#!">
+                                            <span class="font-weight-bold">1. #Vestibulum faucibus</span>
+                                            <span class="d-block caption">130 Views</span>
+                                          </a>
+
+                                          <a class="waves-effect collection-item" href="#!">
+                                            <span class="font-weight-bold">2. #Nulla eget lobortis lacus</span>
+                                            <span class="d-block caption">120 Views</span>
+                                          </a>
+
+                                          <a class="waves-effect collection-item" href="#!">
+                                            <span class="font-weight-bold">3. #Cras convallis</span>
+                                            <span class="d-block caption">100 Views</span>
+                                          </a>
+
+                                          <a class="waves-effect collection-item" href="#!">
+                                            <span class="font-weight-bold">4. #Quisque a consequat</span>
+                                            <span class="d-block caption">88 Views</span>
+                                          </a>
+
+                                          <a class="waves-effect collection-item" href="#!">
+                                            <span class="font-weight-bold">5. #Suspendisse</span>
+                                            <span class="d-block caption">90 Views</span>
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="py-4"></div>
+                                  <div class="card paper">
+                                    <header>
+                                      <div class="icon"><i class="material-icons small">photo_library</i></div>
+                                      <div class="card-content"><span class="card-title">Album Post</span>
+                                        <p></p>
+                                      </div>
+                                      <div class="text"></div>
+                                    </header>
+                                    <div class="content">
+                                      <div>
+                                        <div class="row ma-0">
+                                          <div class="col-md-6 pa-0 gallery-item">
+                                            <div class="card-image">
+                                              <img class="responsive-image text-right pa-1" src="https://source.unsplash.com/random" />
+                                              <a class="btn btn-icon waves-effect btn-small"><i class="material-icons white-text">star</i></a>
+                                            </div>
+                                          </div>
+                                          <div class="col-md-6 pa-0 gallery-item">
+                                            <div class="card-image">
+                                              <img class="responsive-image text-right pa-1" src="https://source.unsplash.com/random" />
+                                              <a class="btn btn-icon waves-effect btn-small"><i class="material-icons white-text">star</i></a>
+                                            </div>
+                                          </div>
+                                          <div class="col-md-6 pa-0 gallery-item">
+                                            <div class="card-image">
+                                              <img class="responsive-image text-right pa-1" src="https://source.unsplash.com/random" />
+                                              <a class="btn btn-icon waves-effect btn-small"><i class="material-icons white-text">star</i></a>
+                                            </div>
+                                          </div>
+                                          <div class="col-md-6 pa-0 gallery-item">
+                                            <div class="card-image">
+                                              <img class="responsive-image text-right pa-1" src="https://source.unsplash.com/random" />
+                                              <a class="btn btn-icon waves-effect btn-small"><i class="material-icons white-text">star</i></a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <a class="btn waves-effect btn-flat block">see all</a>
+                                    </div>
+                                  </div>
+                                  <div class="py-4"></div>
+                                  <div class="card help-paper text-center">
+                                    <div class="card-content">
+                                      <h6 class="use-text-bold text-center mb-3">Still no luck? We can help!</h6>
+                                      <p class="mb-3">Contact us and we’ll get back to you as soon as possible.</p>
+                                      <div class="card-actions">
+                                        <a class="btn-outlined block primary">submit a request</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="footer">
+                        <footer class="footer-sitemap">
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-md-3 pa-4">
+                                <div class="logo">
+                                  <img src="./assets/images/logo-starter.png" alt="logo" />
+                                  <h6 class="title">Starter Project</h6>
+                                </div>
+                                <p class="body-2">Create your project from scratch with main components and basic styles.</p>
+                                <p class="body-2">&copy;
+                                  Nirwana Theme 2021</p>
+                              </div>
+                              <div class="col-md-6 pa-4">
+                                <ul class="show-sm-down collapsible">
+                                  <li class="accordion-content">
+                                    <div class="collapsible-header">
+                                      <h6 class="title mb-4">Company</h6><i class="material-icons right arrow">expand_more</i>
+                                    </div>
+                                    <div class="collapsible-body">
+                                      <ul>
+                                        <li><a href="#team">Team</a></li>
+                                        <li><a href="#history">History</a></li>
+                                        <li><a href="#contact-us">Contact us</a></li>
+                                        <li><a href="#locations">Locations</a></li>
+                                      </ul>
+                                    </div>
+                                  </li>
+                                  <li class="accordion-content">
+                                    <div class="collapsible-header">
+                                      <h6 class="title mb-4">Resources</h6><i class="material-icons right arrow">expand_more</i>
+                                    </div>
+                                    <div class="collapsible-body">
+                                      <ul>
+                                        <li><a href="#resource">Resource</a></li>
+                                        <li><a href="#resource-name">Resource name</a></li>
+                                        <li><a href="#another-resource">Another resource</a></li>
+                                        <li><a href="#final-resource">Final resource</a></li>
+                                      </ul>
+                                    </div>
+                                  </li>
+                                  <li class="accordion-content">
+                                    <div class="collapsible-header">
+                                      <h6 class="title mb-4">Legal</h6><i class="material-icons right arrow">expand_more</i>
+                                    </div>
+                                    <div class="collapsible-body">
+                                      <ul>
+                                        <li><a href="#privacy-policy">Privacy policy</a></li>
+                                        <li><a href="#terms-of-use">Terms of use</a></li>
+                                      </ul>
+                                    </div>
+                                  </li>
+                                </ul>
+                                <div class="row show-md-up justify-content-around">
+                                  <div class="col pa-4 site-map-item">
+                                    <h6 class="title mb-4">Company</h6>
+                                    <ul>
+                                      <li><a href="#team">Team</a></li>
+                                      <li><a href="#history">History</a></li>
+                                      <li><a href="#contact-us">Contact us</a></li>
+                                      <li><a href="#locations">Locations</a></li>
+                                    </ul>
+                                  </div>
+                                  <div class="col pa-4 site-map-item">
+                                    <h6 class="title mb-4">Resources</h6>
+                                    <ul>
+                                      <li><a href="#resource">Resource</a></li>
+                                      <li><a href="#resource-name">Resource name</a></li>
+                                      <li><a href="#another-resource">Another resource</a></li>
+                                      <li><a href="#final-resource">Final resource</a></li>
+                                    </ul>
+                                  </div>
+                                  <div class="col pa-4 site-map-item">
+                                    <h6 class="title mb-4">Legal</h6>
+                                    <ul>
+                                      <li><a href="#privacy-policy">Privacy policy</a></li>
+                                      <li><a href="#terms-of-use">Terms of use</a></li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-3 pa-4">
+                                <div class="socmed">
+                                  <a class="btn btn-icon waves-effect"><span class="ion-social-facebook icon"></span></a>
+                                  <a class="btn btn-icon waves-effect"><span class="ion-social-twitter icon"></span></a>
+                                  <a class="btn btn-icon waves-effect"><span class="ion-social-instagram icon"></span></a>
+                                  <a class="btn btn-icon waves-effect"><span class="ion-social-linkedin icon"></span></a>
+                                </div>
+                                <div class="select-lang select-outlined">
+                                  <select class="select" id="lang_select">
+                                    <option value="ar">󠁥󠁮󠁧󠁿العربيّة</option>
+                                    <option value="de">Deutsch</option>
+                                    <option value="en" selected>English</option>
+                                    <option value="id">󠁥󠁮󠁧󠁿Bahasa Indonesia</option>
+                                    <option value="pt">󠁥󠁮󠁧󠁿Português</option>
+                                    <option value="zh">简体中文</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </footer>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- Scripts-->
+              <!-- Put the 3rd/plugins javascript here-->
+              <script src="./assets/js/vendors/jquery.min.js"></script>
+              <script src="./assets/js/vendors/bootstrap.min.js"></script>
+              <script src="./assets/js/vendors/enquire.min.js"></script>
+              <script src="./assets/js/vendors/jquery.form-validator.min.js"></script>
+              <script src="./assets/js/vendors/jquery.touchSwipe.min.js"></script>
+              <script src="./assets/js/vendors/jquery.magnific-popup.min.js"></script>
+              <script src="./assets/js/vendors/pace.min.js"></script>
+              <script src="./assets/js/vendors/slick.min.js"></script>
+              <script src="./assets/js/vendors/wow.min.js"></script>
+              <script src="./assets/js/vendors/jquery.navScroll.min.js"></script><!-- This assets are not avalaible in npm.js or it has been costumized-->
+              <script src="./assets/js/vendors/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+              <script src="./assets/js/vendors/materialize.js"></script>
+              <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
+              <script src="./assets/js/scripts.js"></script>
 </body>
 
 </html>

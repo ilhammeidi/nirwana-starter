@@ -1,5 +1,5 @@
 // #### HEADER ####
-include mobile-menu.pug
+include side-nav/multi-mobile.pug
 header.app-bar.header#header
   .container
     #menu_blank &nbsp;
@@ -7,126 +7,22 @@ header.app-bar.header#header
       nav.nav-menu
         |
         |
-        button.btn-icon.waves-effect.sidenav-trigger.show-md-down(
+        button.btn-icon.waves-effect.sidenav-trigger.hamburger.hamburger--spin.show-md-down(
           id="mobile_menu"
           type="button"
+          data-target="slide_menu"
         )
-          i.material-icons menu
+          span.hamburger-box
+            span.bar.hamburger-inner
         .logo
           |
           |
-          a(href="#home")
-            img(
-              src=assets + brand.starter.img
-              alt="logo"
-            )
+          a(href=link.starter.home)
+            include ../logo.pug
+            +logo('landscape')
           |
           |
         .scrollactive-nav.show-lg-up
-          ul
-            li
-              a.btn.btn-flat.droplist-trigger-hover.waves-effect(href='#' data-target='dropdown2') Menu 2
-              ul#dropdown2.dropdown-content
-                li
-                  a.droplist-trigger-hover-child(href='#!' data-target='menu_blank') two
-                li
-                  a.droplist-trigger-hover-child(href='#!' data-target='dropdown2_1') one &gt;
-                  ul#dropdown2_1.dropdown-content.child-menu
-                    li
-                      a(href='#!') one
-                    li
-                      a(href='#!') two
-                    li
-                      a(href='#!') three
-                    li
-                      a(href='#!') four
-                li
-                  a.droplist-trigger-hover-child(href='#!' data-target='menu_blank') two x x
-                li
-                  a(href='#!') three
-                li
-                  a.droplist-trigger-hover-child(href='#!' data-target='dropdown2_2') one &gt;
-                  ul#dropdown2_2.dropdown-content.child-menu
-                    li
-                      a(href='#!') one
-                    li
-                      a.droplist-trigger-hover-child(href='#!' data-target='dropdown2_2_1') two &gt;
-                      ul#dropdown2_2_1.dropdown-content.child-menu
-                        li
-                          a(href='#!') one
-                        li
-                          a(href='#!') two
-                        li
-                          a(href='#!') three
-                        li
-                          a(href='#!') four
-                    li
-                      a.droplist-trigger-hover-child(href='#!' data-target='dropdown2_2_2') three &gt;
-                      ul#dropdown2_2_2.dropdown-content.child-menu
-                        li
-                          a(href='#!') one
-                        li
-                          a(href='#!') two
-                        li
-                          a(href='#!') three
-                        li
-                          a(href='#!') four
-                    li
-                      a(href='#!') four
-                li
-                  a(href='#!') four
-            li
-              a.btn.btn-flat.droplist-trigger-hover.waves-effect(href='#' data-target='dropdown1') Menu 1
-              ul#dropdown1.dropdown-content
-                li
-                  a(href='#!') two
-                li
-                  a.droplist-trigger-hover-child(href='#!' data-target='dropdown1_1') one &gt;
-                  ul#dropdown1_1.dropdown-content.child-menu
-                    li
-                      a(href='#!') one
-                    li
-                      a(href='#!') two
-                    li
-                      a(href='#!') three
-                    li
-                      a.droplist-trigger-hover-child(href='#!' data-target='dropdown1_1_1') four &gt;
-                      ul#dropdown1_1_1.dropdown-content.child-menu
-                        li
-                          a(href='#!') one
-                        li
-                          a(href='#!') two
-                        li
-                          a(href='#!') three
-                        li
-                          a(href='#!') four
-                li
-                  a(href='#!') three
-                li
-                  a.droplist-trigger-hover-child(href='#!' data-target='dropdown1_2') one &gt;
-                  ul#dropdown1_2.dropdown-content.child-menu
-                    li
-                      a(href='#!') one
-                    li
-                      a(href='#!') two
-                    li
-                      a(href='#!') three
-                    li
-                      a(href='#!') four
-                li
-                  a(href='#!') four
-      nav.user-menu
-        |
-        |
-        button.btn.btn-flat.waves-effect.show-lg-up(type="button") Login
-        |
-        |
-        button.btn.waves-effect.primary(type="button") Register
-        |
-        |
-        span.spacer.vertical-divider.show-lg-up
-        include ./settings
-        +settings("false")
-|
-|
+          include top-nav/multi-level-click
+      include ./top-nav/user-menu
 // #### END HEADER ####

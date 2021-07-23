@@ -1,20 +1,19 @@
-.subscribe-wrap {
+.subscribe-style {
   max-width: 640px;
-  margin: 0 auto -32px;
+  margin: 0 auto $spacing4;
   position: relative;
   .form {
     margin-top: $spacing4
   }
-}
-
-.paper {
-  width: 100%;
-  padding: spacing(2, 3);
-}
-.text-field {
-  top: $spacing2;
-  position: relative;
-}
-.right-icon {
-  @include margin-left($spacing1)
+  .paper {
+    width: 100%;
+    padding: spacing(2, 3);
+  }
+  .text-field {
+    top: $spacing2;
+    position: relative;
+  }
+  .right-icon {
+    @include margin-left($spacing1)
+  }
 }

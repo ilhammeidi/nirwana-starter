@@ -9,7 +9,7 @@ body {
 }
 
 // Additional Button Styles
-$btn-radius: 4px !default;
+$btn-radius: 6px !default;
 
 @mixin btn-hover {
   &:before {
@@ -34,26 +34,28 @@ $btn-radius: 4px !default;
   }
 }
 
-@mixin btn-style($border: none, $radius: 4px) {
+@mixin btn-style($border: none, $radius: 6px) {
   text-decoration: none;
   text-align: center;
   letter-spacing: .5px;
   -webkit-transition: background-color .2s ease-out;
   transition: background-color .2s ease-out;
   cursor: pointer;
-  font-size: 14px;
   outline: 0;
   border: $border;
   font-weight: $font-bold;
   border-radius: $radius;
   display: inline-block;
-  height: 36px;
-  line-height: 36px;
-  padding: 0 16px;
   text-transform: uppercase;
   vertical-align: middle;
   -webkit-tap-highlight-color: transparent;
   @include btn-hover;
+  &:not(.btn-small):not(.btn-large) {
+    padding: 0 16px;
+    font-size: 14px;
+    height: 36px;
+    line-height: 36px;
+  }
 }
 
 .btn {
@@ -132,16 +134,46 @@ $btn-radius: 4px !default;
 // Font Icons
 .icon {
   &.primary {
-    color: $palette-primary-main;
+    color: $palette-primary-main !important;
   }
   &.secondary {
-    color: $palette-secondary-main;
+    color: $palette-secondary-main !important;
   }
 }
 
 // Collection Item
 .collection-item.no-hover:hover{
   background: none;
+}
+
+.collection {
+  a.collection-item{
+    @include palette-text-primary
+  }
+}
+
+.collection .collection-item.avatar:not(.circle-clipper) > .round,
+.collection .collection-item.avatar :not(.circle-clipper) > .round,
+.collection .collection-item.avatar:not(.circle-clipper) > .square,
+.collection .collection-item.avatar :not(.circle-clipper) > .square {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  overflow: hidden;
+  left: 12px;
+  top: 12px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.round {
+  border-radius: $rounded-small
+}
+
+// Collapsible Accordion
+.collapsible {
+  box-shadow: none;
+  border: none;
 }
 
 // Typography
@@ -251,6 +283,11 @@ $btn-radius: 4px !default;
   }
 }
 
+// Container
+.dropdown-content {
+  border-radius: $rounded-small;
+}
+
 // Form
 .select {
   &-outlined {
@@ -284,6 +321,16 @@ $btn-radius: 4px !default;
     input:not([type]):focus:not([readonly]) + label, input[type=text]:not(.browser-default):focus:not([readonly]) + label, input[type=password]:not(.browser-default):focus:not([readonly]) + label, input[type=email]:not(.browser-default):focus:not([readonly]) + label, input[type=url]:not(.browser-default):focus:not([readonly]) + label, input[type=time]:not(.browser-default):focus:not([readonly]) + label, input[type=date]:not(.browser-default):focus:not([readonly]) + label, input[type=datetime]:not(.browser-default):focus:not([readonly]) + label, input[type=datetime-local]:not(.browser-default):focus:not([readonly]) + label, input[type=tel]:not(.browser-default):focus:not([readonly]) + label, input[type=number]:not(.browser-default):focus:not([readonly]) + label, input[type=search]:not(.browser-default):focus:not([readonly]) + label, textarea.materialize-textarea:focus:not([readonly]) + label {
       color: $palette-secondary-main
     }
+  }
+  .prefix {
+    width: auto;
+    left: 0;
+  }
+  .suffix {
+    position: absolute;
+    transition: color 0.2s;
+    top: 0.5rem;
+    right: 0;
   }
 }
 
@@ -324,5 +371,11 @@ $btn-radius: 4px !default;
 
 .dropdown-divider {
   @include palette-divider
+}
+
+// Toast icon
+.toast .toast-action {
+  color: #FFF;
+  @include margin-right(-12px)
 }
 

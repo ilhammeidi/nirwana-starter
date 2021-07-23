@@ -1,0 +1,42 @@
+.banner-basic {
+  .banner-wrap {
+    position: relative;
+    display: block;
+    position: relative;
+    display: block;
+    .img {
+      @include right(1%);
+      img {
+        width: 100%;
+      }
+    }
+    .inner {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      @include breakpoints-down('md') {
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+    .text {
+      h4 {
+        font-weight: $font-bold;
+        margin-bottom: $spacing2;
+        display: block;
+      }
+      h5 {
+        line-height: 36px;
+        display: block;
+        @include palette-text-secondary
+      }
+    }
+    @include use-theme(background, $palette-primary-light, $palette-primary-dark);
+    @include breakpoints-up('sm') {
+      height: 600px;
+    }
+    @include breakpoints-down('xs') {
+      padding: spacing(12, 0, 5)
+    }
+  }
+}

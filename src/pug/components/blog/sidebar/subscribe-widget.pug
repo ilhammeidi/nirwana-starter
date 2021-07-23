@@ -1,0 +1,16 @@
+include ../../paper.pug
+
++paper($t.common.blog_subscribe, 'signal_wifi_4_bar', $t.common.blog_subscribe_desc, true)
+  div
+    .form
+      .input-field.flex-fill
+        |
+        |
+        input.input.dark#subscribe(type='text')/
+        |
+        |
+        label.white-text(for='subscribe') #{$t.common.register_email}
+        |
+        |
+      .btn.btn-outlined.white.small.send
+        | #{$t.common.btn_submit}

@@ -37,26 +37,27 @@ function fixedFabNav() {
 
 var progressOffset = 0;
 
-var $progress = $('#statistic').offset();
-if($("#statistic").length > 0) {
+var $progress = $('#progress').offset();
+if($("#progress").length > 0) {
   progressOffset = $progress.top - 50;
 }
 
 function playProgress() {
   if (window.pageYOffset > progressOffset) {
-    $('#statistic').removeClass('zero');
+    $('#progress').removeClass('zero');
   }
 }
 
-setTimeout(function() {
-  window.onscroll = function() {
-    playProgress();
-    fixedNav();
-    fixedFabNav();
-  };
-}, 500)
 
 $(document).ready(function(){
+  // Fixed nav
+  setTimeout(function() {
+    window.onscroll = function() {
+      playProgress();
+      fixedNav();
+      fixedFabNav();
+    };
+  }, 500)
   // Preloader
   $('#preloader').delay(1000).fadeOut('fast');
   $(".transition-page").addClass('page-fadeUp-transition-enter').delay(1000).queue(function(){
@@ -81,12 +82,13 @@ $(document).ready(function(){
   
   // initial wow
   new WOW().init();
-  
-  // initial parallax
-  $('#mode_feature').enllax();
-  
+    
   // Accordion init
   $('.collapsible').collapsible();
+  var elem = document.querySelector('.collapsible.expandable');
+  var instance = M.Collapsible.init(elem, {
+    accordion: false
+  });
 
   // Select
   $('.select').formSelect();

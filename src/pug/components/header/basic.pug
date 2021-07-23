@@ -1,0 +1,30 @@
+// #### HEADER ####
+header.app-bar.header#header
+  .container
+    .header-content
+      nav.nav-menu.flex-grow-1
+        |
+        |
+        button.btn-icon.waves-effect.sidenav-trigger.show-md-down(
+          id="mobile_menu"
+          type="button"
+        )
+          i.material-icons menu
+        .logo.flex-grow-1
+          |
+          |
+          a(href=link.starter.home)
+            include ../logo.pug
+            +logo('landscape')
+          |
+          |
+        nav.user-menu
+          |
+          |
+          a.btn.btn-flat.waves-effect.show-lg-up(type="button" href=basicMenuLink !== undefined ? basicMenuLink : link.starter.login)
+            | #{basicMenuText !== undefined ? basicMenuText : $t.common.login}
+          |
+          |
+          span.spacer.vertical-divider.show-lg-up
+          include ./top-nav/settings
+// #### END HEADER ####
