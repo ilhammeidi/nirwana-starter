@@ -83,7 +83,7 @@ Starter</span>
                     <a class="btn btn-flat waves-effect show-lg-up" type="button" href="/login.html">Login</a>
                     <span class="spacer vertical-divider show-lg-up"></span>
                     <div class="menu-setting">
-                      <div class="setting"><button class="btn btn-icon waves-effect btn-small m-2 dropdown-trigger" data-target="dropdown_config" data-align="left" type="button"><i class="icon material-icons" id="setting_icon">settings</i></button>
+                      <div class="setting"><button class="btn btn-icon waves-effect btn-small dropdown-trigger" data-target="dropdown_config" data-align="left" type="button"><i class="icon material-icons" id="setting_icon">settings</i></button>
                         <div class="dropdown-content setting" id="dropdown_config">
                           <ul class="collection with-header">
                             <li class="collection-header">theme mode</li>
@@ -223,15 +223,15 @@ Starter</span>
           </div>
           <div id="footer">
             <footer class="footer-sitemap">
-              <div class="container">
+              <div class="container mq-sm-down" data-class="fixed-width">
                 <div class="row">
-                  <div class="col-md-3 pa-4">
+                  <div class="col-md-3 pa-4 logo-area">
                     <div class="logo">
                       <img src="./assets/images/logo-starter.png" alt="logo" />
                       <h6 class="title">Starter Project</h6>
                     </div>
                     <p class="body-2">Create your project from scratch with main components and basic styles.</p>
-                    <p class="body-2">&copy;
+                    <p class="body-2 hidden-sm-down">&copy;
                       Nirwana Theme 2021</p>
                   </div>
                   <div class="col-md-6 pa-4">
@@ -319,6 +319,8 @@ Starter</span>
                         <option value="zh">简体中文</option>
                       </select>
                     </div>
+                    <p class="body-2 mt-5 text-center hidden-md-up">&copy;
+                      Nirwana Theme 2021</p>
                   </div>
                 </div>
               </div>

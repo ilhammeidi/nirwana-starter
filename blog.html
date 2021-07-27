@@ -594,7 +594,7 @@
               <div id="menu_blank">&nbsp;</div>
               <div class="header-content">
                 <nav class="nav-menu">
-                  <button class="btn-icon waves-effect sidenav-trigger show-md-down" id="mobile_menu" type="button" data-target="slide_menu"><i class="material-icons">menu</i></button>
+                  <button class="btn-icon waves-effect sidenav-trigger hamburger hamburger--spin show-md-down" id="mobile_menu" type="button" data-target="slide_menu"><span class="hamburger-box"><span class="bar hamburger-inner"></span></span></button>
                   <div class="logo">
                     <a href="index.html">
                       <span class="logo landscape medium">
@@ -603,7 +603,7 @@
 Starter</span>
                     </a>
                   </div>
-                  <div class="scrollactive-nav show-lg-up">
+                  <div class="scrollactive-nav show-lg-up multi-menu">
                     <div class="multi-menu">
                       <ul class="multi-menu-root">
                         <li>
@@ -887,8 +887,6 @@ Starter</span>
                       </ul>
                     </div>
                   </div>
-                </nav>
-                <nav>
                   <div class="hidden-xs-down">
                     <div class="search short">
                       <div class="input-field">
@@ -898,7 +896,7 @@ Starter</span>
                     </div>
                   </div><span class="spacer vertical-divider show-lg-up"></span>
                   <div class="menu-setting">
-                    <div class="setting"><button class="btn btn-icon waves-effect btn-small m-2 dropdown-trigger" data-target="dropdown_config" data-align="left" type="button"><i class="icon material-icons" id="setting_icon">settings</i></button>
+                    <div class="setting"><button class="btn btn-icon waves-effect btn-small dropdown-trigger" data-target="dropdown_config" data-align="left" type="button"><i class="icon material-icons" id="setting_icon">settings</i></button>
                       <div class="dropdown-content setting" id="dropdown_config">
                         <ul class="collection with-header">
                           <li class="collection-header">theme mode</li>
@@ -954,12 +952,12 @@ Starter</span>
                     </div>
                   </div>
                 </nav>
-                <div class="hidden-sm-up">
-                  <div class="search">
-                    <div class="input-field">
-                      <i class="material-icons search-icon prefix">search</i>
-                      <input type="text" placeholder="I'm looking for...">
-                    </div>
+              </div>
+              <div class="hidden-sm-up">
+                <div class="search">
+                  <div class="input-field">
+                    <i class="material-icons search-icon prefix">search</i>
+                    <input type="text" placeholder="I'm looking for...">
                   </div>
                 </div>
               </div>
@@ -1340,25 +1338,25 @@ Starter</span>
                       <div class="content">
                         <div>
                           <div class="row ma-0">
-                            <div class="col-md-6 pa-0 gallery-item">
+                            <div class="col-6 pa-0 gallery-item">
                               <div class="card-image">
                                 <img class="responsive-image text-right pa-1" src="https://source.unsplash.com/random" />
                                 <a class="btn btn-icon waves-effect btn-small"><i class="material-icons white-text">star</i></a>
                               </div>
                             </div>
-                            <div class="col-md-6 pa-0 gallery-item">
+                            <div class="col-6 pa-0 gallery-item">
                               <div class="card-image">
                                 <img class="responsive-image text-right pa-1" src="https://source.unsplash.com/random" />
                                 <a class="btn btn-icon waves-effect btn-small"><i class="material-icons white-text">star</i></a>
                               </div>
                             </div>
-                            <div class="col-md-6 pa-0 gallery-item">
+                            <div class="col-6 pa-0 gallery-item">
                               <div class="card-image">
                                 <img class="responsive-image text-right pa-1" src="https://source.unsplash.com/random" />
                                 <a class="btn btn-icon waves-effect btn-small"><i class="material-icons white-text">star</i></a>
                               </div>
                             </div>
-                            <div class="col-md-6 pa-0 gallery-item">
+                            <div class="col-6 pa-0 gallery-item">
                               <div class="card-image">
                                 <img class="responsive-image text-right pa-1" src="https://source.unsplash.com/random" />
                                 <a class="btn btn-icon waves-effect btn-small"><i class="material-icons white-text">star</i></a>
@@ -1376,15 +1374,15 @@ Starter</span>
           </div>
           <div id="footer">
             <footer class="footer-sitemap">
-              <div class="container">
+              <div class="container mq-sm-down" data-class="fixed-width">
                 <div class="row">
-                  <div class="col-md-3 pa-4">
+                  <div class="col-md-3 pa-4 logo-area">
                     <div class="logo">
                       <img src="./assets/images/logo-starter.png" alt="logo" />
                       <h6 class="title">Starter Project</h6>
                     </div>
                     <p class="body-2">Create your project from scratch with main components and basic styles.</p>
-                    <p class="body-2">&copy;
+                    <p class="body-2 hidden-sm-down">&copy;
                       Nirwana Theme 2021</p>
                   </div>
                   <div class="col-md-6 pa-4">
@@ -1472,6 +1470,8 @@ Starter</span>
                         <option value="zh">简体中文</option>
                       </select>
                     </div>
+                    <p class="body-2 mt-5 text-center hidden-md-up">&copy;
+                      Nirwana Theme 2021</p>
                   </div>
                 </div>
               </div>

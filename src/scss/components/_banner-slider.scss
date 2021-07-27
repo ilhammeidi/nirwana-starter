@@ -19,7 +19,7 @@
       }
       @include breakpoints-up('sm') {
         position: absolute;
-        top: -80px;
+        top: 100px;
       }
       @include breakpoints-up('md') {
         @include right(10%);
@@ -33,9 +33,15 @@
       display: flex;
       height: 100%;
       align-items: center;
-      @include breakpoints-down('md') {
-        flex-direction: column;
-        justify-content: center;
+      .row {
+        @include breakpoints-down('md') {
+          flex-direction: column;
+          justify-content: center;
+        }
+        @include breakpoints-down('xs') {
+          flex-direction: row;
+          justify-content: center;
+        }
       }
     }
     .text {

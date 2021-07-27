@@ -8,6 +8,9 @@
   .paper {
     width: 100%;
     padding: spacing(2, 3);
+    @include breakpoints-down(xs) {
+      padding: $spacing2
+    }
   }
   .text-field {
     top: $spacing2;

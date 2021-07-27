@@ -52,7 +52,7 @@
   }
   .blog-content {
     @include breakpoints-down(xs) {
-      margin-top: $spacing2
+      margin-top: $spacing4
     }
     ul, ol {
       margin-bottom: $spacing2
@@ -69,7 +69,14 @@
     margin: spacing(3, 0);
     .btn {
       border-width: 2px;
-      @include margin-right($spacing2)
+      @include margin-right($spacing2);
+      @include breakpoints-down(xs) {
+        padding: 0 $spacing1;
+        border-radius: 50%;
+        i {
+          width: 16px;
+        }
+      }
     }
   }
   .facebook {

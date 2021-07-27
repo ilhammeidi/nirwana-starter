@@ -28,9 +28,9 @@
   ]
 
 footer.footer-sitemap
-  .container
+  .container.mq-sm-down(data-class='fixed-width')
     .row
-      .col-md-3.pa-4
+      .col-md-3.pa-4.logo-area
         .logo
           |
           |
@@ -40,7 +40,7 @@ footer.footer-sitemap
           h6.title #{brand.starter.projectName}
         p.body-2
           | #{$t.starter.banner_subtitle}
-        p.body-2
+        p.body-2.hidden-sm-down
           | &copy;
           | #{brand.starter.footerText}
       .col-md-6.pa-4
@@ -92,3 +92,6 @@ footer.footer-sitemap
               option(value=locale selected=locale === doc_lang) #{$t.common[locale]}
           |
           |
+        p.body-2.mt-5.text-center.hidden-md-up
+          | &copy;
+          | #{brand.starter.footerText}

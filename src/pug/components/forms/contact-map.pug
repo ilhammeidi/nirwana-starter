@@ -71,13 +71,13 @@ mixin contact-map(full=false)
                       label
                         input.filled-in.secondary(type='checkbox' required)
                         span #{$t.common.form_terms} 
+                          br/
                           a.link(href='#') #{$t.common.form_privacy}
                       |
                       |
                     .btn-area
                       button.btn.block.primary.btn-large.waves-effect(type="submit") #{$t.common.form_send}
           .col-md-6.ps-md-0
-            .hidden-md-down
-              .card.map(class=full ? 'full' : '')
-                #map
+            .card.map(class=full ? 'full' : '')
+              #map
         

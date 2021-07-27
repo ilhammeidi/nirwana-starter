@@ -1,14 +1,13 @@
 // #### MORE FEATURE ####
 .feature-more
-  .container#mode_feature
-    .row
-      .col-md-6.px-6
-        .feature-item
-          .wow.fadeInLeft(data-wow-duration="0.6s")
-            h3.title-app.display-2 Lorem ipsum dolor
-          .wow.fadeInLeft(data-wow-delay="0.3s" data-wow-duration="0.6s")
-            p.text
-              | Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur, neque doloribus.
+  #mode_feature
+    .row.feature-item
+      .col-md-6.px-0.px-sm-6
+        .wow.fadeInLeft(data-wow-duration="0.6s")
+          h3.title-app.display-2 Lorem ipsum dolor
+        .wow.fadeInLeft(data-wow-delay="0.3s" data-wow-duration="0.6s")
+          p.text
+            | Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur, neque doloribus.
       .col-md-6.px-6
         .feature-item
           .wow.zoomIn(data-wow-delay="0.3s" data-wow-duration="0.6s")
@@ -20,7 +19,13 @@
               img(src=imgAPI.photo[5] alt="img")/
               |
               |
-    .row
+    .row.flex-lg-row-reverse.feature-item
+      .col-md-6.px-0.px-sm-6
+        .wow.fadeInLeft(data-wow-duration='0.6s')
+          h3.title-app.display-2 Lorem ipsum dolor
+        .wow.fadeInRight(data-wow-delay="0.5s" data-wow-duration="0.6s")
+          p.text
+            | Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur, neque doloribus.
       .col-md-6.px-6
         .feature-item
           .wow.zoomIn(data-wow-delay="0.3s" data-wow-duration="0.6s")
@@ -29,19 +34,12 @@
             figure.img
               |
               |
-              img(src=imgAPI.photo[0] alt="img")/
+              img(src=imgAPI.photo[5] alt="img")/
               |
               |
-      .col-md-6.px-6
-        .feature-item
-          .wow.fadeInLeft(data-wow-duration='0.6s')
-            h3.title-app.display-2 Lorem ipsum dolor
-          .wow.fadeInRight(data-wow-delay="0.5s" data-wow-duration="0.6s")
-            p.text
-              | Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur, neque doloribus.
-    .row
-      .col-md-12.px-6
-        .feature-item.last.text-center
+    .row.feature-item.last
+      .col-md-12.px-0.px-sm-6
+        .text-center
           .wow.fadeInUp(data-wow-duration="0.6s")
             h3.title-app.display-2 Lorem ipsum dolor
           .wow.fadeInUp(data-wow-duration="0.6s" data-wow-delay="0.3s")

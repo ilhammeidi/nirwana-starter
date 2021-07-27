@@ -41,6 +41,7 @@
   }
   .action {
     padding: 0;
+    display: flex;
     .btn {
       flex: 1;
       padding: $spacing1;

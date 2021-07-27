@@ -8,11 +8,10 @@
   }  
   .showimg {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 382px;
     z-index: 6;
-    top: 48px;
+    max-width: calc(100% - 24px);
+    top: 33px;
     left: 12px;
     border-radius: 12px;
     overflow: hidden;
@@ -147,6 +146,11 @@
     position: relative;
     .icon {
       font-size: 32px;
+    }
+    .nav {
+      @include breakpoints-down(xs) {
+        display: none;
+      }
     }
   }
   

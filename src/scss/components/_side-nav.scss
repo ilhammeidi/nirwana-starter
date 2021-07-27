@@ -4,7 +4,7 @@ $identation: 8px;
   width: 260px;
   @include palette-background-default;
   padding: spacing(10, 2, 0);
-  z-index: 1100;
+  z-index: 999;
   @include breakpoints-down(xs) {
     width: 100% !important
   }

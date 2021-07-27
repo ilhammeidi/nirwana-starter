@@ -28,6 +28,7 @@
       height: 40px;
       font-size: 80px;
       line-height: 80px;
+      text-align: center;
       @include breakpoints-up(md) {
         @include margin-right($spacing2);
         width: 80px;

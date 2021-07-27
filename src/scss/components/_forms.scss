@@ -51,7 +51,7 @@
     margin-top: $spacing8;
     padding: spacing(0, 8, 10);
     @include breakpoints-down(md) {
-      padding: spacing(0, 4, 8)
+      padding: spacing(0, 8, 8)
     }
     @include breakpoints-down(xs) {
       padding: spacing(0, 2, 8)

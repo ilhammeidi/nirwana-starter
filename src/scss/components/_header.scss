@@ -77,7 +77,7 @@ $flag: '../images/flag-logo.png';
       }
     }
     nav {
-      padding: spacing(1, 0);
+      padding: $spacing1
     }
   }
   &.no-shadow {
@@ -88,10 +88,8 @@ $flag: '../images/flag-logo.png';
     display: flex;
     max-width: 600px;
     align-items: center;
-    @include margin-left($spacing2);
-    @include margin-right($spacing2);
     @include breakpoints-down(xs) {
-      margin-bottom: $spacing2;
+      margin: spacing(0, 2, 2);
     }
     @include breakpoints-up(sm) {
       flex: 1;
@@ -102,6 +100,7 @@ $flag: '../images/flag-logo.png';
     .input-field {
       @include padding-right($spacing2);
       min-height: 0;
+      margin-top: 0;
       margin-bottom: 0;
       width: 100%;
       border: 1px solid;
@@ -137,7 +136,7 @@ $flag: '../images/flag-logo.png';
   & nav {
     transition: all 0.3s ease;
     align-items: center;
-    padding: $spacing1;
+    padding: spacing(1, 2);
     margin: 6px 0;
     display: flex;
     & > * {
@@ -169,10 +168,18 @@ $flag: '../images/flag-logo.png';
       height: 48px;
       width: 48px;
     }
+    @include breakpoints-between(sm, lg) {
+      flex: 1
+    }
   }
 }
 
-.nav-menu {
+nav.nav-menu {
+  width: 100%;
+  .btn-icon.hamburger {
+    padding: 0;
+    line-height: 52px
+  }
   .scrollactive-nav {
     list-style: none;
     display: flex;
@@ -194,6 +201,7 @@ $flag: '../images/flag-logo.png';
       line-height: inherit;
     }
     .multi-menu {
+      flex: 1;
       .btn {
         margin: spacing(0, 0.5);
         padding: $spacing1;
@@ -231,6 +239,10 @@ $flag: '../images/flag-logo.png';
     .child-menu {
       left: -100%
     }
+  }
+  @include breakpoints-down(md) {
+    justify-content: space-between;
+    padding: spacing(0, 1)
   }
 }
 

@@ -594,7 +594,7 @@
               <div id="menu_blank">&nbsp;</div>
               <div class="header-content">
                 <nav class="nav-menu">
-                  <button class="btn-icon waves-effect sidenav-trigger show-md-down" id="mobile_menu" type="button" data-target="slide_menu"><i class="material-icons">menu</i></button>
+                  <button class="btn-icon waves-effect sidenav-trigger hamburger hamburger--spin show-md-down" id="mobile_menu" type="button" data-target="slide_menu"><span class="hamburger-box"><span class="bar hamburger-inner"></span></span></button>
                   <div class="logo">
                     <a href="index.html">
                       <span class="logo landscape medium">
@@ -603,7 +603,7 @@
 Starter</span>
                     </a>
                   </div>
-                  <div class="scrollactive-nav show-lg-up">
+                  <div class="scrollactive-nav show-lg-up multi-menu">
                     <div class="multi-menu">
                       <ul class="multi-menu-root">
                         <li>
@@ -887,8 +887,6 @@ Starter</span>
                       </ul>
                     </div>
                   </div>
-                </nav>
-                <nav>
                   <div class="hidden-xs-down">
                     <div class="search short">
                       <div class="input-field">
@@ -898,7 +896,7 @@ Starter</span>
                     </div>
                   </div><span class="spacer vertical-divider show-lg-up"></span>
                   <div class="menu-setting">
-                    <div class="setting"><button class="btn btn-icon waves-effect btn-small m-2 dropdown-trigger" data-target="dropdown_config" data-align="left" type="button"><i class="icon material-icons" id="setting_icon">settings</i></button>
+                    <div class="setting"><button class="btn btn-icon waves-effect btn-small dropdown-trigger" data-target="dropdown_config" data-align="left" type="button"><i class="icon material-icons" id="setting_icon">settings</i></button>
                       <div class="dropdown-content setting" id="dropdown_config">
                         <ul class="collection with-header">
                           <li class="collection-header">theme mode</li>
@@ -954,12 +952,12 @@ Starter</span>
                     </div>
                   </div>
                 </nav>
-                <div class="hidden-sm-up">
-                  <div class="search">
-                    <div class="input-field">
-                      <i class="material-icons search-icon prefix">search</i>
-                      <input type="text" placeholder="I'm looking for...">
-                    </div>
+              </div>
+              <div class="hidden-sm-up">
+                <div class="search">
+                  <div class="input-field">
+                    <i class="material-icons search-icon prefix">search</i>
+                    <input type="text" placeholder="I'm looking for...">
                   </div>
                 </div>
               </div>
@@ -968,7 +966,7 @@ Starter</span>
           <div class="container-general pt-12">
             <div class="container pt-3">
               <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-8 px-0 px-sm-3">
                   <div class="blog-style">
                     <article class="blog-content">
                       <h4 class="text-h4 title-blog">Maecenas rutrum dolor sed nisi</h4><time class="caption">June 19, 2021 by Oliver</time>
@@ -979,7 +977,7 @@ Starter</span>
                       <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
                       <p>Example code block Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo. Tortor mauris condimentum nibh, ut fermentum massa.</p><strong>Sub-heading</strong>
                       <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                      <figure class="image-blog"><img src="https://source.unsplash.com/random" alt="blog"></figure>
+                      <figure class="image-blog"><img src="https://source.unsplash.com/random" alt="blog" /></figure>
                       <ul class="list">
                         <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
                         <li>Donec id elit non mi porta gravida at eget metus.</li>
@@ -1005,7 +1003,7 @@ Starter</span>
                       <div class="form-comment">
                         <div class="write">
                           <div class="avatar-img"><img src="./assets/images/avatars/pp_boy3.svg" alt="avatar"></div>
-                          <div class="input-field"><input id="write_comment" placeholder="Write Comments" type="text"><button class="btn waves-effect primary send-btn"><span class="hidden-xs-down">Send Message</span>
+                          <div class="input-field"><input id="write_comment" placeholder="Write Comments" type="text"><button class="btn-outlined btn-small waves-effect primary send-btn"><span class="hidden-xs-down">Send Message</span>
                               <div class="material-icons icon show-xs-down">send</div></button></div>
                         </div>
                       </div>
@@ -1055,7 +1053,7 @@ Starter</span>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 px-0 px-sm-3">
                   <div class="blog-style">
                     <div class="card paper color">
                       <header>
@@ -1251,25 +1249,25 @@ Starter</span>
                       <div class="content">
                         <div>
                           <div class="row ma-0">
-                            <div class="col-md-6 pa-0 gallery-item">
+                            <div class="col-6 pa-0 gallery-item">
                               <div class="card-image">
                                 <img class="responsive-image text-right pa-1" src="https://source.unsplash.com/random" />
                                 <a class="btn btn-icon waves-effect btn-small"><i class="material-icons white-text">star</i></a>
                               </div>
                             </div>
-                            <div class="col-md-6 pa-0 gallery-item">
+                            <div class="col-6 pa-0 gallery-item">
                               <div class="card-image">
                                 <img class="responsive-image text-right pa-1" src="https://source.unsplash.com/random" />
                                 <a class="btn btn-icon waves-effect btn-small"><i class="material-icons white-text">star</i></a>
                               </div>
                             </div>
-                            <div class="col-md-6 pa-0 gallery-item">
+                            <div class="col-6 pa-0 gallery-item">
                               <div class="card-image">
                                 <img class="responsive-image text-right pa-1" src="https://source.unsplash.com/random" />
                                 <a class="btn btn-icon waves-effect btn-small"><i class="material-icons white-text">star</i></a>
                               </div>
                             </div>
-                            <div class="col-md-6 pa-0 gallery-item">
+                            <div class="col-6 pa-0 gallery-item">
                               <div class="card-image">
                                 <img class="responsive-image text-right pa-1" src="https://source.unsplash.com/random" />
                                 <a class="btn btn-icon waves-effect btn-small"><i class="material-icons white-text">star</i></a>
@@ -1287,15 +1285,15 @@ Starter</span>
           </div>
           <div id="footer">
             <footer class="footer-sitemap">
-              <div class="container">
+              <div class="container mq-sm-down" data-class="fixed-width">
                 <div class="row">
-                  <div class="col-md-3 pa-4">
+                  <div class="col-md-3 pa-4 logo-area">
                     <div class="logo">
                       <img src="./assets/images/logo-starter.png" alt="logo" />
                       <h6 class="title">Starter Project</h6>
                     </div>
                     <p class="body-2">Create your project from scratch with main components and basic styles.</p>
-                    <p class="body-2">&copy;
+                    <p class="body-2 hidden-sm-down">&copy;
                       Nirwana Theme 2021</p>
                   </div>
                   <div class="col-md-6 pa-4">
@@ -1383,6 +1381,8 @@ Starter</span>
                         <option value="zh">简体中文</option>
                       </select>
                     </div>
+                    <p class="body-2 mt-5 text-center hidden-md-up">&copy;
+                      Nirwana Theme 2021</p>
                   </div>
                 </div>
               </div>
