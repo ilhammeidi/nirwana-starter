@@ -9,6 +9,11 @@
     }
     .inner-wrap {
       width: 100%;
+      &.container {
+        @include breakpoints-between(sm, lg) {
+          padding: 0 !important
+        }
+      }
     }
     a {
       @include use-theme(color, $palette-primary-main, $palette-primary-light);
@@ -29,14 +34,19 @@
   }
   .card.form-box {
     overflow: hidden;
-    background: transparent;
-    border: 1px solid $palette-primary-main;
     &.map-form {
       @include breakpoints-up(md) {
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
         border-right: none;
       }
+    }
+    @include breakpoints-up(md) {
+      background: transparent;
+      border: 1px solid $palette-primary-main;
+    }
+    @include breakpoints-down(sm) {
+      box-shadow: none
     }
   }
   .desc {
@@ -48,13 +58,15 @@
   }
   .form {
     position: relative;
-    margin-top: $spacing8;
     padding: spacing(0, 8, 10);
+    @include breakpoints-up(md) {
+      margin-top: $spacing8;
+    }
     @include breakpoints-down(md) {
       padding: spacing(0, 8, 8)
     }
     @include breakpoints-down(xs) {
-      padding: spacing(0, 2, 8)
+      padding: spacing(0, 2, 5);
     }
   }
   .form-helper {
@@ -71,20 +83,7 @@
   }
   .btn-area {
     justify-content: space-between;
-    @include breakpoints-up(md) {
-      margin-top: $spacing3;
-      display: flex;
-    }
-    @include breakpoints-down('sm') {
-      button {
-        margin-top: $spacing4;
-        width: 100%
-      }
-    }
-    @include breakpoints-down(xs) {
-      margin-top: $spacing2;
-      margin-bottom: $spacing3;
-    }
+    margin-top: $spacing5;
     button.btn-large {
       min-height: 48px;
       min-width: 180px;
@@ -98,8 +97,35 @@
     &.flex {
       display: flex;
       justify-content: space-between;
-      @include breakpoints-down(sm) {
+      @include breakpoints-down(xs) {
         display: block
+      }
+    }
+    &:not(.flex) {
+      @include breakpoints-between(md, lg) {
+        button {
+          width: 100%;
+          margin-top: $spacing3;
+        }
+      }
+      @include breakpoints-between(xs, sm) {
+        button {
+          width: 100%;
+          margin-top: $spacing3;
+        }
+      }
+    }
+    @include breakpoints-up(lg) {
+      display: flex;
+    }
+    @include breakpoints-between(sm, md) {
+      display: flex;
+    }
+    @include breakpoints-down(xs) {
+      margin-top: $spacing2;
+      button {
+        width: 100%;
+        margin-top: $spacing3;
       }
     }
   }

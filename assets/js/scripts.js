@@ -685,10 +685,10 @@ $(document).ready(function(){
     constrainWidth: true,
     container: $('#container_menu'),
     onOpenStart: function() {
-      $header.addClass('no-shadow')
+      $header.addClass('open-drawer')
     },
     onCloseEnd: function() {
-      $header.removeClass('no-shadow')
+      $header.removeClass('open-drawer')
     }
   });
 

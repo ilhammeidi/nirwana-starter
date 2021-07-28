@@ -5,12 +5,7 @@ header.app-bar.header#header
       nav.nav-menu.flex-grow-1
         |
         |
-        button.btn-icon.waves-effect.sidenav-trigger.show-md-down(
-          id="mobile_menu"
-          type="button"
-        )
-          i.material-icons menu
-        .logo.flex-grow-1
+        .logo.flex-grow-1.start-mobile
           |
           |
           a(href=link.starter.home)
@@ -21,10 +16,10 @@ header.app-bar.header#header
         nav.user-menu
           |
           |
-          a.btn.btn-flat.waves-effect.show-lg-up(type="button" href=basicMenuLink !== undefined ? basicMenuLink : link.starter.login)
+          a.btn.primary.waves-effect(href=basicMenuLink !== undefined ? basicMenuLink : link.starter.login)
             | #{basicMenuText !== undefined ? basicMenuText : $t.common.login}
           |
           |
-          span.spacer.vertical-divider.show-lg-up
+          span.spacer.vertical-divider.show-md-up
           include ./top-nav/settings
 // #### END HEADER ####

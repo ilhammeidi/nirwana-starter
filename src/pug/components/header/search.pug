@@ -5,12 +5,7 @@ header.app-bar.header#header
       nav.nav-menu.flex-grow-1
         |
         |
-        button.btn-icon.waves-effect.sidenav-trigger.show-md-down(
-          id="mobile_menu"
-          type="button"
-        )
-          i.material-icons menu
-        .logo
+        .logo.start-mobile
           |
           |
           a(href=link.starter.home)
@@ -18,7 +13,7 @@ header.app-bar.header#header
             +logo('landscape')
           |
           |
-        .hide-xs-down.flex-grow-1
+        .hidden-xs-down.flex-grow-1
           include ./top-nav/search-field
           +search-field()
       include ./top-nav/user-menu

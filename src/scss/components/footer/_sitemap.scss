@@ -1,7 +1,7 @@
 .footer-sitemap {
   border-top: 1px solid;
   @include palette-divider;
-  margin-top: $spacing8;
+  margin-top: $spacing4;
   @include breakpoints-up(sm) {
     padding-top: $spacing6;
   }
@@ -47,7 +47,9 @@
     margin-top: $spacing4;
     display: flex;
     align-items: center;
-    justify-content: center;
+    @include breakpoints-down(sm) {
+      justify-content: center;
+    }
     img {
       width: 54px;
       height: 54px;

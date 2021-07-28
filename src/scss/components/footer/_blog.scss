@@ -117,11 +117,12 @@
   }
   .socmed {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin-bottom: $spacing4;
     a.btn-icon {
       border-radius: 50%;
       margin: $spacing1;
+      padding: 0;
       @include use-theme(background, $palette-primary-light !important,  $palette-primary-dark !important);
       .icon {
         @include use-theme(color, $palette-primary-dark !important,  $palette-primary-light !important);
@@ -143,6 +144,11 @@
   .select-lang {
     display: inherit;
     margin: $spacing2 0;
+    max-width: 200px;
+    @include breakpoints-down(sm) {
+      margin-left: auto;
+      margin-right: auto;
+    }
     input {
       box-shadow: 0 1.5px 12px 2px rgba(0, 0, 0, 0.06);
       border-color: $palette-primary-main;
@@ -154,6 +160,11 @@
     @include breakpoints-down('md') {
       padding-bottom: 0 !important;
       padding-top: 0 !important
+    }
+  }
+  .copyright {
+    @include breakpoints-down(sm) {
+      text-align: center;
     }
   }
 }

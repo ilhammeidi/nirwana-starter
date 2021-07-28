@@ -15,7 +15,7 @@
         padding: 0;
         li {
           display: inline-block;
-          margin: spacing(0, 1);
+          margin: $spacing1;
           float: none;
           a {
             @include use-theme(color, $palette-primary-main, $palette-primary-light);
@@ -77,7 +77,7 @@
   .socmed {
     display: flex;
     width: 200px;
-    margin: 0 auto;
+    margin: $spacing8 auto;
     justify-content: space-between;
   }
 
@@ -89,7 +89,7 @@
     @include use-theme(background, $palette-primary-light, $palette-primary-main);
     &.btn {
       line-height: initial;
-      border-radius: 0;
+      border-radius: 50%;
       i {
         @include use-theme(color, $palette-primary-dark, $palette-primary-light);
         width: 25px;
@@ -106,8 +106,6 @@
   }
   .copyright {
     display: block;
-    @include use-theme(color, $palette-primary-dark, $palette-primary-light);
-    @include use-theme(background, $palette-primary-light, $palette-primary-main);
     padding: spacing(1.5);
     margin-top: spacing(3);
     p {

@@ -43,6 +43,12 @@ $flag: '../images/flag-logo.png';
   height: 0;
 }
 
+.start-mobile {
+  @include breakpoints-down(xs) {
+    margin: spacing(1, 2)
+  }
+}
+
 .header {
   @include palette-text-primary;
   box-shadow: none;
@@ -59,6 +65,9 @@ $flag: '../images/flag-logo.png';
         padding: 0 $spacing3
       }
     }
+  }
+  .sidenav-trigger {
+    margin: 0
   }
   &.fixed {
     position: fixed;
@@ -77,10 +86,10 @@ $flag: '../images/flag-logo.png';
       }
     }
     nav {
-      padding: $spacing1
+      padding: 0;
     }
   }
-  &.no-shadow {
+  &.open-drawer {
      @include palette-background-paper;
   }
   .search {
@@ -128,7 +137,6 @@ $flag: '../images/flag-logo.png';
   }
 }
 
-
 .header-content {
   display: flex;
   align-items: center;
@@ -136,17 +144,21 @@ $flag: '../images/flag-logo.png';
   & nav {
     transition: all 0.3s ease;
     align-items: center;
-    padding: spacing(1, 2);
-    margin: 6px 0;
+    margin: 3px 0;
     display: flex;
-    & > * {
-      margin: 0 $spacing1
+    @include breakpoints-up(sm) {
+      padding: $spacing1
     }
     .menu-setting {
       margin: 0;
       a {
         padding: spacing(0.5, 1);
         display: block;
+      }
+    }
+    & > * {
+      @include breakpoints-up(sm) {
+        margin: 0 $spacing1
       }
     }
   }
@@ -178,6 +190,7 @@ nav.nav-menu {
   width: 100%;
   .btn-icon.hamburger {
     padding: 0;
+    margin: spacing(0, 1);
     line-height: 52px
   }
   .scrollactive-nav {
@@ -219,7 +232,6 @@ nav.nav-menu {
     }
   }
   .dropdown-content {
-    @include shade;
     padding: 4px;
     overflow: visible !important;
     li {
@@ -242,7 +254,6 @@ nav.nav-menu {
   }
   @include breakpoints-down(md) {
     justify-content: space-between;
-    padding: spacing(0, 1)
   }
 }
 
@@ -276,7 +287,7 @@ nav.nav-menu {
   margin: 0 $spacing1;
   border-left: 1px solid;
   @include palette-divider;
-  height: 100%;
+  height: 40px;
   min-height: $spacing6
 }
 
@@ -417,7 +428,7 @@ nav.nav-menu {
   @include palette-background-paper;
   width: 100%;
   position: fixed;
-  z-index: 9990;
+  z-index: 1;
   height: 100%;
   display: none;
   .full-nav {

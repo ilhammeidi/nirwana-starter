@@ -7,7 +7,7 @@ block variables
 block auth_content
   div.form-style
     .head
-      h4.use-text-subtitle
+      h4.use-text-title.mq-md-up(data-class='use-text-subtitle')
         | #{$t.common.login_title}
     include ./social-auth
     .separator
@@ -54,7 +54,7 @@ block auth_content
         a.btn-flat.button-link(href='#') #{$t.common.login_forgot}
         |
         |
-      .btn-area.mt-10
+      .btn-area
         |
         |
         button.btn.secondary.btn-large.block.waves-effect(type="submit") #{$t.common.continue}
