@@ -2,12 +2,13 @@
 .product-card {
   position: relative;
   width: 100%;
-  figure {
+  .figure {
     margin: 0px;
     overflow: hidden;
-    img {
+    .responsive-img {
       width: 100%;
-      min-height: 100%
+      height: 100%;
+      background-size: cover;
     }
   }
   .property {
@@ -67,7 +68,7 @@
   /* Orientation */
   &.portrait {
     max-width: 350px;
-    figure {
+    .figure {
       display: block;
       height: 170px;
     }
@@ -87,7 +88,7 @@
     @include breakpoints-up(sm) {
       height: 150px;
     }
-    figure {
+    .figure {
       width: 200px;
       height: 150px;
     }
@@ -122,18 +123,18 @@
   /* Type */
   &.full {
     overflow: hidden;
-    figure {
+    .figure {
       border-radius: 0 !important;
     }
   }
   &.round {
-    figure {
+    .figure {
       overflow: hidden;
       border-radius: $rounded-medium;
       height: 134px;
     }
     &.portrait {
-      figure {
+      .figure {
         position: relative;
         top: $spacing1;
         margin-left: $spacing1;
@@ -142,7 +143,7 @@
       }
     }
     &.landscape {
-      figure {
+      .figure {
         margin-top: $spacing1;
         margin-bottom: $spacing1;
         @include margin-left($spacing1);
@@ -152,7 +153,7 @@
   &.oval {
     overflow: hidden;
     &.portrait {
-      figure {
+      .figure {
         height: 150px;
         width: 120%;
         margin-left: -10%;
@@ -164,7 +165,7 @@
       @include breakpoints-down(xs) {
         height: 150px;
       }
-      figure {
+      .figure {
         overflow: hidden;
         border-radius: 0 50% 50% 0 !important;
         height: 250px;
@@ -174,7 +175,7 @@
   }
   &.over {
     overflow: visible;
-    figure {
+    .figure {
       overflow: hidden;
       @include shade;
       position: relative;
@@ -182,7 +183,7 @@
     }
     &.portrait {
       margin-top: $spacing2;
-      figure {
+      .figure {
         margin: spacing(0, 2);
         top: $spacing2 * -1;
         margin-bottom: $spacing2 * -1;
@@ -190,7 +191,7 @@
     }
     &.landscape {
       @include margin-left($spacing2);
-      figure {
+      .figure {
         margin: spacing(2, 0);
         height: 118px;
         width: 140px;

@@ -21,16 +21,12 @@
   ]
 
 mixin sorter(total)
-  .row.sorter.align-items-center
-    .col-lg-9.col-md-8.col-sm-6.py-1
-      h2.use-text-subtitle
-        span#result_length #{total}
-        | &nbsp; Items Found
-    .col-lg-3.col-md-4.col-sm-6.py-1
-      .d-flex.justify-content-end.align-items-center
+  .row.sorter.align-items-center.flex-sm-row-reverse
+    .col-lg-3.col-sm-8.py-1.px-0
+      .d-flex.justify-content-sm-end.justify-content-center.align-items-center
         |
         |
-        button.btn.btn-outlined.btn-small.primary.waves-effect.me-4.show-sm-down#open_filter(type='button')
+        button.modal-trigger.btn.btn-outlined.btn-small.primary.waves-effect.me-4.show-sm-down#open_filter(href="#modal_filter" type='button')
           |
           |
           i.material-icons.left filter_list
@@ -59,3 +55,7 @@ mixin sorter(total)
               option(value=item.value) #{item.title}
           |
           |
+    .col-lg-9.col-sm-4.py-1.px-0
+      h2.use-text-subtitle
+        span#result_length #{total}
+        | &nbsp; Items Found          

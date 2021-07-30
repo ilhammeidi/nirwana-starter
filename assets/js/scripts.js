@@ -155,7 +155,7 @@ function stopVideo() {
 }
 
 $(function() {
-  $('.modal').modal({
+  $('#video_modal.modal').modal({
     onOpenEnd: function() {
       playVideo();
     },
@@ -163,7 +163,7 @@ $(function() {
       stopVideo();
     }
   });
-  $('.modal .modal-close').click(function(){
+  $('#video_modal.modal .modal-close').click(function(){
     stopVideo();
   })
 });
@@ -566,6 +566,11 @@ $('#filter_price button').click(function() {
   renderResult();
 });
 
+
+// handle mobile filter
+$(function() {
+  $('#modal_filter.modal').modal();
+});
 // Validate form
 var toastHTML = '<span>Message Sent</span><button onclick="M.Toast.dismissAll()" class="btn-icon waves-effect toast-action"><i class="material-icons">close</i></button>';
 $.validate({

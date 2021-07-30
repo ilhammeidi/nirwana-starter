@@ -262,6 +262,16 @@ block variables
 
 block content
   #products-page
+    #modal_filter.modal.bottom-sheet
+      .modal-content.filter-style
+        nav.filter-head
+          .nav-wrapper
+            div.d-flex
+              button.btn.btn-icon.btn-small.invert.waves-effect.modal-close(type='button')
+                i.material-icons close
+              h5.use-text-subtitle2.ma-2 Filter
+            button.modal-close.btn-flat.waves-effect(type='button') DONE  
+        include ../components/filter/filter
     .main-wrap
       include ../components/header/main.pug
       .container-wrap
@@ -274,11 +284,11 @@ block content
               .col-lg-2.col-md-3.pa-0
                 .hidden-sm-down
                   include ../components/filter/filter
-              .col-lg-10.col-md-9
+              .col-lg-10.col-md-9.px-sm-3.px-0
                 include ../components/cards/product-card
                 .row#product_result(data-items=products)
                   each item in products
-                    .col.col-sm-4
-                      +product-card(item.rating, item.price, 'https://source.unsplash.com/random', item.title, 'Category: '+item.category+' ~ '+'Tag: '+item.tag+' ~ '+'Check: '+item.check+' ~ '+'Radio: '+item.radio, 'round', 'portrait')
+                    .col-lg-4.col-sm-6.px-sm-3.px-0
+                      +product-card(item.rating, item.price, 'https://source.unsplash.com/random', item.title, 'Category: '+item.category+' ~ '+'Tag: '+item.tag+' ~ '+'Check: '+item.check+' ~ '+'Radio: '+item.radio, 'round', 'portrait', link.starter.productDetail)
       #footer
         include ../components/footer/main.pug

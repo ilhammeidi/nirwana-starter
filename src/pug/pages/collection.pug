@@ -14,7 +14,7 @@ block content
         .search-content
           .container.max-lg
             .row.align-items-start.justify-content-center
-              .col-md-9
+              .col-lg-9.col-md-8.px-0.px-md-3
                 include ../components/cards/profile-card
                 include ../components/cards/product-card
                 include ../components/cards/media-card
@@ -44,8 +44,8 @@ block content
                   .row
                     - var product_p = 0
                     while product_p < 3
-                      .col-sm-4(data-index=product_p++)
-                        +product-card(3, 20, 'https://source.unsplash.com/random', 'Sed lacinia velit', 'Proin pretium arcu eget metus porta consecteturc', 'oval', 'portrait')
+                      .col-lg-4.col-md-6.col-sm-4(data-index=product_p++)
+                        +product-card(3, 20, 'https://source.unsplash.com/random', 'Sed lacinia velit', 'Proin pretium arcu eget metus porta consecteturc', 'over', 'portrait')
                         br/
                         br/
                 #product_l.space-top-short
@@ -78,7 +78,7 @@ block content
                   .row
                     - var news_p = 0
                     while news_p < 3
-                      .col-sm-4(data-index=news_p++)
+                      .col-lg-4.col-md-6.col-sm-4(data-index=news_p++)
                         +news-card('Ut sed eros finibus, placerat orci id, dapibus mauris. Vestibulum consequat hendrerit lacus.', 'news', 'portrait', 'over', 'https://source.unsplash.com/random', '#')
                 #news_l.space-top-short
                   h4.use-text-subtitle.mb-3
@@ -94,7 +94,7 @@ block content
                   .row
                     - var post_p = 0
                     while post_p < 3
-                      .col-sm-4(data-index=post_p++)
+                      .col-lg-4.col-md-6.col-sm-4(data-index=post_p++)
                         +post-card('Maecenas rutrum dolor sed nisi', 'Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant. Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant', '12 Nov 2021', 'portrait', 'oval', 'https://source.unsplash.com/random', '#')
                 #post_l.space-top-short
                   h4.use-text-subtitle.mb-3
@@ -104,7 +104,7 @@ block content
                     while post_l < 3
                       .col-md-12.px-0(data-index=post_l++)
                         +post-card('Maecenas rutrum dolor sed nisi', 'Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant. Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant', '12 Nov 2021', 'landscape', 'over', 'https://source.unsplash.com/random', '#')
-              .col-md-3.px-0
+              .col-lg-3.col-md-4.px-0
                 include ../components/list/sidebar/sidebar
       #footer
         include ../components/footer/main.pug

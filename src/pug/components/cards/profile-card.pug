@@ -35,27 +35,28 @@ mixin profile-card(cover, avatar = assets + '/images/avatars/pp_girl.svg', name,
             | See Profile
           |
           |
-      .card-actions.action
-        |
-        |
-        a.waves-effect.btn.btn-flat(href='#')
-          span.btn-content
-            i.icon.material-icons account_circle
-            | #{connection} Connection
-        |
-        |
-        a.waves-effect.btn.btn-flat(href='#')
-          span.btn-content
-            i.icon.material-icons favorite
-            | #{ favorites } Favorites
-        |
-        |
-        a.waves-effect.btn.btn-flat(href='#')
-          span.btn-content
-            i.icon.material-icons photo_library
-            | #{albums} Albums
-        |
-        |
-      if orientation === 'landscape'
-        a.waves-effect.btn.btn-outlined.primary.main-btn(href='href')
-          | See Profile
+      .action-area
+        .card-actions.action
+          |
+          |
+          a.waves-effect.btn.btn-flat(href='#')
+            span.btn-content
+              i.icon.material-icons account_circle
+              | #{connection} Connection
+          |
+          |
+          a.waves-effect.btn.btn-flat(href='#')
+            span.btn-content
+              i.icon.material-icons favorite
+              | #{ favorites } Favorites
+          |
+          |
+          a.waves-effect.btn.btn-flat(href='#')
+            span.btn-content
+              i.icon.material-icons photo_library
+              | #{albums} Albums
+          |
+          |
+        if orientation === 'landscape'
+          a.waves-effect.btn.btn-outlined.primary.main-btn.mq-xs-down(href='href' data-class='btn-small')
+            | See Profile

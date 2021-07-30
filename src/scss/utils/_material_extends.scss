@@ -94,6 +94,9 @@ $btn-radius: 6px !default;
     &:before {
       border-radius: 50%;
     }
+    &.invert {
+      color: $palette-common-white
+    }
   }
   &-outlined {
     position: relative;
@@ -379,3 +382,19 @@ $btn-radius: 6px !default;
   @include margin-right(-12px)
 }
 
+
+// Modal
+.modal.bottom-sheet {
+  max-height: 90%;
+  border-radius: $rounded-small $rounded-small 0 0 
+}
+
+
+// x-scroll mobile
+.scroll-tablet {
+  @include breakpoints-down(sm) {
+    overflow-x: auto;
+    overflow-y: visible;
+    flex-wrap: nowrap;
+  }
+}

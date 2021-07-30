@@ -233,3 +233,9 @@ $('#filter_price button').click(function() {
   filterVal.range.to = Number($('#price_to').val());
   renderResult();
 });
+
+
+// handle mobile filter
+$(function() {
+  $('#modal_filter.modal').modal();
+});

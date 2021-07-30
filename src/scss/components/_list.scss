@@ -56,6 +56,12 @@
     align-items: center;
     @include breakpoints-down(xs) {
       display: block;
+      text-align: center;
+      &.main {
+        & > * {
+          width: 100%;
+        }
+      }
       & > * {
         margin: spacing(0, 0, 2);
       }
@@ -175,11 +181,5 @@
     font-weight: $font-bold;
     font-size: 18px;
     color: $palette-primary-main;
-  }
-  .scroll-tablet {
-    @include breakpoints-down(sm) {
-      overflow: auto;
-      flex-wrap: nowrap;
-    }
   }
 }
