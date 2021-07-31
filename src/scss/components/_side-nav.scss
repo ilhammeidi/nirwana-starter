@@ -3,7 +3,7 @@ $identation: 8px;
 .mobile-nav {
   width: 260px;
   @include palette-background-default;
-  padding: spacing(10, 2, 0);
+  padding: spacing(10, 2);
   z-index: 999;
   @include breakpoints-down(xs) {
     width: 100% !important

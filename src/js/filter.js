@@ -12,10 +12,10 @@ $('#switch_view button').click(function() {
 
   var view = $(this).data('value');
   if(view === 'grid') {
-    $('#product_result > .col').addClass('col-sm-4').removeClass('col-sm-12');
+    $('#product_result > .col').addClass('col-lg-4').removeClass('col-sm-12');
     $('#product_result .product-card').addClass('portrait').removeClass('landscape');
   } else {
-    $('#product_result > .col').addClass('col-sm-12').removeClass('col-sm-4');
+    $('#product_result > .col').addClass('col-sm-12').removeClass('col-lg-4');
     $('#product_result .product-card').addClass('landscape').removeClass('portrait');
   }
 });
@@ -229,8 +229,8 @@ $('#filter_tags .btn-tag input[type="checkbox"]').click(function() {
 
 // price filter
 $('#filter_price button').click(function() {
-  filterVal.range.from = Number($('#price_from').val());
-  filterVal.range.to = Number($('#price_to').val());
+  filterVal.range.from = Number($('.price_from').val());
+  filterVal.range.to = Number($('.price_to').val());
   renderResult();
 });
 

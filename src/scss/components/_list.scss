@@ -157,7 +157,7 @@
     }
   }
   .help-paper {
-    background-color: $palette-primary-light;
+    @include use-theme(background-color, $palette-primary-light, $palette-primary-dark);
     padding: spacing(2, 1);
   }
   .headline {

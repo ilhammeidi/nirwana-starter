@@ -29,7 +29,8 @@
       "pricing": "/pricing.html",
       "faq": "/faq.html",
       "maintenance": "/maintenance.html",
-      "comingSoon": "/coming-soon.html"
+      "comingSoon": "/coming-soon.html",
+      "error": "/404.html"
     }
   },
   "imgAPI": {

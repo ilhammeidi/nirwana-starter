@@ -288,7 +288,7 @@ block content
                 include ../components/cards/product-card
                 .row#product_result(data-items=products)
                   each item in products
-                    .col-lg-4.col-sm-6.px-sm-3.px-0
+                    .col.col-lg-4.col-sm-6.px-sm-3.px-0
                       +product-card(item.rating, item.price, 'https://source.unsplash.com/random', item.title, 'Category: '+item.category+' ~ '+'Tag: '+item.tag+' ~ '+'Check: '+item.check+' ~ '+'Radio: '+item.radio, 'round', 'portrait', link.starter.productDetail)
       #footer
         include ../components/footer/main.pug

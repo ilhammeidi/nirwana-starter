@@ -193,6 +193,9 @@ nav.nav-menu {
     margin: spacing(0, 1);
     line-height: 52px
   }
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    @include palette-background-text-primary
+  }
   .scrollactive-nav {
     list-style: none;
     display: flex;
