@@ -88,7 +88,7 @@
       }
     }
     .btn-flat {
-      margin-left: $spacing1 * -1
+      @include margin-left($spacing1 * -1)
     }
     .subtitle {
       font-size: 14px;
@@ -171,7 +171,7 @@
       .figure {
         height: 150px;
         width: 120%;
-        margin-left: -10%;
+        @include margin-left(-10%);
         overflow: hidden;
         border-radius: 0 0 50% 50%;
         & > div {

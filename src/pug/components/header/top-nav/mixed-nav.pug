@@ -33,7 +33,7 @@ include ../data/sample-page
             .row
               each subitem in sample
                 .col-sm-3.mb-6
-                  .title-mega #{subitem.name}
+                  .title-mega #{$t.common['header_' + subitem.name]}
                   |
                   |
                   img.thumb-menu(src=subitem.thumb alt="thumbnail")/
@@ -43,7 +43,7 @@ include ../data/sample-page
                     each childitem in subitem.child
                       li.waves-effect
                         a.menu-list(href=childitem.link class=childitem.name === pageName ? 'current' : '')
-                          | #{childitem.name}
+                          | #{$t.common['header_' + childitem.name]}
       
     |
     |

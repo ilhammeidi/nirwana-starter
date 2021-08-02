@@ -1,9 +1,9 @@
 .footer-sitemap {
   border-top: 1px solid;
   @include palette-divider;
-  margin-top: $spacing4;
+  margin-top: $spacing10;
   @include breakpoints-up(sm) {
-    padding-top: $spacing6;
+    padding-top: $spacing5;
   }
   .link {
     margin: spacing(1, 1.5);

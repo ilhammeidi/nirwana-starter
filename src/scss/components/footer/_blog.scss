@@ -117,7 +117,6 @@
   }
   .socmed {
     display: flex;
-    justify-content: center;
     margin-bottom: $spacing4;
     a.btn-icon {
       border-radius: 50%;
@@ -143,7 +142,7 @@
 
   .select-lang {
     display: inherit;
-    margin: $spacing2 0;
+    margin: spacing(2, 1);
     max-width: 200px;
     @include breakpoints-down(sm) {
       margin-left: auto;

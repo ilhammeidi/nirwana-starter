@@ -120,4 +120,11 @@
   .avatar-char {
     font-style: normal;
   }
+  .collection {
+    .secondary-content {
+      i {
+        @include rtl-flip
+      }
+    }
+  }
 }

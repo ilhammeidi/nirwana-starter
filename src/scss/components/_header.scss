@@ -150,6 +150,7 @@ $flag: '../images/flag-logo.png';
       padding: $spacing1
     }
     .menu-setting {
+      position: relative;
       margin: 0;
       a {
         padding: spacing(0.5, 1);
@@ -213,7 +214,7 @@ nav.nav-menu {
       }
     }
     i.right.icon {
-      margin-left: 0;
+      @include margin-left(0);
       line-height: inherit;
     }
     .multi-menu {
@@ -252,7 +253,8 @@ nav.nav-menu {
       }
     }
     .child-menu {
-      left: -100%
+      left: -100%;
+      @include use-rtl(right, 100%);
     }
   }
   @include breakpoints-down(md) {
@@ -264,7 +266,7 @@ nav.nav-menu {
   .flag {
     margin: 0;
     & i {
-      margin-left: $spacing2;
+      @include margin-left($spacing2);
       @include flag-icon;
     }
   }
@@ -304,6 +306,18 @@ nav.nav-menu {
   .active {
     transform: rotate(30deg)
   }
+  .dropdown-content {
+    width: 240px !important;
+    border-radius: 12px;
+    [dir="ltr"] & {
+      right: $spacing1 !important;
+      left: auto !important
+    }
+    [dir="rtl"] & {
+      left: $spacing1 !important;
+      right: auto !important
+    }
+  }
 }
 
 .mode-menu, .lang-menu {
@@ -332,12 +346,6 @@ nav.nav-menu {
 .menu-list {
   text-transform: capitalize
 }
-
-.dropdown-content.setting {
-  width: 200px !important;
-  border-radius: 12px;
-}
-
 
 /* Top Multi Lv Menu */
 .submenu-hover {
@@ -380,6 +388,9 @@ nav.nav-menu {
 }
 
 .multi-menu-root {
+  & > li {
+    position: relative;
+  }
   .dropdown-content {
     width: 200px !important;
   }
@@ -431,7 +442,7 @@ nav.nav-menu {
   @include palette-background-paper;
   width: 100%;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   height: 100%;
   display: none;
   .full-nav {

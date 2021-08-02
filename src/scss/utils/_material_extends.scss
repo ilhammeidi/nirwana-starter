@@ -79,6 +79,7 @@ $btn-radius: 6px !default;
     font-weight: $font-medium;
     &:hover {
       background: none;
+      color: inherit
     }
   }
   &-icon {
@@ -145,6 +146,10 @@ $btn-radius: 6px !default;
 }
 
 // Collection Item
+.collection .collection-item {
+  background: none;
+}
+
 .collection-item.no-hover:hover{
   background: none;
 }
@@ -327,13 +332,13 @@ $btn-radius: 6px !default;
   }
   .prefix {
     width: auto;
-    left: 0;
+    @include left(0);
   }
   .suffix {
     position: absolute;
     transition: color 0.2s;
     top: 0.5rem;
-    right: 0;
+    @include right(0)
   }
 }
 
@@ -389,6 +394,10 @@ $btn-radius: 6px !default;
   border-radius: $rounded-small $rounded-small 0 0 
 }
 
+.modal-content {
+  @include palette-background-paper;
+}
+
 
 // x-scroll mobile
 .scroll-tablet {
@@ -397,4 +406,9 @@ $btn-radius: 6px !default;
     overflow-y: visible;
     flex-wrap: nowrap;
   }
+}
+
+// tooltip
+.material-tooltip {
+  right: auto;
 }

@@ -77,7 +77,7 @@ $identation: 8px;
       padding: 0;
     }
     i.material-icons {
-      margin-left: -8px;
+      @include margin-left(-8px)
     }
   }
   .side-group-link {

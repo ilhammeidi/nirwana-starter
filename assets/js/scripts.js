@@ -339,7 +339,7 @@ $carousel.on('afterChange', function(event, slick, currentSlide){
  */
 
 var $chatPanel = $('#chat_panel'),
-    $closeChat = $('.close_chat'),
+    $closeChat = $('#close_chat'),
     $chatContainer = $('#chat-container ul'),
     $chatField = $('#chat_field'),
     $sendMessage = $('#send_message'),
@@ -888,12 +888,13 @@ $(document).ready(function(){
 
 $(function(){
   // Language select in Headed
-  $('#lang_menu li a').click(function(){
+  $('#lang_menu li').click(function(){
+    var $el_target = $(this).children();
     var url = window.location.toString(),
         path = window.location.pathname.split('/'),
         path_lang = path[path.length - 2],
         file = path[path.length - 1]
-    var lang = $(this).data("lang");
+    var lang = $el_target.data("lang");
     
     window.location = url.replace(path_lang + "/" + file, lang + "/" + file);
   })

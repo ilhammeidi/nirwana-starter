@@ -12,7 +12,7 @@
       }
     }
     .img {
-      @include right(1%);
+      right: 1%;
       max-width: 40%;
       img {
         width: 100%;
@@ -22,7 +22,7 @@
         top: 100px;
       }
       @include breakpoints-up('md') {
-        @include right(10%);
+        right: 10%;
         max-width: 50%;
       }
       @include breakpoints-down('xs') {
@@ -67,7 +67,7 @@
         flex-direction: column;
         align-items: flex-start;
         flex: 1 0 auto;
-        text-align: left;
+        @include text-align(left);
         strong {
           text-transform: capitalize;
           font-size: 28px;

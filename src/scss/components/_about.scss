@@ -146,6 +146,7 @@
     position: relative;
     .icon {
       font-size: 32px;
+      @include rtl-flip;
     }
     .nav {
       @include breakpoints-down(xs) {
@@ -165,10 +166,10 @@
   }
 
   .prev {
-    left: -30px;
+    @include left(-30px);
   }
 
   .next {
-    right: -30px;
+    @include right(-30px);
   }
 }
