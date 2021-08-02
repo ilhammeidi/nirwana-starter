@@ -560,7 +560,9 @@ function productCard(rating = 0, price = 0, img, title, desc, type = 'full', ori
   var $item = `<div class="col col-sm-4">
     <div class="card product-card portrait ${type}">
       <a class="waves-effect hidden-link" href=${href}>&nbsp;</a>
-      <figure><img src=${img} alt=${title}></figure>
+      <div class="figure">
+        <div class="responsive-img" style="background-image:url(${img})">&nbsp;</div>
+      </div>
       <div class="desc">
         <div class="text">
           <h6 class="title pb-2 text-truncate">${title}</h6>

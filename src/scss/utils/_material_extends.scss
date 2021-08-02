@@ -352,6 +352,10 @@ $btn-radius: 6px !default;
   background-color: $palette-secondary-main;
 }
 
+[type=checkbox].filled-in:checked + span:not(.lever):before {
+  @include use-rtl(transform, rotateZ(30deg) scaleX(-1))
+}
+
 // Preloader
 .pace {
   -webkit-pointer-events: none;
