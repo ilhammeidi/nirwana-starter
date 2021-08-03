@@ -28,13 +28,17 @@ mixin child-menu(menuItems)
               | #{$t.starter['header_' + item.name]}
         li.collection-item.group-child.has-child
           .collapsible-header
+            |
+            |
             a.waves-effect.text-truncate.menu-list(href='#!')
-              | #{$t.common.header_sample_page}
               |
+              | #{$t.common.header_sample_page}
               |
               i.material-icons.right keyboard_arrow_down
               |
               |
+            |
+            |
           .collapsible-body
             +child-menu(sample)
     .dropdown-divider

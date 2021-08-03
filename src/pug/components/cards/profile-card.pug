@@ -3,7 +3,7 @@ mixin profile-card(cover, avatar = assets + '/images/avatars/pp_girl.svg', name,
     .figure
       |
       |
-      .responsive-img(style={'background-image': `url(${cover}`})
+      .responsive-img(style={'background-image': `url(${cover})`})
       |
       |
     .avatar-img.avatar(class=orientation === 'portrait' ? 'bigger' : 'big')
@@ -40,23 +40,39 @@ mixin profile-card(cover, avatar = assets + '/images/avatars/pp_girl.svg', name,
           |
           |
           a.waves-effect.btn.btn-flat(href='#')
+            |
+            |
             span.btn-content
               i.icon.material-icons account_circle
               | #{connection} Connection
+            |
+            |
           |
           |
           a.waves-effect.btn.btn-flat(href='#')
+            |
+            |
             span.btn-content
               i.icon.material-icons favorite
               | #{ favorites } Favorites
+            |
+            |
           |
           |
           a.waves-effect.btn.btn-flat(href='#')
+            |
+            |
             span.btn-content
               i.icon.material-icons photo_library
               | #{albums} Albums
+            |
+            |
           |
           |
+        |
+        |
         if orientation === 'landscape'
           a.waves-effect.btn.btn-outlined.primary.main-btn.mq-xs-down(href='href' data-class='btn-small')
             | See Profile
+          |
+          |

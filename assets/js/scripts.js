@@ -360,7 +360,7 @@ function sendChat() {
 
   // scroll to bottom
   var ctn = document.getElementById('chat-container')
-  setTimeout(() => {
+  setTimeout(function() {
     ctn.scrollTo(0, ctn.scrollHeight)
   }, 300);
 }
@@ -622,10 +622,10 @@ $('#sort_by').change(function(e){
 });
 
 // category filter
-$('#filter_category li a').click(function() {
+$('.filter_category li a').click(function() {
   var val = $(this).data('value');
 
-  $('#filter_category li a').removeClass('active');
+  $('.filter_category li a').removeClass('active');
   $(this).addClass('active');
 
   filterVal.category = val;
@@ -633,10 +633,10 @@ $('#filter_category li a').click(function() {
 });
 
 // rating filter
-$('#filter_rating li a').click(function() {
+$('.filter_rating li a').click(function() {
   var val = $(this).data('value');
 
-  $('#filter_rating li a').removeClass('active');
+  $('.filter_rating li a').removeClass('active');
   $(this).addClass('active');
 
   filterVal.rating = Number(val);
@@ -644,9 +644,9 @@ $('#filter_rating li a').click(function() {
 });
 
 // category radio
-$('#filter_radio li input[type="radio"]').click(function() {
+$('.filter_radio li input[type="radio"]').click(function() {
   var val = $(this).val();
-  $('#filter_radio li').removeClass('active');
+  $('.filter_radio li').removeClass('active');
   $(this).parents('.collection-item').addClass('active');
 
   filterVal.radio = val;
@@ -654,10 +654,10 @@ $('#filter_radio li input[type="radio"]').click(function() {
 });
 
 // category checkbox
-$('#filter_check li input[type="checkbox"]').click(function() {
+$('.filter_check li input[type="checkbox"]').click(function() {
   var val = $(this).val();
 
-  $('#filter_check li').removeClass('active');
+  $('.filter_check li').removeClass('active');
   $(this).parents('.collection-item').addClass('active');
 
   if($(this).is(':checked')) {
@@ -669,14 +669,14 @@ $('#filter_check li input[type="checkbox"]').click(function() {
 });
 
 // select all categories
-$('#select_all_categories').click(function(){
+$('.select_all_categories').click(function(){
   filterVal.check = checkAll;
-  $('#filter_check input[type="checkbox"]').prop('checked', true);
+  $('.filter_check input[type="checkbox"]').prop('checked', true);
   renderResult();
 });
 
 // category tags
-$('#filter_tags .btn-tag input[type="checkbox"]').click(function() {
+$('.filter_tags .btn-tag input[type="checkbox"]').click(function() {
   var val = $(this).val();
   if($(this).is(':checked')) {
     filterVal.tags.push(val)
@@ -687,9 +687,9 @@ $('#filter_tags .btn-tag input[type="checkbox"]').click(function() {
 });
 
 // price filter
-$('#filter_price button').click(function() {
-  filterVal.range.from = Number($('.price_from').val());
-  filterVal.range.to = Number($('.price_to').val());
+$('.filter_price button').click(function() {
+  filterVal.range.from = Number($('#price_from').val());
+  filterVal.range.to = Number($('#price_to').val());
   renderResult();
 });
 

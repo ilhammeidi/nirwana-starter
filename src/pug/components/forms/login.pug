@@ -12,13 +12,13 @@ block auth_content
     include ./social-auth
     .separator
       p #{$t.common.login_or}
-    form#login_form(method='' action='')
+    form#login_form
       .row.spacing3
         .col-sm-12
           .input-field
             |
             |
-            input.validate#email(type="email" name="email" required)
+            input.validate#email(type="email" name="email" required)/
             |
             |
             label(for='email') #{$t.common.login_email}
@@ -28,7 +28,7 @@ block auth_content
           .input-field
             |
             |
-            input.validate#password(type="password" name="password" required)
+            input.validate#password(type="password" name="password" required)/
             |
             |
             label(for='password') #{$t.common.login_password}
@@ -41,7 +41,7 @@ block auth_content
           label
             |
             |
-            input.filled-in.secondary(type='checkbox')
+            input.filled-in.secondary(type='checkbox')/
             |
             |
             span #{$t.common.login_remember}

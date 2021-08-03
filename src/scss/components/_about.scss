@@ -122,7 +122,7 @@
 
   .bg-wrapper {
     @include use-theme(background-color, $palette-primary-light, $palette-primary-dark);
-    padding: spacing(4, 0, 10)
+    padding: spacing(5, 0)
   }
 
   .gallery-root, .team-root {

@@ -26,7 +26,7 @@ function sendChat() {
 
   // scroll to bottom
   var ctn = document.getElementById('chat-container')
-  setTimeout(() => {
+  setTimeout(function() {
     ctn.scrollTo(0, ctn.scrollHeight)
   }, 300);
 }
