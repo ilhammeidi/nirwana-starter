@@ -7,12 +7,13 @@ header.app-bar.header#header
       nav.nav-menu
         |
         |
-        button.btn-icon.waves-effect.sidenav-trigger.show-md-down(
+        button.btn-icon.waves-effect.sidenav-trigger.hamburger.hamburger--spin.show-md-down(
           id="mobile_menu"
           type="button"
           data-target="slide_menu"
         )
-          i.material-icons menu
+          span.hamburger-box
+            span.bar.hamburger-inner
         .logo
           |
           |
@@ -21,15 +22,18 @@ header.app-bar.header#header
             +logo('landscape')
           |
           |
-        .scrollactive-nav.show-lg-up
+        .scrollactive-nav.show-lg-up.multi-menu
           include top-nav/multi-level-click
-      nav
         .hidden-xs-down
           include ./top-nav/search-field
           +search-field(true)
+        |
+        |
         span.spacer.vertical-divider.show-lg-up
+        |
+        |
         include ./top-nav/settings
-      .hidden-sm-up
-        include ./top-nav/search-field
-        +search-field()
+    .hidden-sm-up
+      include ./top-nav/search-field
+      +search-field()
 // #### END HEADER ####

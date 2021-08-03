@@ -20,11 +20,11 @@ include ../../paper.pug
   div
     .row.ma-0
       each item in images
-        .col-md-6.pa-0.gallery-item
+        .col-6.pa-0.gallery-item
           .card-image
             |
             |
-            img.responsive-image.text-right.pa-1(src=item.src)/
+            img.responsive-image.text-right.pa-1(src=item.src alt='thumb')/
             |
             |
             a.btn.btn-icon.waves-effect.btn-small

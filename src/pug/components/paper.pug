@@ -4,8 +4,12 @@ mixin paper(title, icon, subtitle='', color=false)
       .icon
         i.material-icons.small(class=color ? 'white-text' : '') #{icon}
       .card-content
+        |
+        |
         span.card-title #{title}
-        p #{subtitle}
-      .text
+        |
+        |
+        if subtitle !== ''
+          p #{subtitle}
     .content
       block

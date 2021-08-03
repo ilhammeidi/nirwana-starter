@@ -70,27 +70,30 @@
             <div class="container">
               <div class="header-content">
                 <nav class="nav-menu flex-grow-1">
-                  <button class="btn-icon waves-effect sidenav-trigger show-md-down" id="mobile_menu" type="button"><i class="material-icons">menu</i></button>
-                  <div class="logo flex-grow-1">
+                  <div class="logo flex-grow-1 start-mobile">
                     <a href="index.html">
-                      <span class="logo landscape medium">
-<img src="./assets/images/logo-starter.png" alt="logo"/>
-
-Starter</span>
+                      <span class="logo landscape medium"><img src="./assets/images/logo-starter.png" alt="logo"/>Starter</span>
                     </a>
                   </div>
                   <nav class="user-menu">
-                    <a class="btn btn-flat waves-effect show-lg-up" type="button" href="/login.html">Login</a>
-                    <span class="spacer vertical-divider show-lg-up"></span>
+                    <a class="btn primary waves-effect" href="login.html">Login</a>
+                    <span class="spacer vertical-divider show-md-up"></span>
                     <div class="menu-setting">
-                      <div class="setting"><button class="btn btn-icon waves-effect btn-small m-2 dropdown-trigger" data-target="dropdown_config" data-align="left" type="button"><i class="icon material-icons" id="setting_icon">settings</i></button>
+                      <div class="setting">
+                        <button class="btn btn-icon waves-effect btn-small dropdown-trigger ma-1" data-target="dropdown_config" data-align="left" type="button">
+                          <i class="icon material-icons" id="setting_icon">settings</i>
+                        </button>
                         <div class="dropdown-content setting" id="dropdown_config">
                           <ul class="collection with-header">
                             <li class="collection-header">theme mode</li>
                             <li class="collection-item no-hover pl-4">
                               <div class="flex-menu">
                                 <div class="switch">
-                                  <label>light<input id="theme_switcher" type="checkbox"><span class="lever"></span>dark</label>
+                                  <label>
+                                    light
+                                    <input id="theme_switcher" type="checkbox"><span class="lever"></span>
+                                    dark
+                                  </label>
                                 </div>
                               </div>
                             </li>
@@ -149,12 +152,12 @@ Starter</span>
                 <div class="container inner-wrap">
                   <div class="auth-frame">
                     <div class="row">
-                      <div class="col-md-6 px-sm-6 px-2">
+                      <div class="col-md-6">
                         <div class="card form-box fragment-fadeUp">
                           <div class="form-wrap">
                             <div class="form-style">
                               <div class="head">
-                                <h4 class="use-text-subtitle">Create new account</h4>
+                                <h4 class="use-text-title mq-md-up" data-class="use-text-subtitle">Create new account</h4>
                               </div>
                               <div class="socmed-side-login">
                                 <button class="btn navi-btn waves-effect"><i class="ion-social-facebook left"></i>Facebook</button>
@@ -164,29 +167,29 @@ Starter</span>
                               <div class="separator">
                                 <p>Or register with email</p>
                               </div>
-                              <form id="register_form" method="" action="">
+                              <form id="register_form">
                                 <div class="row spacing3">
                                   <div class="col-sm-12">
                                     <div class="input-field">
-                                      <input class="validate" id="name" type="text" name="name" required>
+                                      <input class="validate" id="name" type="text" name="name" required />
                                       <label for="name">Name? *</label>
                                     </div>
                                   </div>
                                   <div class="col-sm-12">
                                     <div class="input-field">
-                                      <input class="validate" id="email" type="email" name="email" required>
+                                      <input class="validate" id="email" type="email" name="email" required />
                                       <label for="email">Email? *</label>
                                     </div>
                                   </div>
                                   <div class="col-md-6">
                                     <div class="input-field mq-md-up" data-class="me-2">
-                                      <input class="validate" id="password" type="password" name="password" required>
+                                      <input class="validate" id="password" type="password" name="password" required />
                                       <label for="password">Password</label>
                                     </div>
                                   </div>
                                   <div class="col-md-6">
                                     <div class="input-field mq-md-up" data-class="ms-2">
-                                      <input class="validate" id="confirm" type="password" name="confirm" data-validation="confirmation" data-validation-confirm="password" required>
+                                      <input class="validate" id="confirm" type="password" name="confirm" data-validation="confirmation" data-validation-confirm="password" required />
                                       <label for="confirm">Confirm Password</label>
                                     </div>
                                   </div>
@@ -194,7 +197,7 @@ Starter</span>
                                 <div class="btn-area">
                                   <div class="form-helper">
                                     <div class="form-control-label">
-                                      <label><input class="filled-in secondary" type="checkbox" required><span>I have read and accept the Terms of <a class="link" href="#">Service &amp; Privacy Policy *</a></span></label>
+                                      <label><input class="filled-in secondary" type="checkbox" required /><span>I have read and accept the Terms of <a class="link" href="#">Service &amp; Privacy Policy *</a></span></label>
                                     </div>
                                   </div>
                                   <button class="btn secondary btn-large waves-effect" type="submit">Continue</button>
@@ -223,16 +226,15 @@ Starter</span>
           </div>
           <div id="footer">
             <footer class="footer-sitemap">
-              <div class="container">
+              <div class="container mq-sm-down" data-class="fixed-width">
                 <div class="row">
-                  <div class="col-md-3 pa-4">
+                  <div class="col-md-3 pa-4 logo-area">
                     <div class="logo">
                       <img src="./assets/images/logo-starter.png" alt="logo" />
                       <h6 class="title">Starter Project</h6>
                     </div>
                     <p class="body-2">Create your project from scratch with main components and basic styles.</p>
-                    <p class="body-2">&copy;
-                      Nirwana Theme 2021</p>
+                    <p class="body-2 hidden-sm-down">&copy; Nirwana Theme 2021</p>
                   </div>
                   <div class="col-md-6 pa-4">
                     <ul class="show-sm-down collapsible">
@@ -319,6 +321,7 @@ Starter</span>
                         <option value="zh">简体中文</option>
                       </select>
                     </div>
+                    <p class="body-2 mt-5 text-center hidden-md-up">&copy; Nirwana Theme 2021</p>
                   </div>
                 </div>
               </div>

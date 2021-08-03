@@ -7,18 +7,18 @@ block variables
 block auth_content
   div.form-style
     .head
-      h4.use-text-subtitle
+      h4.use-text-title.mq-md-up(data-class='use-text-subtitle')
         | #{$t.common.login_title}
     include ./social-auth
     .separator
       p #{$t.common.login_or}
-    form#login_form(method='' action='')
+    form#login_form
       .row.spacing3
         .col-sm-12
           .input-field
             |
             |
-            input.validate#email(type="email" name="email" required)
+            input.validate#email(type="email" name="email" required)/
             |
             |
             label(for='email') #{$t.common.login_email}
@@ -28,7 +28,7 @@ block auth_content
           .input-field
             |
             |
-            input.validate#password(type="password" name="password" required)
+            input.validate#password(type="password" name="password" required)/
             |
             |
             label(for='password') #{$t.common.login_password}
@@ -41,7 +41,7 @@ block auth_content
           label
             |
             |
-            input.filled-in.secondary(type='checkbox')
+            input.filled-in.secondary(type='checkbox')/
             |
             |
             span #{$t.common.login_remember}
@@ -54,7 +54,7 @@ block auth_content
         a.btn-flat.button-link(href='#') #{$t.common.login_forgot}
         |
         |
-      .btn-area.mt-10
+      .btn-area
         |
         |
         button.btn.secondary.btn-large.block.waves-effect(type="submit") #{$t.common.continue}

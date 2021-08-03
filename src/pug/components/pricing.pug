@@ -59,6 +59,6 @@ include cards/pricing-card.pug
   .pricing-wrap
     .row.align-items-end
       each tier in tiers
-        .col-sm-3.px-3
+        .col-md-3.col-sm-6.px-3
           +pricing-card(tier.title, tier.subheader, tier.price, tier.description, tier.buttonText, tier.buttonVariant)
 // #### END PRICING ####

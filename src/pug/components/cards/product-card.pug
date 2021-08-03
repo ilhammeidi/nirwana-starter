@@ -5,8 +5,8 @@ mixin product-card(rating = 0, price = 0, img, title, desc, type = 'full', orien
     a.waves-effect.hidden-link(href=href) &nbsp;
     |
     |
-    figure
-      img(src=img alt=title)
+    .figure
+      .responsive-img(style={'background-image': `url(${img})`})
     .desc
       .text
         h6.title.pb-2.text-truncate #{title}

@@ -5,7 +5,7 @@
  */
 
 var $chatPanel = $('#chat_panel'),
-    $closeChat = $('.close_chat'),
+    $closeChat = $('#close_chat'),
     $chatContainer = $('#chat-container ul'),
     $chatField = $('#chat_field'),
     $sendMessage = $('#send_message'),
@@ -26,7 +26,7 @@ function sendChat() {
 
   // scroll to bottom
   var ctn = document.getElementById('chat-container')
-  setTimeout(() => {
+  setTimeout(function() {
     ctn.scrollTo(0, ctn.scrollHeight)
   }, 300);
 }

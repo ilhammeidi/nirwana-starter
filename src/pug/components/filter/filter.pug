@@ -1,7 +1,7 @@
 // #### FILTER ####
 
-aside.filter
-  .filter-block#filter_category
+aside.filter-style
+  .filter-block.filter_category
     ul.collection.with-header
       li.collection-header Filter Categories
       li
@@ -25,7 +25,7 @@ aside.filter
       li
         a.waves-effect.collection-item(data-value='cat-f' href='#!')
           | Category f
-  .filter-block#filter_rating
+  .filter-block.filter_rating
     ul.collection.with-header
       li.collection-header Rating
       li
@@ -126,14 +126,14 @@ aside.filter
           |
         |
         |
-  .filter-block#filter_radio
+  .filter-block.filter_radio
     ul.collection.with-header
       li.collection-header Filter Radio
       li.collection-item.waves-effect.active
         |
         |
         label.label-block
-          input.with-gap(name='filter_radio' type='radio' value='all' checked)
+          input.with-gap(name='filter_radio' type='radio' value='all' checked)/
           span #{$t.common.list_filter}
         |
         |
@@ -141,7 +141,7 @@ aside.filter
         |
         |
         label.label-block
-          input.with-gap(name='filter_radio' type='radio' value='radio-a')
+          input.with-gap(name='filter_radio' type='radio' value='radio-a')/
           span Radio A
         |
         |
@@ -149,7 +149,7 @@ aside.filter
         |
         |
         label.label-block
-          input.with-gap(name='filter_radio' type='radio' value='radio-b')
+          input.with-gap(name='filter_radio' type='radio' value='radio-b')/
           span Radio B
         |
         |
@@ -157,7 +157,7 @@ aside.filter
         |
         |
         label.label-block
-          input.with-gap(name='filter_radio' type='radio' value='radio-c')
+          input.with-gap(name='filter_radio' type='radio' value='radio-c')/
           span Radio C
         |
         |
@@ -165,7 +165,7 @@ aside.filter
         |
         |
         label.label-block
-          input.with-gap(name='filter_radio' type='radio' value='radio-d')
+          input.with-gap(name='filter_radio' type='radio' value='radio-d')/
           span Radio D
         |
         |
@@ -173,7 +173,7 @@ aside.filter
         |
         |
         label.label-block
-          input.with-gap(name='filter_radio' type='radio' value='radio-e')
+          input.with-gap(name='filter_radio' type='radio' value='radio-e')/
           span Radio E
         |
         |
@@ -181,43 +181,43 @@ aside.filter
         |
         |
         label.label-block
-          input.with-gap(name='filter_radio' type='radio' value='radio-f')
+          input.with-gap(name='filter_radio' type='radio' value='radio-f')/
           span Radio F
         |
         |
-  .filter-block#filter_tags
+  .filter-block.filter_tags
     .collection.with-header
       .collection-header Filter Tags
       .px-2
         span.btn-tag
-          input#tag_one(type='checkbox' value='tag-one' checked)
+          input#tag_one(type='checkbox' value='tag-one' checked)/
           label.waves-effect(for='tag_one') Tag One
         span.btn-tag
-          input#tag_two(type='checkbox' value='tag-two' checked)
+          input#tag_two(type='checkbox' value='tag-two' checked)/
           label.waves-effect(for='tag_two') Tag Two
         span.btn-tag
-          input#tag_three(type='checkbox' value='tag-three' checked)
+          input#tag_three(type='checkbox' value='tag-three' checked)/
           label.waves-effect(for='tag_three') Tag Three
         span.btn-tag
-          input#tag_four(type='checkbox' value='tag-four' checked)
+          input#tag_four(type='checkbox' value='tag-four' checked)/
           label.waves-effect(for='tag_four') Tag Four
-  .filter-block#filter_price
+  .filter-block.filter_price
     .collection.with-header
       .collection-header Filter Range
       .px-4
         .d-flex
           .input-field.pa-0
-            input#price_from(placeholder='$ From' type='text' value="0")
+            input#price_from(placeholder='$ From' type='text' value="0")/
           .strip -
           .input-field.pa-0
-            input#price_to(placeholder='$ To' type='text' value="100")
+            input#price_to(placeholder='$ To' type='text' value="100")/
         button.btn.btn-small.block.primary.waves-effect(type='button')
           | Apply
           i.material-icons.right.use-rtl-flip keyboard_arrow_right
-  .filter-block#filter_check
+  .filter-block.filter_check
     ul.collection.with-header
       li.collection-header Filter Check
-      li.collection-item.waves-effect.active#select_all_categories
+      li.collection-item.waves-effect.active.select_all_categories
         | Select All
       li.collection-item.waves-effect
         |
@@ -225,7 +225,7 @@ aside.filter
         label.label-block
           |
           |
-          input.primary.filled-in(type='checkbox' value='check-a' checked)
+          input.primary.filled-in(type='checkbox' value='check-a' checked)/
           span Check A
           |
           |
@@ -237,7 +237,7 @@ aside.filter
         label.label-block
           |
           |
-          input.primary.filled-in(type='checkbox' value='check-b' checked)
+          input.primary.filled-in(type='checkbox' value='check-b' checked)/
           span Check B
           |
           |
@@ -249,7 +249,7 @@ aside.filter
         label.label-block
           |
           |
-          input.primary.filled-in(type='checkbox' value='check-c' checked)
+          input.primary.filled-in(type='checkbox' value='check-c' checked)/
           span Check C
           |
           |
@@ -261,7 +261,7 @@ aside.filter
         label.label-block
           |
           |
-          input.primary.filled-in(type='checkbox' value='check-d' checked)
+          input.primary.filled-in(type='checkbox' value='check-d' checked)/
           span Check D
           |
           |
@@ -273,7 +273,7 @@ aside.filter
         label.label-block
           |
           |
-          input.primary.filled-in(type='checkbox' value='check-e' checked)
+          input.primary.filled-in(type='checkbox' value='check-e' checked)/
           span Check E
           |
           |
@@ -285,7 +285,7 @@ aside.filter
         label.label-block
           |
           |
-          input.primary.filled-in(type='checkbox' value='check-f' checked)
+          input.primary.filled-in(type='checkbox' value='check-f' checked)/
           span Check F
           |
           |

@@ -19,7 +19,7 @@ mixin contact-map(full=false)
                         .input-field.primary.filled
                           |
                           |
-                          input.validate#name(type='text' required)
+                          input.validate#name(type='text' required)/
                           |
                           |
                           label(for='name') #{$t.common.form_name}
@@ -29,7 +29,7 @@ mixin contact-map(full=false)
                         .input-field.primary.filled
                           |
                           |
-                          input.validate#email(type='email' required)
+                          input.validate#email(type='email' required)/
                           |
                           |
                           label(for='email') #{$t.common.form_email}
@@ -42,14 +42,14 @@ mixin contact-map(full=false)
                           input#phone(type='tel')
                           |
                           |
-                          label(for='phone') #{$t.common.form_phone}
+                          label(for='phone') #{$t.common.form_phone}/
                           |
                           |
                       .col-sm-12
                         .input-field.primary.filled
                           |
                           |
-                          input#company(type='text')
+                          input#company(type='text')/
                           |
                           |
                           label(for='company') #{$t.common.form_company}
@@ -69,15 +69,25 @@ mixin contact-map(full=false)
                       |
                       |
                       label
-                        input.filled-in.secondary(type='checkbox' required)
+                        |
+                        |
+                        input.filled-in.secondary(type='checkbox' required)/
+                        |
+                        |
                         span #{$t.common.form_terms} 
+                          br/
                           a.link(href='#') #{$t.common.form_privacy}
+                        |
+                        |
                       |
                       |
                     .btn-area
+                      |
+                      |
                       button.btn.block.primary.btn-large.waves-effect(type="submit") #{$t.common.form_send}
+                      |
+                      |
           .col-md-6.ps-md-0
-            .hidden-md-down
-              .card.map(class=full ? 'full' : '')
-                #map
+            .card.map(class=full ? 'full' : '')
+              #map
         

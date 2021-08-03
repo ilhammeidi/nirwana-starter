@@ -12,10 +12,10 @@ $('#switch_view button').click(function() {
 
   var view = $(this).data('value');
   if(view === 'grid') {
-    $('#product_result > .col').addClass('col-sm-4').removeClass('col-sm-12');
+    $('#product_result > .col').addClass('col-lg-4').removeClass('col-sm-12');
     $('#product_result .product-card').addClass('portrait').removeClass('landscape');
   } else {
-    $('#product_result > .col').addClass('col-sm-12').removeClass('col-sm-4');
+    $('#product_result > .col').addClass('col-sm-12').removeClass('col-lg-4');
     $('#product_result .product-card').addClass('landscape').removeClass('portrait');
   }
 });
@@ -103,7 +103,9 @@ function productCard(rating = 0, price = 0, img, title, desc, type = 'full', ori
   var $item = `<div class="col col-sm-4">
     <div class="card product-card portrait ${type}">
       <a class="waves-effect hidden-link" href=${href}>&nbsp;</a>
-      <figure><img src=${img} alt=${title}></figure>
+      <div class="figure">
+        <div class="responsive-img" style="background-image:url(${img})">&nbsp;</div>
+      </div>
       <div class="desc">
         <div class="text">
           <h6 class="title pb-2 text-truncate">${title}</h6>
@@ -163,10 +165,10 @@ $('#sort_by').change(function(e){
 });
 
 // category filter
-$('#filter_category li a').click(function() {
+$('.filter_category li a').click(function() {
   var val = $(this).data('value');
 
-  $('#filter_category li a').removeClass('active');
+  $('.filter_category li a').removeClass('active');
   $(this).addClass('active');
 
   filterVal.category = val;
@@ -174,10 +176,10 @@ $('#filter_category li a').click(function() {
 });
 
 // rating filter
-$('#filter_rating li a').click(function() {
+$('.filter_rating li a').click(function() {
   var val = $(this).data('value');
 
-  $('#filter_rating li a').removeClass('active');
+  $('.filter_rating li a').removeClass('active');
   $(this).addClass('active');
 
   filterVal.rating = Number(val);
@@ -185,9 +187,9 @@ $('#filter_rating li a').click(function() {
 });
 
 // category radio
-$('#filter_radio li input[type="radio"]').click(function() {
+$('.filter_radio li input[type="radio"]').click(function() {
   var val = $(this).val();
-  $('#filter_radio li').removeClass('active');
+  $('.filter_radio li').removeClass('active');
   $(this).parents('.collection-item').addClass('active');
 
   filterVal.radio = val;
@@ -195,10 +197,10 @@ $('#filter_radio li input[type="radio"]').click(function() {
 });
 
 // category checkbox
-$('#filter_check li input[type="checkbox"]').click(function() {
+$('.filter_check li input[type="checkbox"]').click(function() {
   var val = $(this).val();
 
-  $('#filter_check li').removeClass('active');
+  $('.filter_check li').removeClass('active');
   $(this).parents('.collection-item').addClass('active');
 
   if($(this).is(':checked')) {
@@ -210,14 +212,14 @@ $('#filter_check li input[type="checkbox"]').click(function() {
 });
 
 // select all categories
-$('#select_all_categories').click(function(){
+$('.select_all_categories').click(function(){
   filterVal.check = checkAll;
-  $('#filter_check input[type="checkbox"]').prop('checked', true);
+  $('.filter_check input[type="checkbox"]').prop('checked', true);
   renderResult();
 });
 
 // category tags
-$('#filter_tags .btn-tag input[type="checkbox"]').click(function() {
+$('.filter_tags .btn-tag input[type="checkbox"]').click(function() {
   var val = $(this).val();
   if($(this).is(':checked')) {
     filterVal.tags.push(val)
@@ -228,8 +230,14 @@ $('#filter_tags .btn-tag input[type="checkbox"]').click(function() {
 });
 
 // price filter
-$('#filter_price button').click(function() {
+$('.filter_price button').click(function() {
   filterVal.range.from = Number($('#price_from').val());
   filterVal.range.to = Number($('#price_to').val());
   renderResult();
+});
+
+
+// handle mobile filter
+$(function() {
+  $('#modal_filter.modal').modal();
 });

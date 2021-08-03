@@ -14,7 +14,7 @@
   }
   .badge {
     position: absolute;
-    right: 10px;
+    @include right(10px);
     top: 10px;
     color: white;
     font-size: 12px;
@@ -63,7 +63,7 @@
   /* Orientation */
   &.landscape {
     .media-title {
-      text-align: left;
+      @include text-align(left);
     }
   }
   &.portrait {

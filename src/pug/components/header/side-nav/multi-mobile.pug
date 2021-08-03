@@ -7,13 +7,16 @@ mixin child-menu(menuItems)
         if subitem.child
           li.collection-item.has-grand-child
             .collapsible-header
+              |
+              |
               a.waves-effect.text-truncate.menu-list(href='#!')
                 |
                 |
                 i.material-icons.left arrow_drop_down
                 | #{subitem.name}
                 |
-                |
+              |
+              |
             .collapsible-body
               +child-menu(subitem.child)
         else
@@ -36,13 +39,17 @@ mixin child-menu(menuItems)
           if item.child
             li.collection-item.group-child.has-child
               .collapsible-header
+                |
+                |
                 a.waves-effect.text-truncate.menu-list(href='#!')
-                  | #{item.name}
                   |
+                  | #{item.name}
                   |
                   i.material-icons.right keyboard_arrow_down
                   |
                   |
+                |
+                |
               .collapsible-body
                 +child-menu(item.child)
           else

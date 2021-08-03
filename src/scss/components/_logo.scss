@@ -30,6 +30,10 @@
     img {
       max-width: 54px;
       height: 54px;
+      @include breakpoints-down(xs) {
+        max-Width: 32px;
+        height: 32px
+      }
     }
   }
   &.large {

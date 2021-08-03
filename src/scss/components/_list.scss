@@ -14,7 +14,7 @@
   .card-image .btn-icon {
     position: absolute;
     top: 10px;
-    right: 10px;
+    @include right(10px)
   }
   .text {
     @include text-align(left);
@@ -56,6 +56,12 @@
     align-items: center;
     @include breakpoints-down(xs) {
       display: block;
+      text-align: center;
+      &.main {
+        & > * {
+          width: 100%;
+        }
+      }
       & > * {
         margin: spacing(0, 0, 2);
       }
@@ -151,7 +157,7 @@
     }
   }
   .help-paper {
-    background-color: $palette-primary-light;
+    @include use-theme(background-color, $palette-primary-light, $palette-primary-dark);
     padding: spacing(2, 1);
   }
   .headline {
@@ -175,11 +181,5 @@
     font-weight: $font-bold;
     font-size: 18px;
     color: $palette-primary-main;
-  }
-  .scroll-tablet {
-    @include breakpoints-down(sm) {
-      overflow: auto;
-      flex-wrap: nowrap;
-    }
   }
 }

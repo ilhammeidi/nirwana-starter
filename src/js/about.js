@@ -155,7 +155,7 @@ function stopVideo() {
 }
 
 $(function() {
-  $('.modal').modal({
+  $('#video_modal.modal').modal({
     onOpenEnd: function() {
       playVideo();
     },
@@ -163,7 +163,7 @@ $(function() {
       stopVideo();
     }
   });
-  $('.modal .modal-close').click(function(){
+  $('#video_modal.modal .modal-close').click(function(){
     stopVideo();
   })
 });

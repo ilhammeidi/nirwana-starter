@@ -43,6 +43,12 @@ $flag: '../images/flag-logo.png';
   height: 0;
 }
 
+.start-mobile {
+  @include breakpoints-down(xs) {
+    margin: spacing(1, 2)
+  }
+}
+
 .header {
   @include palette-text-primary;
   box-shadow: none;
@@ -59,6 +65,9 @@ $flag: '../images/flag-logo.png';
         padding: 0 $spacing3
       }
     }
+  }
+  .sidenav-trigger {
+    margin: 0
   }
   &.fixed {
     position: fixed;
@@ -77,10 +86,10 @@ $flag: '../images/flag-logo.png';
       }
     }
     nav {
-      padding: spacing(1, 0);
+      padding: 0;
     }
   }
-  &.no-shadow {
+  &.open-drawer {
      @include palette-background-paper;
   }
   .search {
@@ -88,10 +97,8 @@ $flag: '../images/flag-logo.png';
     display: flex;
     max-width: 600px;
     align-items: center;
-    @include margin-left($spacing2);
-    @include margin-right($spacing2);
     @include breakpoints-down(xs) {
-      margin-bottom: $spacing2;
+      margin: spacing(0, 2, 2);
     }
     @include breakpoints-up(sm) {
       flex: 1;
@@ -102,6 +109,7 @@ $flag: '../images/flag-logo.png';
     .input-field {
       @include padding-right($spacing2);
       min-height: 0;
+      margin-top: 0;
       margin-bottom: 0;
       width: 100%;
       border: 1px solid;
@@ -129,7 +137,6 @@ $flag: '../images/flag-logo.png';
   }
 }
 
-
 .header-content {
   display: flex;
   align-items: center;
@@ -137,17 +144,22 @@ $flag: '../images/flag-logo.png';
   & nav {
     transition: all 0.3s ease;
     align-items: center;
-    padding: $spacing1;
-    margin: 6px 0;
+    margin: 3px 0;
     display: flex;
-    & > * {
-      margin: 0 $spacing1
+    @include breakpoints-up(sm) {
+      padding: $spacing1
     }
     .menu-setting {
+      position: relative;
       margin: 0;
       a {
         padding: spacing(0.5, 1);
         display: block;
+      }
+    }
+    & > * {
+      @include breakpoints-up(sm) {
+        margin: 0 $spacing1
       }
     }
   }
@@ -169,10 +181,22 @@ $flag: '../images/flag-logo.png';
       height: 48px;
       width: 48px;
     }
+    @include breakpoints-between(sm, lg) {
+      flex: 1
+    }
   }
 }
 
-.nav-menu {
+nav.nav-menu {
+  width: 100%;
+  .btn-icon.hamburger {
+    padding: 0;
+    margin: spacing(0, 1);
+    line-height: 52px
+  }
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    @include palette-background-text-primary
+  }
   .scrollactive-nav {
     list-style: none;
     display: flex;
@@ -190,10 +214,11 @@ $flag: '../images/flag-logo.png';
       }
     }
     i.right.icon {
-      margin-left: 0;
+      @include margin-left(0);
       line-height: inherit;
     }
     .multi-menu {
+      flex: 1;
       .btn {
         margin: spacing(0, 0.5);
         padding: $spacing1;
@@ -211,7 +236,6 @@ $flag: '../images/flag-logo.png';
     }
   }
   .dropdown-content {
-    @include shade;
     padding: 4px;
     overflow: visible !important;
     li {
@@ -229,8 +253,12 @@ $flag: '../images/flag-logo.png';
       }
     }
     .child-menu {
-      left: -100%
+      left: -100%;
+      @include use-rtl(right, 100%);
     }
+  }
+  @include breakpoints-down(md) {
+    justify-content: space-between;
   }
 }
 
@@ -238,7 +266,7 @@ $flag: '../images/flag-logo.png';
   .flag {
     margin: 0;
     & i {
-      margin-left: $spacing2;
+      @include margin-left($spacing2);
       @include flag-icon;
     }
   }
@@ -264,7 +292,7 @@ $flag: '../images/flag-logo.png';
   margin: 0 $spacing1;
   border-left: 1px solid;
   @include palette-divider;
-  height: 100%;
+  height: 40px;
   min-height: $spacing6
 }
 
@@ -277,6 +305,18 @@ $flag: '../images/flag-logo.png';
   }
   .active {
     transform: rotate(30deg)
+  }
+  .dropdown-content {
+    width: 240px !important;
+    border-radius: 12px;
+    [dir="ltr"] & {
+      right: $spacing1 !important;
+      left: auto !important
+    }
+    [dir="rtl"] & {
+      left: $spacing1 !important;
+      right: auto !important
+    }
   }
 }
 
@@ -306,12 +346,6 @@ $flag: '../images/flag-logo.png';
 .menu-list {
   text-transform: capitalize
 }
-
-.dropdown-content.setting {
-  width: 200px !important;
-  border-radius: 12px;
-}
-
 
 /* Top Multi Lv Menu */
 .submenu-hover {
@@ -354,6 +388,9 @@ $flag: '../images/flag-logo.png';
 }
 
 .multi-menu-root {
+  & > li {
+    position: relative;
+  }
   .dropdown-content {
     width: 200px !important;
   }
@@ -405,7 +442,7 @@ $flag: '../images/flag-logo.png';
   @include palette-background-paper;
   width: 100%;
   position: fixed;
-  z-index: 9990;
+  z-index: 2;
   height: 100%;
   display: none;
   .full-nav {

@@ -1,6 +1,6 @@
 include ../data/sample-page
 
-.scrollactive-nav.scrollnav.show-lg-up
+.scrollactive-nav.scrollnav.show-lg-up.multi-menu
   ul.main-menu
     each item in menu.starter
       |
@@ -18,9 +18,9 @@ include ../data/sample-page
     li
       |
       |
-      button.btn.btn-flat.megamenu-trigger-click.waves-effect(href='#sample-page' data-target='sample-page')
-        | #{$t.common.header_sample_page}
+      button.btn.btn-flat.megamenu-trigger-click.waves-effect(data-target='sample-page')
         |
+        | #{$t.common.header_sample_page}
         |
         i.material-icons.right.icon keyboard_arrow_down
         |
@@ -33,7 +33,7 @@ include ../data/sample-page
             .row
               each subitem in sample
                 .col-sm-3.mb-6
-                  .title-mega #{subitem.name}
+                  .title-mega #{$t.common['header_' + subitem.name]}
                   |
                   |
                   img.thumb-menu(src=subitem.thumb alt="thumbnail")/
@@ -43,7 +43,7 @@ include ../data/sample-page
                     each childitem in subitem.child
                       li.waves-effect
                         a.menu-list(href=childitem.link class=childitem.name === pageName ? 'current' : '')
-                          | #{childitem.name}
+                          | #{$t.common['header_' + childitem.name]}
       
     |
     |

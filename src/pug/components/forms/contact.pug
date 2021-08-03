@@ -10,7 +10,7 @@
               .input-field.primary
                 |
                 |
-                input.validate#name(type='text' required)
+                input.validate#name(type='text' required)/
                 |
                 |
                 label(for='name') #{$t.common.form_name}
@@ -20,7 +20,7 @@
               .input-field.primary
                 |
                 |
-                input.validate#email(type='email' required)
+                input.validate#email(type='email' required)/
                 |
                 |
                 label(for='email') #{$t.common.form_email}
@@ -30,7 +30,7 @@
               .input-field.primary
                 |
                 |
-                input#phone(type='tel')
+                input#phone(type='tel')/
                 |
                 |
                 label(for='phone') #{$t.common.form_phone}
@@ -40,7 +40,7 @@
               .input-field.primary
                 |
                 |
-                input#company(type='text')
+                input#company(type='text')/
                 |
                 |
                 label(for='company') #{$t.common.form_company}
@@ -61,7 +61,7 @@
               |
               |
               label
-                input.filled-in.primary(type='checkbox' required)
+                input.filled-in.primary(type='checkbox' required)/
                 span #{$t.common.form_terms}
               |
               |
@@ -69,4 +69,8 @@
               a(href='#') #{$t.common.form_privacy}
               |
               |
+            |
+            |
             button.btn.btn-large.waves-effect.primary(type="submit") #{$t.common.form_send}
+            |
+            |

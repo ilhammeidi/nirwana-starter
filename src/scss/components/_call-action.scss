@@ -1,6 +1,9 @@
 .call-to-action {
   .root {
     position: relative;
+    @include breakpoints-up(sm) {
+      margin: spacing(0, 2);
+    }
     p {
       margin: 0
     }

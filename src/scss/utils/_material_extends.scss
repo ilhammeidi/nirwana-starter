@@ -79,6 +79,7 @@ $btn-radius: 6px !default;
     font-weight: $font-medium;
     &:hover {
       background: none;
+      color: inherit
     }
   }
   &-icon {
@@ -93,6 +94,9 @@ $btn-radius: 6px !default;
     }
     &:before {
       border-radius: 50%;
+    }
+    &.invert {
+      color: $palette-common-white
     }
   }
   &-outlined {
@@ -142,6 +146,10 @@ $btn-radius: 6px !default;
 }
 
 // Collection Item
+.collection .collection-item {
+  background: none;
+}
+
 .collection-item.no-hover:hover{
   background: none;
 }
@@ -324,13 +332,13 @@ $btn-radius: 6px !default;
   }
   .prefix {
     width: auto;
-    left: 0;
+    @include left(0);
   }
   .suffix {
     position: absolute;
     transition: color 0.2s;
     top: 0.5rem;
-    right: 0;
+    @include right(0)
   }
 }
 
@@ -344,6 +352,10 @@ $btn-radius: 6px !default;
   background-color: $palette-secondary-main;
 }
 
+[type=checkbox].filled-in:checked + span:not(.lever):before {
+  @include use-rtl(transform, rotateZ(30deg) scaleX(-1))
+}
+
 // Preloader
 .pace {
   -webkit-pointer-events: none;
@@ -355,7 +367,7 @@ $btn-radius: 6px !default;
     display: none;
   }
   .pace-progress {
-    background: #2196f3;
+    background: #9c27b0;
     position: fixed;
     z-index: 10000;
     top: 0;
@@ -379,3 +391,28 @@ $btn-radius: 6px !default;
   @include margin-right(-12px)
 }
 
+
+// Modal
+.modal.bottom-sheet {
+  max-height: 90%;
+  border-radius: $rounded-small $rounded-small 0 0 
+}
+
+.modal-content {
+  @include palette-background-paper;
+}
+
+
+// x-scroll mobile
+.scroll-tablet {
+  @include breakpoints-down(sm) {
+    overflow-x: auto;
+    overflow-y: visible;
+    flex-wrap: nowrap;
+  }
+}
+
+// tooltip
+.material-tooltip {
+  right: auto;
+}

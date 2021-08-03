@@ -3,9 +3,6 @@
   display: flex;
   max-width: 1000px;
   border-radius: $rounded-medium;
-  .btn.action-btn {
-    min-width: 200px;
-  }
   .card-action {
     border: none;
     padding: spacing(1, 0);
@@ -43,6 +40,9 @@
       padding-left: $spacing2;
       padding-right: $spacing2;
     }
+    .btn.action-btn {
+      width: 100%
+    }
   }
   &.landscape {
     flex-direction: row;
@@ -50,6 +50,7 @@
       width: 100%;
       min-height: 100%;
       height: auto;
+      width: 200px;
       @include breakpoints-down(xs) {
         max-width: 100px;
         max-height: 130px;
@@ -62,8 +63,9 @@
       }
     }
     .properties {
+      flex: 1;
       @include breakpoints-down(xs) {
-        padding: $spacing1;
+        padding: spacing(1, 2);
         overflow: hidden;
         display: flex;
         flex-direction: column;
@@ -100,7 +102,7 @@
     &.portrait {
       .figure {
         width: 120%;
-        margin-left: -10%;
+        @include margin-left(-10%);
         overflow: hidden;
         border-radius: 0 0 50% 50%;
       }
