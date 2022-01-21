@@ -1,129 +1,4 @@
 /**
- * @name _common
- * @function handle scroling
- * @function initial parallax, tooltip, carousel, etc
- */
-
-var $header = $("#header");
-var $pageNav = $("#page_nav");
-var sticky = 0;
-
-// Sticky header
-if($("#header").length > 0) {
-  sticky = header.offsetTop + 80;
-}
-
-function fixedNav() {
-  if (window.pageYOffset > sticky) {
-    $header.addClass("fixed");
-  } else {
-    $header.removeClass("fixed");
-  }
-}
-
-// Bottom right navigation,
-function fixedFabNav() {
-  if (window.pageYOffset > 500) {
-    $pageNav.addClass("show");
-  } else {
-    $pageNav.removeClass("show");
-  }
-}
-
-/**
- * @name Feature Progress
- * @function handle progress on scroll window
- */
-
-var progressOffset = 0;
-
-var $progress = $('#progress').offset();
-if($("#progress").length > 0) {
-  progressOffset = $progress.top - 50;
-}
-
-function playProgress() {
-  if (window.pageYOffset > progressOffset) {
-    $('#progress').removeClass('zero');
-  }
-}
-
-
-$(document).ready(function(){
-  // Fixed nav
-  setTimeout(function() {
-    window.onscroll = function() {
-      playProgress();
-      fixedNav();
-      fixedFabNav();
-    };
-  }, 500)
-  // Preloader
-  $('#preloader').delay(1000).fadeOut('fast');
-  $(".transition-page").addClass('page-fadeUp-transition-enter').delay(1000).queue(function(){
-    $(this)
-    .removeClass('page-fadeUp-transition-enter')
-    .addClass('page-fadeUp-transition-enter-active')
-    .dequeue()
-    .delay(1400).queue(function(){
-      $(this)
-      .removeClass('page-fadeUp-transition-enter-active')
-      .addClass('page-fadeUp-transition-exit')
-      .dequeue();
-    })
-  });
-  
-  // Open Page scroll navigation
-  $('.scrollnav').navScroll({
-    scrollSpy: true,
-    activeParent: true,
-    activeClassName: 'current'
-  });
-  
-  // initial wow
-  new WOW().init();
-    
-  // Accordion init
-  $('.collapsible').collapsible();
-  var elem = document.querySelector('.collapsible.expandable');
-  var instance = M.Collapsible.init(elem, {
-    accordion: false
-  });
-
-  // Select
-  $('.select').formSelect();
-
-  // Tooltip initial
-  $('.tooltipped').tooltip();
-
-  // slick carousel config
-  $('.slick-carousel').slick({
-    dots: false,
-    arrows: false,
-    slidesToShow: 3,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 30000,
-    responsive: [
-      {
-        breakpoint: 800,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  });
-});
-
-/**
  * @name Carousel
  * @function handle team and album carousel
  */
@@ -590,7 +465,7 @@ function renderResult() {
   $('#result_length').text(items.length);
   $('#product_result').html('');
   for (i=0; i<items.length; i++) {
-    $('#product_result').append(productCard(items[i].rating, items[i].price, 'https://source.unsplash.com/random', items[i].title, 'Category: '+items[i].category+' ~ '+'Tag: '+items[i].tag+' ~ '+'Check: '+items[i].check+' ~ '+'Radio: '+items[i].radio, 'round', 'portrait', '/detail-product'))
+    $('#product_result').append(productCard(items[i].rating, items[i].price, items[i].img, items[i].title, 'Category: '+items[i].category+' ~ '+'Tag: '+items[i].tag+' ~ '+'Check: '+items[i].check+' ~ '+'Radio: '+items[i].radio, 'round', 'portrait', '/detail-product'))
   }
 }
 
@@ -696,7 +571,18 @@ $('.filter_price button').click(function() {
 
 // handle mobile filter
 $(function() {
-  $('#modal_filter.modal').modal();
+  $('#modal_filter.modal').modal({
+    onOpenStart: function() {
+      var filter_sidebar = $('#filter_sidebar > aside');
+      filter_sidebar.detach();
+      $('#filter_mobile').append(filter_sidebar);
+    },
+    onCloseEnd: function() {
+      var filter_mobile = $('#filter_mobile > aside');
+      filter_mobile.detach();
+      $('#filter_sidebar').append(filter_mobile);
+    }
+  });
 });
 // Validate form
 var toastHTML = '<span>Message Sent</span><button onclick="M.Toast.dismissAll()" class="btn-icon waves-effect toast-action"><i class="material-icons">close</i></button>';
@@ -1085,3 +971,128 @@ enquire
   .register(mq.smDown, handler_smDown)
   .register(mq.mdDown, handler_mdDown)
   .register(mq.lgDown, handler_lgDown);
+
+/**
+ * @name _common
+ * @function handle scroling
+ * @function initial parallax, tooltip, carousel, etc
+ */
+
+var $header = $('header.header.app-bar');
+var $pageNav = $("#page_nav");
+var sticky = 0;
+
+// Sticky header
+if($("#header").length > 0) {
+  sticky = $header[0].offsetTop + 80;
+}
+
+function fixedNav() {
+  if (window.pageYOffset > sticky) {
+    $header.addClass("fixed");
+  } else {
+    $header.removeClass("fixed");
+  }
+}
+
+// Bottom right navigation,
+function fixedFabNav() {
+  if (window.pageYOffset > 500) {
+    $pageNav.addClass("show");
+  } else {
+    $pageNav.removeClass("show");
+  }
+}
+
+/**
+ * @name Feature Progress
+ * @function handle progress on scroll window
+ */
+
+var progressOffset = 0;
+
+var $progress = $('#progress').offset();
+if($("#progress").length > 0) {
+  progressOffset = $progress.top - 50;
+}
+
+function playProgress() {
+  if (window.pageYOffset > progressOffset) {
+    $('#progress').removeClass('zero');
+  }
+}
+
+
+$(document).ready(function(){
+  // Fixed nav
+  setTimeout(function() {
+    window.onscroll = function() {
+      playProgress();
+      fixedNav();
+      fixedFabNav();
+    };
+  }, 500)
+  // Preloader
+  $('#preloader').delay(1000).fadeOut('fast');
+  $(".transition-page").addClass('page-fadeUp-transition-enter').delay(1000).queue(function(){
+    $(this)
+    .removeClass('page-fadeUp-transition-enter')
+    .addClass('page-fadeUp-transition-enter-active')
+    .dequeue()
+    .delay(1400).queue(function(){
+      $(this)
+      .removeClass('page-fadeUp-transition-enter-active')
+      .addClass('page-fadeUp-transition-exit')
+      .dequeue();
+    })
+  });
+  
+  // Open Page scroll navigation
+  $('.scrollnav').navScroll({
+    scrollSpy: true,
+    activeParent: true,
+    activeClassName: 'current'
+  });
+  
+  // initial wow
+  new WOW().init();
+    
+  // Accordion init
+  $('.collapsible').collapsible();
+  var elem = document.querySelector('.collapsible.expandable');
+  var instance = M.Collapsible.init(elem, {
+    accordion: false
+  });
+
+  // Select
+  $('.select').formSelect();
+
+  // Tooltip initial
+  $('.tooltipped').tooltip();
+
+  // slick carousel config
+  $('.slick-carousel').slick({
+    dots: false,
+    arrows: false,
+    slidesToShow: 3,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 30000,
+    responsive: [
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+});

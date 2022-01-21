@@ -133,7 +133,7 @@ function renderResult() {
   $('#result_length').text(items.length);
   $('#product_result').html('');
   for (i=0; i<items.length; i++) {
-    $('#product_result').append(productCard(items[i].rating, items[i].price, 'https://source.unsplash.com/random', items[i].title, 'Category: '+items[i].category+' ~ '+'Tag: '+items[i].tag+' ~ '+'Check: '+items[i].check+' ~ '+'Radio: '+items[i].radio, 'round', 'portrait', '/detail-product'))
+    $('#product_result').append(productCard(items[i].rating, items[i].price, items[i].img, items[i].title, 'Category: '+items[i].category+' ~ '+'Tag: '+items[i].tag+' ~ '+'Check: '+items[i].check+' ~ '+'Radio: '+items[i].radio, 'round', 'portrait', '/detail-product'))
   }
 }
 
@@ -239,5 +239,16 @@ $('.filter_price button').click(function() {
 
 // handle mobile filter
 $(function() {
-  $('#modal_filter.modal').modal();
+  $('#modal_filter.modal').modal({
+    onOpenStart: function() {
+      var filter_sidebar = $('#filter_sidebar > aside');
+      filter_sidebar.detach();
+      $('#filter_mobile').append(filter_sidebar);
+    },
+    onCloseEnd: function() {
+      var filter_mobile = $('#filter_mobile > aside');
+      filter_mobile.detach();
+      $('#filter_sidebar').append(filter_mobile);
+    }
+  });
 });

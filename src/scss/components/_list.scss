@@ -183,3 +183,10 @@
     color: $palette-primary-main;
   }
 }
+
+#product_result {
+  .card {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

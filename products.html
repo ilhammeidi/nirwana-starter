@@ -16,8 +16,8 @@
   <link rel="apple-touch-icon" sizes="152x152" href="./assets/favicons/apple-icon-152x152.png">
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicons/apple-icon-180x180.png">
   <link rel="icon" type="image/png" sizes="192x192" href="./assets/favicons/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicons/favicon-16x16.png">
   <link rel="manifest" href="./assets/favicons/manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="./assets/favicons/ms-icon-144x144.png"><!-- PWA primary color-->
@@ -65,7 +65,7 @@
     <div class="m-content purple-var" id="main-wrap">
       <div id="products-page">
         <div class="modal bottom-sheet" id="modal_filter">
-          <div class="modal-content filter-style">
+          <div class="modal-content modal-filter">
             <nav class="filter-head">
               <div class="nav-wrapper">
                 <div class="d-flex">
@@ -74,137 +74,8 @@
                 </div>
                 <button class="modal-close btn-flat waves-effect" type="button">DONE </button>
               </div>
-            </nav><!-- #### FILTER ####-->
-            <aside class="filter-style">
-              <div class="filter-block filter_category">
-                <ul class="collection with-header">
-                  <li class="collection-header">Filter Categories</li>
-                  <li><a class="waves-effect collection-item active" data-value="all" href="#!">All categories</a></li>
-                  <li><a class="waves-effect collection-item" data-value="cat-a" href="#!">Category a</a></li>
-                  <li><a class="waves-effect collection-item" data-value="cat-b" href="#!">Category b</a></li>
-                  <li><a class="waves-effect collection-item" data-value="cat-c" href="#!">Category c</a></li>
-                  <li><a class="waves-effect collection-item" data-value="cat-d" href="#!">Category d</a></li>
-                  <li><a class="waves-effect collection-item" data-value="cat-e" href="#!">Category e</a></li>
-                  <li><a class="waves-effect collection-item" data-value="cat-f" href="#!">Category f</a></li>
-                </ul>
-              </div>
-              <div class="filter-block filter_rating">
-                <ul class="collection with-header">
-                  <li class="collection-header">Rating</li>
-                  <li><a class="waves-effect collection-item active" data-value="0" href="#!">All Rating</a></li>
-                  <li>
-                    <a class="waves-effect collection-item" data-value="1" href="#!">
-                      <span class="star"><i class="material-icons star-icon">star</i><i class="material-icons star-icon-disable">star</i><i class="material-icons star-icon-disable">star</i><i class="material-icons star-icon-disable">star</i><i class="material-icons star-icon-disable">star</i></span>
-                      <span class="caption">Minimum 1 star rating</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="waves-effect collection-item" data-value="2" href="#!">
-                      <span class="star"><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon-disable">star</i><i class="material-icons star-icon-disable">star</i><i class="material-icons star-icon-disable">star</i></span>
-                      <span class="caption">Minimum 2 star rating</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="waves-effect collection-item" data-value="3" href="#!">
-                      <span class="star"><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon-disable">star</i><i class="material-icons star-icon-disable">star</i></span>
-                      <span class="caption">Minimum 3 star rating</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="waves-effect collection-item" data-value="4" href="#!">
-                      <span class="star"><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon-disable">star</i></span>
-                      <span class="caption">Minimum 4 star rating</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="waves-effect collection-item" data-value="5" href="#!">
-                      <span class="star"><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i></span>
-                      <span class="caption">Minimum 5 star rating</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="filter-block filter_radio">
-                <ul class="collection with-header">
-                  <li class="collection-header">Filter Radio</li>
-                  <li class="collection-item waves-effect active">
-                    <label class="label-block"><input class="with-gap" name="filter_radio" type="radio" value="all" checked /><span>All categories</span></label>
-                  </li>
-                  <li class="collection-item waves-effect">
-                    <label class="label-block"><input class="with-gap" name="filter_radio" type="radio" value="radio-a" /><span>Radio A</span></label>
-                  </li>
-                  <li class="collection-item waves-effect">
-                    <label class="label-block"><input class="with-gap" name="filter_radio" type="radio" value="radio-b" /><span>Radio B</span></label>
-                  </li>
-                  <li class="collection-item waves-effect">
-                    <label class="label-block"><input class="with-gap" name="filter_radio" type="radio" value="radio-c" /><span>Radio C</span></label>
-                  </li>
-                  <li class="collection-item waves-effect">
-                    <label class="label-block"><input class="with-gap" name="filter_radio" type="radio" value="radio-d" /><span>Radio D</span></label>
-                  </li>
-                  <li class="collection-item waves-effect">
-                    <label class="label-block"><input class="with-gap" name="filter_radio" type="radio" value="radio-e" /><span>Radio E</span></label>
-                  </li>
-                  <li class="collection-item waves-effect">
-                    <label class="label-block"><input class="with-gap" name="filter_radio" type="radio" value="radio-f" /><span>Radio F</span></label>
-                  </li>
-                </ul>
-              </div>
-              <div class="filter-block filter_tags">
-                <div class="collection with-header">
-                  <div class="collection-header">Filter Tags</div>
-                  <div class="px-2"><span class="btn-tag"><input id="tag_one" type="checkbox" value="tag-one" checked/><label class="waves-effect" for="tag_one">Tag One</label></span><span class="btn-tag"><input id="tag_two" type="checkbox" value="tag-two" checked/><label class="waves-effect" for="tag_two">Tag Two</label></span><span class="btn-tag"><input id="tag_three" type="checkbox" value="tag-three" checked/><label class="waves-effect" for="tag_three">Tag Three</label></span><span class="btn-tag"><input id="tag_four" type="checkbox" value="tag-four" checked/><label class="waves-effect" for="tag_four">Tag Four</label></span></div>
-                </div>
-              </div>
-              <div class="filter-block filter_price">
-                <div class="collection with-header">
-                  <div class="collection-header">Filter Range</div>
-                  <div class="px-4">
-                    <div class="d-flex">
-                      <div class="input-field pa-0"><input id="price_from" placeholder="$ From" type="text" value="0" /></div>
-                      <div class="strip">-</div>
-                      <div class="input-field pa-0"><input id="price_to" placeholder="$ To" type="text" value="100" /></div>
-                    </div><button class="btn btn-small block primary waves-effect" type="button">Apply<i class="material-icons right use-rtl-flip">keyboard_arrow_right</i></button>
-                  </div>
-                </div>
-              </div>
-              <div class="filter-block filter_check">
-                <ul class="collection with-header">
-                  <li class="collection-header">Filter Check</li>
-                  <li class="collection-item waves-effect active select_all_categories">Select All</li>
-                  <li class="collection-item waves-effect">
-                    <label class="label-block">
-                      <input class="primary filled-in" type="checkbox" value="check-a" checked /><span>Check A</span>
-                    </label>
-                  </li>
-                  <li class="collection-item waves-effect">
-                    <label class="label-block">
-                      <input class="primary filled-in" type="checkbox" value="check-b" checked /><span>Check B</span>
-                    </label>
-                  </li>
-                  <li class="collection-item waves-effect">
-                    <label class="label-block">
-                      <input class="primary filled-in" type="checkbox" value="check-c" checked /><span>Check C</span>
-                    </label>
-                  </li>
-                  <li class="collection-item waves-effect">
-                    <label class="label-block">
-                      <input class="primary filled-in" type="checkbox" value="check-d" checked /><span>Check D</span>
-                    </label>
-                  </li>
-                  <li class="collection-item waves-effect">
-                    <label class="label-block">
-                      <input class="primary filled-in" type="checkbox" value="check-e" checked /><span>Check E</span>
-                    </label>
-                  </li>
-                  <li class="collection-item waves-effect">
-                    <label class="label-block">
-                      <input class="primary filled-in" type="checkbox" value="check-f" checked /><span>Check F</span>
-                    </label>
-                  </li>
-                </ul>
-              </div>
-            </aside>
+            </nav>
+            <div class="filter-style" id="filter_mobile"></div>
           </div>
         </div>
         <div class="main-wrap">
@@ -350,7 +221,7 @@
                             <div class="container max-md">
                               <div class="row">
                                 <div class="col-sm-3 mb-6">
-                                  <div class="title-mega"></div>
+                                  <div class="title-mega">company</div>
                                   <img class="thumb-menu" src="http://via.placeholder.com/200x78/ffce00/767676/" alt="thumbnail" />
                                   <ul>
                                     <li class="waves-effect"><a class="menu-list" href="about.html">about</a></li>
@@ -360,7 +231,7 @@
                                   </ul>
                                 </div>
                                 <div class="col-sm-3 mb-6">
-                                  <div class="title-mega"></div>
+                                  <div class="title-mega">Form</div>
                                   <img class="thumb-menu" src="http://via.placeholder.com/200x78/fcbdff/767676/" alt="thumbnail" />
                                   <ul>
                                     <li class="waves-effect"><a class="menu-list" href="login.html">login</a></li>
@@ -370,7 +241,7 @@
                                   </ul>
                                 </div>
                                 <div class="col-sm-3 mb-6">
-                                  <div class="title-mega"></div>
+                                  <div class="title-mega">items</div>
                                   <img class="thumb-menu" src="http://via.placeholder.com/200x78/2f688b/FFFFFF/" alt="thumbnail" />
                                   <ul>
                                     <li class="waves-effect"><a class="menu-list" href="collection.html">card collection</a></li>
@@ -379,7 +250,7 @@
                                   </ul>
                                 </div>
                                 <div class="col-sm-3 mb-6">
-                                  <div class="title-mega"></div>
+                                  <div class="title-mega">utilities</div>
                                   <img class="thumb-menu" src="http://via.placeholder.com/200x78/ceff00/767676/" alt="thumbnail" />
                                   <ul>
                                     <li class="waves-effect"><a class="menu-list" href="pricing.html">pricing and faq</a></li>
@@ -518,136 +389,138 @@
                   <div class="col-lg-2 col-md-3 pa-0">
                     <div class="hidden-sm-down">
                       <!-- #### FILTER ####-->
-                      <aside class="filter-style">
-                        <div class="filter-block filter_category">
-                          <ul class="collection with-header">
-                            <li class="collection-header">Filter Categories</li>
-                            <li><a class="waves-effect collection-item active" data-value="all" href="#!">All categories</a></li>
-                            <li><a class="waves-effect collection-item" data-value="cat-a" href="#!">Category a</a></li>
-                            <li><a class="waves-effect collection-item" data-value="cat-b" href="#!">Category b</a></li>
-                            <li><a class="waves-effect collection-item" data-value="cat-c" href="#!">Category c</a></li>
-                            <li><a class="waves-effect collection-item" data-value="cat-d" href="#!">Category d</a></li>
-                            <li><a class="waves-effect collection-item" data-value="cat-e" href="#!">Category e</a></li>
-                            <li><a class="waves-effect collection-item" data-value="cat-f" href="#!">Category f</a></li>
-                          </ul>
-                        </div>
-                        <div class="filter-block filter_rating">
-                          <ul class="collection with-header">
-                            <li class="collection-header">Rating</li>
-                            <li><a class="waves-effect collection-item active" data-value="0" href="#!">All Rating</a></li>
-                            <li>
-                              <a class="waves-effect collection-item" data-value="1" href="#!">
-                                <span class="star"><i class="material-icons star-icon">star</i><i class="material-icons star-icon-disable">star</i><i class="material-icons star-icon-disable">star</i><i class="material-icons star-icon-disable">star</i><i class="material-icons star-icon-disable">star</i></span>
-                                <span class="caption">Minimum 1 star rating</span>
-                              </a>
-                            </li>
-                            <li>
-                              <a class="waves-effect collection-item" data-value="2" href="#!">
-                                <span class="star"><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon-disable">star</i><i class="material-icons star-icon-disable">star</i><i class="material-icons star-icon-disable">star</i></span>
-                                <span class="caption">Minimum 2 star rating</span>
-                              </a>
-                            </li>
-                            <li>
-                              <a class="waves-effect collection-item" data-value="3" href="#!">
-                                <span class="star"><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon-disable">star</i><i class="material-icons star-icon-disable">star</i></span>
-                                <span class="caption">Minimum 3 star rating</span>
-                              </a>
-                            </li>
-                            <li>
-                              <a class="waves-effect collection-item" data-value="4" href="#!">
-                                <span class="star"><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon-disable">star</i></span>
-                                <span class="caption">Minimum 4 star rating</span>
-                              </a>
-                            </li>
-                            <li>
-                              <a class="waves-effect collection-item" data-value="5" href="#!">
-                                <span class="star"><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i></span>
-                                <span class="caption">Minimum 5 star rating</span>
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="filter-block filter_radio">
-                          <ul class="collection with-header">
-                            <li class="collection-header">Filter Radio</li>
-                            <li class="collection-item waves-effect active">
-                              <label class="label-block"><input class="with-gap" name="filter_radio" type="radio" value="all" checked /><span>All categories</span></label>
-                            </li>
-                            <li class="collection-item waves-effect">
-                              <label class="label-block"><input class="with-gap" name="filter_radio" type="radio" value="radio-a" /><span>Radio A</span></label>
-                            </li>
-                            <li class="collection-item waves-effect">
-                              <label class="label-block"><input class="with-gap" name="filter_radio" type="radio" value="radio-b" /><span>Radio B</span></label>
-                            </li>
-                            <li class="collection-item waves-effect">
-                              <label class="label-block"><input class="with-gap" name="filter_radio" type="radio" value="radio-c" /><span>Radio C</span></label>
-                            </li>
-                            <li class="collection-item waves-effect">
-                              <label class="label-block"><input class="with-gap" name="filter_radio" type="radio" value="radio-d" /><span>Radio D</span></label>
-                            </li>
-                            <li class="collection-item waves-effect">
-                              <label class="label-block"><input class="with-gap" name="filter_radio" type="radio" value="radio-e" /><span>Radio E</span></label>
-                            </li>
-                            <li class="collection-item waves-effect">
-                              <label class="label-block"><input class="with-gap" name="filter_radio" type="radio" value="radio-f" /><span>Radio F</span></label>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="filter-block filter_tags">
-                          <div class="collection with-header">
-                            <div class="collection-header">Filter Tags</div>
-                            <div class="px-2"><span class="btn-tag"><input id="tag_one" type="checkbox" value="tag-one" checked/><label class="waves-effect" for="tag_one">Tag One</label></span><span class="btn-tag"><input id="tag_two" type="checkbox" value="tag-two" checked/><label class="waves-effect" for="tag_two">Tag Two</label></span><span class="btn-tag"><input id="tag_three" type="checkbox" value="tag-three" checked/><label class="waves-effect" for="tag_three">Tag Three</label></span><span class="btn-tag"><input id="tag_four" type="checkbox" value="tag-four" checked/><label class="waves-effect" for="tag_four">Tag Four</label></span></div>
+                      <div class="filter-style" id="filter_sidebar">
+                        <aside>
+                          <div class="filter-block filter_category">
+                            <ul class="collection with-header">
+                              <li class="collection-header">Filter Categories</li>
+                              <li><a class="waves-effect collection-item active" data-value="all" href="#!">All categories</a></li>
+                              <li><a class="waves-effect collection-item" data-value="cat-a" href="#!">Category a</a></li>
+                              <li><a class="waves-effect collection-item" data-value="cat-b" href="#!">Category b</a></li>
+                              <li><a class="waves-effect collection-item" data-value="cat-c" href="#!">Category c</a></li>
+                              <li><a class="waves-effect collection-item" data-value="cat-d" href="#!">Category d</a></li>
+                              <li><a class="waves-effect collection-item" data-value="cat-e" href="#!">Category e</a></li>
+                              <li><a class="waves-effect collection-item" data-value="cat-f" href="#!">Category f</a></li>
+                            </ul>
                           </div>
-                        </div>
-                        <div class="filter-block filter_price">
-                          <div class="collection with-header">
-                            <div class="collection-header">Filter Range</div>
-                            <div class="px-4">
-                              <div class="d-flex">
-                                <div class="input-field pa-0"><input id="price_from" placeholder="$ From" type="text" value="0" /></div>
-                                <div class="strip">-</div>
-                                <div class="input-field pa-0"><input id="price_to" placeholder="$ To" type="text" value="100" /></div>
-                              </div><button class="btn btn-small block primary waves-effect" type="button">Apply<i class="material-icons right use-rtl-flip">keyboard_arrow_right</i></button>
+                          <div class="filter-block filter_rating">
+                            <ul class="collection with-header">
+                              <li class="collection-header">Rating</li>
+                              <li><a class="waves-effect collection-item active" data-value="0" href="#!">All Rating</a></li>
+                              <li>
+                                <a class="waves-effect collection-item" data-value="1" href="#!">
+                                  <span class="star"><i class="material-icons star-icon">star</i><i class="material-icons star-icon-disable">star</i><i class="material-icons star-icon-disable">star</i><i class="material-icons star-icon-disable">star</i><i class="material-icons star-icon-disable">star</i></span>
+                                  <span class="caption">Minimum 1 star rating</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a class="waves-effect collection-item" data-value="2" href="#!">
+                                  <span class="star"><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon-disable">star</i><i class="material-icons star-icon-disable">star</i><i class="material-icons star-icon-disable">star</i></span>
+                                  <span class="caption">Minimum 2 star rating</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a class="waves-effect collection-item" data-value="3" href="#!">
+                                  <span class="star"><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon-disable">star</i><i class="material-icons star-icon-disable">star</i></span>
+                                  <span class="caption">Minimum 3 star rating</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a class="waves-effect collection-item" data-value="4" href="#!">
+                                  <span class="star"><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon-disable">star</i></span>
+                                  <span class="caption">Minimum 4 star rating</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a class="waves-effect collection-item" data-value="5" href="#!">
+                                  <span class="star"><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i><i class="material-icons star-icon">star</i></span>
+                                  <span class="caption">Minimum 5 star rating</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="filter-block filter_radio">
+                            <ul class="collection with-header">
+                              <li class="collection-header">Filter Radio</li>
+                              <li class="collection-item waves-effect active">
+                                <label class="label-block"><input class="with-gap" name="filter_radio" type="radio" value="all" checked /><span>All categories</span></label>
+                              </li>
+                              <li class="collection-item waves-effect">
+                                <label class="label-block"><input class="with-gap" name="filter_radio" type="radio" value="radio-a" /><span>Radio A</span></label>
+                              </li>
+                              <li class="collection-item waves-effect">
+                                <label class="label-block"><input class="with-gap" name="filter_radio" type="radio" value="radio-b" /><span>Radio B</span></label>
+                              </li>
+                              <li class="collection-item waves-effect">
+                                <label class="label-block"><input class="with-gap" name="filter_radio" type="radio" value="radio-c" /><span>Radio C</span></label>
+                              </li>
+                              <li class="collection-item waves-effect">
+                                <label class="label-block"><input class="with-gap" name="filter_radio" type="radio" value="radio-d" /><span>Radio D</span></label>
+                              </li>
+                              <li class="collection-item waves-effect">
+                                <label class="label-block"><input class="with-gap" name="filter_radio" type="radio" value="radio-e" /><span>Radio E</span></label>
+                              </li>
+                              <li class="collection-item waves-effect">
+                                <label class="label-block"><input class="with-gap" name="filter_radio" type="radio" value="radio-f" /><span>Radio F</span></label>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="filter-block filter_tags">
+                            <div class="collection with-header">
+                              <div class="collection-header">Filter Tags</div>
+                              <div class="px-2"><span class="btn-tag"><input id="tag_one" type="checkbox" value="tag-one" checked/><label class="waves-effect" for="tag_one">Tag One</label></span><span class="btn-tag"><input id="tag_two" type="checkbox" value="tag-two" checked/><label class="waves-effect" for="tag_two">Tag Two</label></span><span class="btn-tag"><input id="tag_three" type="checkbox" value="tag-three" checked/><label class="waves-effect" for="tag_three">Tag Three</label></span><span class="btn-tag"><input id="tag_four" type="checkbox" value="tag-four" checked/><label class="waves-effect" for="tag_four">Tag Four</label></span></div>
                             </div>
                           </div>
-                        </div>
-                        <div class="filter-block filter_check">
-                          <ul class="collection with-header">
-                            <li class="collection-header">Filter Check</li>
-                            <li class="collection-item waves-effect active select_all_categories">Select All</li>
-                            <li class="collection-item waves-effect">
-                              <label class="label-block">
-                                <input class="primary filled-in" type="checkbox" value="check-a" checked /><span>Check A</span>
-                              </label>
-                            </li>
-                            <li class="collection-item waves-effect">
-                              <label class="label-block">
-                                <input class="primary filled-in" type="checkbox" value="check-b" checked /><span>Check B</span>
-                              </label>
-                            </li>
-                            <li class="collection-item waves-effect">
-                              <label class="label-block">
-                                <input class="primary filled-in" type="checkbox" value="check-c" checked /><span>Check C</span>
-                              </label>
-                            </li>
-                            <li class="collection-item waves-effect">
-                              <label class="label-block">
-                                <input class="primary filled-in" type="checkbox" value="check-d" checked /><span>Check D</span>
-                              </label>
-                            </li>
-                            <li class="collection-item waves-effect">
-                              <label class="label-block">
-                                <input class="primary filled-in" type="checkbox" value="check-e" checked /><span>Check E</span>
-                              </label>
-                            </li>
-                            <li class="collection-item waves-effect">
-                              <label class="label-block">
-                                <input class="primary filled-in" type="checkbox" value="check-f" checked /><span>Check F</span>
-                              </label>
-                            </li>
-                          </ul>
-                        </div>
-                      </aside>
+                          <div class="filter-block filter_price">
+                            <div class="collection with-header">
+                              <div class="collection-header">Filter Range</div>
+                              <div class="px-4">
+                                <div class="d-flex">
+                                  <div class="input-field pa-0"><input id="price_from" placeholder="$ From" type="text" value="0" /></div>
+                                  <div class="strip">-</div>
+                                  <div class="input-field pa-0"><input id="price_to" placeholder="$ To" type="text" value="100" /></div>
+                                </div><button class="btn btn-small block primary waves-effect" type="button">Apply<i class="material-icons right use-rtl-flip">keyboard_arrow_right</i></button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="filter-block filter_check">
+                            <ul class="collection with-header">
+                              <li class="collection-header">Filter Check</li>
+                              <li class="collection-item waves-effect active select_all_categories">Select All</li>
+                              <li class="collection-item waves-effect">
+                                <label class="label-block">
+                                  <input class="primary filled-in" type="checkbox" value="check-a" checked /><span>Check A</span>
+                                </label>
+                              </li>
+                              <li class="collection-item waves-effect">
+                                <label class="label-block">
+                                  <input class="primary filled-in" type="checkbox" value="check-b" checked /><span>Check B</span>
+                                </label>
+                              </li>
+                              <li class="collection-item waves-effect">
+                                <label class="label-block">
+                                  <input class="primary filled-in" type="checkbox" value="check-c" checked /><span>Check C</span>
+                                </label>
+                              </li>
+                              <li class="collection-item waves-effect">
+                                <label class="label-block">
+                                  <input class="primary filled-in" type="checkbox" value="check-d" checked /><span>Check D</span>
+                                </label>
+                              </li>
+                              <li class="collection-item waves-effect">
+                                <label class="label-block">
+                                  <input class="primary filled-in" type="checkbox" value="check-e" checked /><span>Check E</span>
+                                </label>
+                              </li>
+                              <li class="collection-item waves-effect">
+                                <label class="label-block">
+                                  <input class="primary filled-in" type="checkbox" value="check-f" checked /><span>Check F</span>
+                                </label>
+                              </li>
+                            </ul>
+                          </div>
+                        </aside>
+                      </div>
                     </div>
                   </div>
                   <div class="col-lg-10 col-md-9 px-sm-3 px-0">
@@ -1318,8 +1191,8 @@
   <script src="./assets/js/vendors/jquery.navScroll.min.js"></script><!-- This assets are not avalaible in npm.js or it has been costumized-->
   <script src="./assets/js/vendors/modernizr-2.8.3-respond-1.4.2.min.js"></script>
   <script src="./assets/js/vendors/materialize.js"></script>
-  <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
   <script src="./assets/js/scripts.js"></script>
+  <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
 </body>
 
 </html>

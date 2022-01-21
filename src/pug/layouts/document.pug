@@ -9,7 +9,7 @@ include base.pug
 
 mixin productionCSS
   if doc_dir === 'rtl'
-    link(href="../assets/css/starter-bundle-rtl.min.css" rel="stylesheet")
+    link(href=assets + "/css/starter-bundle-rtl.min.css" rel="stylesheet")
   else
     link(href=assets + "/css/starter-bundle.min.css" rel="stylesheet")
 
@@ -51,7 +51,6 @@ mixin generalJS
   // This assets are not avalaible in npm.js or it has been costumized
   script(src=assets + "/js/vendors/modernizr-2.8.3-respond-1.4.2.min.js")
   script(src=assets + "/js/vendors/materialize.js")
-  script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?callback=initMap')
   script(src=assets + "/js/scripts.js")
 
 mixin localJS
@@ -89,6 +88,7 @@ mixin jsAssets
     +localJS
   else
     +npmJS
+  script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?callback=initMap')
 
 html(lang=doc_lang dir=doc_dir)
   block variables
@@ -114,8 +114,8 @@ html(lang=doc_lang dir=doc_dir)
     link(rel="apple-touch-icon" sizes="152x152" href=assets + "/favicons/apple-icon-152x152.png")
     link(rel="apple-touch-icon" sizes="180x180" href=assets + "/favicons/apple-icon-180x180.png")
     link(rel="icon" type="image/png" sizes="192x192" href=assets + "/favicons/android-icon-192x192.png")
-    link(rel="icon" type="image/png" sizes="32x32" href=assets + "/favicon-32x32.png")
-    link(rel="icon" type="image/png" sizes="16x16" href=assets + "/favicon-16x16.png")
+    link(rel="icon" type="image/png" sizes="32x32" href=assets + "/favicons/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="16x16" href=assets + "/favicons/favicon-16x16.png")
     link(rel="manifest" href=assets+ "/favicons/manifest.json")
     meta(name="msapplication-TileColor" content="#ffffff")
     meta(name="msapplication-TileImage" content=assets + "/favicons/ms-icon-144x144.png")

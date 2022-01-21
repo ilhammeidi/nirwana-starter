@@ -160,7 +160,7 @@
     &.landscape {
       @include breakpoints-down(sm) {
         .figure {
-          height: 145px;
+          height: 90%;
         }
       }
     }

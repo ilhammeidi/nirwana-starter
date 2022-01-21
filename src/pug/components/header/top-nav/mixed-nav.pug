@@ -33,7 +33,7 @@ include ../data/sample-page
             .row
               each subitem in sample
                 .col-sm-3.mb-6
-                  .title-mega #{$t.common['header_' + subitem.name]}
+                  .title-mega #{subitem.name}
                   |
                   |
                   img.thumb-menu(src=subitem.thumb alt="thumbnail")/

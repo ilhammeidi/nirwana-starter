@@ -16,8 +16,8 @@
   <link rel="apple-touch-icon" sizes="152x152" href="../../assets/favicons/apple-icon-152x152.png">
   <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicons/apple-icon-180x180.png">
   <link rel="icon" type="image/png" sizes="192x192" href="../../assets/favicons/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicons/favicon-16x16.png">
   <link rel="manifest" href="../../assets/favicons/manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="../../assets/favicons/ms-icon-144x144.png"><!-- PWA primary color-->
@@ -76,10 +76,12 @@
                   <li class="collection-item"><a class="sidenav-close waves-effect menu-list" href="#blog">مدونة</a></li>
                   <li class="collection-item"><a class="sidenav-close waves-effect menu-list" href="#subscribe">اشتراك</a></li>
                   <li class="collection-item group-child has-child">
-                    <div class="collapsible-header"><a class="waves-effect text-truncate menu-list" href="#!">الصفحة الداخلية
-
+                    <div class="collapsible-header">
+                      <a class="waves-effect text-truncate menu-list" href="#!">
+                        الصفحة الداخلية
                         <i class="material-icons right">keyboard_arrow_down</i>
-                      </a></div>
+                      </a>
+                    </div>
                     <div class="collapsible-body">
                       <div class="collection side-group">
                         <ul class="group-child">
@@ -175,10 +177,7 @@
                   <button class="btn-icon waves-effect sidenav-trigger hamburger hamburger--spin show-md-down" id="mobile_menu" type="button" data-target="slide_menu"><span class="hamburger-box"><span class="bar hamburger-inner"></span></span></button>
                   <div class="logo">
                     <a href="index.html">
-                      <span class="logo landscape medium">
-<img src="../../assets/images/logo-starter.png" alt="logo"/>
-
-Starter</span>
+                      <span class="logo landscape medium"><img src="../../assets/images/logo-starter.png" alt="logo"/>Starter</span>
                     </a>
                   </div>
                   <div class="scrollactive-nav scrollnav show-lg-up multi-menu">
@@ -199,8 +198,8 @@ Starter</span>
                         <a class="btn btn-flat anchor-link waves-effect" href="index.html#subscribe">اشتراك</a>
                       </li>
                       <li>
-                        <button class="btn btn-flat megamenu-trigger-click waves-effect" href="#sample-page" data-target="sample-page">الصفحة الداخلية
-
+                        <button class="btn btn-flat megamenu-trigger-click waves-effect" data-target="sample-page">
+                          الصفحة الداخلية
                           <i class="material-icons right icon">keyboard_arrow_down</i>
                         </button>
                         <div class="mega-menu-root dropdown-content" id="sample-page">
@@ -208,7 +207,7 @@ Starter</span>
                             <div class="container max-md">
                               <div class="row">
                                 <div class="col-sm-3 mb-6">
-                                  <div class="title-mega"></div>
+                                  <div class="title-mega">company</div>
                                   <img class="thumb-menu" src="http://via.placeholder.com/200x78/ffce00/767676/" alt="thumbnail" />
                                   <ul>
                                     <li class="waves-effect"><a class="menu-list" href="about.html">حول</a></li>
@@ -218,7 +217,7 @@ Starter</span>
                                   </ul>
                                 </div>
                                 <div class="col-sm-3 mb-6">
-                                  <div class="title-mega"></div>
+                                  <div class="title-mega">Form</div>
                                   <img class="thumb-menu" src="http://via.placeholder.com/200x78/fcbdff/767676/" alt="thumbnail" />
                                   <ul>
                                     <li class="waves-effect"><a class="menu-list" href="login.html">تسجيل الدخول</a></li>
@@ -228,7 +227,7 @@ Starter</span>
                                   </ul>
                                 </div>
                                 <div class="col-sm-3 mb-6">
-                                  <div class="title-mega"></div>
+                                  <div class="title-mega">items</div>
                                   <img class="thumb-menu" src="http://via.placeholder.com/200x78/2f688b/FFFFFF/" alt="thumbnail" />
                                   <ul>
                                     <li class="waves-effect"><a class="menu-list" href="collection.html">مجموعة البطاقات</a></li>
@@ -237,7 +236,7 @@ Starter</span>
                                   </ul>
                                 </div>
                                 <div class="col-sm-3 mb-6">
-                                  <div class="title-mega"></div>
+                                  <div class="title-mega">utilities</div>
                                   <img class="thumb-menu" src="http://via.placeholder.com/200x78/ceff00/767676/" alt="thumbnail" />
                                   <ul>
                                     <li class="waves-effect"><a class="menu-list" href="pricing.html">التسعير والأسئلة الشائعة</a></li>
@@ -255,18 +254,25 @@ Starter</span>
                     </ul>
                   </div>
                   <nav class="user-menu">
-                    <a class="btn btn-flat waves-effect show-sm-up" type="button" href="login.html">تسجيل الدخول</a>
-                    <a class="btn waves-effect primary show-sm-up" type="button" href="register.html">تسجيل</a>
+                    <a class="btn btn-flat waves-effect show-sm-up" href="login.html">تسجيل الدخول</a>
+                    <a class="btn waves-effect primary show-sm-up" href="register.html">تسجيل</a>
                     <span class="spacer vertical-divider show-lg-up"></span>
                     <div class="menu-setting">
-                      <div class="setting"><button class="btn btn-icon waves-effect btn-small dropdown-trigger ma-1" data-target="dropdown_config" data-align="right" type="button"><i class="icon material-icons" id="setting_icon">settings</i></button>
+                      <div class="setting">
+                        <button class="btn btn-icon waves-effect btn-small dropdown-trigger ma-1" data-target="dropdown_config" data-align="right" type="button">
+                          <i class="icon material-icons" id="setting_icon">settings</i>
+                        </button>
                         <div class="dropdown-content setting" id="dropdown_config">
                           <ul class="collection with-header">
                             <li class="collection-header">وضع السمة</li>
                             <li class="collection-item no-hover pl-4">
                               <div class="flex-menu">
                                 <div class="switch">
-                                  <label>ضوء<input id="theme_switcher" type="checkbox"><span class="lever"></span>داكن</label>
+                                  <label>
+                                    ضوء
+                                    <input id="theme_switcher" type="checkbox"><span class="lever"></span>
+                                    داكن
+                                  </label>
                                 </div>
                               </div>
                             </li>
@@ -323,7 +329,7 @@ Starter</span>
             <!-- #### SEARCH ####-->
             <section class="search-banner">
               <div class="container max-md">
-                <row class="search-block align-items-center">
+                <div class="row search-block align-items-center">
                   <col-sm-12>
                     <h2 class="use-text-title2 text-center">مليون من الموارد للجميع</h2>
                     <h3 class="use-text-subtitle2 text-center">تصفح أكثر من 300 مليون عنصر مخزون. اعثر بسرعة على العناصر الأصلية والمتميزة.</h3>
@@ -334,7 +340,7 @@ Starter</span>
                       </div>
                     </div>
                   </col-sm-12>
-                </row>
+                </div>
               </div>
             </section>
             <div class="container max-md space-top-short">
@@ -347,7 +353,8 @@ Starter</span>
                         <ul class="collapsible">
                           <li class="accordion-content paper active">
                             <div class="collapsible-header content">
-                              <p class="heading">Pellentesque ac bibendum tortor?</p><i class="material-icons right arrow">expand_more</i>
+                              <p class="heading">Pellentesque ac bibendum tortor?</p>
+                              <i class="material-icons right arrow">expand_more</i>
                             </div>
                             <div class="collapsible-body detail">
                               <p>Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor.</p>
@@ -355,7 +362,8 @@ Starter</span>
                           </li>
                           <li class="accordion-content paper">
                             <div class="collapsible-header content">
-                              <p class="heading">In mi nulla, fringilla vestibulum?</p><i class="material-icons right arrow">expand_more</i>
+                              <p class="heading">In mi nulla, fringilla vestibulum?</p>
+                              <i class="material-icons right arrow">expand_more</i>
                             </div>
                             <div class="collapsible-body detail">
                               <p>Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. </p>
@@ -363,7 +371,8 @@ Starter</span>
                           </li>
                           <li class="accordion-content paper">
                             <div class="collapsible-header content">
-                              <p class="heading">Quisque lacinia purus ut libero?</p><i class="material-icons right arrow">expand_more</i>
+                              <p class="heading">Quisque lacinia purus ut libero?</p>
+                              <i class="material-icons right arrow">expand_more</i>
                             </div>
                             <div class="collapsible-body detail">
                               <p>Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. </p>
@@ -371,7 +380,8 @@ Starter</span>
                           </li>
                           <li class="accordion-content paper">
                             <div class="collapsible-header content">
-                              <p class="heading">Quisque ut metus sit amet augue?</p><i class="material-icons right arrow">expand_more</i>
+                              <p class="heading">Quisque ut metus sit amet augue?</p>
+                              <i class="material-icons right arrow">expand_more</i>
                             </div>
                             <div class="collapsible-body detail">
                               <p>Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. </p>
@@ -379,7 +389,8 @@ Starter</span>
                           </li>
                           <li class="accordion-content paper">
                             <div class="collapsible-header content">
-                              <p class="heading">Pellentesque ac bibendum tortor?</p><i class="material-icons right arrow">expand_more</i>
+                              <p class="heading">Pellentesque ac bibendum tortor?</p>
+                              <i class="material-icons right arrow">expand_more</i>
                             </div>
                             <div class="collapsible-body detail">
                               <p>Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. </p>
@@ -394,7 +405,8 @@ Starter</span>
                         <ul class="collapsible">
                           <li class="accordion-content paper active">
                             <div class="collapsible-header content">
-                              <p class="heading">Pellentesque ac bibendum tortor?</p><i class="material-icons right arrow">expand_more</i>
+                              <p class="heading">Pellentesque ac bibendum tortor?</p>
+                              <i class="material-icons right arrow">expand_more</i>
                             </div>
                             <div class="collapsible-body detail">
                               <p>Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor.</p>
@@ -402,7 +414,8 @@ Starter</span>
                           </li>
                           <li class="accordion-content paper">
                             <div class="collapsible-header content">
-                              <p class="heading">In mi nulla, fringilla vestibulum?</p><i class="material-icons right arrow">expand_more</i>
+                              <p class="heading">In mi nulla, fringilla vestibulum?</p>
+                              <i class="material-icons right arrow">expand_more</i>
                             </div>
                             <div class="collapsible-body detail">
                               <p>Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. </p>
@@ -410,7 +423,8 @@ Starter</span>
                           </li>
                           <li class="accordion-content paper">
                             <div class="collapsible-header content">
-                              <p class="heading">Quisque lacinia purus ut libero?</p><i class="material-icons right arrow">expand_more</i>
+                              <p class="heading">Quisque lacinia purus ut libero?</p>
+                              <i class="material-icons right arrow">expand_more</i>
                             </div>
                             <div class="collapsible-body detail">
                               <p>Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. </p>
@@ -418,7 +432,8 @@ Starter</span>
                           </li>
                           <li class="accordion-content paper">
                             <div class="collapsible-header content">
-                              <p class="heading">Quisque ut metus sit amet augue?</p><i class="material-icons right arrow">expand_more</i>
+                              <p class="heading">Quisque ut metus sit amet augue?</p>
+                              <i class="material-icons right arrow">expand_more</i>
                             </div>
                             <div class="collapsible-body detail">
                               <p>Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. </p>
@@ -426,7 +441,8 @@ Starter</span>
                           </li>
                           <li class="accordion-content paper">
                             <div class="collapsible-header content">
-                              <p class="heading">Pellentesque ac bibendum tortor?</p><i class="material-icons right arrow">expand_more</i>
+                              <p class="heading">Pellentesque ac bibendum tortor?</p>
+                              <i class="material-icons right arrow">expand_more</i>
                             </div>
                             <div class="collapsible-body detail">
                               <p>Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. </p>
@@ -441,7 +457,8 @@ Starter</span>
                         <ul class="collapsible">
                           <li class="accordion-content paper active">
                             <div class="collapsible-header content">
-                              <p class="heading">Pellentesque ac bibendum tortor?</p><i class="material-icons right arrow">expand_more</i>
+                              <p class="heading">Pellentesque ac bibendum tortor?</p>
+                              <i class="material-icons right arrow">expand_more</i>
                             </div>
                             <div class="collapsible-body detail">
                               <p>Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor.</p>
@@ -449,7 +466,8 @@ Starter</span>
                           </li>
                           <li class="accordion-content paper">
                             <div class="collapsible-header content">
-                              <p class="heading">In mi nulla, fringilla vestibulum?</p><i class="material-icons right arrow">expand_more</i>
+                              <p class="heading">In mi nulla, fringilla vestibulum?</p>
+                              <i class="material-icons right arrow">expand_more</i>
                             </div>
                             <div class="collapsible-body detail">
                               <p>Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. </p>
@@ -457,7 +475,8 @@ Starter</span>
                           </li>
                           <li class="accordion-content paper">
                             <div class="collapsible-header content">
-                              <p class="heading">Quisque lacinia purus ut libero?</p><i class="material-icons right arrow">expand_more</i>
+                              <p class="heading">Quisque lacinia purus ut libero?</p>
+                              <i class="material-icons right arrow">expand_more</i>
                             </div>
                             <div class="collapsible-body detail">
                               <p>Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. </p>
@@ -465,7 +484,8 @@ Starter</span>
                           </li>
                           <li class="accordion-content paper">
                             <div class="collapsible-header content">
-                              <p class="heading">Quisque ut metus sit amet augue?</p><i class="material-icons right arrow">expand_more</i>
+                              <p class="heading">Quisque ut metus sit amet augue?</p>
+                              <i class="material-icons right arrow">expand_more</i>
                             </div>
                             <div class="collapsible-body detail">
                               <p>Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. </p>
@@ -473,7 +493,8 @@ Starter</span>
                           </li>
                           <li class="accordion-content paper">
                             <div class="collapsible-header content">
-                              <p class="heading">Pellentesque ac bibendum tortor?</p><i class="material-icons right arrow">expand_more</i>
+                              <p class="heading">Pellentesque ac bibendum tortor?</p>
+                              <i class="material-icons right arrow">expand_more</i>
                             </div>
                             <div class="collapsible-body detail">
                               <p>Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. </p>
@@ -488,7 +509,8 @@ Starter</span>
                         <ul class="collapsible">
                           <li class="accordion-content paper active">
                             <div class="collapsible-header content">
-                              <p class="heading">Pellentesque ac bibendum tortor?</p><i class="material-icons right arrow">expand_more</i>
+                              <p class="heading">Pellentesque ac bibendum tortor?</p>
+                              <i class="material-icons right arrow">expand_more</i>
                             </div>
                             <div class="collapsible-body detail">
                               <p>Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor.</p>
@@ -496,7 +518,8 @@ Starter</span>
                           </li>
                           <li class="accordion-content paper">
                             <div class="collapsible-header content">
-                              <p class="heading">In mi nulla, fringilla vestibulum?</p><i class="material-icons right arrow">expand_more</i>
+                              <p class="heading">In mi nulla, fringilla vestibulum?</p>
+                              <i class="material-icons right arrow">expand_more</i>
                             </div>
                             <div class="collapsible-body detail">
                               <p>Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. </p>
@@ -504,7 +527,8 @@ Starter</span>
                           </li>
                           <li class="accordion-content paper">
                             <div class="collapsible-header content">
-                              <p class="heading">Quisque lacinia purus ut libero?</p><i class="material-icons right arrow">expand_more</i>
+                              <p class="heading">Quisque lacinia purus ut libero?</p>
+                              <i class="material-icons right arrow">expand_more</i>
                             </div>
                             <div class="collapsible-body detail">
                               <p>Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. </p>
@@ -512,7 +536,8 @@ Starter</span>
                           </li>
                           <li class="accordion-content paper">
                             <div class="collapsible-header content">
-                              <p class="heading">Quisque ut metus sit amet augue?</p><i class="material-icons right arrow">expand_more</i>
+                              <p class="heading">Quisque ut metus sit amet augue?</p>
+                              <i class="material-icons right arrow">expand_more</i>
                             </div>
                             <div class="collapsible-body detail">
                               <p>Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. </p>
@@ -520,7 +545,8 @@ Starter</span>
                           </li>
                           <li class="accordion-content paper">
                             <div class="collapsible-header content">
-                              <p class="heading">Pellentesque ac bibendum tortor?</p><i class="material-icons right arrow">expand_more</i>
+                              <p class="heading">Pellentesque ac bibendum tortor?</p>
+                              <i class="material-icons right arrow">expand_more</i>
                             </div>
                             <div class="collapsible-body detail">
                               <p>Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. </p>
@@ -535,7 +561,8 @@ Starter</span>
                         <ul class="collapsible">
                           <li class="accordion-content paper active">
                             <div class="collapsible-header content">
-                              <p class="heading">Pellentesque ac bibendum tortor?</p><i class="material-icons right arrow">expand_more</i>
+                              <p class="heading">Pellentesque ac bibendum tortor?</p>
+                              <i class="material-icons right arrow">expand_more</i>
                             </div>
                             <div class="collapsible-body detail">
                               <p>Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor.</p>
@@ -543,7 +570,8 @@ Starter</span>
                           </li>
                           <li class="accordion-content paper">
                             <div class="collapsible-header content">
-                              <p class="heading">In mi nulla, fringilla vestibulum?</p><i class="material-icons right arrow">expand_more</i>
+                              <p class="heading">In mi nulla, fringilla vestibulum?</p>
+                              <i class="material-icons right arrow">expand_more</i>
                             </div>
                             <div class="collapsible-body detail">
                               <p>Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. </p>
@@ -551,7 +579,8 @@ Starter</span>
                           </li>
                           <li class="accordion-content paper">
                             <div class="collapsible-header content">
-                              <p class="heading">Quisque lacinia purus ut libero?</p><i class="material-icons right arrow">expand_more</i>
+                              <p class="heading">Quisque lacinia purus ut libero?</p>
+                              <i class="material-icons right arrow">expand_more</i>
                             </div>
                             <div class="collapsible-body detail">
                               <p>Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. </p>
@@ -559,7 +588,8 @@ Starter</span>
                           </li>
                           <li class="accordion-content paper">
                             <div class="collapsible-header content">
-                              <p class="heading">Quisque ut metus sit amet augue?</p><i class="material-icons right arrow">expand_more</i>
+                              <p class="heading">Quisque ut metus sit amet augue?</p>
+                              <i class="material-icons right arrow">expand_more</i>
                             </div>
                             <div class="collapsible-body detail">
                               <p>Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. </p>
@@ -567,7 +597,8 @@ Starter</span>
                           </li>
                           <li class="accordion-content paper">
                             <div class="collapsible-header content">
-                              <p class="heading">Pellentesque ac bibendum tortor?</p><i class="material-icons right arrow">expand_more</i>
+                              <p class="heading">Pellentesque ac bibendum tortor?</p>
+                              <i class="material-icons right arrow">expand_more</i>
                             </div>
                             <div class="collapsible-body detail">
                               <p>Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. </p>
@@ -582,7 +613,8 @@ Starter</span>
                         <ul class="collapsible">
                           <li class="accordion-content paper active">
                             <div class="collapsible-header content">
-                              <p class="heading">Pellentesque ac bibendum tortor?</p><i class="material-icons right arrow">expand_more</i>
+                              <p class="heading">Pellentesque ac bibendum tortor?</p>
+                              <i class="material-icons right arrow">expand_more</i>
                             </div>
                             <div class="collapsible-body detail">
                               <p>Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor.</p>
@@ -590,7 +622,8 @@ Starter</span>
                           </li>
                           <li class="accordion-content paper">
                             <div class="collapsible-header content">
-                              <p class="heading">In mi nulla, fringilla vestibulum?</p><i class="material-icons right arrow">expand_more</i>
+                              <p class="heading">In mi nulla, fringilla vestibulum?</p>
+                              <i class="material-icons right arrow">expand_more</i>
                             </div>
                             <div class="collapsible-body detail">
                               <p>Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. </p>
@@ -598,7 +631,8 @@ Starter</span>
                           </li>
                           <li class="accordion-content paper">
                             <div class="collapsible-header content">
-                              <p class="heading">Quisque lacinia purus ut libero?</p><i class="material-icons right arrow">expand_more</i>
+                              <p class="heading">Quisque lacinia purus ut libero?</p>
+                              <i class="material-icons right arrow">expand_more</i>
                             </div>
                             <div class="collapsible-body detail">
                               <p>Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. </p>
@@ -606,7 +640,8 @@ Starter</span>
                           </li>
                           <li class="accordion-content paper">
                             <div class="collapsible-header content">
-                              <p class="heading">Quisque ut metus sit amet augue?</p><i class="material-icons right arrow">expand_more</i>
+                              <p class="heading">Quisque ut metus sit amet augue?</p>
+                              <i class="material-icons right arrow">expand_more</i>
                             </div>
                             <div class="collapsible-body detail">
                               <p>Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. </p>
@@ -614,7 +649,8 @@ Starter</span>
                           </li>
                           <li class="accordion-content paper">
                             <div class="collapsible-header content">
-                              <p class="heading">Pellentesque ac bibendum tortor?</p><i class="material-icons right arrow">expand_more</i>
+                              <p class="heading">Pellentesque ac bibendum tortor?</p>
+                              <i class="material-icons right arrow">expand_more</i>
                             </div>
                             <div class="collapsible-body detail">
                               <p>Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. </p>
@@ -666,8 +702,7 @@ Starter</span>
                       <h6 class="title">Starter Project</h6>
                     </div>
                     <p class="body-2">أنشئ مشروعك من البداية باستخدام المكونات الأساسية والأنماط الأساسية.</p>
-                    <p class="body-2 hidden-sm-down">&copy;
-                      Nirwana Theme 2021</p>
+                    <p class="body-2 hidden-sm-down">&copy; Nirwana Theme 2021</p>
                   </div>
                   <div class="col-md-6 pa-4">
                     <ul class="show-sm-down collapsible">
@@ -754,8 +789,7 @@ Starter</span>
                         <option value="zh">简体中文</option>
                       </select>
                     </div>
-                    <p class="body-2 mt-5 text-center hidden-md-up">&copy;
-                      Nirwana Theme 2021</p>
+                    <p class="body-2 mt-5 text-center hidden-md-up">&copy; Nirwana Theme 2021</p>
                   </div>
                 </div>
               </div>
@@ -778,8 +812,8 @@ Starter</span>
   <script src="../../assets/js/vendors/jquery.navScroll.min.js"></script><!-- This assets are not avalaible in npm.js or it has been costumized-->
   <script src="../../assets/js/vendors/modernizr-2.8.3-respond-1.4.2.min.js"></script>
   <script src="../../assets/js/vendors/materialize.js"></script>
-  <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
   <script src="../../assets/js/scripts.js"></script>
+  <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
 </body>
 
 </html>

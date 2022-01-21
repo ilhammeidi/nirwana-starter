@@ -4,13 +4,13 @@
  * @function initial parallax, tooltip, carousel, etc
  */
 
-var $header = $("#header");
+var $header = $('header.header.app-bar');
 var $pageNav = $("#page_nav");
 var sticky = 0;
 
 // Sticky header
 if($("#header").length > 0) {
-  sticky = header.offsetTop + 80;
+  sticky = $header[0].offsetTop + 80;
 }
 
 function fixedNav() {

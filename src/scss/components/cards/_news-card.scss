@@ -78,9 +78,10 @@
       }
     }
     .properties {
+      flex: 1;
+      overflow: hidden;
       @include breakpoints-down(xs) {
         padding: $spacing1;
-        overflow: hidden;
         display: flex;
         flex-direction: column;
         justify-content: center;

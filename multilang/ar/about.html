@@ -16,8 +16,8 @@
   <link rel="apple-touch-icon" sizes="152x152" href="../../assets/favicons/apple-icon-152x152.png">
   <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicons/apple-icon-180x180.png">
   <link rel="icon" type="image/png" sizes="192x192" href="../../assets/favicons/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicons/favicon-16x16.png">
   <link rel="manifest" href="../../assets/favicons/manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="../../assets/favicons/ms-icon-144x144.png"><!-- PWA primary color-->
@@ -76,10 +76,12 @@
                   <li class="collection-item"><a class="sidenav-close waves-effect menu-list" href="#blog">مدونة</a></li>
                   <li class="collection-item"><a class="sidenav-close waves-effect menu-list" href="#subscribe">اشتراك</a></li>
                   <li class="collection-item group-child has-child">
-                    <div class="collapsible-header"><a class="waves-effect text-truncate menu-list" href="#!">الصفحة الداخلية
-
+                    <div class="collapsible-header">
+                      <a class="waves-effect text-truncate menu-list" href="#!">
+                        الصفحة الداخلية
                         <i class="material-icons right">keyboard_arrow_down</i>
-                      </a></div>
+                      </a>
+                    </div>
                     <div class="collapsible-body">
                       <div class="collection side-group">
                         <ul class="group-child">
@@ -175,10 +177,7 @@
                   <button class="btn-icon waves-effect sidenav-trigger hamburger hamburger--spin show-md-down" id="mobile_menu" type="button" data-target="slide_menu"><span class="hamburger-box"><span class="bar hamburger-inner"></span></span></button>
                   <div class="logo">
                     <a href="index.html">
-                      <span class="logo landscape medium">
-<img src="../../assets/images/logo-starter.png" alt="logo"/>
-
-Starter</span>
+                      <span class="logo landscape medium"><img src="../../assets/images/logo-starter.png" alt="logo"/>Starter</span>
                     </a>
                   </div>
                   <div class="scrollactive-nav scrollnav show-lg-up multi-menu">
@@ -199,8 +198,8 @@ Starter</span>
                         <a class="btn btn-flat anchor-link waves-effect" href="index.html#subscribe">اشتراك</a>
                       </li>
                       <li>
-                        <button class="btn btn-flat megamenu-trigger-click waves-effect" href="#sample-page" data-target="sample-page">الصفحة الداخلية
-
+                        <button class="btn btn-flat megamenu-trigger-click waves-effect" data-target="sample-page">
+                          الصفحة الداخلية
                           <i class="material-icons right icon">keyboard_arrow_down</i>
                         </button>
                         <div class="mega-menu-root dropdown-content" id="sample-page">
@@ -208,7 +207,7 @@ Starter</span>
                             <div class="container max-md">
                               <div class="row">
                                 <div class="col-sm-3 mb-6">
-                                  <div class="title-mega"></div>
+                                  <div class="title-mega">company</div>
                                   <img class="thumb-menu" src="http://via.placeholder.com/200x78/ffce00/767676/" alt="thumbnail" />
                                   <ul>
                                     <li class="waves-effect"><a class="menu-list current" href="about.html">حول</a></li>
@@ -218,7 +217,7 @@ Starter</span>
                                   </ul>
                                 </div>
                                 <div class="col-sm-3 mb-6">
-                                  <div class="title-mega"></div>
+                                  <div class="title-mega">Form</div>
                                   <img class="thumb-menu" src="http://via.placeholder.com/200x78/fcbdff/767676/" alt="thumbnail" />
                                   <ul>
                                     <li class="waves-effect"><a class="menu-list" href="login.html">تسجيل الدخول</a></li>
@@ -228,7 +227,7 @@ Starter</span>
                                   </ul>
                                 </div>
                                 <div class="col-sm-3 mb-6">
-                                  <div class="title-mega"></div>
+                                  <div class="title-mega">items</div>
                                   <img class="thumb-menu" src="http://via.placeholder.com/200x78/2f688b/FFFFFF/" alt="thumbnail" />
                                   <ul>
                                     <li class="waves-effect"><a class="menu-list" href="collection.html">مجموعة البطاقات</a></li>
@@ -237,7 +236,7 @@ Starter</span>
                                   </ul>
                                 </div>
                                 <div class="col-sm-3 mb-6">
-                                  <div class="title-mega"></div>
+                                  <div class="title-mega">utilities</div>
                                   <img class="thumb-menu" src="http://via.placeholder.com/200x78/ceff00/767676/" alt="thumbnail" />
                                   <ul>
                                     <li class="waves-effect"><a class="menu-list" href="pricing.html">التسعير والأسئلة الشائعة</a></li>
@@ -255,18 +254,25 @@ Starter</span>
                     </ul>
                   </div>
                   <nav class="user-menu">
-                    <a class="btn btn-flat waves-effect show-sm-up" type="button" href="login.html">تسجيل الدخول</a>
-                    <a class="btn waves-effect primary show-sm-up" type="button" href="register.html">تسجيل</a>
+                    <a class="btn btn-flat waves-effect show-sm-up" href="login.html">تسجيل الدخول</a>
+                    <a class="btn waves-effect primary show-sm-up" href="register.html">تسجيل</a>
                     <span class="spacer vertical-divider show-lg-up"></span>
                     <div class="menu-setting">
-                      <div class="setting"><button class="btn btn-icon waves-effect btn-small dropdown-trigger ma-1" data-target="dropdown_config" data-align="right" type="button"><i class="icon material-icons" id="setting_icon">settings</i></button>
+                      <div class="setting">
+                        <button class="btn btn-icon waves-effect btn-small dropdown-trigger ma-1" data-target="dropdown_config" data-align="right" type="button">
+                          <i class="icon material-icons" id="setting_icon">settings</i>
+                        </button>
                         <div class="dropdown-content setting" id="dropdown_config">
                           <ul class="collection with-header">
                             <li class="collection-header">وضع السمة</li>
                             <li class="collection-item no-hover pl-4">
                               <div class="flex-menu">
                                 <div class="switch">
-                                  <label>ضوء<input id="theme_switcher" type="checkbox"><span class="lever"></span>داكن</label>
+                                  <label>
+                                    ضوء
+                                    <input id="theme_switcher" type="checkbox"><span class="lever"></span>
+                                    داكن
+                                  </label>
                                 </div>
                               </div>
                             </li>
@@ -356,7 +362,7 @@ Starter</span>
           <div class="counter-style" id="counter_target">
             <div class="container max-md">
               <div class="row justify-content-center align-items-center">
-                <div class="col px-0 py-4">
+                <div class="col py-4">
                   <div class="counter-item">
                     <span class="icon ion-leaf"></span>
                     <div class="text">
@@ -365,7 +371,7 @@ Starter</span>
                     </div>
                   </div>
                 </div>
-                <div class="col px-0 py-4">
+                <div class="col py-4">
                   <div class="counter-item">
                     <span class="icon ion-ios-lightbulb-outline"></span>
                     <div class="text">
@@ -374,7 +380,7 @@ Starter</span>
                     </div>
                   </div>
                 </div>
-                <div class="col px-0 py-4">
+                <div class="col py-4">
                   <div class="counter-item">
                     <span class="icon ion-ios-world-outline"></span>
                     <div class="text">
@@ -402,11 +408,12 @@ Starter</span>
                   <h4 class="use-text-title2 mb-3">Lorem ipsum dolor sit amet.</h4>
                   <p class="pb-2 use-text-subtitle2">Proin scelerisque sapien at enim faucibus, ut scelerisque urna consequat.</p>
                   <div class="video-wrap">
-                    <div class="modal-trigger" data-target="video_modal">
+                    <div class="modal-trigger" data-target="video_modal" data-video="sf15CtXuw9M">
                       <div class="card media-card landscape video">
                         <span class="badge grey darken-4">02:30</span>
-                        <figure><img src="https://source.unsplash.com/random" alt="cover"></figure>
-                        <div class="property"><a class="btn play-btn waves-effect" href=""><span class="ion-ios-play"></span></a>
+                        <figure><img src="https://source.unsplash.com/random" alt="cover" /></figure>
+                        <div class="property">
+                          <a class="btn play-btn waves-effect" href=""><span class="ion-ios-play"></span></a>
                           <div class="card-title media-title">Sed lacinia velit, ut malesuada eros interdum a</div>
                         </div>
                       </div>
@@ -476,7 +483,7 @@ Starter</span>
                     <div class="item px-3" data-key="0">
                       <div class="card profile-card landscape full">
                         <div class="figure">
-                          <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
+                          <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random);"></div>
                         </div>
                         <div class="avatar-img avatar big">
                           <img src="../../assets/images/avatars/pp_girl3.svg" alt="avatar" />
@@ -491,10 +498,17 @@ Starter</span>
                           </div>
                           <div class="action-area">
                             <div class="card-actions action">
-                              <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">account_circle</i>100 Connection</span></a>
-                              <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">favorite</i>10 Favorites</span></a>
-                              <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">photo_library</i>12 Albums</span></a>
-                            </div><a class="waves-effect btn btn-outlined primary main-btn mq-xs-down" href="href" data-class="btn-small">See Profile</a>
+                              <a class="waves-effect btn btn-flat" href="#">
+                                <span class="btn-content"><i class="icon material-icons">account_circle</i>100 Connection</span>
+                              </a>
+                              <a class="waves-effect btn btn-flat" href="#">
+                                <span class="btn-content"><i class="icon material-icons">favorite</i>10 Favorites</span>
+                              </a>
+                              <a class="waves-effect btn btn-flat" href="#">
+                                <span class="btn-content"><i class="icon material-icons">photo_library</i>12 Albums</span>
+                              </a>
+                            </div>
+                            <a class="waves-effect btn btn-outlined primary main-btn mq-xs-down" href="href" data-class="btn-small">See Profile</a>
                           </div>
                         </div>
                       </div>
@@ -502,7 +516,7 @@ Starter</span>
                     <div class="item px-3" data-key="1">
                       <div class="card profile-card landscape full">
                         <div class="figure">
-                          <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
+                          <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random);"></div>
                         </div>
                         <div class="avatar-img avatar big">
                           <img src="../../assets/images/avatars/pp_girl3.svg" alt="avatar" />
@@ -517,10 +531,17 @@ Starter</span>
                           </div>
                           <div class="action-area">
                             <div class="card-actions action">
-                              <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">account_circle</i>100 Connection</span></a>
-                              <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">favorite</i>10 Favorites</span></a>
-                              <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">photo_library</i>12 Albums</span></a>
-                            </div><a class="waves-effect btn btn-outlined primary main-btn mq-xs-down" href="href" data-class="btn-small">See Profile</a>
+                              <a class="waves-effect btn btn-flat" href="#">
+                                <span class="btn-content"><i class="icon material-icons">account_circle</i>100 Connection</span>
+                              </a>
+                              <a class="waves-effect btn btn-flat" href="#">
+                                <span class="btn-content"><i class="icon material-icons">favorite</i>10 Favorites</span>
+                              </a>
+                              <a class="waves-effect btn btn-flat" href="#">
+                                <span class="btn-content"><i class="icon material-icons">photo_library</i>12 Albums</span>
+                              </a>
+                            </div>
+                            <a class="waves-effect btn btn-outlined primary main-btn mq-xs-down" href="href" data-class="btn-small">See Profile</a>
                           </div>
                         </div>
                       </div>
@@ -528,7 +549,7 @@ Starter</span>
                     <div class="item px-3" data-key="2">
                       <div class="card profile-card landscape full">
                         <div class="figure">
-                          <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
+                          <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random);"></div>
                         </div>
                         <div class="avatar-img avatar big">
                           <img src="../../assets/images/avatars/pp_girl3.svg" alt="avatar" />
@@ -543,10 +564,17 @@ Starter</span>
                           </div>
                           <div class="action-area">
                             <div class="card-actions action">
-                              <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">account_circle</i>100 Connection</span></a>
-                              <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">favorite</i>10 Favorites</span></a>
-                              <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">photo_library</i>12 Albums</span></a>
-                            </div><a class="waves-effect btn btn-outlined primary main-btn mq-xs-down" href="href" data-class="btn-small">See Profile</a>
+                              <a class="waves-effect btn btn-flat" href="#">
+                                <span class="btn-content"><i class="icon material-icons">account_circle</i>100 Connection</span>
+                              </a>
+                              <a class="waves-effect btn btn-flat" href="#">
+                                <span class="btn-content"><i class="icon material-icons">favorite</i>10 Favorites</span>
+                              </a>
+                              <a class="waves-effect btn btn-flat" href="#">
+                                <span class="btn-content"><i class="icon material-icons">photo_library</i>12 Albums</span>
+                              </a>
+                            </div>
+                            <a class="waves-effect btn btn-outlined primary main-btn mq-xs-down" href="href" data-class="btn-small">See Profile</a>
                           </div>
                         </div>
                       </div>
@@ -554,7 +582,7 @@ Starter</span>
                     <div class="item px-3" data-key="3">
                       <div class="card profile-card landscape full">
                         <div class="figure">
-                          <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
+                          <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random);"></div>
                         </div>
                         <div class="avatar-img avatar big">
                           <img src="../../assets/images/avatars/pp_girl3.svg" alt="avatar" />
@@ -569,10 +597,17 @@ Starter</span>
                           </div>
                           <div class="action-area">
                             <div class="card-actions action">
-                              <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">account_circle</i>100 Connection</span></a>
-                              <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">favorite</i>10 Favorites</span></a>
-                              <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">photo_library</i>12 Albums</span></a>
-                            </div><a class="waves-effect btn btn-outlined primary main-btn mq-xs-down" href="href" data-class="btn-small">See Profile</a>
+                              <a class="waves-effect btn btn-flat" href="#">
+                                <span class="btn-content"><i class="icon material-icons">account_circle</i>100 Connection</span>
+                              </a>
+                              <a class="waves-effect btn btn-flat" href="#">
+                                <span class="btn-content"><i class="icon material-icons">favorite</i>10 Favorites</span>
+                              </a>
+                              <a class="waves-effect btn btn-flat" href="#">
+                                <span class="btn-content"><i class="icon material-icons">photo_library</i>12 Albums</span>
+                              </a>
+                            </div>
+                            <a class="waves-effect btn btn-outlined primary main-btn mq-xs-down" href="href" data-class="btn-small">See Profile</a>
                           </div>
                         </div>
                       </div>
@@ -580,7 +615,7 @@ Starter</span>
                     <div class="item px-3" data-key="4">
                       <div class="card profile-card landscape full">
                         <div class="figure">
-                          <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
+                          <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random);"></div>
                         </div>
                         <div class="avatar-img avatar big">
                           <img src="../../assets/images/avatars/pp_girl3.svg" alt="avatar" />
@@ -595,10 +630,17 @@ Starter</span>
                           </div>
                           <div class="action-area">
                             <div class="card-actions action">
-                              <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">account_circle</i>100 Connection</span></a>
-                              <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">favorite</i>10 Favorites</span></a>
-                              <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">photo_library</i>12 Albums</span></a>
-                            </div><a class="waves-effect btn btn-outlined primary main-btn mq-xs-down" href="href" data-class="btn-small">See Profile</a>
+                              <a class="waves-effect btn btn-flat" href="#">
+                                <span class="btn-content"><i class="icon material-icons">account_circle</i>100 Connection</span>
+                              </a>
+                              <a class="waves-effect btn btn-flat" href="#">
+                                <span class="btn-content"><i class="icon material-icons">favorite</i>10 Favorites</span>
+                              </a>
+                              <a class="waves-effect btn btn-flat" href="#">
+                                <span class="btn-content"><i class="icon material-icons">photo_library</i>12 Albums</span>
+                              </a>
+                            </div>
+                            <a class="waves-effect btn btn-outlined primary main-btn mq-xs-down" href="href" data-class="btn-small">See Profile</a>
                           </div>
                         </div>
                       </div>
@@ -606,7 +648,7 @@ Starter</span>
                     <div class="item px-3" data-key="5">
                       <div class="card profile-card landscape full">
                         <div class="figure">
-                          <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random;"></div>
+                          <div class="responsive-img" style="background-image:url(https://source.unsplash.com/random);"></div>
                         </div>
                         <div class="avatar-img avatar big">
                           <img src="../../assets/images/avatars/pp_girl3.svg" alt="avatar" />
@@ -621,10 +663,17 @@ Starter</span>
                           </div>
                           <div class="action-area">
                             <div class="card-actions action">
-                              <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">account_circle</i>100 Connection</span></a>
-                              <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">favorite</i>10 Favorites</span></a>
-                              <a class="waves-effect btn btn-flat" href="#"><span class="btn-content"><i class="icon material-icons">photo_library</i>12 Albums</span></a>
-                            </div><a class="waves-effect btn btn-outlined primary main-btn mq-xs-down" href="href" data-class="btn-small">See Profile</a>
+                              <a class="waves-effect btn btn-flat" href="#">
+                                <span class="btn-content"><i class="icon material-icons">account_circle</i>100 Connection</span>
+                              </a>
+                              <a class="waves-effect btn btn-flat" href="#">
+                                <span class="btn-content"><i class="icon material-icons">favorite</i>10 Favorites</span>
+                              </a>
+                              <a class="waves-effect btn btn-flat" href="#">
+                                <span class="btn-content"><i class="icon material-icons">photo_library</i>12 Albums</span>
+                              </a>
+                            </div>
+                            <a class="waves-effect btn btn-outlined primary main-btn mq-xs-down" href="href" data-class="btn-small">See Profile</a>
                           </div>
                         </div>
                       </div>
@@ -639,69 +688,85 @@ Starter</span>
               <div class="container">
                 <h4 class="use-text-title2 mb-3">المعرض</h4>
                 <p class="use-text-subtitle2">Vestibulum faucibus eget erat eget pretium. Donec commodo convallis eget suscipit orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <div class="carousel"><button class="btn btn-icon waves-effect btn-small nav prev" id="team_prev"><i class="icon material-icons">arrow_back</i></button>
+                <div class="carousel">
+                  <button class="btn btn-icon waves-effect btn-small nav prev" id="team_prev"><i class="icon material-icons">arrow_back</i></button>
                   <div class="photo-carousel" id="about_photo_carousel">
                     <div class="item px-sm-3 px-1 showImg" data-index="0">
-                      <div class="showimg"><a class="waves-effect" href="https://source.unsplash.com/random"><img src="https://source.unsplash.com/random" /></a></div>
+                      <div class="showimg">
+                        <a class="waves-effect" href="https://source.unsplash.com/random"><img src="https://source.unsplash.com/random" alt="photo" /></a>
+                      </div>
                       <div class="card media-card portrait photo">
                         <a class="cover-link waves-effect" href="https://source.unsplash.com/random"></a>
-                        <figure><img src="https://source.unsplash.com/random" alt="cover"></figure>
+                        <figure><img src="https://source.unsplash.com/random" alt="cover" /></figure>
                         <div class="property">
                           <div class="card-title media-title">Sed lacinia velit, ut malesuada eros interdum a</div>
                         </div>
                       </div>
                     </div>
                     <div class="item px-sm-3 px-1 showImg" data-index="1">
-                      <div class="showimg"><a class="waves-effect" href="https://source.unsplash.com/random"><img src="https://source.unsplash.com/random" /></a></div>
+                      <div class="showimg">
+                        <a class="waves-effect" href="https://source.unsplash.com/random"><img src="https://source.unsplash.com/random" alt="photo" /></a>
+                      </div>
                       <div class="card media-card portrait photo">
                         <a class="cover-link waves-effect" href="https://source.unsplash.com/random"></a>
-                        <figure><img src="https://source.unsplash.com/random" alt="cover"></figure>
+                        <figure><img src="https://source.unsplash.com/random" alt="cover" /></figure>
                         <div class="property">
                           <div class="card-title media-title">Sed lacinia velit, ut malesuada eros interdum a</div>
                         </div>
                       </div>
                     </div>
                     <div class="item px-sm-3 px-1 showImg" data-index="2">
-                      <div class="showimg"><a class="waves-effect" href="https://source.unsplash.com/random"><img src="https://source.unsplash.com/random" /></a></div>
+                      <div class="showimg">
+                        <a class="waves-effect" href="https://source.unsplash.com/random"><img src="https://source.unsplash.com/random" alt="photo" /></a>
+                      </div>
                       <div class="card media-card portrait photo">
                         <a class="cover-link waves-effect" href="https://source.unsplash.com/random"></a>
-                        <figure><img src="https://source.unsplash.com/random" alt="cover"></figure>
+                        <figure><img src="https://source.unsplash.com/random" alt="cover" /></figure>
                         <div class="property">
                           <div class="card-title media-title">Sed lacinia velit, ut malesuada eros interdum a</div>
                         </div>
                       </div>
                     </div>
                     <div class="item px-sm-3 px-1 showImg" data-index="3">
-                      <div class="showimg"><a class="waves-effect" href="https://source.unsplash.com/random"><img src="https://source.unsplash.com/random" /></a></div>
+                      <div class="showimg">
+                        <a class="waves-effect" href="https://source.unsplash.com/random"><img src="https://source.unsplash.com/random" alt="photo" /></a>
+                      </div>
                       <div class="card media-card portrait photo">
                         <a class="cover-link waves-effect" href="https://source.unsplash.com/random"></a>
-                        <figure><img src="https://source.unsplash.com/random" alt="cover"></figure>
+                        <figure><img src="https://source.unsplash.com/random" alt="cover" /></figure>
                         <div class="property">
                           <div class="card-title media-title">Sed lacinia velit, ut malesuada eros interdum a</div>
                         </div>
                       </div>
                     </div>
                     <div class="item px-sm-3 px-1 showImg" data-index="4">
-                      <div class="showimg"><a class="waves-effect" href="https://source.unsplash.com/random"><img src="https://source.unsplash.com/random" /></a></div>
+                      <div class="showimg">
+                        <a class="waves-effect" href="https://source.unsplash.com/random"><img src="https://source.unsplash.com/random" alt="photo" /></a>
+                      </div>
                       <div class="card media-card portrait photo">
                         <a class="cover-link waves-effect" href="https://source.unsplash.com/random"></a>
-                        <figure><img src="https://source.unsplash.com/random" alt="cover"></figure>
+                        <figure><img src="https://source.unsplash.com/random" alt="cover" /></figure>
                         <div class="property">
                           <div class="card-title media-title">Sed lacinia velit, ut malesuada eros interdum a</div>
                         </div>
                       </div>
                     </div>
                     <div class="item px-sm-3 px-1 showImg" data-index="5">
-                      <div class="showimg"><a class="waves-effect" href="https://source.unsplash.com/random"><img src="https://source.unsplash.com/random" /></a></div>
+                      <div class="showimg">
+                        <a class="waves-effect" href="https://source.unsplash.com/random"><img src="https://source.unsplash.com/random" alt="photo" /></a>
+                      </div>
                       <div class="card media-card portrait photo">
                         <a class="cover-link waves-effect" href="https://source.unsplash.com/random"></a>
-                        <figure><img src="https://source.unsplash.com/random" alt="cover"></figure>
+                        <figure><img src="https://source.unsplash.com/random" alt="cover" /></figure>
                         <div class="property">
                           <div class="card-title media-title">Sed lacinia velit, ut malesuada eros interdum a</div>
                         </div>
                       </div>
                     </div>
-                  </div><button class="btn btn-icon waves-effect btn-small nav next" id="team_next"><i class="icon material-icons">arrow_forward</i></button>
+                  </div>
+                  <button class="btn btn-icon waves-effect btn-small nav next" id="team_next">
+                    <i class="icon material-icons">arrow_forward</i>
+                  </button>
                 </div>
               </div>
             </div>
@@ -742,25 +807,25 @@ Starter</span>
                               <div class="row spacing6">
                                 <div class="col-sm-12">
                                   <div class="input-field primary filled">
-                                    <input class="validate" id="name" type="text" required>
+                                    <input class="validate" id="name" type="text" required />
                                     <label for="name">ما اسمك؟ *</label>
                                   </div>
                                 </div>
                                 <div class="col-sm-12">
                                   <div class="input-field primary filled">
-                                    <input class="validate" id="email" type="email" required>
+                                    <input class="validate" id="email" type="email" required />
                                     <label for="email">ما هو بريدك الإلكتروني؟ *</label>
                                   </div>
                                 </div>
                                 <div class="col-sm-12">
                                   <div class="input-field primary filled">
                                     <input id="phone" type="tel">
-                                    <label for="phone">ما هو رقم هاتفك؟</label>
+                                    <label for="phone">ما هو رقم هاتفك؟/</label>
                                   </div>
                                 </div>
                                 <div class="col-sm-12">
                                   <div class="input-field primary filled">
-                                    <input id="company" type="text">
+                                    <input id="company" type="text" />
                                     <label for="company">ما هي شركتك؟</label>
                                   </div>
                                 </div>
@@ -772,9 +837,14 @@ Starter</span>
                                 </div>
                               </div>
                               <div class="form-control-label">
-                                <label><input class="filled-in secondary" type="checkbox" required><span>لقد قرأت ووافقت على شروط <br/><a class="link" href="#">سياسة الخدمة والخصوصية *</a></span></label>
+                                <label>
+                                  <input class="filled-in secondary" type="checkbox" required />
+                                  <span>لقد قرأت ووافقت على شروط <br/><a class="link" href="#">سياسة الخدمة والخصوصية *</a></span>
+                                </label>
                               </div>
-                              <div class="btn-area"><button class="btn block primary btn-large waves-effect" type="submit">إرسال رسالة</button></div>
+                              <div class="btn-area">
+                                <button class="btn block primary btn-large waves-effect" type="submit">إرسال رسالة</button>
+                              </div>
                             </form>
                           </div>
                         </div>
@@ -800,8 +870,7 @@ Starter</span>
                       <h6 class="title">Starter Project</h6>
                     </div>
                     <p class="body-2">أنشئ مشروعك من البداية باستخدام المكونات الأساسية والأنماط الأساسية.</p>
-                    <p class="body-2 hidden-sm-down">&copy;
-                      Nirwana Theme 2021</p>
+                    <p class="body-2 hidden-sm-down">&copy; Nirwana Theme 2021</p>
                   </div>
                   <div class="col-md-6 pa-4">
                     <ul class="show-sm-down collapsible">
@@ -888,8 +957,7 @@ Starter</span>
                         <option value="zh">简体中文</option>
                       </select>
                     </div>
-                    <p class="body-2 mt-5 text-center hidden-md-up">&copy;
-                      Nirwana Theme 2021</p>
+                    <p class="body-2 mt-5 text-center hidden-md-up">&copy; Nirwana Theme 2021</p>
                   </div>
                 </div>
               </div>
@@ -912,8 +980,8 @@ Starter</span>
   <script src="../../assets/js/vendors/jquery.navScroll.min.js"></script><!-- This assets are not avalaible in npm.js or it has been costumized-->
   <script src="../../assets/js/vendors/modernizr-2.8.3-respond-1.4.2.min.js"></script>
   <script src="../../assets/js/vendors/materialize.js"></script>
-  <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
   <script src="../../assets/js/scripts.js"></script>
+  <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
 </body>
 
 </html>

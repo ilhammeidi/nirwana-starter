@@ -82,26 +82,44 @@
   .apply-range {
     @include rtl-flip
   }
-  .filter-head {
-    background: $palette-primary-main;
-    .nav-wrapper {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: $palette-common-white;
-      button {
-        color: $palette-common-white;
-        margin: $spacing1
-      }
-    }
-  }
   &.modal-content {
     padding: 0;
     border: none;
   }
 }
 
+.modal-filter {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  border: none;
+  &.modal-content {
+    padding-top: $spacing8
+  }
+}
+
+nav.filter-head {
+  background: $palette-primary-main;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  .nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $palette-common-white;
+    button {
+      color: $palette-common-white;
+      margin: $spacing1
+    }
+  }
+}
+
 .sorter {
+  .input-field {
+    flex: 1;
+  }
   @include breakpoints-down(xs) {
     flex-direction: column-reverse;
     .btn {

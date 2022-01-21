@@ -301,7 +301,7 @@ $btn-radius: 6px !default;
   &-outlined {
     .select-wrapper input.select-dropdown {
       border: 1px solid var(--div-2);
-      border-radius: $spacing1 / 2;
+      border-radius: $spacing1 * 0.5;
       @include padding-left($spacing1);
       box-sizing: border-box;
     }
@@ -354,27 +354,6 @@ $btn-radius: 6px !default;
 
 [type=checkbox].filled-in:checked + span:not(.lever):before {
   @include use-rtl(transform, rotateZ(30deg) scaleX(-1))
-}
-
-// Preloader
-.pace {
-  -webkit-pointer-events: none;
-  pointer-events: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  &-inactive {
-    display: none;
-  }
-  .pace-progress {
-    background: #9c27b0;
-    position: fixed;
-    z-index: 10000;
-    top: 0;
-    right: 100%;
-    width: 100%;
-    height: 2px;
-  }
 }
 
 .justify-content-evenly {

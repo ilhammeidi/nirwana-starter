@@ -192,6 +192,7 @@
       color: $palette-common-white;
       width: 150px;
       margin: 0 $spacing1;
+      font-size: 12px;
       @include breakpoints-down(md) {
         margin: 0 4px;
         width: 120px;

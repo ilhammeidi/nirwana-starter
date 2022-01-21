@@ -5,7 +5,7 @@ mixin news-card(title, headline, orientation='portrait', type='full', img, href=
     .properties
       .caption
         | #{headline}
-      .news-title 
+      .news-title.text-truncate
         | #{title}
       .card-action
         if orientation === 'portrait'

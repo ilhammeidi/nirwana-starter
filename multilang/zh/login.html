@@ -16,8 +16,8 @@
   <link rel="apple-touch-icon" sizes="152x152" href="../../assets/favicons/apple-icon-152x152.png">
   <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicons/apple-icon-180x180.png">
   <link rel="icon" type="image/png" sizes="192x192" href="../../assets/favicons/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicons/favicon-16x16.png">
   <link rel="manifest" href="../../assets/favicons/manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="../../assets/favicons/ms-icon-144x144.png"><!-- PWA primary color-->
@@ -72,24 +72,28 @@
                 <nav class="nav-menu flex-grow-1">
                   <div class="logo flex-grow-1 start-mobile">
                     <a href="index.html">
-                      <span class="logo landscape medium">
-<img src="../../assets/images/logo-starter.png" alt="logo"/>
-
-Starter</span>
+                      <span class="logo landscape medium"><img src="../../assets/images/logo-starter.png" alt="logo"/>Starter</span>
                     </a>
                   </div>
                   <nav class="user-menu">
                     <a class="btn primary waves-effect" href="register.html">注册</a>
                     <span class="spacer vertical-divider show-md-up"></span>
                     <div class="menu-setting">
-                      <div class="setting"><button class="btn btn-icon waves-effect btn-small dropdown-trigger ma-1" data-target="dropdown_config" data-align="left" type="button"><i class="icon material-icons" id="setting_icon">settings</i></button>
+                      <div class="setting">
+                        <button class="btn btn-icon waves-effect btn-small dropdown-trigger ma-1" data-target="dropdown_config" data-align="left" type="button">
+                          <i class="icon material-icons" id="setting_icon">settings</i>
+                        </button>
                         <div class="dropdown-content setting" id="dropdown_config">
                           <ul class="collection with-header">
                             <li class="collection-header">主题模式</li>
                             <li class="collection-item no-hover pl-4">
                               <div class="flex-menu">
                                 <div class="switch">
-                                  <label>光<input id="theme_switcher" type="checkbox"><span class="lever"></span>黑暗</label>
+                                  <label>
+                                    光
+                                    <input id="theme_switcher" type="checkbox"><span class="lever"></span>
+                                    黑暗
+                                  </label>
                                 </div>
                               </div>
                             </li>
@@ -163,17 +167,17 @@ Starter</span>
                               <div class="separator">
                                 <p>或通过电子邮件登录</p>
                               </div>
-                              <form id="login_form" method="" action="">
+                              <form id="login_form">
                                 <div class="row spacing3">
                                   <div class="col-sm-12">
                                     <div class="input-field">
-                                      <input class="validate" id="email" type="email" name="email" required>
+                                      <input class="validate" id="email" type="email" name="email" required />
                                       <label for="email">电子邮件</label>
                                     </div>
                                   </div>
                                   <div class="col-sm-12">
                                     <div class="input-field">
-                                      <input class="validate" id="password" type="password" name="password" required>
+                                      <input class="validate" id="password" type="password" name="password" required />
                                       <label for="password">密码</label>
                                     </div>
                                   </div>
@@ -181,7 +185,7 @@ Starter</span>
                                 <div class="form-helper mt-4">
                                   <div class="form-control-label">
                                     <label>
-                                      <input class="filled-in secondary" type="checkbox">
+                                      <input class="filled-in secondary" type="checkbox" />
                                       <span>记住</span>
                                     </label>
                                   </div>
@@ -222,8 +226,7 @@ Starter</span>
                       <h6 class="title">Starter Project</h6>
                     </div>
                     <p class="body-2">使用主要组件和基本样式从头开始创建项目。</p>
-                    <p class="body-2 hidden-sm-down">&copy;
-                      Nirwana Theme 2021</p>
+                    <p class="body-2 hidden-sm-down">&copy; Nirwana Theme 2021</p>
                   </div>
                   <div class="col-md-6 pa-4">
                     <ul class="show-sm-down collapsible">
@@ -310,8 +313,7 @@ Starter</span>
                         <option value="zh">简体中文</option>
                       </select>
                     </div>
-                    <p class="body-2 mt-5 text-center hidden-md-up">&copy;
-                      Nirwana Theme 2021</p>
+                    <p class="body-2 mt-5 text-center hidden-md-up">&copy; Nirwana Theme 2021</p>
                   </div>
                 </div>
               </div>
@@ -334,8 +336,8 @@ Starter</span>
   <script src="../../assets/js/vendors/jquery.navScroll.min.js"></script><!-- This assets are not avalaible in npm.js or it has been costumized-->
   <script src="../../assets/js/vendors/modernizr-2.8.3-respond-1.4.2.min.js"></script>
   <script src="../../assets/js/vendors/materialize.js"></script>
-  <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
   <script src="../../assets/js/scripts.js"></script>
+  <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
 </body>
 
 </html>

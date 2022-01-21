@@ -22,17 +22,14 @@
     font-size: 16px;
     img {
       max-Width: 34px;
-      height: 34px
     }
   }
   &.medium {
     font-size: 18px;
     img {
       max-width: 54px;
-      height: 54px;
       @include breakpoints-down(xs) {
         max-Width: 32px;
-        height: 32px
       }
     }
   }
@@ -40,7 +37,6 @@
     font-size: 28px;
     img {
       max-width: 64px;
-      height: 64px
     }
   }
 }

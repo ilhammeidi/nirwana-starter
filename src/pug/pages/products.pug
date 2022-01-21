@@ -263,7 +263,7 @@ block variables
 block content
   #products-page
     #modal_filter.modal.bottom-sheet
-      .modal-content.filter-style
+      .modal-content.modal-filter
         nav.filter-head
           .nav-wrapper
             div.d-flex
@@ -279,7 +279,7 @@ block content
             button.modal-close.btn-flat.waves-effect(type='button') DONE  
             |
             |
-        include ../components/filter/filter
+        #filter_mobile.filter-style
     .main-wrap
       include ../components/header/main.pug
       .container-wrap

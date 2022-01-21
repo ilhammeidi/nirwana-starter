@@ -1,293 +1,293 @@
 // #### FILTER ####
-
-aside.filter-style
-  .filter-block.filter_category
-    ul.collection.with-header
-      li.collection-header Filter Categories
-      li
-        a.waves-effect.collection-item.active(data-value='all' href='#!')
-          | #{$t.common.list_filter}
-      li
-        a.waves-effect.collection-item(data-value='cat-a' href='#!')
-          | Category a
-      li
-        a.waves-effect.collection-item(data-value='cat-b' href='#!')
-          | Category b
-      li
-        a.waves-effect.collection-item(data-value='cat-c' href='#!')
-          | Category c
-      li
-        a.waves-effect.collection-item(data-value='cat-d' href='#!')
-          | Category d
-      li
-        a.waves-effect.collection-item(data-value='cat-e' href='#!')
-          | Category e
-      li
-        a.waves-effect.collection-item(data-value='cat-f' href='#!')
-          | Category f
-  .filter-block.filter_rating
-    ul.collection.with-header
-      li.collection-header Rating
-      li
-        a.waves-effect.collection-item.active(data-value='0' href='#!')
-          | All Rating
-      li
-        |
-        |
-        a.waves-effect.collection-item(data-value='1' href='#!')
+#filter_sidebar.filter-style
+  aside
+    .filter-block.filter_category
+      ul.collection.with-header
+        li.collection-header Filter Categories
+        li
+          a.waves-effect.collection-item.active(data-value='all' href='#!')
+            | #{$t.common.list_filter}
+        li
+          a.waves-effect.collection-item(data-value='cat-a' href='#!')
+            | Category a
+        li
+          a.waves-effect.collection-item(data-value='cat-b' href='#!')
+            | Category b
+        li
+          a.waves-effect.collection-item(data-value='cat-c' href='#!')
+            | Category c
+        li
+          a.waves-effect.collection-item(data-value='cat-d' href='#!')
+            | Category d
+        li
+          a.waves-effect.collection-item(data-value='cat-e' href='#!')
+            | Category e
+        li
+          a.waves-effect.collection-item(data-value='cat-f' href='#!')
+            | Category f
+    .filter-block.filter_rating
+      ul.collection.with-header
+        li.collection-header Rating
+        li
+          a.waves-effect.collection-item.active(data-value='0' href='#!')
+            | All Rating
+        li
           |
           |
-          span.star
-            i.material-icons.star-icon star
-            i.material-icons.star-icon-disable star
-            i.material-icons.star-icon-disable star
-            i.material-icons.star-icon-disable star
-            i.material-icons.star-icon-disable star
+          a.waves-effect.collection-item(data-value='1' href='#!')
+            |
+            |
+            span.star
+              i.material-icons.star-icon star
+              i.material-icons.star-icon-disable star
+              i.material-icons.star-icon-disable star
+              i.material-icons.star-icon-disable star
+              i.material-icons.star-icon-disable star
+            |
+            |
+            span.caption Minimum 1 star rating
+            |
+            |
           |
           |
-          span.caption Minimum 1 star rating
+        li
           |
           |
-        |
-        |
-      li
-        |
-        |
-        a.waves-effect.collection-item(data-value='2' href='#!')
+          a.waves-effect.collection-item(data-value='2' href='#!')
+            |
+            |
+            span.star
+              i.material-icons.star-icon star
+              i.material-icons.star-icon star
+              i.material-icons.star-icon-disable star
+              i.material-icons.star-icon-disable star
+              i.material-icons.star-icon-disable star
+            |
+            |
+            span.caption Minimum 2 star rating
+            |
+            |
           |
           |
-          span.star
-            i.material-icons.star-icon star
-            i.material-icons.star-icon star
-            i.material-icons.star-icon-disable star
-            i.material-icons.star-icon-disable star
-            i.material-icons.star-icon-disable star
+        li
           |
           |
-          span.caption Minimum 2 star rating
+          a.waves-effect.collection-item(data-value='3' href='#!')
+            |
+            |
+            span.star
+              i.material-icons.star-icon star
+              i.material-icons.star-icon star
+              i.material-icons.star-icon star
+              i.material-icons.star-icon-disable star
+              i.material-icons.star-icon-disable star
+            |
+            |
+            span.caption Minimum 3 star rating
+            |
+            |
           |
           |
-        |
-        |
-      li
-        |
-        |
-        a.waves-effect.collection-item(data-value='3' href='#!')
+        li
           |
           |
-          span.star
-            i.material-icons.star-icon star
-            i.material-icons.star-icon star
-            i.material-icons.star-icon star
-            i.material-icons.star-icon-disable star
-            i.material-icons.star-icon-disable star
+          a.waves-effect.collection-item(data-value='4' href='#!')
+            |
+            |
+            span.star
+              i.material-icons.star-icon star
+              i.material-icons.star-icon star
+              i.material-icons.star-icon star
+              i.material-icons.star-icon star
+              i.material-icons.star-icon-disable star
+            |
+            |
+            span.caption Minimum 4 star rating
+            |
+            |
           |
           |
-          span.caption Minimum 3 star rating
+        li
           |
           |
-        |
-        |
-      li
-        |
-        |
-        a.waves-effect.collection-item(data-value='4' href='#!')
+          a.waves-effect.collection-item(data-value='5' href='#!')
+            |
+            |
+            span.star
+              i.material-icons.star-icon star
+              i.material-icons.star-icon star
+              i.material-icons.star-icon star
+              i.material-icons.star-icon star
+              i.material-icons.star-icon star
+            |
+            |
+            span.caption Minimum 5 star rating
+            |
+            |
           |
           |
-          span.star
-            i.material-icons.star-icon star
-            i.material-icons.star-icon star
-            i.material-icons.star-icon star
-            i.material-icons.star-icon star
-            i.material-icons.star-icon-disable star
+    .filter-block.filter_radio
+      ul.collection.with-header
+        li.collection-header Filter Radio
+        li.collection-item.waves-effect.active
           |
           |
-          span.caption Minimum 4 star rating
+          label.label-block
+            input.with-gap(name='filter_radio' type='radio' value='all' checked)/
+            span #{$t.common.list_filter}
           |
           |
-        |
-        |
-      li
-        |
-        |
-        a.waves-effect.collection-item(data-value='5' href='#!')
+        li.collection-item.waves-effect
           |
           |
-          span.star
-            i.material-icons.star-icon star
-            i.material-icons.star-icon star
-            i.material-icons.star-icon star
-            i.material-icons.star-icon star
-            i.material-icons.star-icon star
+          label.label-block
+            input.with-gap(name='filter_radio' type='radio' value='radio-a')/
+            span Radio A
           |
           |
-          span.caption Minimum 5 star rating
+        li.collection-item.waves-effect
           |
           |
-        |
-        |
-  .filter-block.filter_radio
-    ul.collection.with-header
-      li.collection-header Filter Radio
-      li.collection-item.waves-effect.active
-        |
-        |
-        label.label-block
-          input.with-gap(name='filter_radio' type='radio' value='all' checked)/
-          span #{$t.common.list_filter}
-        |
-        |
-      li.collection-item.waves-effect
-        |
-        |
-        label.label-block
-          input.with-gap(name='filter_radio' type='radio' value='radio-a')/
-          span Radio A
-        |
-        |
-      li.collection-item.waves-effect
-        |
-        |
-        label.label-block
-          input.with-gap(name='filter_radio' type='radio' value='radio-b')/
-          span Radio B
-        |
-        |
-      li.collection-item.waves-effect
-        |
-        |
-        label.label-block
-          input.with-gap(name='filter_radio' type='radio' value='radio-c')/
-          span Radio C
-        |
-        |
-      li.collection-item.waves-effect
-        |
-        |
-        label.label-block
-          input.with-gap(name='filter_radio' type='radio' value='radio-d')/
-          span Radio D
-        |
-        |
-      li.collection-item.waves-effect
-        |
-        |
-        label.label-block
-          input.with-gap(name='filter_radio' type='radio' value='radio-e')/
-          span Radio E
-        |
-        |
-      li.collection-item.waves-effect
-        |
-        |
-        label.label-block
-          input.with-gap(name='filter_radio' type='radio' value='radio-f')/
-          span Radio F
-        |
-        |
-  .filter-block.filter_tags
-    .collection.with-header
-      .collection-header Filter Tags
-      .px-2
-        span.btn-tag
-          input#tag_one(type='checkbox' value='tag-one' checked)/
-          label.waves-effect(for='tag_one') Tag One
-        span.btn-tag
-          input#tag_two(type='checkbox' value='tag-two' checked)/
-          label.waves-effect(for='tag_two') Tag Two
-        span.btn-tag
-          input#tag_three(type='checkbox' value='tag-three' checked)/
-          label.waves-effect(for='tag_three') Tag Three
-        span.btn-tag
-          input#tag_four(type='checkbox' value='tag-four' checked)/
-          label.waves-effect(for='tag_four') Tag Four
-  .filter-block.filter_price
-    .collection.with-header
-      .collection-header Filter Range
-      .px-4
-        .d-flex
-          .input-field.pa-0
-            input#price_from(placeholder='$ From' type='text' value="0")/
-          .strip -
-          .input-field.pa-0
-            input#price_to(placeholder='$ To' type='text' value="100")/
-        button.btn.btn-small.block.primary.waves-effect(type='button')
-          | Apply
-          i.material-icons.right.use-rtl-flip keyboard_arrow_right
-  .filter-block.filter_check
-    ul.collection.with-header
-      li.collection-header Filter Check
-      li.collection-item.waves-effect.active.select_all_categories
-        | Select All
-      li.collection-item.waves-effect
-        |
-        |
-        label.label-block
+          label.label-block
+            input.with-gap(name='filter_radio' type='radio' value='radio-b')/
+            span Radio B
           |
           |
-          input.primary.filled-in(type='checkbox' value='check-a' checked)/
-          span Check A
+        li.collection-item.waves-effect
           |
           |
-        |
-        |
-      li.collection-item.waves-effect
-        |
-        |
-        label.label-block
+          label.label-block
+            input.with-gap(name='filter_radio' type='radio' value='radio-c')/
+            span Radio C
           |
           |
-          input.primary.filled-in(type='checkbox' value='check-b' checked)/
-          span Check B
+        li.collection-item.waves-effect
           |
           |
-        |
-        |
-      li.collection-item.waves-effect
-        |
-        |
-        label.label-block
+          label.label-block
+            input.with-gap(name='filter_radio' type='radio' value='radio-d')/
+            span Radio D
           |
           |
-          input.primary.filled-in(type='checkbox' value='check-c' checked)/
-          span Check C
+        li.collection-item.waves-effect
           |
           |
-        |
-        |
-      li.collection-item.waves-effect
-        |
-        |
-        label.label-block
+          label.label-block
+            input.with-gap(name='filter_radio' type='radio' value='radio-e')/
+            span Radio E
           |
           |
-          input.primary.filled-in(type='checkbox' value='check-d' checked)/
-          span Check D
+        li.collection-item.waves-effect
           |
           |
-        |
-        |
-      li.collection-item.waves-effect
-        |
-        |
-        label.label-block
+          label.label-block
+            input.with-gap(name='filter_radio' type='radio' value='radio-f')/
+            span Radio F
           |
           |
-          input.primary.filled-in(type='checkbox' value='check-e' checked)/
-          span Check E
+    .filter-block.filter_tags
+      .collection.with-header
+        .collection-header Filter Tags
+        .px-2
+          span.btn-tag
+            input#tag_one(type='checkbox' value='tag-one' checked)/
+            label.waves-effect(for='tag_one') Tag One
+          span.btn-tag
+            input#tag_two(type='checkbox' value='tag-two' checked)/
+            label.waves-effect(for='tag_two') Tag Two
+          span.btn-tag
+            input#tag_three(type='checkbox' value='tag-three' checked)/
+            label.waves-effect(for='tag_three') Tag Three
+          span.btn-tag
+            input#tag_four(type='checkbox' value='tag-four' checked)/
+            label.waves-effect(for='tag_four') Tag Four
+    .filter-block.filter_price
+      .collection.with-header
+        .collection-header Filter Range
+        .px-4
+          .d-flex
+            .input-field.pa-0
+              input#price_from(placeholder='$ From' type='text' value="0")/
+            .strip -
+            .input-field.pa-0
+              input#price_to(placeholder='$ To' type='text' value="100")/
+          button.btn.btn-small.block.primary.waves-effect(type='button')
+            | Apply
+            i.material-icons.right.use-rtl-flip keyboard_arrow_right
+    .filter-block.filter_check
+      ul.collection.with-header
+        li.collection-header Filter Check
+        li.collection-item.waves-effect.active.select_all_categories
+          | Select All
+        li.collection-item.waves-effect
           |
           |
-        |
-        |
-      li.collection-item.waves-effect
-        |
-        |
-        label.label-block
+          label.label-block
+            |
+            |
+            input.primary.filled-in(type='checkbox' value='check-a' checked)/
+            span Check A
+            |
+            |
           |
           |
-          input.primary.filled-in(type='checkbox' value='check-f' checked)/
-          span Check F
+        li.collection-item.waves-effect
           |
           |
-        |
-        |
+          label.label-block
+            |
+            |
+            input.primary.filled-in(type='checkbox' value='check-b' checked)/
+            span Check B
+            |
+            |
+          |
+          |
+        li.collection-item.waves-effect
+          |
+          |
+          label.label-block
+            |
+            |
+            input.primary.filled-in(type='checkbox' value='check-c' checked)/
+            span Check C
+            |
+            |
+          |
+          |
+        li.collection-item.waves-effect
+          |
+          |
+          label.label-block
+            |
+            |
+            input.primary.filled-in(type='checkbox' value='check-d' checked)/
+            span Check D
+            |
+            |
+          |
+          |
+        li.collection-item.waves-effect
+          |
+          |
+          label.label-block
+            |
+            |
+            input.primary.filled-in(type='checkbox' value='check-e' checked)/
+            span Check E
+            |
+            |
+          |
+          |
+        li.collection-item.waves-effect
+          |
+          |
+          label.label-block
+            |
+            |
+            input.primary.filled-in(type='checkbox' value='check-f' checked)/
+            span Check F
+            |
+            |
+          |
+          |

@@ -9,21 +9,59 @@
 .space-bottom {
   margin-bottom: section-margin($spacing1);
    @include breakpoints-down(md) {
-    margin-bottom: section-margin(6px);
-  }
-}
-.space-top {
-  margin-top: section-margin($spacing1);
-  @include breakpoints-down(md) {
-    margin-top: section-margin(6px);
+    margin-bottom: section-margin(calc($spacing1 / 1.5));
   }
 }
 .space-bottom-short {
-  margin-bottom: section-margin($spacing1 / 2);
+  margin-bottom: section-margin(calc($spacing1 / 1.5));
+  @include breakpoints-down(md) {
+    margin-bottom: section-margin(calc($spacing1 / 2.5));
+  }
+}
+.space-bottom-short-md {
+  @include breakpoints-down(md) {
+    margin-bottom: section-margin(calc($spacing1 / 2.5));
+  }
+}
+.space-bottom-short-sm {
+  @include breakpoints-down(sm) {
+    margin-bottom: section-margin(calc($spacing1 / 2.5));
+  }
+}
+.space-bottom-short-xs {
+  @include breakpoints-down(xs) {
+    margin-bottom: section-margin(calc($spacing1 / 2.5));
+  }
+}
+
+.space-top {
+  margin-top: section-margin($spacing1);
+  @include breakpoints-down(md) {
+    margin-top: section-margin(calc($spacing1 / 1.5));
+  }
 }
 .space-top-short {
-  margin-top: section-margin($spacing1 / 2);
+  margin-top: section-margin(calc($spacing1 / 1.5));
+  @include breakpoints-down(md) {
+    margin-top: section-margin(calc($spacing1 / 2.5));
+  }
 }
+.space-top-short-md {
+  @include breakpoints-down(md) {
+    margin-top: section-margin(calc($spacing1 / 2.5));
+  }
+}
+.space-top-short-sm {
+  @include breakpoints-down(sm) {
+    margin-top: section-margin(calc($spacing1 / 2.5));
+  }
+}
+.space-top-short-xs {
+  @include breakpoints-down(xs) {
+    margin-top: section-margin(calc($spacing1 / 2.5));
+  }
+}
+
 .container-wrap {
   & > section {
     position: relative;
