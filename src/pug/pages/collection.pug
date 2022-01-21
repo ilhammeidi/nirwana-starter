@@ -2,31 +2,113 @@ extends ../layouts/app.pug
 
 block variables
   - var pageTitle = " Card Collection"
+  - var pageName = "collection"
+  - var headerHome = false
+
 block content
-  div
-    #home
+  #collection-page
     .main-wrap
-      .pa-6(style='width: 900px')
-        include ../components/cards/profile-card
-        +profile-card('https://source.unsplash.com/random', undefined, 'John Dalton', 'Web Designer', 100, 10, 12, 'full', 'portrait')
-        br/
-        +profile-card('https://source.unsplash.com/random', undefined, 'John Dalton', 'Web Designer', 100, 10, 12, 'oval', 'landscape')
-        br/
-        include ../components/cards/product-card
-        +product-card(3, 20, 'https://source.unsplash.com/random', 'Sed lacinia velit', 'Proin pretium arcu eget metus porta consecteturc', 'oval', 'portrait')
-        +product-card(3, 20, 'https://source.unsplash.com/random', 'Sed lacinia velit', 'Proin pretium arcu eget metus porta consecteturc', 'round', 'landscape')
-        br/
-        include ../components/cards/media-card
-        +media-card('Sed lacinia velit, ut malesuada eros interdum a', 'portrait', 'video', 'https://source.unsplash.com/random', '')
-        +media-card('Sed lacinia velit, ut malesuada eros interdum a', 'portrait', 'photo', 'https://source.unsplash.com/random', '')
-        br/
-        include ../components/cards/post-card
-        div(style='width: 300px')
-          +post-card('Maecenas rutrum dolor sed nisi', 'Proin pretium arcu eget metus porta consectetur Pellentesque habitant', '12 Nov 2020', 'portrait', 'oval', 'https://source.unsplash.com/random', '#')
-        +post-card('Maecenas rutrum dolor sed nisi', 'Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant. Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant', '12 Nov 2020', 'landscape', 'over', 'https://source.unsplash.com/random', '#')
-        br/
-        include ../components/cards/news-card
-        div(style='width: 300px')
-          +news-card('Ut sed eros finibus, placerat orci id, dapibus mauris. Vestibulum consequat hendrerit lacus.', 'news', 'portrait', 'over', 'https://source.unsplash.com/random', '#')
-        +news-card('Ut sed eros finibus, placerat orci id, dapibus mauris. Vestibulum consequat hendrerit lacus.', 'news', 'landscape', 'oval', 'https://source.unsplash.com/random', '#')
-        
+      include ../components/header/main.pug
+      .container-wrap
+        include ../components/filter/search
+        .search-content
+          .container.max-lg
+            .row.align-items-start.justify-content-center
+              .col-lg-9.col-md-8.px-0.px-md-3
+                include ../components/cards/profile-card
+                include ../components/cards/product-card
+                include ../components/cards/media-card
+                include ../components/cards/post-card
+                include ../components/cards/news-card
+                #profile_p.space-top-short
+                  h4.use-text-subtitle.mb-3
+                    | Profile Cards Portrait
+                  .row
+                    - var profile_p = 0
+                    while profile_p < 2
+                      .col-sm-6(data-index=profile_p++)
+                        +profile-card('https://source.unsplash.com/random', undefined, 'John Dalton', 'Web Designer', 100, 10, 12, 'full', 'portrait')
+                #profile_l.space-top-short
+                  h4.use-text-subtitle.mb-3
+                    | Profile Cards Landscape
+                  .row
+                    - var profile_l = 0
+                    while profile_l < 3
+                      .col-md-12.px-0(data-index=profile_l++)
+                        +profile-card('https://source.unsplash.com/random', undefined, 'John Dalton', 'Web Designer', 100, 10, 12, 'full', 'landscape')
+                        |
+                        |
+                        br/
+                        br/
+                #product_p.space-top-short
+                  h4.use-text-subtitle.mb-3
+                    | Product Cards Portrait
+                  .row
+                    - var product_p = 0
+                    while product_p < 3
+                      .col-lg-4.col-md-6.col-sm-4(data-index=product_p++)
+                        +product-card(3, 20, 'https://source.unsplash.com/random', 'Sed lacinia velit', 'Proin pretium arcu eget metus porta consecteturc', 'over', 'portrait')
+                        |
+                        |
+                        br/
+                        br/
+                #product_l.space-top-short
+                  h4.use-text-subtitle.mb-3
+                    | Product Cards Landscape
+                  .row
+                    - var product_l = 0
+                    while product_l < 3
+                      .col-md-12.px-md-3.px-0(data-index=product_l++)
+                        +product-card(3, 20, 'https://source.unsplash.com/random', 'Sed lacinia velit', 'Proin pretium arcu eget metus porta consecteturc', 'round', 'landscape')
+                #media_video.space-top-short
+                  h4.use-text-subtitle.mb-3
+                    | Video Cards
+                  .row
+                    - var video = 0
+                    while video < 2
+                      .col-sm-6(data-index=video++)
+                        +media-card('Sed lacinia velit, ut malesuada eros interdum a', 'portrait', 'video', 'https://source.unsplash.com/random', '')
+                #media_photo.space-top-short
+                  h4.use-text-subtitle.mb-3
+                    | Image Cards
+                  .row
+                    - var image = 0
+                    while image < 2
+                      .col-sm-6(data-index=image++)
+                        +media-card('Sed lacinia velit, ut malesuada eros interdum a', 'portrait', 'photo', 'https://source.unsplash.com/random', '')
+                #news_p.space-top-short
+                  h4.use-text-subtitle.mb-3
+                    | News Cards Portrait
+                  .row
+                    - var news_p = 0
+                    while news_p < 3
+                      .col-lg-4.col-md-6.col-sm-4(data-index=news_p++)
+                        +news-card('Ut sed eros finibus, placerat orci id, dapibus mauris. Vestibulum consequat hendrerit lacus.', 'news', 'portrait', 'over', 'https://source.unsplash.com/random', '#')
+                #news_l.space-top-short
+                  h4.use-text-subtitle.mb-3
+                    | News Cards Landscape
+                  .row
+                    - var news_l = 0
+                    while news_l < 3
+                      .col-md-12.px-0(data-index=news_l++)
+                        +post-card('Maecenas rutrum dolor sed nisi', 'Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant. Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant', '12 Nov 2021', 'landscape', 'over', 'https://source.unsplash.com/random', '#')
+                #post_p.space-top-short
+                  h4.use-text-subtitle.mb-3
+                    | Post Cards Portrait
+                  .row
+                    - var post_p = 0
+                    while post_p < 3
+                      .col-lg-4.col-md-6.col-sm-4(data-index=post_p++)
+                        +post-card('Maecenas rutrum dolor sed nisi', 'Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant. Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant', '12 Nov 2021', 'portrait', 'oval', 'https://source.unsplash.com/random', '#')
+                #post_l.space-top-short
+                  h4.use-text-subtitle.mb-3
+                    | Post Cards Landscape
+                  .row
+                    - var post_l = 0
+                    while post_l < 3
+                      .col-md-12.px-0(data-index=post_l++)
+                        +post-card('Maecenas rutrum dolor sed nisi', 'Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant. Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. Suspendisse potenti. Proin pretium arcu eget metus porta consectetur Pellentesque habitant', '12 Nov 2021', 'landscape', 'over', 'https://source.unsplash.com/random', '#')
+              .col-lg-3.col-md-4.px-0
+                include ../components/list/sidebar/sidebar
+      #footer
+        include ../components/footer/main.pug

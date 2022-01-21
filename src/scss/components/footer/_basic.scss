@@ -1,0 +1,108 @@
+.footer-basic {
+  .root {
+    text-align: center;
+    @include breakpoints-down(sm) {
+      padding-top: $spacing5
+    }
+    nav {
+      line-height: 24px;
+      margin: spacing(4, 0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      ul {
+        margin: 0;
+        padding: 0;
+        li {
+          display: inline-block;
+          margin: $spacing1;
+          float: none;
+          a {
+            @include use-theme(color, $palette-primary-main, $palette-primary-light);
+            text-transform: capitalize;
+            text-decoration: none !important;
+            padding: spacing(0, 1);
+            font-size: 18px;
+            @include breakpoints-down(xs) {
+              font-size: 16px
+            }
+          }
+        }
+      }
+    }
+  }
+  .logo {
+    margin-bottom: $spacing3;
+    img {
+      width: 70px
+    }
+  }
+  .subscribe {
+    max-width: 560px;
+    margin: 0 auto;
+    margin-bottom: $spacing2;
+    position: relative;
+    h5 {
+      font-weight: $font-bold
+    }
+  }
+  .form {
+    display: block;
+    position: relative;
+    margin-top: $spacing3
+  }
+  .field {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    input {
+      @include padding-right($spacing20);
+      @include breakpoints-down(xs) {
+        @include padding-right(90px)
+      }
+    }
+  }
+  .button {
+    position: absolute;
+    @include right(0);
+    top: $spacing1;
+    width: 90px
+  }
+  .socmed {
+    display: flex;
+    width: 200px;
+    margin: $spacing8 auto;
+    justify-content: space-between;
+  }
+  .icon {
+    padding: $spacing1;
+    width: 40px;
+    height: 40px;
+    box-shadow: none !important;
+    @include use-theme(background, $palette-primary-light, $palette-primary-main);
+    &.btn {
+      line-height: initial;
+      border-radius: 50%;
+      i {
+        @include use-theme(color, $palette-primary-dark, $palette-primary-light);
+        width: 25px;
+        height: 25px;
+        font-size: 22px;
+      }
+    }
+    &:hover {
+      background: $palette-primary-dark;
+      i {
+        color: $palette-primary-light !important;
+      }
+    }
+  }
+  .copyright {
+    display: block;
+    padding: spacing(1.5);
+    margin-top: spacing(3);
+    p {
+      margin-bottom: 0
+    }
+  }
+}

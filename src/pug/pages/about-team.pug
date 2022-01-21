@@ -1,0 +1,25 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = " Team"
+  - var pageName = "team"
+  - var headerHome = false
+
+block content
+  div#about-page
+    .main-wrap
+      include ../components/header/main.pug
+      include ../components/about/banner.pug
+      include ../components/counter.pug
+      +counter
+      .space-top-short.space-bottom-short
+        .container
+          h4.use-text-title2.mb-3
+            | #{$t.common.about_team}
+          p.use-text-subtitle2 Vestibulum faucibus eget erat eget pretium. Donec commodo convallis eget suscipit orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          include ../components/about/team-grid.pug
+      .space-bottom-short
+        include ../components/about/photo-slider.pug
+      include ../components/call-action.pug
+      #footer
+        include ../components/footer/main.pug

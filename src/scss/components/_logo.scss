@@ -1,0 +1,42 @@
+.logo {
+  font-weight: $font-bold;
+  @include palette-text-primary;
+  display: flex;
+  &.landscape {
+    align-items: center;
+    position: relative;
+    top: -2px;
+    img {
+      @include margin-right($spacing2)
+    }
+  }
+  &.portrait {
+    display: block;
+    margin: 0 auto 8px;
+    img {
+      margin: 0 auto $spacing1;
+      display: block;
+    }
+  }
+  &.small {
+    font-size: 16px;
+    img {
+      max-Width: 34px;
+    }
+  }
+  &.medium {
+    font-size: 18px;
+    img {
+      max-width: 54px;
+      @include breakpoints-down(xs) {
+        max-Width: 32px;
+      }
+    }
+  }
+  &.large {
+    font-size: 28px;
+    img {
+      max-width: 64px;
+    }
+  }
+}

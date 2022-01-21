@@ -30,7 +30,7 @@
 @import './utils/url-img';
 
 // Materialize and Bootstrap overide
-@import './utils/overide';
+@import './utils/root';
 
 // Materialize extended style
 @import './utils/material_extends';
@@ -45,10 +45,20 @@
 ** Components and Pages
 */
 
+// Homepage
 @import './components/header';
-@import './components/animate-slider';
+@import './components/logo';
+@import './components/side-nav';
+@import './components/banner-slider';
 @import './components/feature';
 @import './components/counter';
+@import './components/chat';
+@import './components/testimonials';
+@import './components/pricing';
+@import './components/blog';
+@import './components/subscribe';
+@import './components/page-nav';
+@import './components/notification';
 
 // Cards components
 @import './components/cards/post-card';
@@ -59,15 +69,26 @@
 @import './components/cards/product-card';
 @import './components/cards/media-card';
 
-// Filter components
-@import './components/filter';
+// Cards footer
+@import './components/footer/basic';
+@import './components/footer/contact';
+@import './components/footer/sitemap';
+@import './components/footer/blog';
 
-@import './components/testimonials';
-@import './components/pricing';
+// Inner components
+@import './components/about';
+@import './components/banner-basic';
 @import './components/blog';
-@import './components/subscribe';
-@import './components/footer';
-@import './components/page-nav';
-@import './components/notification';
+@import './components/call-action';
+@import './components/comments';
+@import './components/company-logo';
+@import './components/error';
+@import './components/filter';
+@import './components/faq';
+@import './components/forms';
+@import './components/list';
+@import './components/map';
+@import './components/paper';
 
-@import './pages/home';
+// Inner pages
+@import './pages/pages';

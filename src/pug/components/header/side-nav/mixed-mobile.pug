@@ -1,0 +1,54 @@
+include ../data/sample-page.pug
+
+mixin child-menu(menuItems)
+  .collection.side-group
+    each subitem in menuItems
+      ul.group-child
+        li.collection-header
+          .title-mega #{subitem.name}
+        each granditem in subitem.child
+          li.collection-item.side-group-link
+            |
+            |
+            a.waves-effect.text-truncate.menu-list(
+              href=granditem.link
+              class=granditem.name === pageName ? 'current' : ''
+            )
+              | #{granditem.name}
+            |
+            |
+
+#slide_menu.sidenav.mobile-nav
+  .side-multilv
+    .collection.side-multilv
+      ul.collapsible.expandable
+        each item in menu.starter
+          li.collection-item
+            a.sidenav-close.waves-effect.menu-list(href='#' + item.name)
+              | #{$t.starter['header_' + item.name]}
+        li.collection-item.group-child.has-child
+          .collapsible-header
+            |
+            |
+            a.waves-effect.text-truncate.menu-list(href='#!')
+              |
+              | #{$t.common.header_sample_page}
+              |
+              i.material-icons.right keyboard_arrow_down
+              |
+              |
+            |
+            |
+          .collapsible-body
+            +child-menu(sample)
+    .dropdown-divider
+    .collection
+      ul
+        each item in ['login', 'register']
+          li.collection-item
+            |
+            |
+            a.sidenav-close.waves-effect.menu-list(href=link.starter[item])
+              | #{$t.common[item]}
+            |
+            |

@@ -1,0 +1,25 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = " FAQ"
+  - var pageName = "faq"
+  - var headerHome = false
+
+block content
+  #faq-page
+    .main-wrap
+      include ../components/header/main.pug
+      .container-wrap
+        include ../components/filter/search.pug
+        .container.max-md.space-top-short
+          .row
+            .col-md-8.px-sm-6.px-0
+              include ../components/faq/faq-list.pug
+            .col-md-4.px-0
+              .space-bottom-short
+                include ../components/faq/topic-list.pug
+              .space-bottom-short
+                .list-style
+                  include ../components/list/sidebar/help-widget.pug
+      #footer
+        include ../components/footer/main.pug

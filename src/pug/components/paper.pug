@@ -1,0 +1,15 @@
+mixin paper(title, icon, subtitle='', color=false)
+  .card.paper(class=color ? 'color' : '')
+    header
+      .icon
+        i.material-icons.small(class=color ? 'white-text' : '') #{icon}
+      .card-content
+        |
+        |
+        span.card-title #{title}
+        |
+        |
+        if subtitle !== ''
+          p #{subtitle}
+    .content
+      block

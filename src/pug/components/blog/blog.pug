@@ -1,0 +1,33 @@
+-
+  var blogData = [
+    {
+      title: 'Heading',
+      desc:
+        'This is a media card. You can use this section to describe the content.'
+    },
+    {
+      title: 'Heading',
+      desc:
+        'This is a media card. You can use this section to describe the content.'
+    },
+    {
+      title: 'Heading',
+      desc:
+        'This is a media card. You can use this section to describe the content.'
+    }
+  ]
+
+include ../cards/post-card
+
+.container
+  h3.display-2.text-center.mb-4
+    | Blog and News
+  p.body-1.text-center.mb-4
+    | Curabitur egestas consequat lorem, vel fermentum augue porta id.
+  #blog-list.blog-wrap
+    .row.justify-content-center
+      .col-lg-9.px-0.col-md-12
+        .row
+          each item in blogData
+            .col-md-4.px-3
+              +post-card('Maecenas rutrum dolor sed nisi', 'Proin pretium arcu eget metus porta consectetur Pellentesque habitant', '12 Nov 2021', 'portrait', 'full', 'https://source.unsplash.com/random', '#')

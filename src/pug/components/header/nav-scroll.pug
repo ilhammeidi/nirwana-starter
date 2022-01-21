@@ -1,0 +1,26 @@
+// #### HEADER ####
+include side-nav/singlenav-mobile.pug
+header.app-bar.header#header
+  .container
+    .header-content
+      nav.nav-menu
+        |
+        |
+        button.btn-icon.waves-effect.sidenav-trigger.hamburger.hamburger--spin.show-md-down(
+          id="mobile_menu"
+          type="button"
+          data-target="slide_menu"
+        )
+          span.hamburger-box
+            span.bar.hamburger-inner
+        .logo
+          |
+          |
+          a(href=link.starter.home)
+            include ../logo.pug
+            +logo('landscape')
+          |
+          |
+        include ./top-nav/single-nav
+        include ./top-nav/user-menu
+// #### END HEADER ####

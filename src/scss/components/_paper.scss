@@ -1,0 +1,26 @@
+.paper {
+  header {
+    padding: spacing(0, 2);
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: $spacing1;
+    .card-content{
+      padding-bottom: 0;
+      .card-title {
+        margin-bottom: 0;
+        font-weight: $font-medium
+      }
+    }
+    .icon {
+      color: $palette-primary-main;
+      padding: spacing(2, 0);
+      top: 8px;
+      position: relative;
+    }
+  }
+  &.color {
+    color: $palette-common-white;
+    background: $palette-primary-main;
+  }
+}
+

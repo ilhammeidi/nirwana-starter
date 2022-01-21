@@ -1,0 +1,60 @@
+// #### SORTER ####
+
+- 
+  var sortList = [
+    {
+      title: 'Title A to Z',
+      value: 'title-asc'
+    },
+    {
+      title: 'Title Z to A',
+      value: 'title-desc'
+    },
+    {
+      title: 'Highest Price',
+      value: 'price-asc'
+    },
+    {
+      title: 'Lowest Price',
+      value: 'price-desc'
+    }
+  ]
+
+mixin sorter(total)
+  .row.sorter.align-items-center.flex-sm-row-reverse
+    .col-lg-3.col-sm-8.py-1.px-0
+      .d-flex.justify-content-sm-end.justify-content-center.align-items-center
+        |
+        |
+        a.modal-trigger.btn.btn-outlined.btn-small.primary.waves-effect.me-4.show-sm-down#open_filter(href="#modal_filter")
+          |
+          |
+          i.material-icons.left filter_list
+          | Filter
+          |
+        |
+        |
+        .toggle-btn-group.me-4.show-sm-up#switch_view
+          |
+          |
+          button.btn.btn-outlined.btn-small.primary.active(type='button' data-value="grid")
+            i.material-icons grid_on
+          |
+          |
+          button.btn.btn-outlined.btn-small.primary(type='button' data-value="list")
+            i.material-icons view_list
+          |
+          |
+        .input-field
+          |
+          |
+          select.select#sort_by
+            option(value='', disabled='', selected='') Sort By:
+            each item in sortList
+              option(value=item.value) #{item.title}
+          |
+          |
+    .col-lg-9.col-sm-4.py-1.px-0
+      h2.use-text-subtitle
+        span#result_length #{total}
+        | &nbsp; Items Found          

@@ -1,0 +1,8 @@
+.about-style
+  .row
+    include ../cards/profile-card
+    - var n = 0
+    while n < 9
+      .col-md-4.col-sm-6.pa-lg-5.px-2(data-key=n++)
+        .wow.fadeInUp(data-wow-delay=(0.2 + (0.1 * n)) + 's' data-wow-duration='0.5s')
+          +profile-card('https://source.unsplash.com/random', `${assets}/images/avatars/pp_girl.svg`, 'John Dalton', 'Web Designer', 100, 10, 12, 'full', 'portrait')

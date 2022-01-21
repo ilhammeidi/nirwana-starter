@@ -1,0 +1,54 @@
+-
+  var faqData = [
+    {
+      q: 'Pellentesque ac bibendum tortor?',
+      a: 'Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor.'
+    },
+    {
+      q: 'In mi nulla, fringilla vestibulum?',
+      a: 'Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. '
+    },
+    {
+      q: 'Quisque lacinia purus ut libero?',
+      a: 'Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. '
+    },
+    {
+      q: 'Quisque ut metus sit amet augue?',
+      a: 'Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. '
+    },
+    {
+      q: 'Pellentesque ac bibendum tortor?',
+      a: 'Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. '
+    }
+  ]
+
+.faq-style
+  .root
+    .container.fixed-width
+      .row.spacing6
+        .col-md-6.pa-6
+          h4.use-text-subtitle.mb-3.text-md-start.text-center
+            | #{$t.common.faq_title}
+          p.text.use-text-subtitle2.text-md-start.text-center
+            | #{$t.common.faq_desc}
+          .hidden-sm-down
+            .illustration
+              |
+              |
+              img(src=assets + '/images/starter/Illustration.png' alt="illustration")/
+              |
+              |
+        .col-md-6.pa-6
+          .accordion
+            ul.collapsible
+              each item, index in faqData
+                li.accordion-content.paper(class=index === 0 && "active")
+                  .collapsible-header.content
+                    p.heading #{item.q}
+                    |
+                    |
+                    i.material-icons.right.arrow expand_more
+                    |
+                    |
+                  .collapsible-body.detail
+                    p #{item.a}

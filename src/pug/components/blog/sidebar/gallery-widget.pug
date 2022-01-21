@@ -1,0 +1,39 @@
+include ../../paper.pug
+
+-
+  var images = [
+    {
+      src: 'https://source.unsplash.com/random'
+    },
+    {
+      src: 'https://source.unsplash.com/random'
+    },
+    {
+      src: 'https://source.unsplash.com/random'
+    },
+    {
+      src: 'https://source.unsplash.com/random'
+    }
+  ]
+
++paper($t.common.blog_album, 'photo_library')
+  div
+    .row.ma-0
+      each item in images
+        .col-6.pa-0.gallery-item
+          .card-image
+            |
+            |
+            img.responsive-image.text-right.pa-1(src=item.src alt='thumb')/
+            |
+            |
+            a.btn.btn-icon.waves-effect.btn-small
+              i.material-icons.white-text star
+            |
+            |
+  |
+  |
+  a.btn.waves-effect.btn-flat.block
+    | #{$t.common.btn_seeall}
+  |
+  |

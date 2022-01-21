@@ -1,0 +1,43 @@
+-
+  var faqData = [
+    {
+      q: 'Pellentesque ac bibendum tortor?',
+      a: 'Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor.'
+    },
+    {
+      q: 'In mi nulla, fringilla vestibulum?',
+      a: 'Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. '
+    },
+    {
+      q: 'Quisque lacinia purus ut libero?',
+      a: 'Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. '
+    },
+    {
+      q: 'Quisque ut metus sit amet augue?',
+      a: 'Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. '
+    },
+    {
+      q: 'Pellentesque ac bibendum tortor?',
+      a: 'Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. '
+    }
+  ]
+
+div.faq-style
+  - var n = 1
+  while n < 7
+    .faq-group(id='topic'+n++)
+      .use-text-subtitle.mb-3
+        | Lorem ipsum dolor sit amet
+      .accordion
+        ul.collapsible
+          each item, index in faqData
+            li.accordion-content.paper(class=index === 0 && "active")
+              .collapsible-header.content
+                p.heading #{item.q}
+                |
+                |
+                i.material-icons.right.arrow expand_more
+                |
+                |
+              .collapsible-body.detail
+                p #{item.a}

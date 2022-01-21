@@ -1,0 +1,42 @@
+include ../../paper.pug
+
+-
+  var trending = [
+    {
+      title: 'Vestibulum faucibus',
+      share: 130
+    },
+    {
+      title: 'Nulla eget lobortis lacus',
+      share: 120
+    },
+    {
+      title: 'Cras convallis',
+      share: 100
+    },
+    {
+      title: 'Quisque a consequat',
+      share: 88
+    },
+    {
+      title: 'Suspendisse',
+      share: 90
+    }
+  ]
+
++paper('Trending now', 'show_chart', 'Donec commodo convallis ligula eget suscipit orci')
+  div
+    .collection
+      each item, index in trending
+        |
+        |
+        a.waves-effect.collection-item(href='#!')
+          |
+          |
+          span.font-weight-bold
+            | #{index + 1}. ##{item.title}
+          |
+          |
+          span.d-block.caption #{item.share} Views
+          |
+          |

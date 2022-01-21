@@ -1,0 +1,92 @@
+-
+  var comments = [
+    {
+      name: 'John Doe',
+      avatar: '/images/avatars/pp_boy4.svg',
+      date: '13 Dec 2021',
+      comment:
+        'Maecenas nisl libero, tincidunt id odio id, feugiat vulputate quam. Vestibulum feugiat rhoncus metus. In non erat et ipsum molestie porta sit amet ut felis. Vestibulum a massa vestibulum, gravida odio id, fringilla ipsum.'
+    },
+    {
+      name: 'John Doe',
+      avatar: '/images/avatars/pp_boy4.svg',
+      date: '13 Dec 2021',
+      comment:
+        'Maecenas nisl libero, tincidunt id odio id, feugiat vulputate quam. Vestibulum feugiat rhoncus metus. In non erat et ipsum molestie porta sit amet ut felis. Vestibulum a massa vestibulum, gravida odio id, fringilla ipsum.'
+    },
+    {
+      name: 'John Doe',
+      avatar: '/images/avatars/pp_boy4.svg',
+      date: '13 Dec 2021',
+      comment:
+        'Maecenas nisl libero, tincidunt id odio id, feugiat vulputate quam. Vestibulum feugiat rhoncus metus. In non erat et ipsum molestie porta sit amet ut felis. Vestibulum a massa vestibulum, gravida odio id, fringilla ipsum.'
+    },
+    {
+      name: 'John Doe',
+      avatar: '/images/avatars/pp_boy4.svg',
+      date: '13 Dec 2021',
+      comment:
+        'Maecenas nisl libero, tincidunt id odio id, feugiat vulputate quam. Vestibulum feugiat rhoncus metus. In non erat et ipsum molestie porta sit amet ut felis. Vestibulum a massa vestibulum, gravida odio id, fringilla ipsum.'
+    }
+  ]
+
+.blog-style
+  article.blog-content
+    h4.text-h4.title-blog Maecenas rutrum dolor sed nisi
+    span.caption June 19, 2021 by Oliver
+    figure.image-blog
+      img(src='https://source.unsplash.com/random', alt='blog')
+    p
+      | Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.
+    p
+      | Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.
+    strong Heading
+    p
+      | Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+    strong Sub-heading
+    p
+      | Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+    p
+      | Example code block Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo. Tortor mauris condimentum nibh, ut fermentum massa.
+    strong Sub-heading
+    p
+      | Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+    figure.image-blog
+      img(src='https://source.unsplash.com/random', alt='blog')/
+    ul.list
+      li Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+      li Donec id elit non mi porta gravida at eget metus.
+      li Nulla vitae elit libero, a pharetra augue.
+    p
+      | Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a  pharetra augue.
+    ol
+      li Vestibulum id ligula porta felis euismod semper.
+      li
+        | Cum sociis natoque penatibus et magnis dis parturient montes, nascetur  ridiculus mus.
+      li Maecenas sed diam eget risus varius blandit sit amet non magna.
+    .share-socmed
+      h5.use-text-subtitle2.use-text-bold.mb-3 #{$t.common.blog_share}
+      |
+      |
+      a.btn.btn-outlined.waves-effect.facebook.mq-xs-down(data-class='btn-icon')
+        i.icon.ion-social-facebook.left
+        span.hidden-xs-down facebook
+      |
+      |
+      a.btn.btn-outlined.waves-effect.twitter.mq-xs-down(data-class='btn-icon')
+        i.icon.ion-social-twitter.left
+        span.hidden-xs-down twitter
+      |
+      |
+      a.btn.btn-outlined.waves-effect.linkedin.mq-xs-down(data-class='btn-icon')
+        i.icon.ion-social-linkedin.left
+        span.hidden-xs-down linkedin
+      |
+.comment
+  h5.use-text-subtitle2.use-text-bold.mb-3 #{$t.common.blog_write}
+  include ../comment/form
+  .collection.border-0
+    include ../comment/item
+    .comments-style
+      each item, index in comments
+        +item(assets+item.avatar, item.name, item.date, item.comment, index >= comments.length - 1)

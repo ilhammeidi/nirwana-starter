@@ -1,11 +1,11 @@
 mixin news-card(title, headline, orientation='portrait', type='full', img, href='#')
   .card.news-card(class=orientation + ' ' + type)
     .card-image.figure
-      .responsive-img(style={'background-image': `url(${img}`})
+      .responsive-img(style={'background-image': `url(${img})`})
     .properties
       .caption
         | #{headline}
-      .news-title 
+      .news-title.text-truncate
         | #{title}
       .card-action
         if orientation === 'portrait'

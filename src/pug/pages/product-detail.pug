@@ -1,0 +1,20 @@
+extends ../layouts/app.pug
+
+block variables
+  - 
+    var pageTitle = " Product Detail"
+    var pageName = "product detail"
+    var headerHome = false
+
+block content
+  #detail-product-page
+    .main-wrap
+      include ../components/header/main.pug
+      .container-general
+        include ../components/list/detail.pug
+        include ../components/list/description.pug
+        include ../components/list/related-items.pug
+        .space-top-short
+          include ../components/comment/group.pug
+      #footer
+        include ../components/footer/main.pug

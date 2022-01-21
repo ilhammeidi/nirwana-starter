@@ -39,7 +39,7 @@
   top: 50%;
   margin-top: -2px; }
   .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-    width: 20px;
+    width: 15px;
     height: 2px;
     background-color: #000;
     border-radius: 4px;
@@ -51,17 +51,17 @@
     content: "";
     display: block; }
   .hamburger-inner::before {
-    top: -10px; }
+    top: -8px; }
   .hamburger-inner::after {
-    bottom: -10px; }
+    bottom: -8px; }
   .hamburger-inner::before {
-    width: 24px
+    width: 20px
   }
   .hamburger-inner::after {
-    width: 24px
+    width: 20px
   }
 .is-active .hamburger-inner {
-  width: 24px
+  width: 20px
 }
 
 

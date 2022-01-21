@@ -1,0 +1,9 @@
+case footerType
+  when 'sitemap'
+    include ./sitemap
+  when 'blog'
+    include ./blog
+  when 'contact'
+    include ./contact
+  default
+    include ./basic

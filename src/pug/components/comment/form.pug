@@ -1,0 +1,24 @@
+.comments-style
+  .form-comment
+    .write
+      .avatar-img
+        |
+        |
+        img(src=assets+'/images/avatars/pp_boy3.svg' alt='avatar')/
+        |
+        |
+      .input-field
+        |
+        |
+        input#write_comment(placeholder=$t.common.blog_write type='text')/
+        |
+        |
+        button.btn-outlined.btn-small.waves-effect.primary.send-btn
+          |
+          |
+          span.hidden-xs-down #{$t.common.form_send}
+          i.material-icons.icon.show-xs-down send
+          |
+          |
+        |
+        |

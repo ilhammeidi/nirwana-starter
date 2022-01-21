@@ -1,0 +1,25 @@
+block variables
+
+.form-style
+  .page-wrap
+    .container.inner-wrap
+      .auth-frame
+        .row
+          .col-md-6
+            .card.form-box.fragment-fadeUp
+              .form-wrap
+                block auth_content
+          .col-md-6.px-6
+            .hidden-sm-down
+              .greeting
+                h4.use-text-title2.pb-2 #{title}
+                h6.use-text-subtitle2 #{subtitle}
+                .img
+                  |
+                  |
+                  if type === 'login'
+                    img(src=assets+"/images/starter/Illustration.png" alt='illustration')/
+                  else
+                    img(src=assets+"/images/starter/Illustration.png" alt='illustration')/
+                  |
+                  |

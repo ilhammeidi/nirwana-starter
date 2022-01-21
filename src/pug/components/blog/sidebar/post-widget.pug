@@ -1,0 +1,44 @@
+include ../../paper.pug
+
+-
+  var news = [
+    {
+      title: 'Vestibulum bibendum nisi eget magna',
+      date: 'Jan 9, 2014'
+    },
+    {
+      title: 'Quisque a consequat ante',
+      date: 'Jan 9, 2014'
+    },
+    {
+      title: 'Donec dignissim, odio ac imperdiet luctus',
+      date: 'Jan 9, 2014'
+    },
+    {
+      title: 'Suspendisse eleifend nunc non',
+      date: 'Jan 9, 2014'
+    },
+    {
+      title: 'Vestibulum a massa vestibulum',
+      date: 'Jan 9, 2014'
+    }
+  ]
+
++paper($t.common.blog_post, 'bookmark')
+  div
+    .collection
+      each item in news
+        |
+        |
+        a.waves-effect.collection-item(href='#!')
+          |
+          |
+          span.d-block
+            | #{item.title}
+          span.caption #{item.date}
+          |
+          |
+        |
+        |
+    a.btn.waves-effect.btn-flat.block
+      | #{$t.common.btn_seeall}

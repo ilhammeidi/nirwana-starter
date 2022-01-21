@@ -1,0 +1,38 @@
+header.app-bar#header.header
+  .container.fixed-width-md-up
+    .header-content
+      nav.nav-logo.nav-menu.flex-grow-1
+        |
+        |
+        button#hamburger_menu.btn-icon.waves-effect.hamburger.hamburger--spin.mobile-menu
+          |
+          |
+          span.hamburger-box
+            |
+            |
+            span.bar.hamburger-inner
+            |
+            |
+          |
+          |
+        .logo
+          |
+          |
+          a(href=link.starter.home)
+            img(
+              src=assets + brand.starter.img
+              alt="logo"
+            )/
+          |
+          |
+        .flex-grow-1
+        include ./top-nav/user-menu
+.paper-nav#main_menu
+  .full-nav
+    .scrollactive-nav.scrollnav
+      ul.menu
+        each item, index in menu.starter
+          li
+            a.btn-flat.waves-effect(
+              href='#'+item.name
+            ) #{$t.starter['header_'+item.name]}

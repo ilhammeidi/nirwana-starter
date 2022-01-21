@@ -1,0 +1,25 @@
+mixin error(errCode, text)
+  .error-style
+    .error-wrap
+      .container.max-lg
+        .row.align-items-center
+          .col-md-5
+            .flex
+              .illustration
+                |
+                |
+                img(src=assets+'/images/starter/Illustration.png', alt='illustration')/
+                |
+                |
+          .col-md-7
+            .text
+              h3 #{errCode}
+              h4 #{text}
+              p.use-text-paragraph #{$t.common['404_subtitle']}
+              |
+              |
+              a.btn-outlined.primary.waves-effect.btn-large.button(
+                href=link.starter.home
+              ) #{$t.common.back}
+              |
+              |

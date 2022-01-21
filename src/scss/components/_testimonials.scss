@@ -1,11 +1,11 @@
-.testimonial-wrap {
+.testimonial-style {
   width: 100%;
   position: relative;
-  overflow: hidden
-}
-.carousel {
-  margin-top: $spacing3
-}
-.item {
-  padding: $spacing2
+  overflow: hidden;
+  .carousel {
+    margin-top: $spacing3
+  }
+  .item {
+    padding: $spacing2
+  }
 }

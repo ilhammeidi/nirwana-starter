@@ -1,0 +1,116 @@
+include sample-page.pug
+
+-
+  function defaultChild(id) {
+    return [
+      {
+        name: '1Vivamus Condimentum',
+        link: '#'
+      },
+      {
+        id: id,
+        name: '2Lorem',
+        child: [
+          {
+            name: '1Vivamus Condimentum',
+            link: '#'
+          },
+          {
+            name: '1Vivamus Condimentum',
+            link: '#'
+          },
+        ]
+      },
+      {
+        name: '3Eu Rhoncus Odio',
+        link: '#'
+      },
+      {
+        name: '4Praesent Tristique',
+        link: '#'
+      }
+    ]
+  }
+
+  var multiple = [
+    {
+      id: 'id_2',
+      name: 'Second Menu',
+      child: [
+        {
+          name: 'Eu Rhoncus Odio',
+          link: '#'
+        },
+        {
+          id: 'id_2_1',
+          name: 'In Lorem',
+          child: defaultChild('id_2_1_1')
+        },
+        {
+          id: 'id_2_2',
+          name: 'Eu Rhoncus Odio',
+          child: defaultChild('id_2_2_1')
+        },
+        {
+          id: 'id_2_3',
+          name: 'Praesent Tristique',
+          child: defaultChild('id_2_3_1')
+        }
+      ]
+    },
+    {
+      id: 'id_3',
+      name: 'Third Menu',
+      child: [
+        {
+          name: 'Eu Rhoncus Odio',
+          link: '#'
+        },
+        {
+          id: 'id_3_1',
+          name: 'In Lorem',
+          child: defaultChild('id_3_1_1')
+        },
+        {
+          id: 'id_3_2',
+          name: 'Eu Rhoncus Odio',
+          child: defaultChild('id_3_2_1')
+        },
+        {
+          id: 'id_3_3',
+          name: 'Praesent Tristique',
+          child: defaultChild('id_3_3_1')
+        }
+      ]
+    },
+    {
+      id: 'id_4',
+      name: 'Fourth Menu',
+      child: [
+        {
+          name: 'Eu Rhoncus Odio',
+          link: '#'
+        },
+        {
+          id: 'id_4_1',
+          name: 'In Lorem',
+          child: defaultChild('id_4_1_1')
+        },
+        {
+          id: 'id_4_2',
+          name: 'Eu Rhoncus Odio',
+          child: defaultChild('id_4_2_1')
+        },
+        {
+          id: 'id_4_3',
+          name: 'Praesent Tristique',
+          child: defaultChild('id_4_3_1')
+        }
+      ]
+    },
+    {
+      id: 'sample_pages',
+      name: 'inner Pages',
+      child: sample
+    }
+  ]

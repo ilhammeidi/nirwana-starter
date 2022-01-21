@@ -80,13 +80,6 @@
   }
 }
 
-//[class*=col-] {
-//  flex-basis: 0;
-//  -webkit-box-flex: 1;
-//  flex-grow: 1;
-//  max-width: 100%;
-//}
-
 @media (min-width: 600px) {
   .col-sm {
     -ms-flex-preferred-size: 0;

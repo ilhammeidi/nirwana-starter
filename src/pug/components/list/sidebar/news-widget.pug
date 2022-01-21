@@ -1,0 +1,56 @@
+include ../../paper.pug
+
+-
+  var news = [
+    {
+      img: 'https://source.unsplash.com/random',
+      title: 'Vestibulum bibendum nisi eget magna',
+      source: 'the-news.com'
+    },
+    {
+      img: 'https://source.unsplash.com/random',
+      title: 'Quisque a consequat ante',
+      source: 'the-news.com'
+    },
+    {
+      img: 'https://source.unsplash.com/random',
+      title: 'Donec dignissim, odio ac imperdiet luctus',
+      source: 'the-news.com'
+    },
+    {
+      img: 'https://source.unsplash.com/random',
+      title: 'Suspendisse eleifend nunc non',
+      source: 'the-news.com'
+    },
+    {
+      img: 'https://source.unsplash.com/random',
+      title: 'Vestibulum a massa vestibulum',
+      source: 'the-news.com'
+    }
+  ]
+
++paper('Headline News', 'receipt', 'Donec commodo convallis ligula eget suscipit orci.')
+  div
+    .collection
+      each item in news
+        |
+        |
+        a.waves-effect.collection-item.avatar(href='#!')
+          |
+          |
+          img.round(src=item.img alt=item.title)/
+          |
+          |
+          span.d-block
+            | #{item.title}
+          span.caption #{item.source}
+          |
+          |
+      |
+      |
+    |
+    |
+    a.btn.waves-effect.btn-flat.block
+      | #{$t.common.btn_seeall}
+    |
+    |

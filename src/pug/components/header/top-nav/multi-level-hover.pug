@@ -1,0 +1,77 @@
+include ../data/multiple.pug
+
+mixin submenu(menuItems, target_id)
+  ul.dropdown-content.child-menu(id=target_id)
+    each item in menuItems
+      if item.child
+        li
+          |
+          |
+          a.menu-list.droplist-trigger-hover-child(href='#!' data-target=item.id)
+            | #{item.name}
+            |
+            |
+            i.material-icons.right keyboard_arrow_right
+            |
+            |
+          |
+          |
+          +submenu(item.child, item.id)
+      else
+        li
+          a.menu-list.droplist-trigger-hover-child(
+            href=item.link
+            data-target='menu_blank'
+            class=item.name === pageName ? 'current' : ''
+          )
+            | #{item.name}
+
+.multi-menu
+  ul.multi-menu-root
+    each item in multiple
+      if item.child
+        li
+          |
+          |
+          a.menu-list.btn.btn-flat.droplist-trigger-hover.waves-effect(href='#!' data-target=item.id)
+            | #{item.name}
+            |
+            |
+            i.material-icons.right.icon keyboard_arrow_down
+            |
+            |
+          |
+          |
+          ul.dropdown-content(id=item.id)
+            each subitem in item.child
+              if subitem.child
+                li
+                  |
+                  |
+                  a.menu-list.droplist-trigger-hover-child(href='#!' data-target=subitem.id)
+                    | #{subitem.name}
+                    |
+                    |
+                    i.material-icons.right keyboard_arrow_right
+                    |
+                    |
+                  |
+                  |
+                  +submenu(subitem.child, subitem.id)
+              else
+                li
+                  |
+                  |
+                  a.menu-list.droplist-trigger-hover-child(
+                    href=subitem.link
+                    data-target='menu_blank'
+                    class=subitem.name === pageName ? 'current' : ''
+                  )
+                    | #{subitem.name}
+                  |
+                  |
+      else
+        li
+          a.btn.btn-flat.waves-effect(href=item.link data-target='menu_blank')
+            | #{item.name}
+          

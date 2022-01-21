@@ -1,0 +1,99 @@
+$identation: 8px;
+
+.mobile-nav {
+  width: 260px;
+  @include palette-background-default;
+  padding: spacing(10, 2);
+  z-index: 999;
+  @include breakpoints-down(xs) {
+    width: 100% !important
+  }
+  .collection {
+    border: none;
+    &-item {
+      background: none !important;
+      border: none;
+      padding: 0;
+      &.active > .collapsible-header {
+        i.material-icons {
+          transform: rotate(180deg);
+          color: $palette-primary-main
+        }
+      }
+      a {
+        font-weight: $font-regular;
+        line-height: 24px;
+        height: auto;
+        padding: $spacing2;
+        display: block;
+        @include palette-text-primary;
+      }
+    }
+  }
+  .collapsible-body {
+    background: none;
+    padding: 0;
+  }
+  .collapsible-header {
+    display: block;
+    padding: 0;
+    i.material-icons {
+      margin: 0
+    }
+  }
+  ul.expandable {
+    border: none;
+  }
+  .menu-list {
+    font-size: 14px;
+    text-transform: capitalize
+  }
+  .side-multilv {
+    padding-top: $spacing1;
+  }
+  .has-child {
+    @include padding-left(0);
+  }
+  .has-grand-child {
+    padding: 0;
+    > div {
+      @include margin-left(0);
+    }
+  }
+  .group-child {
+    padding-bottom: $spacing2;
+    .collapsible-body {
+      @include padding-left($identation * 1.5);
+    }
+  }
+  .side-group {
+    .collection-item {
+      @include padding-left($identation * 2);
+      a {
+        padding: $spacing1;
+      }
+    }
+    .collapsible-header {
+      padding: 0;
+    }
+    i.material-icons {
+      @include margin-left(-8px)
+    }
+  }
+  .side-group-link {
+    @include padding-left($identation)
+  }
+  .collection-header {
+    @include padding-left($spacing1)
+  }
+  .title-mega {
+    text-transform: uppercase;
+    font-weight: $font-bold;
+    font-size: 11px;
+  }
+  .current {
+    @include use-theme(background, $palette-primary-light, $palette-primary-dark);
+    @include use-theme(color, $palette-primary-dark, $palette-primary-light);
+  }
+}
+

@@ -1,0 +1,61 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = " Coming Soon"
+  - var pageName = "coming soon"
+  - var headerHome = false
+
+block content
+  .container.max-sm.full-width
+    .full-screen-container
+      .d-flex.flex-fill.align-items-center
+        .col-md-12.text-center
+          .d-flex.justify-content-center.align-items-center.mb-10
+            include ../components/logo.pug
+            +logo('landscape', 'medium')
+          .text-center
+            h3.use-text-title
+              | #{$t.common.util_soon}
+            h5.use-text-subtitle2.mq-sm-up(data-class='mb-10')
+              | #{$t.common.util_soon_desc}
+            .form.mq-sm-up.mt-8(data-class='mb-12')
+              .justify-content-center
+                form
+                  .row
+                    .col-sm-12.px-0
+                      .input-field
+                        |
+                        |
+                        input#email(type='text')/
+                        |
+                        |
+                        label(for='email') #{$t.common.form_email}
+                        |
+                        |
+                        button.waves-effect.btn-outlined.primary.mb-2.suffix.show-sm-up
+                          | #{$t.common.util_notif}
+                        |
+                        |
+                      |
+                      |
+                      button.waves-effect.btn.btn-outlined.primary.mb-2.block.hidden-sm-up
+                        | #{$t.common.util_notif}
+            .socmed-btn.mt-10
+              |
+              |
+              a.waves-effect.btn-icon.btn-large.transparent.mx-2(href='#')
+                i.icon.ion-social-facebook
+              |
+              |
+              a.waves-effect.btn-icon.btn-large.transparent.mx-2(href='#')
+                i.icon.ion-social-twitter
+              |
+              |
+              a.waves-effect.btn-icon.btn-large.transparent.mx-2(href='#')
+               i.icon.ion-social-instagram
+              |
+              |
+              a.waves-effect.btn-icon.btn-large.transparent.mx-2(href='#')
+                i.icon.ion-social-linkedin
+              |
+              |

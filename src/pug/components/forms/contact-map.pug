@@ -1,0 +1,93 @@
+mixin contact-map(full=false)
+  .form-style
+    .page-wrap
+      .inner-wrap
+        |
+        |
+        .row.d-flex.align-items-center
+          .col-md-6.pe-md-0.wrap-deco
+            .card.form-box(class=full ? 'map-form' : '')
+                .form
+                  .text-center
+                    h4.use-text-title2.mb-3
+                      | #{$t.common.contact_title2}
+                    p
+                      | Aenean sit amet magna vel magna fringilla fermentum. Donec sed arcu pulvinar ultricies commodo id ligula.
+                  form#contact_form
+                    .row.spacing6
+                      .col-sm-12
+                        .input-field.primary.filled
+                          |
+                          |
+                          input.validate#name(type='text' required)/
+                          |
+                          |
+                          label(for='name') #{$t.common.form_name}
+                          |
+                          |
+                      .col-sm-12
+                        .input-field.primary.filled
+                          |
+                          |
+                          input.validate#email(type='email' required)/
+                          |
+                          |
+                          label(for='email') #{$t.common.form_email}
+                          |
+                          |
+                      .col-sm-12
+                        .input-field.primary.filled
+                          |
+                          |
+                          input#phone(type='tel')
+                          |
+                          |
+                          label(for='phone') #{$t.common.form_phone}/
+                          |
+                          |
+                      .col-sm-12
+                        .input-field.primary.filled
+                          |
+                          |
+                          input#company(type='text')/
+                          |
+                          |
+                          label(for='company') #{$t.common.form_company}
+                          |
+                          |
+                      .col-sm-12
+                        .input-field.primary.filled
+                          |
+                          |
+                          textarea#message.materialize-textarea(rows="6")
+                          |
+                          |
+                          label(for='message') #{$t.common.form_message}
+                          |
+                          |
+                    .form-control-label
+                      |
+                      |
+                      label
+                        |
+                        |
+                        input.filled-in.secondary(type='checkbox' required)/
+                        |
+                        |
+                        span #{$t.common.form_terms} 
+                          br/
+                          a.link(href='#') #{$t.common.form_privacy}
+                        |
+                        |
+                      |
+                      |
+                    .btn-area
+                      |
+                      |
+                      button.btn.block.primary.btn-large.waves-effect(type="submit") #{$t.common.form_send}
+                      |
+                      |
+          .col-md-6.ps-md-0
+            .card.map(class=full ? 'full' : '')
+              #map
+        

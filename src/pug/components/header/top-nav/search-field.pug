@@ -1,0 +1,11 @@
+mixin search-field(short = false)
+  .search(class=short ? 'short' : '')
+    .input-field
+      |
+      |
+      i.material-icons.search-icon.prefix search
+      |
+      |
+      input(type='text' placeholder=$t.common.list_search)
+      |
+      |

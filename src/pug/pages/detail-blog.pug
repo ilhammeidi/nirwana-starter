@@ -1,0 +1,19 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = " Detail Blog"
+  - var pageName = "blog detail"
+
+block content
+  div#blog-page
+    .main-wrap
+      include ../components/header/blog-header.pug
+      .container-general.pt-12
+        .container.pt-3
+          .row
+            .col-md-8.px-0.px-sm-3
+              include ../components/blog/article.pug
+            .col-md-4.px-0.px-sm-3
+              include ../components/blog/sidebar/sidebar.pug
+      #footer
+        include ../components/footer/main.pug

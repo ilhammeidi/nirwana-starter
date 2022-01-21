@@ -1,0 +1,72 @@
+extends auth-frame.pug
+
+block variables
+  - var title = $t.common.register_subtitle
+  - var subtitle = $t.common.auth_desc
+
+block auth_content
+  div.form-style
+    .head
+      h4.use-text-title.mq-md-up(data-class='use-text-subtitle')
+        | #{$t.common.login_create}
+    include ./social-auth
+    .separator
+      p #{$t.common.register_or}
+    form#register_form
+      .row.spacing3
+        .col-sm-12
+          .input-field
+            |
+            |
+            input.validate#name(type="text" name="name" required)/
+            |
+            |
+            label(for='name') #{$t.common.register_name}
+            |
+            |
+        .col-sm-12
+          .input-field
+            |
+            |
+            input.validate#email(type="email" name="email" required)/
+            |
+            |
+            label(for='email') #{$t.common.register_email}
+            |
+            |
+        .col-md-6
+          .input-field.mq-md-up(data-class="me-2")
+            |
+            |
+            input.validate#password(type="password" name="password" required)/
+            |
+            |
+            label(for='password') #{$t.common.register_password}
+            |
+            |
+        .col-md-6
+          .input-field.mq-md-up(data-class="ms-2")
+            |
+            |
+            input.validate#confirm(type="password" name="confirm" data-validation="confirmation" data-validation-confirm="password" required)/
+            |
+            |
+            label(for='confirm') #{$t.common.register_confirm}
+            |
+            |
+      .btn-area
+        .form-helper
+          .form-control-label
+            |
+            |
+            label
+              input.filled-in.secondary(type='checkbox' required)/
+              span #{$t.common.form_terms} 
+                a.link(href='#') #{$t.common.form_privacy}
+            |
+            |
+        |
+        |
+        button.btn.secondary.btn-large.waves-effect(type="submit") #{$t.common.continue}
+        |
+        |

@@ -1,0 +1,33 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = " About"
+  - var pageName = "about"
+  - var headerHome = false
+
+block content
+  div#about-page
+    .main-wrap
+      include ../components/header/main.pug
+      include ../components/about/banner.pug
+      .space-top-short
+        include ../components/company-logo.pug
+      include ../components/counter.pug
+      +counter
+      .container
+        .row
+          .col-md-6.px-0.px-sm-4.px-lg-12
+            include ../components/about/video.pug
+          .col-md-6.px-0.px-sm-4.px-lg-12
+            include ../components/about/progress.pug
+      .space-bottom-short
+        include ../components/about/team-slider.pug
+      .space-bottom-short
+        include ../components/about/photo-slider.pug
+      include ../components/call-action.pug
+      .space-top-short
+        .container
+          include ../components/forms/contact-map.pug
+          +contact-map(true)
+      #footer
+        include ../components/footer/main.pug

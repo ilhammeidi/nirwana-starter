@@ -1,0 +1,79 @@
+.comments-style {
+  .form-comment {
+    padding: $spacing1;
+    border-radius: $rounded-small;
+    @include use-theme(background-color, $palette-primary-light, $palette-primary-dark);
+    @include breakpoints-up(sm) {
+      padding: spacing(2, 3);
+    }
+  }
+  .helper {
+    &.collection {
+      border: none;
+      .collection-item {
+        border: none
+      }
+    }
+  }
+  .write {
+    position: relative;
+    display: flex;
+    align-items: center;
+    .input-field {
+      flex: 1;
+      margin: 0;
+    }
+    .send-btn {
+      position: absolute;
+      top: 8px;
+      @include right(4px);
+      @include breakpoints-down(xs) {
+        line-height: 48px;
+      }
+    }
+  }
+  .avatar-img {
+    @include margin-right($spacing1)
+  }
+  .comments {
+    &.collection-item {
+      background-color: transparent;
+    }
+  }
+  .comment-list {
+    margin-top: $spacing2;
+    .collection-item {
+      border-bottom: none;
+      p {
+        white-space: normal;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        flex: 1 1 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+    .circle {
+      margin-top: $spacing1
+    }
+  }
+  .date {
+    height: auto;
+    padding: 0;
+    font-size: 12px;
+  }
+  .content {
+    margin-top: $spacing1;
+    margin-bottom: $spacing2;
+    line-height: 1.5;
+  }
+  .help-item {
+    text-transform: uppercase;
+    font-size: 13px;
+  }
+  .divider {
+    @include palette-divider;
+    background: none;
+  }
+}

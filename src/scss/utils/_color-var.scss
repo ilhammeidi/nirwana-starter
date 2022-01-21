@@ -6,6 +6,9 @@
   --v-secondarylight-base: #C8E6C9;
   --v-secondary-base: #4CAF50;
   --v-secondarydark-base: #357A38;
+  --v-accentlight-base: #F8BBD0;
+  --v-accent-base: #E91E63;
+  --v-accentdark-base: #AD1457;
 }
 
 .passion-var {
@@ -16,6 +19,9 @@
   --v-secondarylight-base: #C5CAE9;
   --v-secondary-base: #304FFE;
   --v-secondarydark-base: #1A237E;
+  --v-accentlight-base: #D1C4E9;
+  --v-accent-base: #673ab7;
+  --v-accentdark-base: #4527A0;
 }
 
 .smart-var {
@@ -26,6 +32,9 @@
   --v-secondarylight-base: #FFECB3;
   --v-secondary-base: #FFA000;
   --v-secondarydark-base: #FF6F00;
+  --v-accentlight-base: #F8BBD0;
+  --v-accent-base: #E91E63;
+  --v-accentdark-base: #AD1457;
 }
 
 .burgundy-var {
@@ -36,6 +45,9 @@
   --v-secondarylight-base: #bbdefb;
   --v-secondary-base: #2196f3;
   --v-secondarydark-base: #1565c0;
+  --v-accentlight-base: #D1C4E9;
+  --v-accent-base: #673ab7;
+  --v-accentdark-base: #4527A0;
 }
 
 .ocean-blue-var {
@@ -46,6 +58,9 @@
   --v-secondarylight-base: #b2ebf2;
   --v-secondary-base: #00bcd4;
   --v-secondarydark-base: #006064;
+  --v-accentlight-base: #EDE7F6;
+  --v-accent-base: #651FFF;
+  --v-accentdark-base: #4527A0;
 }
 
 .green-leaf-var {
@@ -56,6 +71,9 @@
   --v-secondarylight-base: #CFD8DC;
   --v-secondary-base: #607D8B;
   --v-secondarydark-base: #37474F;
+  --v-accentlight-base: #B2EBF2;
+  --v-accent-base: #00BCD4;
+  --v-accentdark-base: #006064;
 }
 
 .money-var {
@@ -66,6 +84,22 @@
   --v-secondarylight-base: #FFECB3;
   --v-secondary-base: #FFA000;
   --v-secondarydark-base: #FF6F00;
+  --v-accentlight-base: #BBDEFB;
+  --v-accent-base: #2196F3;
+  --v-accentdark-base: #0D47A1;
+}
+
+.coinz-var {
+  --v-anchor-base: #FFA000;
+  --v-primarylight-base: #E1BEE7;
+  --v-primary-base: #9C27B0;
+  --v-primarydark-base: #6A1B9A;
+  --v-secondarylight-base: #FFECB3;
+  --v-secondary-base: #FFA000;
+  --v-secondarydark-base: #FF6F00;
+  --v-accentlight-base: #D1C4E9;
+  --v-accent-base: #673AB7;
+  --v-accentdark-base: #4527A0;
 }
 
 .grayscale-var {
@@ -76,6 +110,9 @@
   --v-secondarylight-base: #D7CCC8;
   --v-secondary-base: #6D4C41;
   --v-secondarydark-base: #3E2723;
+  --v-accentlight-base: #C5CAE9;
+  --v-accent-base: #304FFE;
+  --v-accentdark-base: #1A237E;
 }
 
 .cloud-var {
@@ -86,6 +123,9 @@
   --v-secondarylight-base: #FFE0B2;
   --v-secondary-base: #FF9800;
   --v-secondarydark-base: #E65100;
+  --v-accentlight-base: #C5CAE9;
+  --v-accent-base: #1A237E;
+  --v-accentdark-base: #4527A0;
 }
 
 .joker-var {
@@ -97,7 +137,11 @@
   --v-secondary-base: #00BCD4;
   --v-secondarydark-base: #006064;
   --v-primarylight-lighten1: #ede0ff;
+  --v-accentlight-base: #F8BBD0;
+  --v-accent-base: #E91E63;
+  --v-accentdark-base: #AD1457;
 }
+
 
 .violet-var {
   --v-anchor-base: #EC407A;
@@ -107,6 +151,9 @@
   --v-secondarylight-base: #D1C4E9;
   --v-secondary-base: #673AB7;
   --v-secondarydark-base: #311B92;
+  --v-accentlight-base: #FFECB3;
+  --v-accent-base: #FFC107;
+  --v-accentdark-base: #FF6F00;
 }
 
 .violeta-var {
@@ -117,16 +164,22 @@
   --v-secondarylight-base: #DCEDC8;
   --v-secondary-base: #8BC34A;
   --v-secondarydark-base: #558B2F;
+  --v-accentlight-base: #FFECB3;
+  --v-accent-base: #FFC107;
+  --v-accentdark-base: #FF6F00;
 }
 
 .roseGold-var {
-  --v-anchor-base: #EC407A;
-  --v-primarylight-base: #FFF8E1;
-  --v-primary-base: #FFA000;
-  --v-primarydark-base: #FFA000;
-  --v-secondarylight-base: #FCE4EC;
-  --v-secondary-base: #EC407A;
-  --v-secondarydark-base: #D81B60;
+  --v-anchor-base: #E91E63;
+  --v-primarylight-base: #F8BBD0;
+  --v-primary-base: #E91E63;
+  --v-primarydark-base: #AD1457;
+  --v-secondarylight-base: #FFE0B2;
+  --v-secondary-base: #FF9800;
+  --v-secondarydark-base: #E65100;
+  --v-accentlight-base: #B2EBF2;
+  --v-accent-base: #00BCD4;
+  --v-accentdark-base: #006064;
 }
 
 .deepBlue-var {
@@ -137,16 +190,22 @@
   --v-secondarylight-base: #E1F5FE;
   --v-secondary-base: #03A9F4;
   --v-secondarydark-base: #0277BD;
+  --v-accentlight-base: #C5CAE9;
+  --v-accent-base: #304FFE;
+  --v-accentdark-base: #1A237E;
 }
-
-.ubuntu-var {
-  --v-anchor-base: #EF6C00;
-  --v-primarylight-base: #FFF3E0;
-  --v-primary-base: #EF6C00;
-  --v-primarydark-base: #E65100;
-  --v-secondarylight-base: #F3E5F5;
-  --v-secondary-base: #9C27B0;
-  --v-secondarydark-base: #7B1FA2;
+  
+.sunset-var {
+  --v-anchor-base: #2196F3;
+  --v-primarylight-base: #BBDEFB;
+  --v-primary-base: #2196F3;
+  --v-primarydark-base: #1565C0;
+  --v-secondarylight-base: #FFECB3;
+  --v-secondary-base: #FFC107;
+  --v-secondarydark-base: #FF6F00;
+  --v-accentlight-base: #B2EBF2;
+  --v-accent-base: #00BCD4;
+  --v-accentdark-base: #00838F;
 }
 
 .greenNature-var {
@@ -157,6 +216,9 @@
   --v-secondarylight-base: #F1F8E9;
   --v-secondary-base: #689F38;
   --v-secondarydark-base: #33691E;
+  --v-accentlight-base: #B2EBF2;
+  --v-accent-base: #00BCD4;
+  --v-accentdark-base: #00838F;
 }
 
 .vampire-var {
@@ -167,16 +229,22 @@
   --v-secondarylight-base: #ECEFF1;
   --v-secondary-base: #607D8B;
   --v-secondarydark-base: #455A64;
+  --v-accentlight-base: #B2EBF2;
+  --v-accent-base: #00BCD4;
+  --v-accentdark-base: #00838F;
 }
 
 .mint-var {
-  --v-anchor-base: #2196f3;
-  --v-primarylight-base: #bbdefb;
-  --v-primary-base: #2196f3;
-  --v-primarydark-base: #0d47a1;
-  --v-secondarylight-base: #b3e5fc;
-  --v-secondary-base: #03a9f4;
-  --v-secondarydark-base: #01579b;
+  --v-anchor-base: #03A9F4;
+  --v-primarylight-base: #B3E5FC;
+  --v-primary-base: #03A9F4;
+  --v-primarydark-base: #01579B;
+  --v-secondarylight-base: #C8E6C9;
+  --v-secondary-base: #4CAF50;
+  --v-secondarydark-base: #2E7D32;
+  --v-accentlight-base: #F8BBD0;
+  --v-accent-base: #E91E63;
+  --v-accentdark-base: #AD1457;
 }
 
 .gold-var {
@@ -187,6 +255,9 @@
   --v-secondarylight-base: #EFEBE9;
   --v-secondary-base: #8D6E63;
   --v-secondarydark-base: #4E342E;
+  --v-accentlight-base: #FFECB3;
+  --v-accent-base: #FF9800;
+  --v-accentdark-base: #FF6F00;
 }
 
 .botani-var {
@@ -197,6 +268,9 @@
   --v-secondarylight-base: #FCE4EC;
   --v-secondary-base: #F06292;
   --v-secondarydark-base: #AD1457;
+  --v-accentlight-base: #B2EBF2;
+  --v-accent-base: #00BCD4;
+  --v-accentdark-base: #00838F;
 }
 
 .littleQueen-var {
@@ -207,6 +281,9 @@
   --v-secondarylight-base: #FCE4EC;
   --v-secondary-base: #F06292;
   --v-secondarydark-base: #AD1457;
+  --v-accentlight-base: #C5CAE9;
+  --v-accent-base: #304FFE;
+  --v-accentdark-base: #1A237E;
 }
 
 .purple-var {
@@ -217,6 +294,9 @@
   --v-secondarylight-base: #ea80fc;
   --v-secondary-base: #aa00ff;
   --v-secondarydark-base: #4a148c;
+  --v-accentlight-base: #C5CAE9;
+  --v-accent-base: #304FFE;
+  --v-accentdark-base: #1A237E;
 }
 
 .black-var {
@@ -227,6 +307,9 @@
   --v-secondarylight-base: #E0E0E0;
   --v-secondary-base: #757575;
   --v-secondarydark-base: #424242;
+  --v-accentlight-base: #C5CAE9;
+  --v-accent-base: #304FFE;
+  --v-accentdark-base: #1A237E;
 }
 
 .brown-var {
@@ -237,4 +320,7 @@
   --v-secondarylight-base: #ccb0b0;
   --v-secondary-base: #794848;
   --v-secondarydark-base: #3e2723;
+  --v-accentlight-base: #FFECB3;
+  --v-accent-base: #FFC107;
+  --v-accentdark-base: #FF6F00;
 }

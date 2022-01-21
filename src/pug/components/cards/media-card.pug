@@ -14,11 +14,15 @@ mixin media-card(title, orientation='portrait', type='video', thumb, href='', du
       |
       |
     figure
-      img(src=thumb alt='cover')
+      img(src=thumb alt='cover')/
     .property
       if type === 'video'
+        |
+        |
         a.btn.play-btn.waves-effect(href=href)
           span.ion-ios-play
+      |
+      |
       .card-title.media-title
         | #{title}
   

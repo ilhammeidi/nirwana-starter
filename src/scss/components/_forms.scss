@@ -1,0 +1,278 @@
+.form-style {
+  .page-wrap {
+    min-height: 100%;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    @include breakpoints-up(md) {
+      display: flex;
+    }
+    .inner-wrap {
+      width: 100%;
+      &.container {
+        @include breakpoints-between(sm, lg) {
+          padding: 0 !important
+        }
+      }
+    }
+    a {
+      @include use-theme(color, $palette-primary-main, $palette-primary-light);
+      text-transform: none;
+      font-size: 16px;
+      text-decoration: none;
+      font-weight: $font-regular;
+      @include breakpoints-down(xs) {
+        font-size: 14px;
+      }
+    }
+  }
+  .full-form-wrap {
+    padding-top: $spacing8;
+    @include breakpoints-down(xs) {
+      padding-top: $spacing4
+    }
+  }
+  .card.form-box {
+    overflow: hidden;
+    &.map-form {
+      @include breakpoints-up(md) {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-right: none;
+      }
+    }
+    @include breakpoints-up(md) {
+      background: transparent;
+      border: 1px solid $palette-primary-main;
+    }
+    @include breakpoints-down(sm) {
+      box-shadow: none
+    }
+  }
+  .desc {
+    text-align: center;
+    padding: spacing(0, 10);
+    @include breakpoints-down(xs) {
+      padding: spacing(0, 2)
+    }
+  }
+  .form {
+    position: relative;
+    padding: spacing(0, 8, 10);
+    @include breakpoints-up(md) {
+      margin-top: $spacing8;
+    }
+    @include breakpoints-down(md) {
+      padding: spacing(0, 8, 8)
+    }
+    @include breakpoints-down(xs) {
+      padding: spacing(0, 2, 5);
+    }
+  }
+  .form-helper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 14px;
+    @include margin-right($spacing2);
+    @include breakpoints-down(xs) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .btn-area {
+    justify-content: space-between;
+    margin-top: $spacing5;
+    button.btn-large {
+      min-height: 48px;
+      min-width: 180px;
+    }
+    span {
+      a.link {
+        text-decoration: none !important;
+        color: $palette-secondary-main
+      }
+    }
+    &.flex {
+      display: flex;
+      justify-content: space-between;
+      @include breakpoints-down(xs) {
+        display: block
+      }
+    }
+    &:not(.flex) {
+      @include breakpoints-between(md, lg) {
+        button {
+          width: 100%;
+          margin-top: $spacing3;
+        }
+      }
+      @include breakpoints-between(xs, sm) {
+        button {
+          width: 100%;
+          margin-top: $spacing3;
+        }
+      }
+    }
+    @include breakpoints-up(lg) {
+      display: flex;
+    }
+    @include breakpoints-between(sm, md) {
+      display: flex;
+    }
+    @include breakpoints-down(xs) {
+      margin-top: $spacing2;
+      button {
+        width: 100%;
+        margin-top: $spacing3;
+      }
+    }
+  }
+  .right-icon {
+    @include margin-left($spacing1)
+  }
+  .check {
+    svg {
+      fill: $palette-secondary-main
+    }
+  }
+  .auth-frame {
+    display: block;
+    position: relative;
+    .row > div {
+      padding: 0
+    }
+  }
+  .greeting {
+    display: flex;
+    padding-top: $spacing5;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    text-align: center;
+    h6 {
+      font-weight: $font-regular
+    }
+  }
+  .img {
+    margin: spacing(5, 0)
+  }
+  .head {
+    text-align: center;
+    margin-bottom: $spacing5;
+    text-transform: capitalize;
+    @include breakpoints-down(sm) {
+      margin-top: $spacing2;
+      justify-content: center;
+      a {
+        display: none
+      }
+    }
+  }
+  .form-wrap {
+    @include palette-background-paper;
+    position: relative;
+    padding: 0 $spacing1;
+    @include breakpoints-up(sm) {
+      padding: $spacing5
+    }
+  }
+  .socmed-side-login {
+    display: flex;
+    justify-content: space-around;
+    @include breakpoints-down(md) {
+      justify-content: center
+    }
+    @include breakpoints-down(xs) {
+      display: block
+    }
+    > * {
+      color: $palette-common-white;
+      width: 150px;
+      margin: 0 $spacing1;
+      font-size: 12px;
+      @include breakpoints-down(md) {
+        margin: 0 4px;
+        width: 120px;
+      }
+      @include breakpoints-down(xs) {
+        margin: 0 0 $spacing2;
+        width: 100%
+      }
+    }
+    i {
+      color: $palette-common-white;
+      @include margin-right($spacing1)
+    }
+  }
+  .blue-btn {
+    background: #28aae1 !important;
+    &:hover {
+      background: darken(#28aae1, 20%) !important
+    }
+  }
+  .navi-btn {
+    background: #3b579d !important;
+    &:hover {
+      background: darken(#3b579d, 20%) !important
+    }
+  }
+  .red-btn {
+    background: #dd493c !important;
+    &:hover {
+      background: darken(#dd493c, 20%) !important
+    }
+  }
+  .separator {
+    margin: 40px auto;
+    max-width: 300px;
+    min-width: 200px;
+    text-align: center;
+    position: relative;
+    @include palette-text-secondary;
+    p {
+      @include breakpoints-down(xs) {
+        font-size: 12px
+      }
+    }
+    &:before, &:after {
+      content: "";
+      border-top: 1px solid;
+      @include use-theme(border-top-color, $light-text-hint, $dark-text-hint);
+      top: 50%;
+      position: absolute;
+      width: 20%
+    }
+    &:before {
+      left: 0
+    }
+    &:after {
+      right: 0
+    }
+  }
+  .form-control-label {
+    > div {
+      margin-top: 0
+    }
+  }
+  .input-field textarea {
+    height: auto;
+  }
+  .form-error {
+    color: rgb(185, 74, 72)
+  }
+}
+
+.toast {
+  @include padding-right($spacing1);
+  border-radius: 4px;
+  width: auto;
+  .toast-action {
+    margin-right: 0;
+  }
+  i.material-icons {
+    color: #FFF
+  }
+}

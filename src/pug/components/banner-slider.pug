@@ -1,0 +1,46 @@
+.banner-slider
+  .banner-wrap
+    .carousel
+      .banner-carousel#banner_slider
+        - var n = 0
+        while n < 3
+          .slide(data-key=n++)
+            .inner
+              .container.w-100
+                .row
+                  .col-sm-7.col-lg-6.px-0.px-sm-4
+                    .text
+                      h4.text-h4 #{$t.starter.banner_title}
+                      h5.text-h5 #{$t.starter.banner_subtitle}
+                  .img
+                    |
+                    |
+                    img(src=assets+'/images/starter/Illustration.png' alt='illustration')/
+                    |
+                    |
+    .hidden-md-down
+      .container.max-md
+        nav.slide-nav#banner_nav
+          |
+          |
+          a.waves-effect.active(data-slide='0')
+            strong First Slide
+            | Interdum et malesuada fames ac ante
+          |
+          |
+          hr.divider
+          |
+          |
+          a.waves-effect(data-slide='1')
+            strong Second Slide
+            | Interdum et malesuada fames ac ante
+          |
+          |
+          hr.divider
+          |
+          |
+          a.waves-effect(data-slide='2')
+            strong Third Slide
+            | Interdum et malesuada fames ac ante
+          |
+          |

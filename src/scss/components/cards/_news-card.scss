@@ -78,9 +78,10 @@
       }
     }
     .properties {
+      flex: 1;
+      overflow: hidden;
       @include breakpoints-down(xs) {
         padding: $spacing1;
-        overflow: hidden;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -116,7 +117,7 @@
     &.portrait {
       .figure {
         width: 120%;
-        margin-left: -10%;
+        @include margin-left(-10%);
         overflow: hidden;
         border-radius: 0 0 50% 50%;
       }

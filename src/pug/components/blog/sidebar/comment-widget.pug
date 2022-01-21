@@ -1,0 +1,57 @@
+include ../../paper.pug
+
+-
+  var comments = [
+    {
+      color: 'teal',
+      name: 'John Doe',
+      comment: 'Duis viverra neque eget '
+    },
+    {
+      color: 'pink',
+      name: 'Jean Doe',
+      comment: 'Duis viverra neque eget '
+    },
+    {
+      color: 'purple',
+      name: 'Jim Doe',
+      comment: 'Duis viverra neque eget '
+    },
+    {
+      color: 'amber',
+      name: 'Jihan Doe',
+      comment: 'Duis viverra neque eget '
+    },
+    {
+      color: 'cyan',
+      name: 'Jena Doe',
+      comment: 'Duis viverra neque eget '
+    },
+    {
+      color: 'deepBlue',
+      name: 'Johan Doe',
+      comment: 'Duis viverra neque eget '
+    }
+  ]
+
++paper($t.common.blog_comment, 'message')
+  .collection
+    each item in comments
+      |
+      |
+      a.waves-effect.collection-item.avatar(href='#!')
+        |
+        |
+        i.circle.icon.avatar-char(class=item.color)
+          | #{item.name.charAt(0)}
+        |
+        |
+        span.d-block.use-text-medium
+          | #{item.name}
+        |
+        |
+        span #{item.comment}
+        |
+        |
+      |
+      |

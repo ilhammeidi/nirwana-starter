@@ -1,0 +1,28 @@
+.map {
+  position: relative;
+  z-index: 20;
+  color: $light-text-primary;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.4);
+  height: 745px;
+  @include breakpoints-down(sm) {
+    height: 300px !important;
+  }
+  @include breakpoints-up(md) {
+    border-radius: 0 $rounded-medium $rounded-medium 0 !important;
+  }
+  &.full {
+    height: 984px;
+  }
+  #map {
+    height: 100%;
+  }
+  .buble {
+    .material-icons {
+      color: #607D8B;
+      @include margin-right($spacing1);
+      font-size: 16px;
+      top: 3px;
+      position: relative;
+    }
+  }
+}

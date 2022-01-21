@@ -1,0 +1,16 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = " Contact with Map"
+  - var pageName = "contact map"
+  - var headerHome = false
+
+block content
+  div#contact-page
+    .main-wrap
+      include ../components/header/main.pug
+      .container-general
+        include ../components/forms/contact-map.pug
+        +contact-map
+      #footer
+        include ../components/footer/main.pug

@@ -1,0 +1,76 @@
+.form-style
+  .container.inner-wrap.max-md
+    .full-form-wrap
+      h3.title-contact.use-text-title.pb-3.text-center #{$t.common.contact_title2}
+      p.desc.use-text-subtitle2.text-center #{$t.common.contact_subtitle}
+      .form
+        form#contact_form
+          .row.spacing6
+            .col-sm-6.px-6
+              .input-field.primary
+                |
+                |
+                input.validate#name(type='text' required)/
+                |
+                |
+                label(for='name') #{$t.common.form_name}
+                |
+                |
+            .col-sm-6.px-6
+              .input-field.primary
+                |
+                |
+                input.validate#email(type='email' required)/
+                |
+                |
+                label(for='email') #{$t.common.form_email}
+                |
+                |
+            .col-sm-6.px-6
+              .input-field.primary
+                |
+                |
+                input#phone(type='tel')/
+                |
+                |
+                label(for='phone') #{$t.common.form_phone}
+                |
+                |
+            .col-sm-6.px-6
+              .input-field.primary
+                |
+                |
+                input#company(type='text')/
+                |
+                |
+                label(for='company') #{$t.common.form_company}
+                |
+                |
+            .col-sm-12.px-6
+              .input-field.primary
+                |
+                |
+                textarea#message.materialize-textarea(rows="6")
+                |
+                |
+                label(for='message') #{$t.common.form_message}
+                |
+                |
+          .btn-area
+            .form-control-label
+              |
+              |
+              label
+                input.filled-in.primary(type='checkbox' required)/
+                span #{$t.common.form_terms}
+              |
+              |
+              br/
+              a(href='#') #{$t.common.form_privacy}
+              |
+              |
+            |
+            |
+            button.btn.btn-large.waves-effect.primary(type="submit") #{$t.common.form_send}
+            |
+            |

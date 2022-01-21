@@ -1,0 +1,39 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = " Blog"
+  - var pageName = "blog"
+
+block content
+  include ../components/cards/post-card.pug
+  div#blog-page
+    .main-wrap
+      include ../components/header/blog-header.pug
+      .container-general
+        .container
+          .row.mt-8
+            .col-sm-12.px-0.px-sm-3
+              include ../components/blog/headline.pug
+          .row.mt-8
+            .col-md-6.px-0.px-sm-3
+              +post-card('Maecenas rutrum dolor sed nisi', 'Proin pretium arcu eget metus porta consectetur Pellentesque habitant', '12 Nov 2021', 'landscape', 'full', 'https://source.unsplash.com/random', link.starter.blogDetail)
+            .col-md-6.px-0.px-sm-3
+              +post-card('Maecenas rutrum dolor sed nisi', 'Proin pretium arcu eget metus porta consectetur Pellentesque habitant', '12 Nov 2021', 'landscape', 'full', 'https://source.unsplash.com/random', link.starter.blogDetail)
+          .row.mt-6
+            .col-md-8.px-0.px-sm-4
+              - var n = 0
+              while n < 6
+                div(data-index=n++ class= n > 0 ? 'mt-12' : '')
+                  +post-card('Maecenas rutrum dolor sed nisi', 'Maecenas rutrum dolor sed nisi maximus rhoncus. Nunc vel dignissim enim. Proin pretium arcu eget', '12 Nov 2021', 'portrait', 'oval', 'https://source.unsplash.com/random', link.starter.blogDetail)
+              .arrow
+                .d-flex.justify-content-between.mt-10
+                  .btn-flat.waves-effect
+                    i.material-icons.left arrow_back
+                    | #{$t.common.btn_prev}
+                  .btn-flat.waves-effect
+                    | #{$t.common.btn_next}
+                    i.material-icons.right arrow_forward
+            .col-md-4.px-0.px-sm-4
+              include ../components/blog/sidebar/sidebar.pug
+      #footer
+        include ../components/footer/main.pug

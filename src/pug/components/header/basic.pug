@@ -1,0 +1,25 @@
+// #### HEADER ####
+header.app-bar.header#header
+  .container
+    .header-content
+      nav.nav-menu.flex-grow-1
+        |
+        |
+        .logo.flex-grow-1.start-mobile
+          |
+          |
+          a(href=link.starter.home)
+            include ../logo.pug
+            +logo('landscape')
+          |
+          |
+        nav.user-menu
+          |
+          |
+          a.btn.primary.waves-effect(href=basicMenuLink !== undefined ? basicMenuLink : link.starter.login)
+            | #{basicMenuText !== undefined ? basicMenuText : $t.common.login}
+          |
+          |
+          span.spacer.vertical-divider.show-md-up
+          include ./top-nav/settings
+// #### END HEADER ####

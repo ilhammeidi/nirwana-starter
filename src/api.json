@@ -1,35 +1,36 @@
 {
   "brand": {
     "starter": {
-      "name": "Nirwana Starter",
+      "name": "Starter",
       "desc": "Nirwana Starter - HTML5 Starter Template",
       "prefix": "nirwana",
-      "footerText": "Nirwana Theme All Rights Reserved 2021",
+      "footerText": "Nirwana Theme 2021",
       "logoText": "Nirwana Theme",
       "projectName": "Starter Project",
       "url": "nirwana.indisains.com",
-      "img": "/images/logo.png",
+      "img": "/images/logo-starter.png",
       "notifMsg": "Donec sit amet nulla sed arcu pulvinar ultricies commodo id ligula"
     }
   },
   "link": {
     "starter": {
       "home": "index.html",
-      "about": "/about.html",
-      "team": "/about/team.html",
-      "blog": "/blog/index.html",
-      "blogDetail": "/blog/detail-blog.html",
-      "login": "/login.html",
-      "register": "/register.html",
-      "contact": "/contact/index.html",
-      "contactMap": "/contact/with-map.html",
-      "card": "/collection/index.html",
-      "product": "/collection/products.html",
-      "productDetail": "/collection/detail-product.html",
-      "pricing": "/utils/pricing.html",
-      "faq": "/utils/faq.html",
-      "maintenance": "/utils/maintenance.html",
-      "comingSoon": "/utils/coming-soon.html"
+      "about": "about.html",
+      "team": "about-team.html",
+      "blog": "blog.html",
+      "blogDetail": "detail-blog.html",
+      "login": "login.html",
+      "register": "register.html",
+      "contact": "contact.html",
+      "contactMap": "contact-map.html",
+      "card": "collection.html",
+      "product": "products.html",
+      "productDetail": "product-detail.html",
+      "pricing": "pricing.html",
+      "faq": "faq.html",
+      "maintenance": "maintenance.html",
+      "comingSoon": "coming-soon.html",
+      "error": "404.html"
     }
   },
   "imgAPI": {
@@ -68,7 +69,7 @@
       "http://via.placeholder.com/200x78/ceff00/767676/",
       "http://via.placeholder.com/200x78/ffce00/767676/"
     ],
-    "starer": []
+    "starter": []
   },
   "menu": {
     "starter": [
@@ -93,5 +94,8 @@
         "offset": -40
       }
     ]
+  },
+  "youtube": {
+    "use": true
   }
 }

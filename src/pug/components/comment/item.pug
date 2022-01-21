@@ -1,0 +1,20 @@
+mixin item(avatar=assets+'/images/avatars/pp_boy4.svg', name, date, comment, last=false)
+  .comment-list
+    .collection-item.avatar
+      |
+      |
+      img.circle(src=avatar alt=name)/
+      |
+      |
+      span.title.font-weight-medium #{name}
+      |
+      |
+      div
+        |
+        |
+        span.caption #{date}
+        |
+        |
+        p.mt-2 #{comment}
+    if !last
+      hr.divider/

@@ -1,0 +1,46 @@
+-
+  var comments = [
+    {
+      name: 'John Doe',
+      avatar: '/images/avatars/pp_boy4.svg',
+      date: '13 Dec 2021',
+      comment:
+        'Maecenas nisl libero, tincidunt id odio id, feugiat vulputate quam. Vestibulum feugiat rhoncus metus. In non erat et ipsum molestie porta sit amet ut felis. Vestibulum a massa vestibulum, gravida odio id, fringilla ipsum.'
+    },
+    {
+      name: 'John Doe',
+      avatar: '/images/avatars/pp_boy4.svg',
+      date: '13 Dec 2021',
+      comment:
+        'Maecenas nisl libero, tincidunt id odio id, feugiat vulputate quam. Vestibulum feugiat rhoncus metus. In non erat et ipsum molestie porta sit amet ut felis. Vestibulum a massa vestibulum, gravida odio id, fringilla ipsum.'
+    },
+    {
+      name: 'John Doe',
+      avatar: '/images/avatars/pp_boy4.svg',
+      date: '13 Dec 2021',
+      comment:
+        'Maecenas nisl libero, tincidunt id odio id, feugiat vulputate quam. Vestibulum feugiat rhoncus metus. In non erat et ipsum molestie porta sit amet ut felis. Vestibulum a massa vestibulum, gravida odio id, fringilla ipsum.'
+    },
+    {
+      name: 'John Doe',
+      avatar: '/images/avatars/pp_boy4.svg',
+      date: '13 Dec 2021',
+      comment:
+        'Maecenas nisl libero, tincidunt id odio id, feugiat vulputate quam. Vestibulum feugiat rhoncus metus. In non erat et ipsum molestie porta sit amet ut felis. Vestibulum a massa vestibulum, gravida odio id, fringilla ipsum.'
+    }
+  ]
+
+.comments-style
+  .row.justify-content-center
+    .col-lg-10.col-md-12.pa-sm-6
+      .row
+        .col-md-8.px-0.px-sm-4
+          h4.use-text-subtitle.mb-3.text-capitalize
+            | #{$t.common.list_comments}
+          include ./form
+          .collection.border-0
+            include ./item
+            each item, index in comments
+              +item(assets+item.avatar, item.name, item.date, item.comment, index >= comments.length - 1)
+        .col-md-4.pa-sm-3.px-0
+          include ./help

@@ -1,0 +1,37 @@
+include ../cards/media-card
+
+.about-style
+  .container
+    h4.use-text-title2.mb-3
+      | #{$t.common.about_gallery}
+    p.use-text-subtitle2
+      | Vestibulum faucibus eget erat eget pretium. Donec commodo convallis eget suscipit orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    .carousel
+      |
+      |
+      button.btn.btn-icon.waves-effect.btn-small.nav.prev#team_prev
+        i.icon.material-icons arrow_back
+      |
+      |
+      .photo-carousel#about_photo_carousel
+        - var n = 0
+        while n < 6
+          .item.px-sm-3.px-1.showImg(data-index=n++)
+            .showimg
+              |
+              |
+              a.waves-effect(href='https://source.unsplash.com/random')
+                img(src='https://source.unsplash.com/random' alt='photo')/
+              |
+              |
+            +media-card('Sed lacinia velit, ut malesuada eros interdum a', 'portrait', 'photo', 'https://source.unsplash.com/random', 'https://source.unsplash.com/random')
+      |
+      |
+      button.btn.btn-icon.waves-effect.btn-small.nav.next#team_next
+        |
+        |
+        i.icon.material-icons arrow_forward
+        |
+        |
+      |
+      |

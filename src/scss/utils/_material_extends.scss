@@ -9,7 +9,7 @@ body {
 }
 
 // Additional Button Styles
-$btn-radius: 4px !default;
+$btn-radius: 6px !default;
 
 @mixin btn-hover {
   &:before {
@@ -34,26 +34,28 @@ $btn-radius: 4px !default;
   }
 }
 
-@mixin btn-style($border: none, $radius: 4px) {
+@mixin btn-style($border: none, $radius: 6px) {
   text-decoration: none;
   text-align: center;
   letter-spacing: .5px;
   -webkit-transition: background-color .2s ease-out;
   transition: background-color .2s ease-out;
   cursor: pointer;
-  font-size: 14px;
   outline: 0;
   border: $border;
   font-weight: $font-bold;
   border-radius: $radius;
   display: inline-block;
-  height: 36px;
-  line-height: 36px;
-  padding: 0 16px;
   text-transform: uppercase;
   vertical-align: middle;
   -webkit-tap-highlight-color: transparent;
   @include btn-hover;
+  &:not(.btn-small):not(.btn-large) {
+    padding: 0 16px;
+    font-size: 14px;
+    height: 36px;
+    line-height: 36px;
+  }
 }
 
 .btn {
@@ -77,6 +79,7 @@ $btn-radius: 4px !default;
     font-weight: $font-medium;
     &:hover {
       background: none;
+      color: inherit
     }
   }
   &-icon {
@@ -91,6 +94,9 @@ $btn-radius: 4px !default;
     }
     &:before {
       border-radius: 50%;
+    }
+    &.invert {
+      color: $palette-common-white
     }
   }
   &-outlined {
@@ -132,16 +138,50 @@ $btn-radius: 4px !default;
 // Font Icons
 .icon {
   &.primary {
-    color: $palette-primary-main;
+    color: $palette-primary-main !important;
   }
   &.secondary {
-    color: $palette-secondary-main;
+    color: $palette-secondary-main !important;
   }
 }
 
 // Collection Item
+.collection .collection-item {
+  background: none;
+}
+
 .collection-item.no-hover:hover{
   background: none;
+}
+
+.collection {
+  a.collection-item{
+    @include palette-text-primary
+  }
+}
+
+.collection .collection-item.avatar:not(.circle-clipper) > .round,
+.collection .collection-item.avatar :not(.circle-clipper) > .round,
+.collection .collection-item.avatar:not(.circle-clipper) > .square,
+.collection .collection-item.avatar :not(.circle-clipper) > .square {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  overflow: hidden;
+  left: 12px;
+  top: 12px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.round {
+  border-radius: $rounded-small
+}
+
+// Collapsible Accordion
+.collapsible {
+  box-shadow: none;
+  border: none;
 }
 
 // Typography
@@ -251,12 +291,17 @@ $btn-radius: 4px !default;
   }
 }
 
+// Container
+.dropdown-content {
+  border-radius: $rounded-small;
+}
+
 // Form
 .select {
   &-outlined {
     .select-wrapper input.select-dropdown {
       border: 1px solid var(--div-2);
-      border-radius: $spacing1 / 2;
+      border-radius: $spacing1 * 0.5;
       @include padding-left($spacing1);
       box-sizing: border-box;
     }
@@ -285,6 +330,16 @@ $btn-radius: 4px !default;
       color: $palette-secondary-main
     }
   }
+  .prefix {
+    width: auto;
+    @include left(0);
+  }
+  .suffix {
+    position: absolute;
+    transition: color 0.2s;
+    top: 0.5rem;
+    @include right(0)
+  }
 }
 
 [type=checkbox].filled-in.primary:checked + span:not(.lever):after {
@@ -297,25 +352,8 @@ $btn-radius: 4px !default;
   background-color: $palette-secondary-main;
 }
 
-// Preloader
-.pace {
-  -webkit-pointer-events: none;
-  pointer-events: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  &-inactive {
-    display: none;
-  }
-  .pace-progress {
-    background: #2196f3;
-    position: fixed;
-    z-index: 10000;
-    top: 0;
-    right: 100%;
-    width: 100%;
-    height: 2px;
-  }
+[type=checkbox].filled-in:checked + span:not(.lever):before {
+  @include use-rtl(transform, rotateZ(30deg) scaleX(-1))
 }
 
 .justify-content-evenly {
@@ -326,3 +364,34 @@ $btn-radius: 4px !default;
   @include palette-divider
 }
 
+// Toast icon
+.toast .toast-action {
+  color: #FFF;
+  @include margin-right(-12px)
+}
+
+
+// Modal
+.modal.bottom-sheet {
+  max-height: 90%;
+  border-radius: $rounded-small $rounded-small 0 0 
+}
+
+.modal-content {
+  @include palette-background-paper;
+}
+
+
+// x-scroll mobile
+.scroll-tablet {
+  @include breakpoints-down(sm) {
+    overflow-x: auto;
+    overflow-y: visible;
+    flex-wrap: nowrap;
+  }
+}
+
+// tooltip
+.material-tooltip {
+  right: auto;
+}

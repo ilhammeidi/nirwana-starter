@@ -1,0 +1,130 @@
+.blog-style {
+  .blog-headline {
+    cursor: pointer;
+    .responsive-img {
+      width: 100%;
+      height: 460px;
+      background-size: cover;
+      &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));
+      }
+    }
+  }
+  a.anchor-content {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: $spacing4;
+    @include breakpoints-up(md) {
+      padding: $spacing8;  
+    }
+  }
+  .headline-title {
+    font-weight: $font-medium;
+    margin-bottom: $spacing4;
+    display: block;
+  }
+  .title-blog {
+    font-weight: $font-medium
+  }
+  .image-blog {
+    margin: spacing(5, 0);
+    img {
+      width: 100%
+    }
+  }
+  .card-title {
+    z-index: 1;
+  }
+  .input.dark {
+    border-color: rgba(255, 255, 255, 0.5);
+    color: $palette-common-white;
+    &:focus {
+      border-color: $palette-common-white !important;
+    }
+  }
+  .blog-content {
+    @include breakpoints-down(xs) {
+      margin-top: $spacing4
+    }
+    ul, ol {
+      margin-bottom: $spacing2
+    }
+  }
+  .list {
+    list-style: disc
+  }
+  .share-socmed {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    @include palette-divider;
+    padding: spacing(3, 0);
+    margin: spacing(3, 0);
+    .btn {
+      border-width: 2px;
+      @include margin-right($spacing2);
+      @include breakpoints-down(xs) {
+        padding: 0 $spacing1;
+        border-radius: 50%;
+        i {
+          width: 16px;
+        }
+      }
+    }
+  }
+  .facebook {
+    border-color: #0D47A1;
+    .icon {
+      color: #0D47A1;
+    }
+  }
+  .twitter {
+    border-color: #00BCD4;
+    .icon {
+      color: #00BCD4;
+    }
+  }
+  .linkedin {
+    border-color: #2196F3;
+    .icon {
+      color: #2196F3;
+    }
+  }
+  .gallery-item {
+    padding: 2px;
+    position: relative;
+    a {
+      position: absolute;
+      top: $spacing1;
+      right: $spacing1;
+    }
+  }
+  .form {
+    display: flex;
+    align-items: center;
+    padding: spacing(0, 2)
+  }
+  .input {
+    flex: 1;
+  }
+  .send {
+    @include margin-left($spacing2);
+  }
+  .avatar-char {
+    font-style: normal;
+  }
+  .collection {
+    .secondary-content {
+      i {
+        @include rtl-flip
+      }
+    }
+  }
+}

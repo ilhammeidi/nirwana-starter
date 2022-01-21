@@ -1,0 +1,23 @@
+// #### HEADER ####
+header.app-bar.header#header
+  .container
+    .header-content
+      nav.nav-menu.flex-grow-1.w-auto
+        |
+        |
+        .logo.start-mobile
+          |
+          |
+          a(href=link.starter.home)
+            include ../logo.pug
+            +logo('landscape')
+          |
+          |
+        .hidden-xs-down.flex-grow-1
+          include ./top-nav/search-field
+          +search-field()
+      include ./top-nav/user-menu
+  .hidden-sm-up
+    include ./top-nav/search-field
+    +search-field()
+// #### END HEADER ####

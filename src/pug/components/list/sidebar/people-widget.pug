@@ -1,0 +1,55 @@
+include ../../paper.pug
+
+-
+  var people = [
+    {
+      img: '/images/avatars/pp_boy5.svg',
+      name: 'John Doe',
+      title: 'Web Designer'
+    },
+    {
+      img: '/images/avatars/pp_girl.svg',
+      name: 'Jean Doe',
+      title: 'Executive Merketing'
+    },
+    {
+      img: '/images/avatars/pp_boy2.svg',
+      name: 'Jim Doe',
+      title: 'Dev Ops'
+    },
+    {
+      img: '/images/avatars/pp_girl2.svg',
+      name: 'Jihan Doe',
+      title: 'Director'
+    },
+    {
+      img: '/images/avatars/pp_girl3.svg',
+      name: 'Jena Doe',
+      title: 'CEO'
+    },
+    {
+      img: '/images/avatars/pp_boy3.svg',
+      name: 'Johan Doe',
+      title: 'iOS Developer'
+    }
+  ]
+
++paper('You may know', 'people', 'Donec commodo convallis ligula eget suscipit orci.')
+  ul.collection
+    each item in people
+      li.collection-item.avatar
+        |
+        |
+        img.circle(src=assets+item.img alt=item.name)/
+        |
+        |
+        p.use-text-medium
+          | #{item.name}
+        |
+        |
+        p.caption #{item.title}
+        |
+        |
+        a.secondary-content.primary.btn-outlined.btn-small(href='#!') follow
+        |
+        |

@@ -1,0 +1,60 @@
+.footer-contact {
+  .root {
+    position: relative;
+    padding: $spacing5 0
+  }
+  .form-box {
+    padding: $spacing5;
+    @include breakpoints-down(xs) {
+      padding: spacing(5, 2)
+    }
+    h3 {
+      @include use-theme(color, $palette-primary-dark,  $palette-primary-light);
+    }
+    textarea {
+      height: auto
+    }
+  }
+  .logo {
+    @include palette-text-secondary;
+    text-align: center;
+    display: block;
+    font-size: 26px;
+    margin-top: $spacing5;
+    img {
+      width: 54px;
+      height: 54px;
+      margin-bottom: $spacing2
+    }
+    h4 {
+      text-transform: uppercase
+    }
+  }
+  .margin {
+    margin: $spacing2
+  }
+  .socmed {
+    margin: spacing(3, 0);
+    a.btn-icon {
+      margin: $spacing1;
+      width: 36px;
+      height: 36px;
+      padding: 0;
+      @include use-theme(background, $palette-primary-light !important,  $palette-primary-dark !important);
+      i {
+        @include use-theme(color, $palette-primary-dark !important,  $palette-primary-light !important);
+      }
+    }
+    i {
+      font-size: 24px
+    }
+  }
+  .contact {
+    @include palette-text-secondary;
+  }
+  .divider {
+    margin: 12px;
+    border: none;
+    background: none
+  }
+}

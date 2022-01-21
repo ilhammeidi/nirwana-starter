@@ -3,13 +3,13 @@ var htmlmin = require('gulp-htmlmin');
 var browserSync = require('browser-sync').create();
 var fs = require('fs');
 var gulp    = require('gulp'),
-    sass    = require('gulp-sass'),
+    sass = require('gulp-sass')(require('sass')),
     rtlcss = require('gulp-rtlcss'),
     connect = require('gulp-connect'),
     pug     = require('gulp-pug'),
     plumber = require('gulp-plumber'),
     rename  = require('gulp-rename'),
-    uglify  = require('gulp-uglify'),
+    uglify  = require('gulp-uglify-es').default,
     data    = require('gulp-data'),
     autoprefixer = require('gulp-autoprefixer'),
     sourcemaps = require('gulp-sourcemaps'),
@@ -83,7 +83,8 @@ function views() {
     data: JSON.parse(fs.readFileSync('./src/api.json'))
   };
   return (
-    gulp.src('src/pug/pages/**/*.pug')
+    // gulp.src('src/pug/pages/**/*.pug')
+    gulp.src('src/pug/pages/products.pug')
     .pipe(plumber())
     .pipe(pugI18n(options))
     .pipe(prettyHtml({ indent_size: 2 }))
@@ -196,9 +197,9 @@ function prodCss() {
 
 function prodRtlCss() {
   return (
-    gulp.src('assets/css/rtl-vendors/*.css')
+    gulp.src(['assets/css/rtl-vendors/*.css', 'assets/css/vendors/**/*.css', '!assets/css/vendors/bootstrap.css', '!assets/css/vendors/materialize.css', 'assets/css/*.css'])
     .pipe(cleanCSS())
-    .pipe(concat('rtl-bundle.min.css'))
+    .pipe(concat('starter-bundle-rtl.min.css'))
     .pipe(gulp.dest('dist/assets/css'))
   );
 }

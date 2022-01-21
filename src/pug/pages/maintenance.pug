@@ -1,0 +1,30 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = " Under Maintenance"
+  - var pageName = "maintenance"
+  - var headerHome = false
+
+block content
+  #maintenace-page
+    .container.max-md
+      .full-screen-container
+        .row.align-items-center
+          .col-md-12.text-center
+            section
+              |
+              |
+              i.icon.medium.material-icons.maintenance-icon.hidden-xs-down settings_input_composite
+              |
+              |
+              i.icon.medium.material-icons.maintenance-icon settings
+              |
+              |
+              i.icon.medium.material-icons.maintenance-icon.hidden-xs-down warning
+              |
+              |
+            .text-center
+              h3.use-text-title2
+                | #{$t.common.util_maintenance}
+              h5.use-text-subtitle2
+                | #{$t.common.util_maintenance_dec}
