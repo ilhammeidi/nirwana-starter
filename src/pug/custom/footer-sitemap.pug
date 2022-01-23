@@ -1,0 +1,17 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = "Footer Sitemap"
+  - var pageName = "footer-sitemap"
+  - var headerHome = false
+
+block content
+ div
+    #home
+    include ../components/header/basic.pug
+    .container-wrap.py-10.py-sm-4
+      section.space-top.space-bottom
+        h2.display-3.text-center.mb-4 Footer Sitemap
+        h4.display-1.text-center Footer with sitemap menu and many links.
+    section.space-top
+      include ../components/footer/sitemap.pug

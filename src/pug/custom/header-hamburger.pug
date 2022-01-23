@@ -1,0 +1,17 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = "Header Hamburger"
+  - var pageName = "header-hamburger"
+  - var headerHome = false
+
+block content
+ div
+    #home
+    include ../components/header/hamburger.pug
+    .container-wrap.py-10.py-sm-4
+      section.space-top.space-bottom
+        h2.display-3.text-center.mb-4 Header Hamburger
+        h4.display-1.text-center Header with simple hamburger-menu that contain single link navigation
+    section.space-top
+      include ../components/footer/sitemap.pug

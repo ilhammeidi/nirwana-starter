@@ -1,0 +1,17 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = "Header Megamenu"
+  - var pageName = "header-megamenu"
+  - var headerHome = false
+
+block content
+ div
+    #home
+    include ../components/header/mega.pug
+    .container-wrap.py-10.py-sm-4
+      section.space-top.space-bottom
+        h2.display-3.text-center.mb-4 Header Megamenu
+        h4.display-1.text-center Header with 2 level categories menu arranged in mega menu
+    section.space-top
+      include ../components/footer/sitemap.pug
