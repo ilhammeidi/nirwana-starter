@@ -1,0 +1,17 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = "Header Droplist"
+  - var pageName = "header-droplist"
+  - var headerHome = false
+
+block content
+ div
+    #home
+    include ../components/header/droplist.pug
+    .container-wrap.py-10.py-sm-4
+      section.space-top.space-bottom
+        h2.display-3.text-center.mb-4 Header Droplist
+        h4.display-1.text-center Header with multi-level menu and use dropdown style
+    section.space-top
+      include ../components/footer/sitemap.pug

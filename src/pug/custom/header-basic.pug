@@ -1,0 +1,17 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = "Header Basic"
+  - var pageName = "header-basic"
+  - var headerHome = false
+
+block content
+ div
+    #home
+    include ../components/header/basic.pug
+    .container-wrap.py-10.py-sm-4
+      section.space-top.space-bottom
+        h2.display-3.text-center.mb-4 Header Basic
+        h4.display-1.text-center A basic header without menu, just auth button and setting
+    section.space-top
+      include ../components/footer/sitemap.pug

@@ -1,5 +1,4 @@
-# Nirwana Starter - React JS Landing Page Template
-----------
+# `starter-project`
 
 ### Read documentation here
 http://ilhammeidi.github.io/nirwana-docs
@@ -28,7 +27,7 @@ http://ilhammeidi.github.io/nirwana-docs
 ## Installation
 
 ```
-npm install
+lerna bootstrap
 ```
 
 ## Build
@@ -43,26 +42,14 @@ gulp build
 gulp
 ```
 
-Navigate to localhost:9000
-
-
 ## Generate Translation
 
 ```
 gulp translate
 ```
 
-Will generated to `multilang/`folder
-
 ## Run Minify for Production
 
 ```
 gulp prod
 ```
-
-Will generated to `dist/`folder
-
-
-### License
-This project is licensed under the terms of the [MIT license](https://github.com/ilhammeidi/oiron-starter/blob/main/LICENSE).
-

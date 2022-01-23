@@ -94,6 +94,27 @@ function views() {
   )
 }
 
+function views_custom() {
+  var options = {
+    i18n: {
+      dest: 'custom-components',
+      namespace: '$t',
+      localeExtension: true,
+      locales: 'src/locales/en.json'
+    },
+    data: JSON.parse(fs.readFileSync('./src/api.json'))
+  };
+  return (
+    gulp.src('src/pug/custom/*.pug')
+    .pipe(plumber())
+    .pipe(pugI18n(options))
+    .pipe(prettyHtml({ indent_size: 2 }))
+    .pipe(ext_replace('.html', '.en.html'))
+    .pipe(gulp.dest(options.i18n.dest))
+    .pipe(connect.reload())
+  )
+}
+
 /**
 ** Watch development file changes 
 **/
@@ -220,6 +241,7 @@ function prodJs() {
 const watch = gulp.parallel(watchTask, reload);
 const watch_assets = gulp.parallel(watchAssetsTask, reload);
 const build = gulp.series(gulp.parallel(styles, scripts, html, views));
+const build_custom = gulp.series(gulp.parallel(html, views_custom));
 const assets = gulp.series(gulp.parallel(styles, scripts));
 const translate_rtl = gulp.series(gulp.parallel(langrtl, rtl));
 const prod = gulp.series(gulp.parallel(prodHtml, prodImg, prodIcons, prodCss, prodRtlCss, prodJs));
@@ -232,6 +254,7 @@ exports.views = views;
 exports.assets = assets;
 exports.watch = watch;
 exports.build = build;
+exports.build_custom = build_custom;
 exports.translate = translate;
 exports.translate_rtl = translate_rtl;
 exports.prod = prod;

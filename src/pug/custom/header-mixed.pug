@@ -1,0 +1,17 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = "Header Mixed"
+  - var pageName = "header-mixed"
+  - var headerHome = false
+
+block content
+ div
+    #home
+    include ../components/header/mixed.pug
+    .container-wrap.py-10.py-sm-4
+      section.space-top.space-bottom
+        h2.display-3.text-center.mb-4 Header Mixed
+        h4.display-1.text-center Header menu with mega-menu and single navigation
+    section.space-top
+      include ../components/footer/sitemap.pug

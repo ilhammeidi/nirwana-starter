@@ -1,0 +1,20 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = "Corner Nav"
+  - var pageName = "corner-nav"
+  - var headerHome = false
+
+block content
+ div
+    #home
+    include ../components/header/basic.pug
+    .container-wrap.py-10.py-sm-4
+      section.space-top.space-bottom(style="height: 1000px")
+        h2.display-3.text-center.mb-4 Page Navigation
+        h4.display-1.text-center Scroll until end of page to show Page Navigation.
+    section.space-top
+      include ../components/footer/sitemap.pug
+    |
+    |
+    include ../components/page-nav.pug
