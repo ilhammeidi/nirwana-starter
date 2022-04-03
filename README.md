@@ -20,7 +20,7 @@ http://ilhammeidi.github.io/nirwana-docs
 # Get All Landing Page Collection
 ![Nirwana](https://ilhammeidi.github.io/nirwana-docs/images/banner.jpg)
 
-[GET IT NOW on Envato](https://themeforest.net/user/ilhammeidi/portfolio)
+[GET IT NOW on Creative Market](https://creativemarket.com/ilhammeidi/6918734-Nirwana-HTML-Landing-Page-Collection)
 
 [SEE DEMO](http://nirwana.vercel.app/)
 
